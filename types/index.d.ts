@@ -1,34 +1,3 @@
-interface Name {
-  "name-USen": string,
-  "name-EUen": string,
-  "name-EUde": string,
-  "name-EUes": string,
-  "name-USes": string,
-  "name-EUfr": string,
-  "name-USfr": string,
-  "name-EUit": string,
-  "name-EUnl": string,
-  "name-CNzh": string,
-  "name-TWzh": string,
-  "name-JPja": string,
-  "name-KRko": string,
-  "name-EUru": string
-}
-
-export interface Villager {
-  id: number,
-  "file-name": string,
-  name: NameProperties,
-  personality: string,
-  "birthday-string": string,
-  "birthday": string,
-  species: string,
-  gender: string,
-  "catch-phrase": string,
-  "icon_uri": string,
-  "image_uri": string,
-}
-
 export interface HistoryDocument {
   name: string,
   startDate: string,
@@ -64,7 +33,7 @@ interface NH_Details {
   house_music_note: string,
 }
 
-export interface VillagerProperties2 {
+export interface NookipediaVillager {
   url: string,
   name: string,
   alt_name: string,
@@ -88,4 +57,38 @@ export interface VillagerProperties2 {
   nh_details: NH_Details,
   ja_name: string,
   ja_phrase: string,
+}
+
+export interface Trait {
+  trait: string,
+  count: number,
+  villagers: string[],
+}
+
+export interface Duration extends Trait {
+  duration: number,
+}
+
+export interface History extends HistoryDocument {
+  currentResident: boolean,
+  photo: boolean,
+  startDateString: string,
+  photoDateString: string,
+  daysToPhoto: number,
+  duration: number,
+  startDateDate: Date,
+  endDateDate: Date,
+  endDateString: string,
+  photoDateDate: Date,
+}
+
+export interface PhotoStats {
+  average: number,
+  count: number,
+}
+
+export interface PhotoStats2 {
+  shortestAfterGiving: Duration,
+  longestAfterGiving: Duration,
+  longestWithoutGiving: Duration,
 }
