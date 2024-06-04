@@ -30,7 +30,6 @@ export interface Villager {
 }
 
 export interface HistoryDocument {
-  _id: string,
   name: string,
   startDate: string,
   endDate: string,
@@ -40,7 +39,6 @@ export interface HistoryDocument {
 }
 
 export interface EventDocument {
-  _id: string,
   date: string,
   villager: string,
   event: string,

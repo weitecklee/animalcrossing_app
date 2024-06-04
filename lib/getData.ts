@@ -13,13 +13,13 @@ const client = new MongoClient(process.env.MONGODB_URI,  {
   }
 });
 
-export async function getData() {
+export async function getData(): Promise<{historyData: HistoryDocument[], eventsData: EventDocument[]}> {
   try {
     await client.connect();
 
     const db = client.db('lasagnark');
-    const historyCollection = db.collection<HistoryDocument>('history');
-    const eventsCollection = db.collection<EventDocument>('events');
+    const historyCollection = db.collection<HistoryDocument & {_id: any}>('history');
+    const eventsCollection = db.collection<EventDocument & {_id: any}>('events');
 
     const historyResults = await historyCollection.find().toArray();
     const eventsResults = await eventsCollection.find().toArray();
@@ -33,7 +33,7 @@ export async function getData() {
       return others;
     });
 
-    return [historyData, eventsData];
+    return {historyData, eventsData};
 
   } finally {
     await client.close();
