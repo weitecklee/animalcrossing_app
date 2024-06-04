@@ -92,3 +92,19 @@ export interface PhotoStats2 {
   longestAfterGiving: Duration,
   longestWithoutGiving: Duration,
 }
+
+export interface PreparedData {
+  durationData: Duration[],
+  historyMap: Map<string,History>,
+  noPhotoData: Duration[],
+  photoStats2: PhotoStats2,
+  timelineColors: string[],
+  timelineColors3: string[],
+  timelineData: number[][],
+  timelineData2: number[],
+  timelineData3: number[],
+  timelineLabels: string[],
+  timelineLabels3: string[],
+  timelineNameMap: Map<string, number>,
+  timelineNameMap3: Map<string, number>,
+}
