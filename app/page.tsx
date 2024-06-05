@@ -2,7 +2,6 @@ import { Box, Grid, Link, Typography } from '@mui/material';
 import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import Image from 'next/image';
 import AvatarPNG from '../public/avatar13.png';
-import BoldSpan from '@/components/boldSpan';
 
 export default function Home() {
 
@@ -29,15 +28,21 @@ export default function Home() {
         <br/>
         You can find the following pages and information:
         <br/>
-        &emsp;&emsp;<BoldSpan text={'Villagers'} />: all the villagers that have been on my island
+        &emsp;&emsp;
+        <Typography variant='boldSpan'>Villagers</Typography>
+        : all the villagers that have been on my island
         <br/>
-        &emsp;&emsp;<BoldSpan text={'Timeline'} />: a timeline chart of the villagers
+        &emsp;&emsp;
+        <Typography variant='boldSpan'>Timeline</Typography>
+        : a timeline chart of the villagers
         <br/>
-        &emsp;&emsp;<BoldSpan text={'Stats'} />: all sorts of fun stats
+        &emsp;&emsp;
+        <Typography variant='boldSpan'>Stats</Typography>
+        : all sorts of fun stats
         <br/>
-        &emsp;&emsp;<BoldSpan text={'Map'} />: a map of my island (coming soon!)
-        <br/>
-        &emsp;&emsp;<BoldSpan text={'About'} />: info about the game and me
+        &emsp;&emsp;
+        <Typography variant='boldSpan'>About</Typography>
+        : info about the game and me
         <br/>
         <br/>
         Enjoy your visit!
