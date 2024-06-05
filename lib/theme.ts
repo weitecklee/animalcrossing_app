@@ -41,7 +41,7 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 const coustard = Coustard({
-  weight: ['400', '900'],
+  weight: ['400'],
   subsets: ["latin"],
 });
 

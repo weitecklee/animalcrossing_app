@@ -3,7 +3,7 @@
 import { createContext, ReactNode } from "react";
 import useScreen from "./useScreen";
 
-const ScreenContext = createContext({
+export const ScreenContext = createContext({
   mediumScreen: false,
   smallScreen: false,
 });
