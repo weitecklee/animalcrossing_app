@@ -13,12 +13,26 @@ declare module '@mui/material/styles' {
     title?: React.CSSProperties;
     boldSpan?: React.CSSProperties;
   }
+
+  interface ButtonVariants {
+    navButton: React.CSSProperties;
+  }
+
+  interface ButtonVariantsOptions {
+    navButton?: React.CSSProperties;
+  }
 }
 
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     title: true;
     boldSpan: true;
+  }
+}
+
+declare module '@mui/material/Button' {
+  interface ButtonPropsVariantOverrides {
+    navButton: true;
   }
 }
 
@@ -52,6 +66,7 @@ const theme0 = createTheme({
       fontFamily: coustard.style.fontFamily, // Zilla Slab, Sanchez
     }
   },
+
   components: {
     MuiLink: {
       styleOverrides: {
@@ -67,7 +82,24 @@ const theme0 = createTheme({
         }
       }
     },
-
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          fontFamily: coustard.style.fontFamily,
+        }
+      }
+    },
+    MuiButton: {
+      variants: [
+        {
+          props: { variant: 'navButton' },
+          style: {
+            fontFamily: coustard.style.fontFamily,
+            marginLeft: 1,
+          }
+        }
+      ]
+    }
   },
   breakpoints: {
     values: {
