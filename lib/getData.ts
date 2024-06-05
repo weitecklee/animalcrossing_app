@@ -13,7 +13,7 @@ const client = new MongoClient(process.env.MONGODB_URI,  {
   }
 });
 
-export async function getData(): Promise<{historyData: HistoryDocument[], eventsData: EventDocument[]}> {
+export default async function getData(): Promise<{historyData: HistoryDocument[], eventsData: EventDocument[]}> {
   try {
     await client.connect();
 
