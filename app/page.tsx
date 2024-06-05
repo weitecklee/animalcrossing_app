@@ -1,96 +1,96 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Box, Grid, Link, Typography } from '@mui/material';
+import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
+import Image from 'next/image';
+import AvatarPNG from '../public/avatar13.png';
+import BoldSpan from '@/components/boldSpan';
 
 export default function Home() {
 
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+  return (<Grid
+    container
+    justifyContent='space-between'
+    direction='row-reverse'
+    spacing={1}
+  >
+    <Grid item xs={12} sm={4} sx={{pt: 1, pb: 2}}>
 
-      <div className={styles.center}>
+    </Grid>
+    <Grid item xs={12} sm={8}>
+      <Typography>
+        Hello there!
+      </Typography>
+      <Typography>
+        This is a site I made to showcase my&nbsp;
+        <Box component="span" sx={{fontStyle: 'italic'}}>
+          Animal Crossing: New Horizons
+        </Box>
+        &nbsp;island.
+        <br/>
+        <br/>
+        You can find the following pages and information:
+        <br/>
+        &emsp;&emsp;<BoldSpan text={'Villagers'} />: all the villagers that have been on my island
+        <br/>
+        &emsp;&emsp;<BoldSpan text={'Timeline'} />: a timeline chart of the villagers
+        <br/>
+        &emsp;&emsp;<BoldSpan text={'Stats'} />: all sorts of fun stats
+        <br/>
+        &emsp;&emsp;<BoldSpan text={'Map'} />: a map of my island (coming soon!)
+        <br/>
+        &emsp;&emsp;<BoldSpan text={'About'} />: info about the game and me
+        <br/>
+        <br/>
+        Enjoy your visit!
+      </Typography>
+      <Box py={2}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          src={AvatarPNG}
+          alt="My Villager"
           priority
+          style={{
+            width: '90vw',
+            maxWidth: 376,
+            height: 'auto',
+          }}
         />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
+      </Box>
+      <Typography variant="caption">
+        Special thanks to:
+        <br />
+        &emsp;&emsp;
+        <Link
+          href="https://www.nintendo.com/store/products/animal-crossing-new-horizons-switch/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
+          Nintendo
+          <OpenInNewRoundedIcon fontSize='inherit'/>
+        </Link>
+        &nbsp;for making the Animal Crossing video games
+        <br />
+        &emsp;&emsp;
+        <Link
+          href="https://nookipedia.com/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
         >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
+          Nookipedia
+          <OpenInNewRoundedIcon fontSize='inherit'/>
+        </Link>
+        &nbsp;for providing all the villager data and media
+        <br />
+        <br />
+        Made by&nbsp;
+        <Link
+          href="https://github.com/weitecklee"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          weitecklee
+          <OpenInNewRoundedIcon fontSize='inherit'/>
+        </Link>
+      </Typography>
+    </Grid>
+  </Grid>
   );
 }
