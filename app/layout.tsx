@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from "@/lib/theme";
+import TopBar from "@/lib/topBar";
+import { ScreenProvider } from "@/lib/screenContext";
+import { Container, CssBaseline } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "My Animal Crossing Island",
@@ -16,7 +19,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>
+            <ScreenProvider>
+              <CssBaseline />
+              <TopBar />
+              <Container maxWidth='xl' sx={{pt: 1}}>
+                {children}
+              </Container>
+            </ScreenProvider>
+          </ThemeProvider>
+        </AppRouterCacheProvider>
+      </body>
     </html>
   );
 }
