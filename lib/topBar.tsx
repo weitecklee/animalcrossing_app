@@ -4,9 +4,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Slide, Toolbar, Typography, useScrollTrigger } from '@mui/material';
 import Image from 'next/image';
 import { MouseEvent, useContext, useState } from 'react';
-import FavIcon from '../public/lasagnark8.png';
+import FavIcon from '@/public/lasagnark8.png';
 import { ScreenContext } from './screenContext';
-import { redirect, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 const pages = ['Villagers', 'Timeline', 'Stats', 'About'];

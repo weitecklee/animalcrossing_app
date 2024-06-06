@@ -40,7 +40,7 @@ const montserrat = Montserrat({
   weight: 'variable',
   subsets: ["latin"],
 });
-const coustard = Coustard({
+export const coustard = Coustard({
   weight: ['400'],
   subsets: ["latin"],
 });

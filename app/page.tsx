@@ -1,7 +1,10 @@
 import { Box, Grid, Link, Typography } from '@mui/material';
 import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import Image from 'next/image';
-import AvatarPNG from '../public/avatar13.png';
+import AvatarPNG from '@/public/avatar13.png';
+import getData from '@/lib/getData';
+
+const data = getData();
 
 export default function Home() {
 
