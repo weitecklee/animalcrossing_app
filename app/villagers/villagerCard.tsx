@@ -12,6 +12,7 @@ import { History, NookipediaVillager } from '@/types';
 import IconWithText from '@/components/iconWithText';
 import { ScreenContext } from '@/lib/screenContext';
 import { coustard } from '@/lib/theme';
+import CRIcon from '@/lib/crIcon';
 
 const lowElevation = 4;
 const highElevation = 14;
@@ -65,7 +66,7 @@ export default function VillagerCard({ history, villagerData }: {
               <Typography variant={mediumScreen ? 'subtitle2' : 'h6'} fontFamily={coustard.style.fontFamily}>
                 {history.name}
               </Typography>
-              {/* {history.currentResident ? <CRIcon /> : ''} */}
+              {history.currentResident ? <CRIcon /> : ''}
             </Stack>
             <IconWithText
               Icon={ArrowForwardRoundedIcon}
