@@ -1,4 +1,4 @@
-import nookipediaData from '../lib/combinedData';
+import nookipediaData from './nookipediaData';
 import { calculateDays } from '../lib/functions';
 import { Duration, History, PhotoStats2, PreparedData} from '@/types';
 

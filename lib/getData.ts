@@ -1,5 +1,6 @@
 import { EventDocument, HistoryDocument } from "@/types";
 import { MongoClient, ServerApiVersion } from "mongodb";
+import { cache } from "react";
 
 if (!process.env.MONGODB_URI) {
   throw new Error('Invalid/Missing environment variable: "MONGODB_URI"');
@@ -13,7 +14,7 @@ const client = new MongoClient(process.env.MONGODB_URI,  {
   }
 });
 
-export default async function getData(): Promise<{historyData: HistoryDocument[], eventsData: EventDocument[]}> {
+async function getData(): Promise<{historyData: HistoryDocument[], eventsData: EventDocument[]}> {
   try {
     await client.connect();
 
@@ -39,3 +40,5 @@ export default async function getData(): Promise<{historyData: HistoryDocument[]
     await client.close();
   }
 }
+
+export default cache(getData)

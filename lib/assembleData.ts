@@ -1,9 +1,11 @@
-import { Duration, EventDocument, History, PhotoStats, Trait } from "@/types";
-import nookipediaData from "./combinedData";
-import getData from "./getData";
+import { Duration, EventDocument, History, HistoryDocument, PhotoStats, Trait } from "@/types";
+import nookipediaData from "./nookipediaData";
 import { calculateDays } from "./functions";
+import getData from "./getData";
+import { cache } from "react";
 
-export default async function assembleData(): Promise<{
+
+async function assembleData(): Promise<{
   histories: History[],
   speciesData: Trait[];
   personalityData: Trait[];
@@ -14,7 +16,8 @@ export default async function assembleData(): Promise<{
   islandmatesData: Duration[];
   eventsData: EventDocument[];
 }> {
-  const {historyData, eventsData} = await getData();
+
+  const { eventsData, historyData } = await getData();
 
   const speciesMap: Map<string, Trait> = new Map();
   const personalityMap: Map<string, Trait> = new Map();
@@ -134,3 +137,5 @@ export default async function assembleData(): Promise<{
   }
 
 }
+
+export default cache(assembleData)

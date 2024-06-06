@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { MouseEvent, useContext, useState } from 'react';
 import FavIcon from '../public/lasagnark8.png';
 import { ScreenContext } from './screenContext';
+import { redirect, useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const pages = ['Villagers', 'Timeline', 'Stats', 'About'];
 
@@ -20,6 +22,7 @@ export default function TopBar() {
     setAnchorEl(null);
   };
   const { smallScreen } = useContext(ScreenContext)
+  const router = useRouter();
 
   return (<>
     <Slide appear={false} direction="down" in={!useScrollTrigger()}>
@@ -53,7 +56,7 @@ export default function TopBar() {
                     },
                   }}
                 >
-                  {page}
+                  {<Link href={`/${page.toLowerCase()}`}>{page}</Link>}
                 </MenuItem>)}
               </Menu>
             </Box>
@@ -65,6 +68,7 @@ export default function TopBar() {
                   bgcolor: "success.main"
                 }
               }}
+              onClick={() => router.push('/')}
             >
               <Image
                 src={FavIcon}
@@ -76,6 +80,7 @@ export default function TopBar() {
               variant="title"
               sx={{cursor: "pointer"}}
               component={smallScreen ? 'h4': 'h2'}
+              onClick={() => router.push('/')}
             >
               My Animal Crossing Island
             </Typography>
@@ -94,7 +99,7 @@ export default function TopBar() {
                   }}
                   variant='navButton'
                 >
-                  {page}
+                  {<Link href={`/${page.toLowerCase()}`}>{page}</Link>}
                 </Button>
               ))}
             </Box>
