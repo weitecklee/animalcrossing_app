@@ -1,44 +1,54 @@
 import { EventDocument, HistoryDocument } from "@/types";
-import { MongoClient, ServerApiVersion } from "mongodb";
 import { cache } from "react";
 
-if (!process.env.MONGODB_URI) {
-  throw new Error('Invalid/Missing environment variable: "MONGODB_URI"');
-}
-
-const client = new MongoClient(process.env.MONGODB_URI,  {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
-
 async function getData(): Promise<{historyData: HistoryDocument[], eventsData: EventDocument[]}> {
-  try {
-    await client.connect();
 
-    const db = client.db('lasagnark');
-    const historyCollection = db.collection<HistoryDocument & {_id: any}>('history');
-    const eventsCollection = db.collection<EventDocument & {_id: any}>('events');
+  const payload = {
+    dataSource: 'AnimalCrossing',
+    database: 'lasagnark',
+    collection: 'history',
+    filter: {},
+  };
+  const res = await fetch(`${process.env.API_URL}/action/find`, {
+    method: 'POST',
+    headers: {
+      'api-key': `${process.env.API_KEY}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  });
+  const historyResults: {documents: (HistoryDocument & {_id: any})[]} = await res.json();
+  const historyData = historyResults.documents.map((doc) => {
+    const { _id, ...others } = doc;
+    return others;
+  });
 
-    const historyResults = await historyCollection.find().toArray();
-    const eventsResults = await eventsCollection.find().toArray();
+  const payload2 = {
+    dataSource: 'AnimalCrossing',
+    database: 'lasagnark',
+    collection: 'events',
+    filter: {},
+    sort: {
+      _id: -1,
+    },
+    limit: 10,
+  };
+  const res2 = await fetch(`${process.env.API_URL}/action/find`, {
+    method: 'POST',
+    headers: {
+      'api-key': `${process.env.API_KEY}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload2)
+  });
+  const eventsResults: {documents: (EventDocument & {_id: any})[]} = await res2.json();
+  const eventsData = eventsResults.documents.map((doc) => {
+    const { _id, ...others } = doc;
+    return others;
+  });
 
-    const historyData = historyResults.map((doc) => {
-      const { _id, ...others } = doc;
-      return others;
-    });
-    const eventsData = eventsResults.map((doc) => {
-      const { _id, ...others } = doc;
-      return others;
-    });
+  return {historyData, eventsData};
 
-    return {historyData, eventsData};
-
-  } finally {
-    await client.close();
-  }
 }
 
 export default cache(getData)

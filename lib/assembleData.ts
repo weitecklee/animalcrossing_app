@@ -4,7 +4,6 @@ import { calculateDays } from "./functions";
 import getData from "./getData";
 import { cache } from "react";
 
-
 async function assembleData(): Promise<{
   histories: History[],
   speciesData: Trait[];
