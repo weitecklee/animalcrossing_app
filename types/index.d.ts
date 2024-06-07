@@ -1,3 +1,5 @@
+import { ImageProps } from "next/image";
+
 export interface HistoryDocument {
   name: string,
   startDate: string,
@@ -107,4 +109,9 @@ export interface PreparedData {
   timelineLabels3: string[],
   timelineNameMap: Map<string, number>,
   timelineNameMap3: Map<string, number>,
+}
+
+export interface DataContextProps {
+  historyMap: Map<string, History>,
+  eventsData: EventDocument[],
 }

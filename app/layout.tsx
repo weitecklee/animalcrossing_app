@@ -6,6 +6,9 @@ import { theme } from "@/lib/theme";
 import TopBar from "@/lib/topBar";
 import { ScreenProvider } from "@/lib/screenContext";
 import { Container, CssBaseline } from "@mui/material";
+import { StateProvider } from "@/lib/stateContext";
+import VillagerDialog from "@/lib/villagerDialog";
+import { DataProvider } from "@/lib/dataContext";
 
 export const metadata: Metadata = {
   title: "My Animal Crossing Island",
@@ -22,13 +25,18 @@ export default function RootLayout({
       <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
-            <ScreenProvider>
-              <CssBaseline />
-              <TopBar />
-              <Container maxWidth='xl' sx={{pt: 1}}>
-                {children}
-              </Container>
-            </ScreenProvider>
+            <DataProvider>
+              <ScreenProvider>
+                <StateProvider>
+                  <CssBaseline />
+                  <TopBar />
+                  <VillagerDialog />
+                  <Container maxWidth='xl' sx={{pt: 1}}>
+                    {children}
+                  </Container>
+                </StateProvider>
+              </ScreenProvider>
+            </DataProvider>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

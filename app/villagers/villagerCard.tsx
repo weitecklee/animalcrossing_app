@@ -11,6 +11,7 @@ import { dayOrDays, rgbDataURL } from '@/lib/functions';
 import { History, NookipediaVillager } from '@/types';
 import IconWithText from '@/components/iconWithText';
 import { ScreenContext } from '@/lib/screenContext';
+import { StateContext } from '@/lib/stateContext';
 import { coustard } from '@/lib/theme';
 import CRIcon from '@/lib/crIcon';
 
@@ -23,6 +24,7 @@ export default function VillagerCard({ history, villagerData }: {
 }) {
 
   const { mediumScreen } = useContext(ScreenContext);
+  const { setShowVillagerDialog, setDialogVillager } = useContext(StateContext);
   const theme = useTheme();
   const [elevation, setElevation] = useState(lowElevation);
 
@@ -30,6 +32,10 @@ export default function VillagerCard({ history, villagerData }: {
     <Grid
       item
       minWidth={mediumScreen ? 'calc(128px + 9rem)': 'calc(192px + 12rem)'}
+      onClick={() => {
+        setDialogVillager(history.name);
+        setShowVillagerDialog(true);
+      }}
     >
       <Paper
         elevation={elevation}

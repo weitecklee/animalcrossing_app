@@ -1,17 +1,24 @@
-import assembleData from "@/lib/assembleData";
+'use client';
+
 import VillagerCard from "./villagerCard";
 import nookipediaData from "@/lib/nookipediaData";
 import { Grid } from "@mui/material";
 import Legend from "./legend";
+import { useContext } from "react";
+import { DataContext } from "@/lib/dataContext";
 
-export default async function Villagers() {
+export default function Villagers() {
 
-  const { histories } = await assembleData();
+  const { historyMap } = useContext(DataContext);
+
+  if (!historyMap) {
+    return;
+  }
 
   return <>
     <Legend />
     <Grid container spacing={2} py={2} justifyContent='center'>
-      {histories.map((history) => (
+      {Array.from(historyMap.values()).map((history) => (
         <VillagerCard
           key={history.name}
           history={history}
