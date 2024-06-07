@@ -1,18 +1,21 @@
+'use server';
+
 import {  EventDocument, History, } from "@/types";
 import { calculateDays } from "./functions";
 import getData from "./getData";
 import { cache } from "react";
 
 async function assembleData(): Promise<{
-  histories: History[],
+  historyMap: Map<string, History>,
   eventsData: EventDocument[];
 }> {
 
   const { eventsData, historyData } = await getData();
+  const historyMap: Map<string, History> = new Map();
 
   historyData.sort((a, b) => a.startDate < b.startDate ? -1 : 1);
 
-  const histories: History[] = historyData.map((doc) => {
+  historyData.forEach((doc) => {
 
     const history = {... doc} as History;
     history.startDateDate = new Date(history.startDate);
@@ -41,12 +44,12 @@ async function assembleData(): Promise<{
       history.photo = false;
     }
 
-    return history;
+    historyMap.set(history.name, history);
 
   });
 
   return {
-    histories,
+    historyMap,
     eventsData,
   }
 
