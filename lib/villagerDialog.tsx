@@ -3,7 +3,7 @@
 import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import { Box, Dialog, Grid, Link, Stack, Typography } from '@mui/material';
 import Image from "next/image";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { dateFormatter, dayOrDays } from '@/lib/functions';
 import CRIcon from './crIcon';
 import { rgbDataURL } from "./functions";
@@ -12,14 +12,23 @@ import { StateContext } from "./stateContext";
 import { ScreenContext } from './screenContext';
 import { DataContext } from './dataContext';
 import { coustard } from './theme';
+import IconGrid from './iconGrid';
 
 export default function VillagerDialog() {
 
   const { showVillagerDialog, setShowVillagerDialog, dialogVillager } = useContext(StateContext);
-  const { mediumScreen } = useContext(ScreenContext);
+  const { mediumScreen, smallScreen } = useContext(ScreenContext);
   const { historyMap } = useContext(DataContext);
   const villagerData = nookipediaData.get(dialogVillager);
   const [baseDim, setBaseDim] = useState(128);
+
+  useEffect(() => {
+    if (mediumScreen) {
+      setBaseDim(64);
+    } else {
+      setBaseDim(128);
+    }
+  }, [mediumScreen])
 
   if (!villagerData || !historyMap) {
     return;
@@ -31,6 +40,10 @@ export default function VillagerDialog() {
     open={showVillagerDialog}
     onClose={() => setShowVillagerDialog(false)}
     maxWidth='xl'
+    PaperProps={{sx: smallScreen ? {
+      maxWidth: "100%",
+      mx: "16px",
+    } : {}}}
   >
     <Grid
       container
@@ -126,10 +139,9 @@ export default function VillagerDialog() {
           <br /><br />
             {history.islandmates.length} islandmates:
           </Typography>
-          {/* <IconGrid
+          <IconGrid
             villagers={history.islandmates}
-            customOnClick={handleClose}
-          /> */}
+          />
           </>  : ''
         }
         <br />
