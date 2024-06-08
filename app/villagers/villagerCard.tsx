@@ -44,10 +44,6 @@ export default function VillagerCard({ history, villagerData }: {
           position: 'relative',
           cursor: 'pointer',
         }}
-        onClick={() => {
-          // setDialogVillager(history.name);
-          // setShowVillagerDialog(true);
-        }}
         onMouseOver={() => {
           setElevation(highElevation);
         }}
