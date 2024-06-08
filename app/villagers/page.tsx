@@ -13,17 +13,18 @@ export default function Villagers() {
   const { historyMap } = useContext(DataContext);
 
   return <>
-    <Legend />
-    <Grid container spacing={2} py={2} justifyContent='center'>
-      {!!historyMap ? Array.from(historyMap.values()).map((history) => (
-        <VillagerCard
-          key={history.name}
-          history={history}
-          villagerData={nookipediaData.get(history.name)!}
-        />
-      )) : <Grid item xs><Loading /></Grid>}
-    </Grid>
-    <Legend />
+    {!!historyMap ? <>
+      <Legend />
+      <Grid container spacing={2} py={2} justifyContent='center'>
+        {Array.from(historyMap.values()).map((history) => (
+          <VillagerCard
+            key={history.name}
+            history={history}
+            villagerData={nookipediaData.get(history.name)!}
+          />
+        ))}
+      </Grid>
+      <Legend />
+    </> : <Loading />}
   </>
-
 }
