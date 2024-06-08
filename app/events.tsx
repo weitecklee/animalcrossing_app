@@ -1,12 +1,13 @@
 'use client';
 
-import { Paper, Chip, Divider, List, ListItem, ListItemAvatar, ListItemText, useTheme, Typography, LinearProgress } from '@mui/material';
+import { Paper, Chip, Divider, List, ListItem, ListItemAvatar, ListItemText, useTheme } from '@mui/material';
 import { useContext } from 'react';
 import { dateFormatter } from '@/lib/functions';
 import { DataContext } from '@/lib/dataContext';
 import { ScreenContext } from '@/lib/screenContext';
 import nookipediaData from '@/lib/nookipediaData';
 import VillagerIcon from '@/lib/villagerIcon';
+import Loading from './loading';
 
 export default function Events() {
 
@@ -46,7 +47,7 @@ export default function Events() {
           </ListItemAvatar>
           <ListItemText primary={rewordEvent(villager, event)} secondary={dateFormatter(new Date(date))}/>
         </ListItem>
-        }) : <LinearProgress sx={{m: 2}}/>}
+        }) : <Loading />}
     </List>
   </Paper>
 
