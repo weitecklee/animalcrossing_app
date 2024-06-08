@@ -1,8 +1,12 @@
+'use client';
+
 import { Grid, Typography } from '@mui/material';
 import ErrorPNG from '../public/avatar19.png';
 import Image from 'next/image';
 
-export default function NotFound() {
+export default function Error({error}: {error: Error & {digest?: string}}) {
+
+  console.log(error);
 
   return <Grid
     container
@@ -12,7 +16,7 @@ export default function NotFound() {
   >
     <Grid item>
       <Typography variant='h5'>
-        There doesn&#39;t seem to be anything here...
+        Seems like something went wrong...
       </Typography>
     </Grid>
     <Grid item>
