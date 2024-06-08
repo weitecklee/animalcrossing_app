@@ -2,9 +2,7 @@ import { Box, Grid, Link, Typography } from '@mui/material';
 import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import Image from 'next/image';
 import AvatarPNG from '@/public/avatar13.png';
-import getData from '@/lib/getData';
-
-const data = getData();
+import Events from './events';
 
 export default function Home() {
 
@@ -15,7 +13,7 @@ export default function Home() {
     spacing={1}
   >
     <Grid item xs={12} sm={4} sx={{pt: 1, pb: 2}}>
-
+      <Events />
     </Grid>
     <Grid item xs={12} sm={8}>
       <Typography>
