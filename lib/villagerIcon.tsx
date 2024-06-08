@@ -12,6 +12,9 @@ export default function VillagerIcon({ villager } : {
   villager: string,
 }) {
 
+
+  console.log("historyMap in VillagerIcon");
+
   const { historyMap } = useContext(DataContext);
   const { mediumScreen } = useContext(ScreenContext);
   const { setDialogVillager, setShowVillagerDialog } = useContext(StateContext);

@@ -10,6 +10,7 @@ import Loading from "../loading";
 
 export default function Villagers() {
 
+  console.log('historyMap in Villagers')
   const { historyMap } = useContext(DataContext);
 
   return <>

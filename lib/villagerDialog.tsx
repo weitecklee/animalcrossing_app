@@ -16,6 +16,8 @@ import IconGrid from './iconGrid';
 
 export default function VillagerDialog() {
 
+  console.log("historyMap in VillagerDialog");
+
   const { showVillagerDialog, setShowVillagerDialog, dialogVillager } = useContext(StateContext);
   const { mediumScreen, smallScreen } = useContext(ScreenContext);
   const { historyMap } = useContext(DataContext);
