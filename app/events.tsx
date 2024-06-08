@@ -1,6 +1,6 @@
 'use client';
 
-import { Paper, Chip, Divider, List, ListItem, ListItemAvatar, ListItemText, useTheme } from '@mui/material';
+import { Paper, Chip, Divider, List, ListItem, ListItemAvatar, ListItemText, useTheme, Typography, LinearProgress } from '@mui/material';
 import { useContext } from 'react';
 import { dateFormatter } from '@/lib/functions';
 import { DataContext } from '@/lib/dataContext';
@@ -26,10 +26,6 @@ export default function Events() {
     return `${villager} ${event}`;
   }
 
-  if (!eventsData) {
-    return;
-  }
-
   return <Paper
     elevation={4}
     sx={{
@@ -41,7 +37,7 @@ export default function Events() {
       <Divider>
         <Chip label="Latest Happenings" color="secondary" />
       </Divider>
-      {eventsData.slice(0, smallScreen ? 3 : 10).map((eventDatum) => {
+      {!!eventsData ? eventsData.slice(0, smallScreen ? 3 : 10).map((eventDatum) => {
         const {date, event, villager} = eventDatum;
         const listItemKey = `${villager} ${event}`;
         return <ListItem key={listItemKey}>
@@ -50,7 +46,7 @@ export default function Events() {
           </ListItemAvatar>
           <ListItemText primary={rewordEvent(villager, event)} secondary={dateFormatter(new Date(date))}/>
         </ListItem>
-        })}
+        }) : <LinearProgress sx={{m: 2}}/>}
     </List>
   </Paper>
 
