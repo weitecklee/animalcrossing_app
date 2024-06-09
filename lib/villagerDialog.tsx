@@ -13,8 +13,6 @@ import { ScreenContext } from './screenContext';
 import { DataContext } from './dataContext';
 import { coustard } from './theme';
 import IconGrid from './iconGrid';
-import assembleData from './assembleData';
-import { History } from '@/types';
 
 export default function VillagerDialog() {
 
@@ -22,16 +20,9 @@ export default function VillagerDialog() {
 
   const { showVillagerDialog, setShowVillagerDialog, dialogVillager } = useContext(StateContext);
   const { mediumScreen, smallScreen } = useContext(ScreenContext);
+  const { historyMap } = useContext(DataContext);
   const villagerData = nookipediaData.get(dialogVillager);
   const [baseDim, setBaseDim] = useState(128);
-  const [historyMap, setHistoryMap] = useState(new Map() as Map<string, History>);
-
-  useEffect(() => {
-    assembleData()
-      .then(({ historyMap }) => {
-        setHistoryMap(historyMap);
-      })
-  }, []);
 
   useEffect(() => {
     if (mediumScreen) {
