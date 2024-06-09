@@ -30,10 +30,10 @@ export default function RootLayout({
                 <StateProvider>
                   <CssBaseline />
                   <TopBar />
-                  <VillagerDialog />
                   <Container maxWidth='xl' sx={{pt: 1}}>
                     {children}
                   </Container>
+                  <VillagerDialog />
                 </StateProvider>
               </ScreenProvider>
             </DataProvider>
