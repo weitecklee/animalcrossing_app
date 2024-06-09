@@ -9,7 +9,7 @@ export const DataContext = createContext({
   eventsData: [],
 } as DataContextProps);
 
-export const DataProvider = async ({ children}: {children: ReactNode}) => {
+export const DataProvider = ({ children}: {children: ReactNode}) => {
 
   const [data, setData] = useState({
     historyMap: new Map(),
