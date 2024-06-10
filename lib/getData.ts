@@ -1,3 +1,5 @@
+'use server';
+
 import { EventDocument, HistoryDocument } from "@/types";
 import { cache } from "react";
 

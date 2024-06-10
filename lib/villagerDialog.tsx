@@ -18,7 +18,6 @@ export default function VillagerDialog() {
 
   const { showVillagerDialog, setShowVillagerDialog, dialogVillager } = useContext(StateContext);
   const { mediumScreen, smallScreen } = useContext(ScreenContext);
-  const { historyMap } = useContext(DataContext);
   const villagerData = nookipediaData.get(dialogVillager);
   const [baseDim, setBaseDim] = useState(128);
 
@@ -30,7 +29,9 @@ export default function VillagerDialog() {
     }
   }, [mediumScreen])
 
-  if (!villagerData || !historyMap) {
+  const { historyMap } = useContext(DataContext);
+
+  if (!villagerData) {
     return;
   }
 
