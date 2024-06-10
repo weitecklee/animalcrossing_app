@@ -1,12 +1,10 @@
 'use client';
 
-import { ArrowBackRounded, ArrowForwardRounded } from '@mui/icons-material';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import { Box, Button, Chip, ClickAwayListener, Collapse, DialogContent, Divider, Fab, List, ListItem, Stack, Tooltip, Typography } from '@mui/material';
+import { Box, Button, Chip, ClickAwayListener, DialogContent, Divider, List, ListItem, Stack, Tooltip, Typography } from '@mui/material';
 import { useContext, useState } from 'react';
 import { dayOrDays } from '@/lib/functions';
 import { DataContext } from "@/lib/dataContext";
-import { ScreenContext } from '@/lib/screenContext';
 import { Trait } from '@/types';
 import CRIcon from '@/lib/crIcon';
 import CustomDialog from '@/lib/customDialog';
@@ -15,11 +13,11 @@ import VillagerIcon from '@/lib/villagerIcon';
 import calculateStats from '@/lib/calculateStats';
 import { coustard } from '@/lib/theme';
 import Loading from '../loading';
+import PhotoDialog from './photoDialog';
 
 export default function Stats() {
 
   const { historyMap } = useContext(DataContext);
-  const { smallScreen } = useContext(ScreenContext);
 
   const [dialogTraitData, setDialogTraitData] = useState<Trait[]>([]);
   const [showTraitDialog, setShowTraitDialog] = useState(false);
@@ -27,7 +25,6 @@ export default function Stats() {
   const [showPhotoDialog, setShowPhotoDialog] = useState(false);
   const [showIslandmatesDialog, setShowIslandmatesDialog] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
-  const [photoDialogTab, setPhotoDialogTab] = useState(true);
   const [showPhotoCollapse, setShowPhotoCollapse] = useState(false);
 
   if (!historyMap.size) {
@@ -46,56 +43,6 @@ export default function Stats() {
     noPhotoData,
     photoStats2,
   } = calculateStats(historyMap);
-
-  const PhotoDialogContent = (
-    <Stack sx={{
-      alignItems: "center"
-    }}>
-      <Divider>
-        <Chip label="Time to give (stay after giving)" color="secondary" />
-      </Divider>
-      <List>
-        {photoData.map((photo) => (
-          photo.villagers.map((villager) => (
-            <ListItem key={villager} disablePadding>
-              <Box display="flex" alignItems="center">
-                <VillagerIcon
-                  villager={villager}
-                />
-                <Typography>
-                  &nbsp;&nbsp;{photo.trait} days ({dayOrDays(historyMap.get(villager)!.duration - photo.duration)})
-                </Typography>
-              </Box>
-            </ListItem>
-        ))))}
-      </List>
-    </Stack>
-  );
-
-  const PhotoDialogContent2 = (
-    <Stack sx={{
-      alignItems: "center"
-    }}>
-      <Divider>
-        <Chip label="Stay without giving" color="secondary" />
-      </Divider>
-      <List>
-        {noPhotoData.map((noPhoto) => (
-          noPhoto.villagers.map((villager) => (
-            <ListItem key={villager} disablePadding>
-              <Box display="flex" alignItems="center">
-                <VillagerIcon
-                  villager={villager}
-                />
-                <Typography>
-                  &nbsp;&nbsp;{dayOrDays(noPhoto.duration)}
-                </Typography>
-              </Box>
-            </ListItem>
-        ))))}
-      </List>
-    </Stack>
-  );
 
   const BreakdownLink = ({traitData, onClick} : {
     traitData?: Trait[],
@@ -299,71 +246,15 @@ export default function Stats() {
         </Box>))}
       </DialogContent>
     </CustomDialog>
-    <CustomDialog
-      open={!smallScreen && showPhotoDialog}
-      onClose={() => setShowPhotoDialog(false)}
-      maxWidth={false}
-      zIndex={1200}
-    >
-      <DialogContent>
-        <Stack direction="row" spacing={2}>
-          {PhotoDialogContent}
-          <Divider orientation='vertical' flexItem/>
-          {PhotoDialogContent2}
-        </Stack>
-      </DialogContent>
-    </CustomDialog>
-    <CustomDialog
-      open={smallScreen && showPhotoDialog}
-      onClose={() => setShowPhotoDialog(false)}
-      maxWidth={false}
-      zIndex={1200}
-    >
-      <Collapse
-        in={showPhotoCollapse}
-        orientation="horizontal"
-        onExited={() => {
-          setPhotoDialogTab((a) => !a);
-          setShowPhotoCollapse(true);
-        }}
-      >
-        <DialogContent>
-          {photoDialogTab ? PhotoDialogContent : PhotoDialogContent2}
-        </DialogContent>
-      </Collapse>
-      <Fab
-        size="small"
-        color="secondary"
-        sx={{
-          display: photoDialogTab ? "none" : "flex",
-          ':hover': {
-            bgcolor: "white"
-          },
-          position: "fixed",
-          top: "50%",
-          left: 8,
-        }}
-        onClick={() => setShowPhotoCollapse(false)}
-      >
-        <ArrowBackRounded />
-      </Fab>
-      <Fab
-        size="small"
-        color="secondary"
-        sx={{
-          display: photoDialogTab ? "flex" : "none",
-          ':hover': {
-            bgcolor: "white"
-          },
-          position: "fixed",
-          top: "50%",
-          right: 8,
-        }}
-        onClick={() => setShowPhotoCollapse(false)}
-      >
-        <ArrowForwardRounded />
-      </Fab>
-    </CustomDialog>
+    <PhotoDialog
+      photoData={photoData}
+      noPhotoData={noPhotoData}
+      historyMap={historyMap}
+      showPhotoCollapse={showPhotoCollapse}
+      setShowPhotoCollapse={setShowPhotoCollapse}
+      showPhotoDialog={showPhotoDialog}
+      setShowPhotoDialog={setShowPhotoDialog}
+    />
     <CustomDialog
       open={showIslandmatesDialog}
       onClose={() => setShowIslandmatesDialog(false)}
