@@ -30,7 +30,7 @@ export default function RootLayout({
                 <StateProvider>
                   <CssBaseline />
                   <TopBar />
-                  <Container maxWidth='xl' sx={{pt: 1}}>
+                  <Container maxWidth='xl' sx={{pt: 1, pb: 2}}>
                     {children}
                   </Container>
                   <VillagerDialog />
