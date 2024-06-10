@@ -1,7 +1,7 @@
 'use client';
 
 import { Grid, Typography } from '@mui/material';
-import ErrorPNG from '../public/avatar19.png';
+import ErrorPNG from '@/public/avatar19.png';
 import Image from 'next/image';
 
 export default function Error({error}: {error: Error & {digest?: string}}) {
