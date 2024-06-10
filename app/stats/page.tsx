@@ -29,6 +29,10 @@ export default function Stats() {
   const [photoDialogTab, setPhotoDialogTab] = useState(true);
   const [showPhotoCollapse, setShowPhotoCollapse] = useState(false);
 
+  if (!historyMap.size) {
+    return;
+  }
+
   const {
     speciesData,
     personalityData,
