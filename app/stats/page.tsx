@@ -14,6 +14,7 @@ import IconGrid from '@/lib/iconGrid';
 import VillagerIcon from '@/lib/villagerIcon';
 import calculateStats from '@/lib/calculateStats';
 import { coustard } from '@/lib/theme';
+import Loading from '../loading';
 
 export default function Stats() {
 
@@ -30,7 +31,7 @@ export default function Stats() {
   const [showPhotoCollapse, setShowPhotoCollapse] = useState(false);
 
   if (!historyMap.size) {
-    return;
+    return <Loading />;
   }
 
   const {

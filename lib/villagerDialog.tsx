@@ -13,6 +13,7 @@ import { ScreenContext } from './screenContext';
 import { DataContext } from './dataContext';
 import { coustard } from './theme';
 import IconGrid from './iconGrid';
+import CustomDialog from './customDialog';
 
 export default function VillagerDialog() {
 
@@ -37,14 +38,10 @@ export default function VillagerDialog() {
 
   const history = historyMap.get(dialogVillager);
 
-  return <Dialog
+  return <CustomDialog
     open={showVillagerDialog}
     onClose={() => setShowVillagerDialog(false)}
-    maxWidth='xl'
-    PaperProps={{sx: smallScreen ? {
-      maxWidth: "100%",
-      mx: "16px",
-    } : {}}}
+    zIndex={1300}
   >
     <Grid
       container
@@ -159,5 +156,5 @@ export default function VillagerDialog() {
         </Typography>
       </Grid>
     </Grid>
-  </Dialog>
+  </CustomDialog>
 }
