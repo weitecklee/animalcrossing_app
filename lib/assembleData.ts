@@ -10,8 +10,6 @@ async function assembleData(): Promise<{
   eventsData: EventDocument[];
 }> {
 
-  console.log('assembleData run');
-
   const { eventsData, historyData } = await getData();
   const historyMap: Map<string, History> = new Map();
 

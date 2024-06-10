@@ -17,7 +17,6 @@ export const DataProvider = ({ children}: {children: ReactNode}) => {
   } as DataContextProps);
 
   useEffect(() => {
-    console.log('assembleData useEffect');
     assembleData()
       .then((res) => setData(res));
   }, []);
