@@ -12,9 +12,13 @@ export default function VillagerIcon({ villager } : {
   villager: string,
 }) {
 
-  const { historyMap } = useContext(DataContext);
   const { mediumScreen } = useContext(ScreenContext);
   const { setDialogVillager, setShowVillagerDialog } = useContext(StateContext);
+  const data = useContext(DataContext);
+  if (!data) {
+    return;
+  }
+  const { historyMap } = data;
 
   const villagerData = nookipediaData.get(villager)!;
   const isResident = !!historyMap.get(villager);
