@@ -1,11 +1,9 @@
-import { Duration, EventDocument, History, PhotoStats, Trait } from "@/types";
+import { Duration, History, PhotoStats, PhotoStats2, Trait } from "@/types";
 import nookipediaData from "./nookipediaData";
 import { calculateDays } from "./functions";
-import getData from "./getData";
 import { cache } from "react";
 
-async function calculateStats(): Promise<{
-  histories: History[],
+function calculateStats(historyMap: Map<string, History>): {
   speciesData: Trait[];
   personalityData: Trait[];
   genderData: Trait[];
@@ -13,11 +11,13 @@ async function calculateStats(): Promise<{
   photoStats: PhotoStats;
   currentResidents: string[];
   islandmatesData: Duration[];
-  eventsData: EventDocument[];
-}> {
+  durationData: Duration[],
+  noPhotoData: Duration[],
+  photoStats2: PhotoStats2,
+} {
 
-  const { eventsData, historyData } = await getData();
-
+  const durationMap: Map<number, Duration> = new Map();
+  const noPhotoMap: Map<number, Duration> = new Map();
   const speciesMap: Map<string, Trait> = new Map();
   const personalityMap: Map<string, Trait> = new Map();
   const genderMap: Map<string, Trait> = new Map();
@@ -27,43 +27,86 @@ async function calculateStats(): Promise<{
     average: 0,
     count: 0,
   };
+  const photoStats2: PhotoStats2 = {
+    shortestAfterGiving: {
+      trait: '',
+      count: 0,
+      villagers: [],
+      duration: 10000,
+    },
+    longestAfterGiving: {
+      trait: '',
+      count: 0,
+      villagers: [],
+      duration: 0,
+    },
+    longestWithoutGiving: {
+      trait: '',
+      count: 0,
+      villagers: [],
+      duration: 0,
+    },
+  }
   const currentResidents: string[] = [];
 
-  historyData.sort((a, b) => a.startDate < b.startDate ? -1 : 1);
-
-  const histories: History[] = historyData.map((doc) => {
-    const historyDatum = {... doc} as History;
-    const startDateDate = new Date(historyDatum.startDate);
-    if (!historyDatum.endDate) {
-      historyDatum.currentResident = true;
-      currentResidents.push(historyDatum.name);
-    } else {
-      historyDatum.currentResident = false;
+  Array.from(historyMap.values()).forEach(history => {
+    if (history.currentResident) {
+      currentResidents.push(history.name);
     }
-    if (historyDatum.photoDate) {
-      historyDatum.photo = true
-      const photoDateDate = new Date(historyDatum.photoDate);
-      historyDatum.photoDateString = photoDateDate.toLocaleDateString("en-ZA");
-      historyDatum.daysToPhoto = calculateDays(startDateDate, photoDateDate);
+    if (history.photo) {
       photoStats.count++;
-      photoStats.average += historyDatum.daysToPhoto;
-      if (!photoMap.has(historyDatum.daysToPhoto)) {
-        photoMap.set(historyDatum.daysToPhoto, {
-          trait: historyDatum.daysToPhoto.toString(),
+      photoStats.average += history.daysToPhoto;
+      if (!photoMap.has(history.daysToPhoto)) {
+        photoMap.set(history.daysToPhoto, {
+          trait: history.daysToPhoto.toString(),
           count: 0,
           villagers: [],
-          duration: historyDatum.daysToPhoto,
+          duration: history.daysToPhoto,
         })
       }
-      const tmp = photoMap.get(historyDatum.daysToPhoto)!;
+      const tmp = photoMap.get(history.daysToPhoto)!;
       tmp.count++;
-      tmp.villagers.push(historyDatum.name);
-
+      tmp.villagers.push(history.name);
+      const stayAfterGiving = calculateDays(history.photoDateDate, history.endDateDate);
+      if (!history.currentResident) {
+        if (stayAfterGiving < photoStats2.shortestAfterGiving.duration) {
+          photoStats2.shortestAfterGiving.duration = stayAfterGiving;
+          photoStats2.shortestAfterGiving.villagers = [history.name];
+        } else if (stayAfterGiving === photoStats2.shortestAfterGiving.duration) {
+          photoStats2.shortestAfterGiving.villagers.push(history.name);
+        }
+      }
+      if (stayAfterGiving > photoStats2.longestAfterGiving.duration) {
+        photoStats2.longestAfterGiving.duration = stayAfterGiving;
+        photoStats2.longestAfterGiving.villagers = [history.name];
+      } else if (stayAfterGiving === photoStats2.longestAfterGiving.duration) {
+        photoStats2.longestAfterGiving.villagers.push(history.name);
+      }
     } else {
-      historyDatum.photo = false;
+      if (!noPhotoMap.has(history.duration)) {
+        noPhotoMap.set(history.duration, {
+          trait: history.duration.toString(),
+          count: 0,
+          villagers: [],
+          duration: history.duration,
+        });
+      }
+      const tmp = noPhotoMap.get(history.duration)!;
+      tmp.count++;
+      tmp.villagers.push(history.name);
     }
-    historyDatum.startDateString = startDateDate.toLocaleDateString("en-ZA");
-    const species = nookipediaData.get(historyDatum.name)!.species;
+    if (!durationMap.has(history.duration)) {
+      durationMap.set(history.duration, {
+        trait: history.duration.toString(),
+        count: 0,
+        villagers: [],
+        duration: history.duration,
+      })
+    }
+    const tmpDuration = durationMap.get(history.duration)!;
+    tmpDuration.count++;
+    tmpDuration.villagers.push(history.name);
+    const species = nookipediaData.get(history.name)!.species;
     if (!speciesMap.has(species)) {
       speciesMap.set(species, {
         trait: species,
@@ -73,8 +116,8 @@ async function calculateStats(): Promise<{
     }
     const tmp = speciesMap.get(species)!;
     tmp.count++;
-    tmp.villagers.push(historyDatum.name);
-    const personality = nookipediaData.get(historyDatum.name)!.personality;
+    tmp.villagers.push(history.name);
+    const personality = nookipediaData.get(history.name)!.personality;
     if (!personalityMap.has(personality)) {
       personalityMap.set(personality, {
         trait: personality,
@@ -84,8 +127,8 @@ async function calculateStats(): Promise<{
     }
     const tmp2 = personalityMap.get(personality)!;
     tmp2.count++;
-    tmp2.villagers.push(historyDatum.name);
-    const gender = nookipediaData.get(historyDatum.name)!.gender;
+    tmp2.villagers.push(history.name);
+    const gender = nookipediaData.get(history.name)!.gender;
     if (!genderMap.has(gender)) {
       genderMap.set(gender, {
         trait: gender,
@@ -95,20 +138,19 @@ async function calculateStats(): Promise<{
     }
     const tmp3 = genderMap.get(gender)!;
     tmp3.count++;
-    tmp3.villagers.push(historyDatum.name);
-    if (!islandmatesMap.has(historyDatum.islandmates.length)) {
-      islandmatesMap.set(historyDatum.islandmates.length, {
-        trait: historyDatum.islandmates.length.toString(),
+    tmp3.villagers.push(history.name);
+    if (!islandmatesMap.has(history.islandmates.length)) {
+      islandmatesMap.set(history.islandmates.length, {
+        trait: history.islandmates.length.toString(),
         count: 0,
         villagers: [],
-        duration: historyDatum.islandmates.length,
+        duration: history.islandmates.length,
       });
     }
-    const tmp4 = islandmatesMap.get(historyDatum.islandmates.length)!;
+    const tmp4 = islandmatesMap.get(history.islandmates.length)!;
     tmp4.count++;
-    tmp4.villagers.push(historyDatum.name);
-    return historyDatum;
-
+    tmp4.villagers.push(history.name);
+    return history;
   });
 
   const speciesData = Array.from(speciesMap.values());
@@ -122,9 +164,17 @@ async function calculateStats(): Promise<{
   photoStats.average /= photoStats.count;
   const islandmatesData = Array.from(islandmatesMap.values());
   islandmatesData.sort((a, b) => b.duration - a.duration);
+  const durationData = Array.from(durationMap.values());
+  durationData.sort((a, b) => b.duration - a.duration);
+
+  const noPhotoData = Array.from(noPhotoMap.values());
+  noPhotoData.sort((a, b) => b.duration - a.duration);
+
+  photoStats2.longestWithoutGiving = noPhotoData[0];
+  photoStats2.longestAfterGiving.trait = photoStats2.longestAfterGiving.duration.toString();
+  photoStats2.shortestAfterGiving.trait = photoStats2.shortestAfterGiving.duration.toString();
 
   return {
-    histories,
     speciesData,
     personalityData,
     genderData,
@@ -132,7 +182,9 @@ async function calculateStats(): Promise<{
     photoStats,
     currentResidents,
     islandmatesData,
-    eventsData,
+    durationData,
+    noPhotoData,
+    photoStats2,
   }
 
 }

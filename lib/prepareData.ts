@@ -36,60 +36,6 @@ export default function prepareData(histories: History[]): PreparedData {
   let i = 0;
 
   for (const history of histories) {
-    history.startDateDate = new Date(history.startDate);
-    if (!history.endDate) {
-      history.endDateDate = new Date();
-      history.endDateDate.setHours(0, 0, 0);
-      history.duration = calculateDays(history.startDateDate, history.endDateDate);
-      history.endDateDate.setDate(history.endDateDate.getDate() + 30);
-      history.endDateDate.setHours(0, 0, 0);
-    } else {
-      history.endDateDate = new Date(history.endDate);
-      history.duration = calculateDays(history.startDateDate, history.endDateDate);
-    }
-    history.endDateString = history.endDateDate.toLocaleDateString("en-ZA");
-    if (history.photo) {
-      history.photoDateDate = new Date(history.photoDate!);
-      const stayAfterGiving = calculateDays(history.photoDateDate, history.endDateDate);
-      if (!history.currentResident) {
-        if (stayAfterGiving < photoStats2.shortestAfterGiving.duration) {
-          photoStats2.shortestAfterGiving.duration = stayAfterGiving;
-          photoStats2.shortestAfterGiving.villagers = [history.name];
-        } else if (stayAfterGiving === photoStats2.shortestAfterGiving.duration) {
-          photoStats2.shortestAfterGiving.villagers.push(history.name);
-        }
-      }
-      if (stayAfterGiving > photoStats2.longestAfterGiving.duration) {
-        photoStats2.longestAfterGiving.duration = stayAfterGiving;
-        photoStats2.longestAfterGiving.villagers = [history.name];
-      } else if (stayAfterGiving === photoStats2.longestAfterGiving.duration) {
-        photoStats2.longestAfterGiving.villagers.push(history.name);
-      }
-    } else {
-      if (!noPhotoMap.has(history.duration)) {
-        noPhotoMap.set(history.duration, {
-          trait: history.duration.toString(),
-          count: 0,
-          villagers: [],
-          duration: history.duration,
-        });
-      }
-      const tmp = noPhotoMap.get(history.duration)!;
-      tmp.count++;
-      tmp.villagers.push(history.name);
-    }
-    if (!durationMap.has(history.duration)) {
-      durationMap.set(history.duration, {
-        trait: history.duration.toString(),
-        count: 0,
-        villagers: [],
-        duration: history.duration,
-      })
-    }
-    const tmpDuration = durationMap.get(history.duration)!;
-    tmpDuration.count++;
-    tmpDuration.villagers.push(history.name);
-    historyMap.set(history.name, history);
     timelineLabels.push(history.name);
     timelineData.push([history.startDateDate.valueOf(), history.endDateDate.valueOf()])
     timelineColors.push('#' + nookipediaData.get(history.name)?.title_color!)

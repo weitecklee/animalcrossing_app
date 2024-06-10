@@ -1,4 +1,5 @@
 import { ImageProps } from "next/image";
+import { DialogProps } from "@mui/material";
 
 export interface HistoryDocument {
   name: string,
@@ -114,4 +115,8 @@ export interface PreparedData {
 export interface DataContextProps {
   historyMap: Map<string, History>,
   eventsData: EventDocument[],
+}
+
+export interface CustomDialogProps extends DialogProps {
+  zIndex: number,
 }
