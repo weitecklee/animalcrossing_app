@@ -14,37 +14,33 @@ export default function VillagerIcon({ villager } : {
 
   const { mediumScreen } = useContext(ScreenContext);
   const { setDialogVillager, setShowVillagerDialog } = useContext(StateContext);
-  const data = useContext(DataContext);
-  if (!data) {
-    return;
-  }
-  const { historyMap } = data;
+  const { historyMap } = useContext(DataContext);
 
   const villagerData = nookipediaData.get(villager)!;
   const isResident = !!historyMap.get(villager);
 
   return (
-      <Box>
-        <CRBadge invisible={!historyMap.get(villager)?.currentResident}>
-          <Image
-            src={villagerData.nh_details.icon_url}
-            alt={villager}
-            title={villager}
-            height={mediumScreen ? 48 : 64}
-            width={mediumScreen ? 48 : 64}
-            onClick={() => {
-                setDialogVillager(villager);
-                setShowVillagerDialog(true);
-            }}
-            style={{
-              cursor: 'pointer',
-              opacity: isResident ? 1 : .4,
-            }}
-            placeholder='blur'
-            blurDataURL={rgbDataURL(villagerData.title_color)}
-          />
-        </CRBadge>
-      </Box>
+    <Box>
+      <CRBadge invisible={!historyMap.get(villager)?.currentResident}>
+        <Image
+          src={villagerData.nh_details.icon_url}
+          alt={villager}
+          title={villager}
+          height={mediumScreen ? 48 : 64}
+          width={mediumScreen ? 48 : 64}
+          onClick={() => {
+              setDialogVillager(villager);
+              setShowVillagerDialog(true);
+          }}
+          style={{
+            cursor: 'pointer',
+            opacity: isResident ? 1 : .4,
+          }}
+          placeholder='blur'
+          blurDataURL={rgbDataURL(villagerData.title_color)}
+        />
+      </CRBadge>
+    </Box>
   );
 
 }

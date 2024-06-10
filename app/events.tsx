@@ -14,11 +14,7 @@ export default function Events() {
 
   const { smallScreen, mediumScreen } = useContext(ScreenContext);
   const theme = useTheme();
-  const data = useContext(DataContext);
-  if (!data) {
-    return;
-  }
-  const { eventsData } = data;
+  const { eventsData } = useContext(DataContext);
 
   const determinePronoun = (villager: string) => nookipediaData.get(villager)!.gender === 'Male' ? 'his' : 'her';
 

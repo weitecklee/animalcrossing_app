@@ -10,11 +10,7 @@ import Loading from "../loading";
 
 export default function Villagers() {
 
-  const data = useContext(DataContext);
-  if (!data) {
-    return;
-  }
-  const { historyMap } = data;
+  const { historyMap } = useContext(DataContext);
 
   return <>
     {!!historyMap ? <>

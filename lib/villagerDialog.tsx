@@ -16,8 +16,6 @@ import IconGrid from './iconGrid';
 
 export default function VillagerDialog() {
 
-  console.log("historyMap in VillagerDialog");
-
   const { showVillagerDialog, setShowVillagerDialog, dialogVillager } = useContext(StateContext);
   const { mediumScreen, smallScreen } = useContext(ScreenContext);
   const villagerData = nookipediaData.get(dialogVillager);
@@ -31,11 +29,7 @@ export default function VillagerDialog() {
     }
   }, [mediumScreen])
 
-  const data = useContext(DataContext);
-  if (!data) {
-    return;
-  }
-  const { historyMap } = data;
+  const { historyMap } = useContext(DataContext);
 
   if (!villagerData) {
     return;
