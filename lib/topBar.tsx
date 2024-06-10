@@ -78,8 +78,22 @@ export default function TopBar() {
             </IconButton>
             <Typography
               variant="title"
-              sx={{cursor: "pointer"}}
-              component={smallScreen ? 'h4': 'h2'}
+              sx={{
+                cursor: "pointer",
+                display: smallScreen ? 'none' : 'block',
+              }}
+              component='h2'
+              onClick={() => router.push('/')}
+            >
+              My Animal Crossing Island
+            </Typography>
+            <Typography
+              variant="title"
+              sx={{
+                cursor: "pointer",
+                display: smallScreen ? 'block' : 'none',
+              }}
+              component='h4'
               onClick={() => router.push('/')}
             >
               My Animal Crossing Island
