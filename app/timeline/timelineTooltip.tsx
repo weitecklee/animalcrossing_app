@@ -1,3 +1,5 @@
+'use client';
+
 import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
@@ -13,6 +15,7 @@ import IconWithText from '@/components/iconWithText';
 import { dayOrDays, rgbDataURL } from '@/lib/functions';
 import { ScreenContext } from '@/lib/screenContext';
 import { coustard } from '@/lib/theme';
+import { StateContext } from '@/lib/stateContext';
 
 function DraggablePaper(props: PaperProps) {
   return (
@@ -35,13 +38,13 @@ function DraggablePaper(props: PaperProps) {
   )
 }
 
-export default function TimelineTooltip({ villagerData, history, setShowVillagerDialog }: {
+export default function TimelineTooltip({ villagerData, history }: {
   villagerData: NookipediaVillager,
   history: History,
-  setShowVillagerDialog: Dispatch<SetStateAction<boolean>>,
 }) {
 
   const { smallScreen } = useContext(ScreenContext);
+  const { setShowVillagerDialog } = useContext(StateContext);
 
   return <DraggablePaper>
     <OpenWithRoundedIcon

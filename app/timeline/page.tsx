@@ -253,7 +253,6 @@ export default function Timeline() {
       <TimelineTooltip
         villagerData={nookipediaData.get(timelineVillager)!}
         history={historyMap.get(timelineVillager)!}
-        setShowVillagerDialog={setShowVillagerDialog}
       />
     }
     <Draggable
