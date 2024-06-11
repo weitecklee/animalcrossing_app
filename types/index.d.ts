@@ -96,9 +96,15 @@ export interface PhotoStats2 {
   longestWithoutGiving: Duration,
 }
 
-export interface PreparedData {
+export interface CalculatedStats {
+  speciesData: Trait[];
+  personalityData: Trait[];
+  genderData: Trait[];
+  photoData: Duration[];
+  photoStats: PhotoStats;
+  currentResidents: string[];
+  islandmatesData: Duration[];
   durationData: Duration[],
-  historyMap: Map<string,History>,
   noPhotoData: Duration[],
   photoStats2: PhotoStats2,
   timelineColors: string[],

@@ -47,6 +47,7 @@ export default function TopBar() {
                 {pages.map((page) => <MenuItem
                   key={page}
                   onClick={() => {
+                    router.push(`/${page.toLowerCase()}`);
                     handleClose();
                   }}
                   sx={{
@@ -112,6 +113,7 @@ export default function TopBar() {
                     },
                   }}
                   variant='navButton'
+                  onClick={() => router.push(`/${page.toLowerCase()}`)}
                 >
                   {<Link href={`/${page.toLowerCase()}`}>{page}</Link>}
                 </Button>
