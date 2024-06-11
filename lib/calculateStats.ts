@@ -1,20 +1,9 @@
-import { Duration, History, PhotoStats, PhotoStats2, Trait } from "@/types";
+import { CalculatedStats, Duration, History, PhotoStats, PhotoStats2, Trait } from "@/types";
 import nookipediaData from "./nookipediaData";
 import { calculateDays } from "./functions";
 import { cache } from "react";
 
-function calculateStats(historyMap: Map<string, History>): {
-  speciesData: Trait[];
-  personalityData: Trait[];
-  genderData: Trait[];
-  photoData: Duration[];
-  photoStats: PhotoStats;
-  currentResidents: string[];
-  islandmatesData: Duration[];
-  durationData: Duration[],
-  noPhotoData: Duration[],
-  photoStats2: PhotoStats2,
-} {
+function calculateStats(historyMap: Map<string, History>): CalculatedStats {
 
   const durationMap: Map<number, Duration> = new Map();
   const noPhotoMap: Map<number, Duration> = new Map();
@@ -48,8 +37,13 @@ function calculateStats(historyMap: Map<string, History>): {
     },
   }
   const currentResidents: string[] = [];
+  const timelineLabels: string[] = [];
+  const timelineData: number[][] = [];
+  const timelineColors: string[] = [];
+  const timelineData2: number[] = [];
+  const timelineNameMap: Map<string, number> = new Map();
 
-  Array.from(historyMap.values()).forEach(history => {
+  Array.from(historyMap.values()).forEach((history, i) => {
     if (history.currentResident) {
       currentResidents.push(history.name);
     }
@@ -150,7 +144,11 @@ function calculateStats(historyMap: Map<string, History>): {
     const tmp4 = islandmatesMap.get(history.islandmates.length)!;
     tmp4.count++;
     tmp4.villagers.push(history.name);
-    return history;
+    timelineLabels.push(history.name);
+    timelineData.push([history.startDateDate.valueOf(), history.endDateDate.valueOf()])
+    timelineColors.push('#' + nookipediaData.get(history.name)?.title_color!)
+    timelineData2.push(history.duration);
+    timelineNameMap.set(history.name, i);
   });
 
   const speciesData = Array.from(speciesMap.values());
@@ -174,6 +172,20 @@ function calculateStats(historyMap: Map<string, History>): {
   photoStats2.longestAfterGiving.trait = photoStats2.longestAfterGiving.duration.toString();
   photoStats2.shortestAfterGiving.trait = photoStats2.shortestAfterGiving.duration.toString();
 
+  const timelineData3: number[] = [];
+  const timelineLabels3: string[] = [];
+  const timelineColors3: string[] = [];
+  const timelineNameMap3: Map<string, number> = new Map();
+
+  for (const duration of durationData) {
+    duration.villagers.forEach((villager, i) => {
+      timelineLabels3.push(villager);
+      timelineData3.push(duration.duration);
+      timelineColors3.push('#' + nookipediaData.get(villager)?.title_color!);
+      timelineNameMap3.set(villager, i);
+    })
+  }
+
   return {
     speciesData,
     personalityData,
@@ -185,6 +197,15 @@ function calculateStats(historyMap: Map<string, History>): {
     durationData,
     noPhotoData,
     photoStats2,
+    timelineColors,
+    timelineColors3,
+    timelineData,
+    timelineData2,
+    timelineData3,
+    timelineLabels,
+    timelineLabels3,
+    timelineNameMap,
+    timelineNameMap3,
   }
 
 }
