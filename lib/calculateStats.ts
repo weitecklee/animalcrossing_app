@@ -177,13 +177,16 @@ function calculateStats(historyMap: Map<string, History>): CalculatedStats {
   const timelineColors3: string[] = [];
   const timelineNameMap3: Map<string, number> = new Map();
 
+  let i = 0;
+
   for (const duration of durationData) {
-    duration.villagers.forEach((villager, i) => {
+    for (const villager of duration.villagers) {
       timelineLabels3.push(villager);
       timelineData3.push(duration.duration);
       timelineColors3.push('#' + nookipediaData.get(villager)?.title_color!);
       timelineNameMap3.set(villager, i);
-    })
+      i++;
+    }
   }
 
   return {

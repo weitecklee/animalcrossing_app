@@ -2,7 +2,7 @@
 
 import OpenWithRoundedIcon from '@mui/icons-material/OpenWithRounded';
 import ViewTimelineRoundedIcon from '@mui/icons-material/ViewTimelineRounded';
-import { Alert, Badge, Box, Button, Snackbar, useMediaQuery } from '@mui/material';
+import { Alert, Badge, Box, Button, Snackbar } from '@mui/material';
 import {
   BarElement,
   CategoryScale,
