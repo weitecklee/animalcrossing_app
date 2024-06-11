@@ -39,7 +39,7 @@ export default function Events() {
       <Divider>
         <Chip label="Latest Happenings" color="secondary" />
       </Divider>
-      {!!eventsData ? eventsData.slice(0, smallScreen ? 3 : 10).map((eventDatum) => {
+      {!!eventsData.length ? eventsData.slice(0, smallScreen ? 3 : 10).map((eventDatum) => {
         const {date, event, villager} = eventDatum;
         const listItemKey = `${villager} ${event}`;
         return <ListItem key={listItemKey}>
