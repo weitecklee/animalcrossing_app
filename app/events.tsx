@@ -11,7 +11,6 @@ import Loading from './loading';
 
 export default function Events() {
 
-
   const { smallScreen, mediumScreen } = useContext(ScreenContext);
   const theme = useTheme();
   const { eventsData } = useContext(DataContext);
