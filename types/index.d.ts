@@ -126,3 +126,7 @@ export interface DataContextProps {
 export interface CustomDialogProps extends DialogProps {
   zIndex: number,
 }
+
+export interface CustomImageProps extends ImageProps {
+  blurColor: string,
+}

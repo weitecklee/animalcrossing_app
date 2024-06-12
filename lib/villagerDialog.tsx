@@ -1,12 +1,10 @@
 'use client';
 
 import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
-import { Box, Collapse, Dialog, Grid, Link, Stack, Typography } from '@mui/material';
-import Image from "next/image";
+import { Box, Collapse, Grid, Link, Stack, Typography } from '@mui/material';
 import { useContext, useEffect, useState } from "react";
 import { dateFormatter, dayOrDays } from '@/lib/functions';
 import CRIcon from './crIcon';
-import { rgbDataURL } from "./functions";
 import nookipediaData from "./nookipediaData";
 import { StateContext } from "./stateContext";
 import { ScreenContext } from './screenContext';
@@ -14,11 +12,12 @@ import { DataContext } from './dataContext';
 import { coustard } from './theme';
 import IconGrid from './iconGrid';
 import CustomDialog from './customDialog';
+import CustomImage from './customImage';
 
 export default function VillagerDialog() {
 
   const { showVillagerDialog, setShowVillagerDialog, dialogVillager } = useContext(StateContext);
-  const { mediumScreen, smallScreen } = useContext(ScreenContext);
+  const { mediumScreen } = useContext(ScreenContext);
   const villagerData = nookipediaData.get(dialogVillager);
   const [baseDim, setBaseDim] = useState(128);
   const [showCollapse, setShowCollapse] = useState(true);
@@ -57,45 +56,30 @@ export default function VillagerDialog() {
       >
         <Grid item>
           <Stack direction="row" spacing={2}>
-            <Image
+            <CustomImage
               src={villagerData.image_url}
               alt={`${villagerData.name} image`}
               title={villagerData.name}
               width={2 * baseDim}
               height={3 * baseDim}
-              sizes="100vw"
-              style={{
-                objectFit: 'contain',
-              }}
-              placeholder='blur'
-              blurDataURL={rgbDataURL(villagerData.title_color)}
+              blurColor={villagerData.title_color}
             />
             <Stack alignItems="center">
-              <Image
+              <CustomImage
                 src={villagerData.nh_details.icon_url}
                 alt={`${villagerData.name} icon`}
                 title={villagerData.name}
                 width={baseDim}
                 height={baseDim}
-                sizes="100vw"
-                style={{
-                  objectFit: 'contain',
-                }}
-                placeholder='blur'
-                blurDataURL={rgbDataURL(villagerData.title_color)}
+                blurColor={villagerData.title_color}
               />
-              <Image
+              <CustomImage
                 src={villagerData.nh_details.photo_url}
                 alt={`${villagerData.name} photo`}
                 title={villagerData.name}
                 width={2 * baseDim}
                 height={2 * baseDim}
-                sizes="100vw"
-                style={{
-                  objectFit: 'contain',
-                }}
-                placeholder='blur'
-                blurDataURL={rgbDataURL(villagerData.title_color)}
+                blurColor={villagerData.title_color}
               />
             </Stack>
           </Stack>
