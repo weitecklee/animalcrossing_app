@@ -6,12 +6,12 @@ import { useContext, useState } from 'react';
 import { dayOrDays } from '@/lib/functions';
 import { DataContext } from "@/lib/dataContext";
 import { Trait } from '@/types';
-import CRIcon from '@/lib/crIcon';
-import CustomDialog from '@/lib/customDialog';
-import IconGrid from '@/lib/iconGrid';
-import VillagerIcon from '@/lib/villagerIcon';
+import CRIcon from '@/components/crIcon';
+import CustomDialog from '@/components/customDialog';
+import IconGrid from '@/components/iconGrid';
+import VillagerIcon from '@/components/villagerIcon';
 import calculateStats from '@/lib/calculateStats';
-import { coustard } from '@/lib/theme';
+import { coustard } from '@/app/theme';
 import Loading from '../loading';
 import PhotoDialog from './photoDialog';
 

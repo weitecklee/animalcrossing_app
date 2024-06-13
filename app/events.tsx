@@ -6,7 +6,7 @@ import { dateFormatter } from '@/lib/functions';
 import { DataContext } from '@/lib/dataContext';
 import { ScreenContext } from '@/lib/screenContext';
 import nookipediaData from '@/lib/nookipediaData';
-import VillagerIcon from '@/lib/villagerIcon';
+import VillagerIcon from '@/components/villagerIcon';
 import Loading from './loading';
 
 export default function Events() {

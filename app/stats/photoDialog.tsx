@@ -1,7 +1,7 @@
-import CustomDialog from '@/lib/customDialog';
+import CustomDialog from '@/components/customDialog';
 import { dayOrDays } from '@/lib/functions';
 import { ScreenContext } from '@/lib/screenContext';
-import VillagerIcon from '@/lib/villagerIcon';
+import VillagerIcon from '@/components/villagerIcon';
 import { Duration, History } from '@/types';
 import { ArrowBackRounded, ArrowForwardRounded } from '@mui/icons-material';
 import { Box, Chip, Collapse, DialogContent, Divider, Fab, List, ListItem, Stack, Typography } from '@mui/material';

@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { useContext } from 'react';
 import { ScreenContext } from '@/lib/screenContext';
-import { coustard } from '@/lib/theme';
+import { coustard } from '@/app/theme';
 
 export default function CRIcon() {
 

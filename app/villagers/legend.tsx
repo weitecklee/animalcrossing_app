@@ -7,7 +7,7 @@ import CameraAltRoundedIcon from '@mui/icons-material/CameraAltRounded';
 import { Stack, Typography } from '@mui/material';
 import { ScreenContext } from '@/lib/screenContext';
 import IconWithText from '@/components/iconWithText';
-import CRIcon from '@/lib/crIcon';
+import CRIcon from '@/components/crIcon';
 import { useContext } from 'react';
 
 export default function Legend() {
