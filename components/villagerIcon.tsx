@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import { useContext } from 'react';
-import { ScreenContext } from "./screenContext";
-import { DataContext } from './dataContext';
+import { ScreenContext } from "@/lib/screenContext";
+import { DataContext } from '@/lib/dataContext';
 import CRBadge from './crBadge';
 import { Box, useTheme } from '@mui/material';
-import { rgbDataURL } from './functions';
-import nookipediaData from './nookipediaData';
-import { StateContext } from './stateContext';
+import { rgbDataURL } from '@/lib/functions';
+import nookipediaData from '@/lib/nookipediaData';
+import { StateContext } from '@/lib/stateContext';
+import VillagerTooltip from './villagerTooltip';
 
 export default function VillagerIcon({ villager, customOnClick } : {
   villager: string,
@@ -21,7 +22,7 @@ export default function VillagerIcon({ villager, customOnClick } : {
   const villagerData = nookipediaData.get(villager)!;
   const isResident = !!historyMap.get(villager);
 
-  return (
+  return <VillagerTooltip villager={villager}>
     <Box>
       <CRBadge invisible={!historyMap.get(villager)?.currentResident}>
         <Image
@@ -50,6 +51,6 @@ export default function VillagerIcon({ villager, customOnClick } : {
         />
       </CRBadge>
     </Box>
-  );
+  </VillagerTooltip>;
 
 }

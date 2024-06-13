@@ -5,7 +5,7 @@ import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Slide, Tool
 import Image from 'next/image';
 import { MouseEvent, useContext, useState } from 'react';
 import FavIcon from '@/public/lasagnark8.png';
-import { ScreenContext } from './screenContext';
+import { ScreenContext } from '@/lib/screenContext';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 

@@ -12,8 +12,8 @@ import { History, NookipediaVillager } from '@/types';
 import IconWithText from '@/components/iconWithText';
 import { ScreenContext } from '@/lib/screenContext';
 import { StateContext } from '@/lib/stateContext';
-import { coustard } from '@/lib/theme';
-import CRIcon from '@/lib/crIcon';
+import { coustard } from '@/app/theme';
+import CRIcon from '@/components/crIcon';
 
 const lowElevation = 4;
 const highElevation = 14;

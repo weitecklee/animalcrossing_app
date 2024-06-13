@@ -2,7 +2,7 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { Box, Dialog, Fab } from '@mui/material';
 import { useContext } from 'react';
 import { CustomDialogProps } from '@/types';
-import { ScreenContext } from './screenContext';
+import { ScreenContext } from '@/lib/screenContext';
 
 export default function CustomDialog({zIndex, ...props}: CustomDialogProps) {
 

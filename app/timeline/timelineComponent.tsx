@@ -25,7 +25,7 @@ import { ScreenContext } from '@/lib/screenContext';
 import calculateStats from '@/lib/calculateStats';
 import { StateContext } from '@/lib/stateContext';
 import nookipediaData from '@/lib/nookipediaData';
-import { coustard } from '@/lib/theme';
+import { coustard } from '@/app/theme';
 
 ChartJS.register(
   CategoryScale,

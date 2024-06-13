@@ -1,5 +1,5 @@
 import { ImageProps } from "next/image";
-import { DialogProps } from "@mui/material";
+import { DialogProps, TooltipProps } from "@mui/material";
 
 export interface HistoryDocument {
   name: string,
@@ -129,4 +129,8 @@ export interface CustomDialogProps extends DialogProps {
 
 export interface CustomImageProps extends ImageProps {
   blurColor: string,
+}
+
+export interface VillagerTooltipProps extends Omit<TooltipProps, 'title'> {
+  villager: string,
 }

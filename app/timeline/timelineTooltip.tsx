@@ -7,14 +7,14 @@ import OpenWithRoundedIcon from '@mui/icons-material/OpenWithRounded';
 import { Box, Stack, Typography } from '@mui/material';
 import Paper, { PaperProps } from '@mui/material/Paper';
 import Image from 'next/image';
-import { Dispatch, SetStateAction, useContext } from 'react';
+import { useContext } from 'react';
 import Draggable from 'react-draggable';
 import { History, NookipediaVillager } from '@/types';
-import CRBadge from '@/lib/crBadge';
+import CRBadge from '@/components/crBadge';
 import IconWithText from '@/components/iconWithText';
 import { dayOrDays, rgbDataURL } from '@/lib/functions';
 import { ScreenContext } from '@/lib/screenContext';
-import { coustard } from '@/lib/theme';
+import { coustard } from '@/app/theme';
 import { StateContext } from '@/lib/stateContext';
 
 function DraggablePaper(props: PaperProps) {

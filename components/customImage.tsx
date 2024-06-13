@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { rgbDataURL } from '@/lib/functions';
-import { CustomImageProps } from '../types';
+import { CustomImageProps } from '@/types';
 
 export default function CustomImage({ blurColor, ...props}: CustomImageProps) {
   const { alt } = props;

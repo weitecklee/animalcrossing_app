@@ -1,7 +1,7 @@
 import { Badge, BadgeProps, Typography } from "@mui/material";
 import { useContext } from 'react';
-import { ScreenContext } from "./screenContext";
-import { coustard } from "./theme";
+import { ScreenContext } from "@/lib/screenContext";
+import { coustard } from "@/app/theme";
 
 export default function CRBadge({...props}: BadgeProps) {
 

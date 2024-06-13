@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
-import { theme } from "@/lib/theme";
-import TopBar from "@/lib/topBar";
+import { theme } from "@/app/theme";
+import TopBar from "./topBar";
 import { ScreenProvider } from "@/lib/screenContext";
 import { Container, CssBaseline } from "@mui/material";
 import { StateProvider } from "@/lib/stateContext";
-import VillagerDialog from "@/lib/villagerDialog";
+import VillagerDialog from "@/components/villagerDialog";
 import { DataProvider } from "@/lib/dataContext";
 
 export const metadata: Metadata = {
   title: "My Animal Crossing Island",
   description: "Showcase of my Animal Crossing: New Horizons island and its villagers",
-  metadataBase: new URL('https://animalcrossing-app.vercel.app/'),
+  metadataBase: new URL('https://myacisland.vercel.app/'),
 };
 
 export default function RootLayout({
