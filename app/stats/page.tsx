@@ -1,7 +1,7 @@
 'use client';
 
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import { Box, Button, Chip, ClickAwayListener, DialogContent, Divider, List, ListItem, Stack, Tooltip, Typography } from '@mui/material';
+import { AppBar, Box, Button, Chip, ClickAwayListener, DialogContent, Divider, List, ListItem, Stack, Tooltip, Typography } from '@mui/material';
 import { useContext, useState } from 'react';
 import { dayOrDays } from '@/lib/functions';
 import { DataContext } from "@/lib/dataContext";
@@ -11,7 +11,7 @@ import CustomDialog from '@/components/customDialog';
 import IconGrid from '@/components/iconGrid';
 import VillagerIcon from '@/components/villagerIcon';
 import calculateStats from '@/lib/calculateStats';
-import { coustard } from '@/app/theme';
+import { coustard, theme } from '@/app/theme';
 import Loading from '@/app/loading';
 import PhotoDialog from './photoDialog';
 
@@ -26,6 +26,7 @@ export default function Stats() {
   const [showIslandmatesDialog, setShowIslandmatesDialog] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
   const [showPhotoCollapse, setShowPhotoCollapse] = useState(false);
+  const [traitDialogTitle, setTraitDialogTitle] = useState('');
 
   if (!historyMap.size) {
     return <Loading />;
@@ -44,9 +45,10 @@ export default function Stats() {
     photoStats2,
   } = calculateStats(historyMap);
 
-  const BreakdownLink = ({traitData, onClick} : {
+  const BreakdownLink = ({traitData, onClick, trait} : {
     traitData?: Trait[],
     onClick?: () => void,
+    trait?: string,
   }) => (
     <Button
       size="small"
@@ -57,7 +59,8 @@ export default function Stats() {
         fontFamily: coustard.style.fontFamily,
       }}
       onClick={() => {
-        if (traitData) {
+        if (traitData && trait) {
+          setTraitDialogTitle(trait);
           setDialogTraitData(traitData);
           setShowTraitDialog(true);
         } else {
@@ -68,6 +71,18 @@ export default function Stats() {
       Full breakdown
     </Button>
   );
+
+  const TitleChip = () => (
+    <Box
+      display="flex"
+      justifyContent="center"
+      mb={1}
+      p={1}
+      bgcolor={theme.palette.secondary.main}
+      borderRadius={Number.MAX_SAFE_INTEGER}
+    >
+      <Typography fontFamily={coustard.style.fontFamily} fontSize='1.2rem'>{traitDialogTitle}</Typography>
+    </Box>)
 
   return <>
     <Typography>
@@ -109,7 +124,7 @@ export default function Stats() {
       traitData={speciesData[0]}
     />
     <Typography>
-      <BreakdownLink traitData={speciesData}/>
+      <BreakdownLink traitData={speciesData} trait='Species'/>
     </Typography>
     <Divider>
       <Chip label="Personality" color="secondary" />
@@ -121,7 +136,7 @@ export default function Stats() {
       traitData={personalityData[0]}
     />
     <Typography>
-      <BreakdownLink traitData={personalityData}/>
+      <BreakdownLink traitData={personalityData} trait='Personality' />
     </Typography>
     <Divider>
       <Chip label="Gender" color="secondary" />
@@ -131,7 +146,7 @@ export default function Stats() {
       <br />
       {genderData[1].trait}: {genderData[1].count}
       <br />
-      <BreakdownLink traitData={genderData}/>
+      <BreakdownLink traitData={genderData} trait='Gender' />
     </Typography>
     <Divider>
       <Chip
@@ -236,6 +251,7 @@ export default function Stats() {
       zIndex={1200}
     >
       <DialogContent>
+        <TitleChip />
         {dialogTraitData.map((traitData) => (<Box key={traitData.trait}>
           <Divider>
             <Chip label={`${traitData.trait}: ${traitData.count}`} color="secondary" />
