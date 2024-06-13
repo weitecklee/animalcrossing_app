@@ -13,7 +13,7 @@ import { DataProvider } from "@/lib/dataContext";
 export const metadata: Metadata = {
   title: "My Animal Crossing Island",
   description: "Showcase of my Animal Crossing: New Horizons island and its villagers",
-  metadataBase: new URL('https://animalcrossing-app.vercel.app/'),
+  metadataBase: new URL('https://myacisland.vercel.app/'),
 };
 
 export default function RootLayout({

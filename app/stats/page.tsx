@@ -12,7 +12,7 @@ import IconGrid from '@/components/iconGrid';
 import VillagerIcon from '@/components/villagerIcon';
 import calculateStats from '@/lib/calculateStats';
 import { coustard } from '@/app/theme';
-import Loading from '../loading';
+import Loading from '@/app/loading';
 import PhotoDialog from './photoDialog';
 
 export default function Stats() {

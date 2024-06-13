@@ -7,11 +7,11 @@ import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 import Image from 'next/image';
 import CRBadge from './crBadge';
 import IconWithText from '@/components/iconWithText';
-import { dayOrDays, rgbDataURL } from '../lib/functions';
-import nookipediaData from '../lib/nookipediaData';
-import { DataContext } from '../lib/dataContext';
-import { ScreenContext } from '../lib/screenContext';
-import { coustard } from '../app/theme';
+import { dayOrDays, rgbDataURL } from '@/lib/functions';
+import nookipediaData from '@/lib/nookipediaData';
+import { DataContext } from '@/lib/dataContext';
+import { ScreenContext } from '@/lib/screenContext';
+import { coustard } from '@/app/theme';
 
 export default function VillagerTooltip({ villager, ...props }: VillagerTooltipProps) {
 

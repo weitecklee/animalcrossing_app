@@ -6,7 +6,7 @@ import { Grid } from "@mui/material";
 import Legend from "./legend";
 import { useContext } from "react";
 import { DataContext } from "@/lib/dataContext";
-import Loading from "../loading";
+import Loading from "@/app/loading";
 
 export default function Villagers() {
 
