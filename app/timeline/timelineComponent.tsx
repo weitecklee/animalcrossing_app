@@ -101,7 +101,7 @@ options2.plugins.zoom.limits = {
 export default function Timeline() {
 
   const { historyMap } = useContext(DataContext);
-  const { setShowVillagerDialog, setDialogVillager } = useContext(StateContext);
+  const { setDialogVillager } = useContext(StateContext);
 
   const {
     timelineColors,
@@ -207,7 +207,7 @@ export default function Timeline() {
   return <Box sx={{
     position: "relative",
     width: "100%",
-    height: 'calc(100vh - 88px)',
+    height: 'calc(100dvh - 88px)',
   }}>
     <Snackbar
       open={openSnackbar}
