@@ -124,7 +124,7 @@ export default function VillagerDialog() {
           }
           {history ? <>
             <Typography>
-              Duration of residence:&nbsp;
+              Length of stay:&nbsp;
               {dayOrDays(history.duration)}{history.currentResident && " and counting"}
             <br /><br />
               {history.islandmates.length} islandmates:

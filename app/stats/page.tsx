@@ -14,6 +14,8 @@ import calculateStats from '@/lib/calculateStats';
 import { coustard } from '@/app/theme';
 import Loading from '@/app/loading';
 import PhotoDialog from './photoDialog';
+import TitleChip from './titleChip';
+import StatsDivider from './statsDivider';
 
 export default function Stats() {
 
@@ -26,6 +28,7 @@ export default function Stats() {
   const [showIslandmatesDialog, setShowIslandmatesDialog] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
   const [showPhotoCollapse, setShowPhotoCollapse] = useState(false);
+  const [traitDialogTitle, setTraitDialogTitle] = useState('');
 
   if (!historyMap.size) {
     return <Loading />;
@@ -44,9 +47,10 @@ export default function Stats() {
     photoStats2,
   } = calculateStats(historyMap);
 
-  const BreakdownLink = ({traitData, onClick} : {
+  const BreakdownLink = ({traitData, onClick, trait} : {
     traitData?: Trait[],
     onClick?: () => void,
+    trait?: string,
   }) => (
     <Button
       size="small"
@@ -57,7 +61,8 @@ export default function Stats() {
         fontFamily: coustard.style.fontFamily,
       }}
       onClick={() => {
-        if (traitData) {
+        if (traitData && trait) {
+          setTraitDialogTitle(trait);
           setDialogTraitData(traitData);
           setShowTraitDialog(true);
         } else {
@@ -68,6 +73,7 @@ export default function Stats() {
       Full breakdown
     </Button>
   );
+
 
   return <>
     <Typography>
@@ -80,9 +86,7 @@ export default function Stats() {
       </Typography>
     </Stack>
     <IconGrid villagers={currentResidents} />
-    <Divider>
-      <Chip label="Duration of Residence" color="secondary" />
-    </Divider>
+    <StatsDivider label='Length of Stay' />
     <Typography>
       Average: {(Array.from(historyMap.values()).reduce((a, b) => a + b.duration, 0) / historyMap.size).toFixed(2)} days
       <br />
@@ -99,9 +103,7 @@ export default function Stats() {
       traitData={durationData[durationData.length - 1]}
     />
     <BreakdownLink onClick={() => {setShowDurationDialog(true);}} />
-    <Divider>
-      <Chip label="Species" color="secondary" />
-    </Divider>
+    <StatsDivider label='Species' />
     <Typography>
       Most common: {speciesData[0].trait}
     </Typography>
@@ -109,11 +111,9 @@ export default function Stats() {
       traitData={speciesData[0]}
     />
     <Typography>
-      <BreakdownLink traitData={speciesData}/>
+      <BreakdownLink traitData={speciesData} trait='Species'/>
     </Typography>
-    <Divider>
-      <Chip label="Personality" color="secondary" />
-    </Divider>
+    <StatsDivider label='Personality' />
     <Typography>
       Most common: {personalityData[0].trait}
     </Typography>
@@ -121,39 +121,34 @@ export default function Stats() {
       traitData={personalityData[0]}
     />
     <Typography>
-      <BreakdownLink traitData={personalityData}/>
+      <BreakdownLink traitData={personalityData} trait='Personality' />
     </Typography>
-    <Divider>
-      <Chip label="Gender" color="secondary" />
-    </Divider>
+    <StatsDivider label='Gender' />
     <Typography>
       {genderData[0].trait}: {genderData[0].count}
       <br />
       {genderData[1].trait}: {genderData[1].count}
       <br />
-      <BreakdownLink traitData={genderData}/>
+      <BreakdownLink traitData={genderData} trait='Gender' />
     </Typography>
-    <Divider>
-      <Chip
-        label="Photos"
-        color="secondary"
-        deleteIcon={
-          <Tooltip
-            title={
-              <ClickAwayListener onClickAway={() => {setShowTooltip(false);}}>
-                <Typography>
-                  You can interact with villagers to raise your friendship level with them, usually by talking to them, giving them gifts, or completing tasks for them. Once this friendship level is high enough, villagers may randomly give you their photo after being gifted a high quality item. I usually try to wait till I have received a villager&#39;s photo before I let them leave the island.
-                </Typography>
-              </ClickAwayListener>
-            }
-            open={showTooltip}
-          >
-            <InfoOutlinedIcon />
-          </Tooltip>
-        }
-        onDelete={() => {setShowTooltip((a) => !a)}}
-      />
-    </Divider>
+    <StatsDivider
+      label="Photos"
+      deleteIcon={
+        <Tooltip
+          title={
+            <ClickAwayListener onClickAway={() => {setShowTooltip(false);}}>
+              <Typography>
+                You can interact with villagers to raise your friendship level with them, usually by talking to them, giving them gifts, or completing tasks for them. Once this friendship level is high enough, villagers may randomly give you their photo after being gifted a high quality item. I usually try to wait till I have received a villager&#39;s photo before I let them leave the island.
+              </Typography>
+            </ClickAwayListener>
+          }
+          open={showTooltip}
+        >
+          <InfoOutlinedIcon />
+        </Tooltip>
+      }
+      onDelete={() => {setShowTooltip((a) => !a)}}
+    />
     <Typography>
       Given: {photoStats.count} ({(photoStats.count / historyMap.size * 100).toFixed(2)}%)
       <br />
@@ -189,9 +184,7 @@ export default function Stats() {
       traitData={photoStats2.longestWithoutGiving}
     />
     <BreakdownLink onClick={() => {setShowPhotoDialog(true); setShowPhotoCollapse(true);}} />
-    <Divider>
-      <Chip label="Islandmates" color="secondary" />
-    </Divider>
+    <StatsDivider label='Islandmates' />
     <Typography>
       Most islandmates: {islandmatesData[0].trait}
     </Typography>
@@ -212,10 +205,11 @@ export default function Stats() {
       zIndex={1200}
     >
       <DialogContent>
+        <TitleChip title={'Length of Stay'}/>
         <List>
           {durationData.map((duration) => (
             duration.villagers.map((villager) => (
-              <ListItem key={villager} disablePadding>
+              <ListItem key={villager} disablePadding sx={{display: 'flex', justifyContent: 'center'}}>
                 <Box display="flex" alignItems="center">
                   <VillagerIcon
                     villager={villager}
@@ -236,6 +230,7 @@ export default function Stats() {
       zIndex={1200}
     >
       <DialogContent>
+        <TitleChip title={traitDialogTitle}/>
         {dialogTraitData.map((traitData) => (<Box key={traitData.trait}>
           <Divider>
             <Chip label={`${traitData.trait}: ${traitData.count}`} color="secondary" />
@@ -262,16 +257,17 @@ export default function Stats() {
       zIndex={1200}
     >
       <DialogContent>
+        <TitleChip title='Islandmates' />
         <List>
           {islandmatesData.map((islandmates) => (
             islandmates.villagers.map((villager) => (
-              <ListItem key={villager} disablePadding>
+              <ListItem key={villager} disablePadding sx={{display: 'flex', justifyContent: 'center'}}>
                 <Box display="flex" alignItems="center">
                   <VillagerIcon
                     villager={villager}
                   />
                   <Typography>
-                    &nbsp;&nbsp;{islandmates.trait} islandmates
+                    &nbsp;&nbsp;{islandmates.trait}
                   </Typography>
                 </Box>
               </ListItem>

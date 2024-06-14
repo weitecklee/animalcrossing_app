@@ -6,6 +6,7 @@ import { Duration, History } from '@/types';
 import { ArrowBackRounded, ArrowForwardRounded } from '@mui/icons-material';
 import { Box, Chip, Collapse, DialogContent, Divider, Fab, List, ListItem, Stack, Typography } from '@mui/material';
 import { Dispatch, SetStateAction, useContext, useState } from 'react';
+import TitleChip from './titleChip';
 
 export default function PhotoDialog({ photoData, noPhotoData, historyMap, showPhotoDialog, setShowPhotoDialog, showPhotoCollapse, setShowPhotoCollapse }: {
   photoData: Duration[],
@@ -86,6 +87,7 @@ export default function PhotoDialog({ photoData, noPhotoData, historyMap, showPh
         }}
       >
         <DialogContent>
+          <TitleChip title='Photos' />
           {photoDialogTab ? PhotoDialogContent : PhotoDialogContent2}
         </DialogContent>
       </Collapse>
@@ -131,6 +133,7 @@ export default function PhotoDialog({ photoData, noPhotoData, historyMap, showPh
     zIndex={1200}
   >
     <DialogContent>
+      <TitleChip title='Photos' />
       <Stack direction="row" spacing={2}>
         {PhotoDialogContent}
         <Divider orientation='vertical' flexItem/>

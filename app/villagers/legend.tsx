@@ -38,7 +38,7 @@ export default function Legend() {
     />
     <IconWithText
       Icon={AccessTimeRoundedIcon}
-      text={'Duration of residence'}
+      text={'Length of stay'}
       screenBoolean={mediumScreen}
     />
   </>
