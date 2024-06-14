@@ -72,16 +72,17 @@ export default function Stats() {
     </Button>
   );
 
-  const TitleChip = () => (
+  const TitleChip = ({title}: {title?: string}) => (
     <Box
       display="flex"
       justifyContent="center"
       mb={1}
-      p={1}
+      py={1}
+      px={2}
       bgcolor={theme.palette.secondary.main}
       borderRadius={Number.MAX_SAFE_INTEGER}
     >
-      <Typography fontFamily={coustard.style.fontFamily} fontSize='1.2rem'>{traitDialogTitle}</Typography>
+      <Typography fontFamily={coustard.style.fontFamily} fontSize='1.2rem'>{title || traitDialogTitle}</Typography>
     </Box>)
 
   return <>
@@ -227,10 +228,11 @@ export default function Stats() {
       zIndex={1200}
     >
       <DialogContent>
+        <TitleChip title={'Duration of Residence'}/>
         <List>
           {durationData.map((duration) => (
             duration.villagers.map((villager) => (
-              <ListItem key={villager} disablePadding>
+              <ListItem key={villager} disablePadding sx={{display: 'flex', justifyContent: 'center'}}>
                 <Box display="flex" alignItems="center">
                   <VillagerIcon
                     villager={villager}
@@ -278,16 +280,17 @@ export default function Stats() {
       zIndex={1200}
     >
       <DialogContent>
+        <TitleChip title='Islandmates' />
         <List>
           {islandmatesData.map((islandmates) => (
             islandmates.villagers.map((villager) => (
-              <ListItem key={villager} disablePadding>
+              <ListItem key={villager} disablePadding sx={{display: 'flex', justifyContent: 'center'}}>
                 <Box display="flex" alignItems="center">
                   <VillagerIcon
                     villager={villager}
                   />
                   <Typography>
-                    &nbsp;&nbsp;{islandmates.trait} islandmates
+                    &nbsp;&nbsp;{islandmates.trait}
                   </Typography>
                 </Box>
               </ListItem>
