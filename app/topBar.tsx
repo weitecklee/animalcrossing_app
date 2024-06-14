@@ -86,7 +86,6 @@ export default function TopBar() {
               variant="title"
               sx={{
                 cursor: "pointer",
-                display: smallScreen ? 'block' : 'none',
               }}
               component={titleComponent}
               onClick={() => router.push('/')}

@@ -101,7 +101,7 @@ options2.plugins.zoom.limits = {
 export default function Timeline() {
 
   const { historyMap } = useContext(DataContext);
-  const { setShowVillagerDialog, setDialogVillager } = useContext(StateContext);
+  const { setDialogVillager } = useContext(StateContext);
 
   const {
     timelineColors,
