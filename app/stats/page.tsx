@@ -1,7 +1,7 @@
 'use client';
 
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import { AppBar, Box, Button, Chip, ClickAwayListener, DialogContent, Divider, List, ListItem, Stack, Tooltip, Typography } from '@mui/material';
+import { Box, Button, Chip, ClickAwayListener, DialogContent, Divider, List, ListItem, Stack, Tooltip, Typography } from '@mui/material';
 import { useContext, useState } from 'react';
 import { dayOrDays } from '@/lib/functions';
 import { DataContext } from "@/lib/dataContext";
@@ -11,9 +11,10 @@ import CustomDialog from '@/components/customDialog';
 import IconGrid from '@/components/iconGrid';
 import VillagerIcon from '@/components/villagerIcon';
 import calculateStats from '@/lib/calculateStats';
-import { coustard, theme } from '@/app/theme';
+import { coustard } from '@/app/theme';
 import Loading from '@/app/loading';
 import PhotoDialog from './photoDialog';
+import TitleChip from './titleChip';
 
 export default function Stats() {
 
@@ -72,18 +73,6 @@ export default function Stats() {
     </Button>
   );
 
-  const TitleChip = ({title}: {title?: string}) => (
-    <Box
-      display="flex"
-      justifyContent="center"
-      mb={1}
-      py={1}
-      px={2}
-      bgcolor={theme.palette.secondary.main}
-      borderRadius={Number.MAX_SAFE_INTEGER}
-    >
-      <Typography fontFamily={coustard.style.fontFamily} fontSize='1.2rem'>{title || traitDialogTitle}</Typography>
-    </Box>)
 
   return <>
     <Typography>
@@ -253,7 +242,7 @@ export default function Stats() {
       zIndex={1200}
     >
       <DialogContent>
-        <TitleChip />
+        <TitleChip title={traitDialogTitle}/>
         {dialogTraitData.map((traitData) => (<Box key={traitData.trait}>
           <Divider>
             <Chip label={`${traitData.trait}: ${traitData.count}`} color="secondary" />
