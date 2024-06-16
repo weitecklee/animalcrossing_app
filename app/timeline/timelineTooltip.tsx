@@ -15,7 +15,7 @@ import IconWithText from '@/components/iconWithText';
 import { dayOrDays, rgbDataURL } from '@/lib/functions';
 import { ScreenContext } from '@/lib/screenContext';
 import { coustard } from '@/app/theme';
-import { StateContext } from '@/lib/stateContext';
+import Link from 'next/link';
 
 function DraggablePaper(props: PaperProps) {
   return (
@@ -44,7 +44,6 @@ export default function TimelineTooltip({ villagerData, history }: {
 }) {
 
   const { smallScreen } = useContext(ScreenContext);
-  const { setShowVillagerDialog } = useContext(StateContext);
 
   return <DraggablePaper>
     <OpenWithRoundedIcon
@@ -63,10 +62,8 @@ export default function TimelineTooltip({ villagerData, history }: {
         left: '1%',
       }}
     />
+    <Link href={`/villagers/${history.name}`}>
     <Box
-      onClick={() => {
-        setShowVillagerDialog(true);
-      }}
       sx={{
         cursor: 'pointer',
       }}
@@ -115,6 +112,6 @@ export default function TimelineTooltip({ villagerData, history }: {
         text={dayOrDays(history.duration)}
         screenBoolean={smallScreen}
       />
-    </Box>
+    </Box></Link>
   </DraggablePaper>
 }

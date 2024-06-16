@@ -3,10 +3,9 @@ import { useContext } from 'react';
 import { ScreenContext } from "@/lib/screenContext";
 import { DataContext } from '@/lib/dataContext';
 import CRBadge from './crBadge';
-import { Box, useTheme } from '@mui/material';
+import { Box } from '@mui/material';
 import { rgbDataURL } from '@/lib/functions';
 import nookipediaData from '@/lib/nookipediaData';
-import { StateContext } from '@/lib/stateContext';
 import VillagerTooltip from './villagerTooltip';
 import Link from 'next/link';
 
@@ -15,9 +14,7 @@ export default function VillagerIcon({ villager, customOnClick } : {
   customOnClick?: () => void,
 }) {
 
-  const theme = useTheme();
   const { mediumScreen } = useContext(ScreenContext);
-  const { setDialogVillager, setShowVillagerDialog } = useContext(StateContext);
   const { historyMap } = useContext(DataContext);
 
   const villagerData = nookipediaData.get(villager)!;
