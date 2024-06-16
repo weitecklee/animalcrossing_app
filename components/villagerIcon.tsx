@@ -8,6 +8,7 @@ import { rgbDataURL } from '@/lib/functions';
 import nookipediaData from '@/lib/nookipediaData';
 import { StateContext } from '@/lib/stateContext';
 import VillagerTooltip from './villagerTooltip';
+import Link from 'next/link';
 
 export default function VillagerIcon({ villager, customOnClick } : {
   villager: string,
@@ -23,34 +24,27 @@ export default function VillagerIcon({ villager, customOnClick } : {
   const isResident = !!historyMap.get(villager);
 
   return <VillagerTooltip villager={villager}>
-    <Box>
-      <CRBadge invisible={!historyMap.get(villager)?.currentResident}>
-        <Image
-          src={villagerData.nh_details.icon_url}
-          alt={villager}
-          title={villager}
-          height={mediumScreen ? 48 : 64}
-          width={mediumScreen ? 48 : 64}
-          onClick={() => {
-            if (customOnClick) {
-              customOnClick();
-              setTimeout(() => {
-                setDialogVillager(villager);
-              }, theme.transitions.duration.standard);
-            } else {
-              setDialogVillager(villager);
-              setShowVillagerDialog(true);
-            }
-          }}
-          style={{
-            cursor: 'pointer',
-            opacity: isResident ? 1 : .4,
-          }}
-          placeholder='blur'
-          blurDataURL={rgbDataURL(villagerData.title_color)}
-        />
-      </CRBadge>
-    </Box>
+    <Link href={`/villagers/${villager}`}>
+      <Box>
+        <CRBadge invisible={!historyMap.get(villager)?.currentResident}>
+          <Image
+            src={villagerData.nh_details.icon_url}
+            alt={villager}
+            title={villager}
+            height={mediumScreen ? 48 : 64}
+            width={mediumScreen ? 48 : 64}
+            onClick={() => {
+            }}
+            style={{
+              cursor: 'pointer',
+              opacity: isResident ? 1 : .4,
+            }}
+            placeholder='blur'
+            blurDataURL={rgbDataURL(villagerData.title_color)}
+          />
+        </CRBadge>
+      </Box>
+    </Link>
   </VillagerTooltip>;
 
 }
