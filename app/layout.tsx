@@ -6,7 +6,6 @@ import { theme } from "@/app/theme";
 import TopBar from "./topBar";
 import { ScreenProvider } from "@/lib/screenContext";
 import { Container, CssBaseline } from "@mui/material";
-import { StateProvider } from "@/lib/stateContext";
 import { DataProvider } from "@/lib/dataContext";
 
 export const metadata: Metadata = {
@@ -29,14 +28,12 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <DataProvider>
               <ScreenProvider>
-                <StateProvider>
-                  <CssBaseline />
-                  <TopBar />
-                  <Container maxWidth='xl' sx={{pt: 1, pb: 2}}>
-                    {children}
-                  </Container>
-                  {villagerDialog}
-                </StateProvider>
+                <CssBaseline />
+                <TopBar />
+                <Container maxWidth='xl' sx={{pt: 1, pb: 2}}>
+                  {children}
+                </Container>
+                {villagerDialog}
               </ScreenProvider>
             </DataProvider>
           </ThemeProvider>

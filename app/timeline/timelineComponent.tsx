@@ -23,7 +23,6 @@ import { DataContext } from "@/lib/dataContext";
 import TimelineTooltip from './timelineTooltip';
 import { ScreenContext } from '@/lib/screenContext';
 import calculateStats from '@/lib/calculateStats';
-import { StateContext } from '@/lib/stateContext';
 import nookipediaData from '@/lib/nookipediaData';
 import { coustard } from '@/app/theme';
 
@@ -101,7 +100,6 @@ options2.plugins.zoom.limits = {
 export default function Timeline() {
 
   const { historyMap } = useContext(DataContext);
-  const { setDialogVillager } = useContext(StateContext);
 
   const {
     timelineColors,
@@ -157,10 +155,6 @@ export default function Timeline() {
   useEffect(() => {
     setOpenSnackbar(smallScreen);
   }, [smallScreen]);
-
-  useEffect(() => {
-    setDialogVillager(timelineVillager);
-  }, [timelineVillager, setDialogVillager]);
 
   useEffect(() => {
     if (timelineMode === 0) {

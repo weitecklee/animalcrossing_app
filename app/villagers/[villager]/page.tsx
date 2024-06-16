@@ -13,7 +13,6 @@ import IconGrid from '@/components/iconGrid';
 import CustomImage from '@/components/customImage';
 import { notFound } from 'next/navigation';
 
-
 export default function VillagerPage({ params } : { params: { villager: string } }) {
 
   const { mediumScreen } = useContext(ScreenContext);
