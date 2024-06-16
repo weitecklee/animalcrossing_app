@@ -2,11 +2,10 @@
 
 import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import { Box, Grid, Link, Stack, Typography } from '@mui/material';
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { dateFormatter, dayOrDays } from '@/lib/functions';
 import CRIcon from '@/components/crIcon';
 import nookipediaData from "@/lib/nookipediaData";
-import { ScreenContext } from '@/lib/screenContext';
 import { DataContext } from '@/lib/dataContext';
 import { coustard } from '@/app/theme';
 import IconGrid from '@/components/iconGrid';
@@ -14,20 +13,14 @@ import CustomImage from '@/components/customImage';
 import { notFound } from 'next/navigation';
 import Loading from '@/app/loading';
 
+const baseDim = 128;
+const unit1 = `${baseDim * 1}px`;
+const unit2 = `${baseDim * 2}px`;
+const unit3 = `${baseDim * 3}px`;
+
 export default function VillagerInfo({ params } : { params: { villager: string } }) {
 
-  const { mediumScreen } = useContext(ScreenContext);
   const villagerData = nookipediaData.get(params.villager);
-  const [baseDim, setBaseDim] = useState(128);
-
-  useEffect(() => {
-    if (mediumScreen) {
-      setBaseDim(64);
-    } else {
-      setBaseDim(128);
-    }
-  }, [mediumScreen])
-
   const { historyMap } = useContext(DataContext);
 
   if (!villagerData) {
@@ -37,40 +30,43 @@ export default function VillagerInfo({ params } : { params: { villager: string }
   const history = historyMap.get(params.villager);
 
   return (<>
-    <Grid item>
-      <Stack direction="row" spacing={2}>
-        <CustomImage
-          src={villagerData.image_url}
-          alt={`${villagerData.name} image`}
-          title={villagerData.name}
-          width={2 * baseDim}
-          height={3 * baseDim}
-          blurColor={villagerData.title_color}
-          key={villagerData.image_url}
-        />
-        <Stack alignItems="center">
+    <Grid item xs={12} sm={6} md={5} position="relative">
+      <Stack position="relative" direction="row" spacing={2} width="100%" height="100%" >
+        <Box position="relative" height="auto" width={unit2}  maxWidth="50%" maxHeight="100%">
           <CustomImage
-            src={villagerData.nh_details.icon_url}
-            alt={`${villagerData.name} icon`}
+            fill
+            src={villagerData.image_url}
+            alt={`${villagerData.name} image`}
             title={villagerData.name}
-            width={baseDim}
-            height={baseDim}
             blurColor={villagerData.title_color}
-            key={villagerData.nh_details.icon_url}
+            key={villagerData.image_url}
           />
-          <CustomImage
-            src={villagerData.nh_details.photo_url}
-            alt={`${villagerData.name} photo`}
-            title={villagerData.name}
-            width={2 * baseDim}
-            height={2 * baseDim}
-            blurColor={villagerData.title_color}
-            key={villagerData.nh_details.photo_url}
-          />
+        </Box>
+        <Stack width={unit2} height="auto" position="relative" maxHeight="100%" maxWidth="50%" justifyContent="center" alignItems="center">
+          <Box position="relative" width={unit1} height={unit1} maxHeight="100%" maxWidth="100%">
+            <CustomImage
+              src={villagerData.nh_details.icon_url}
+              alt={`${villagerData.name} icon`}
+              title={villagerData.name}
+              fill
+              blurColor={villagerData.title_color}
+              key={villagerData.nh_details.icon_url}
+            />
+          </Box>
+          <Box position="relative" width={unit2} height={unit2} maxWidth="100%">
+            <CustomImage
+              src={villagerData.nh_details.photo_url}
+              alt={`${villagerData.name} photo`}
+              title={villagerData.name}
+              fill
+              blurColor={villagerData.title_color}
+              key={villagerData.nh_details.photo_url}
+            />
+          </Box>
         </Stack>
       </Stack>
     </Grid>
-    <Grid item maxWidth={mediumScreen? 40 * 8 : 64 * 9 }>
+    <Grid item xs={12} sm={6} md={7} >
       <Stack direction="row" alignItems="center">
         <Typography variant="h6" fontFamily={coustard.style.fontFamily}>
           {villagerData.name}&ensp;{villagerData.ja_name}&ensp;

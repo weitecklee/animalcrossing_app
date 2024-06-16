@@ -6,7 +6,6 @@ export default function VillagerPage({ params } : { params: { villager: string }
   return (
     <Grid
       container
-      alignItems='center'
       justifyContent='center'
       spacing={4}
     >

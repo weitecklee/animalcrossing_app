@@ -16,7 +16,6 @@ export default function VillagerDialog({params}: {params: {villager: string}}) {
   >
     <Grid
       container
-      alignItems='center'
       justifyContent='center'
       padding={4}
       spacing={4}
