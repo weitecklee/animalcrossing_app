@@ -4,7 +4,7 @@ import { ScreenContext } from "@/lib/screenContext";
 import { DataContext } from '@/lib/dataContext';
 import CRBadge from './crBadge';
 import { Box } from '@mui/material';
-import { rgbDataURL } from '@/lib/functions';
+import { fixName, rgbDataURL } from '@/lib/functions';
 import nookipediaData from '@/lib/nookipediaData';
 import VillagerTooltip from './villagerTooltip';
 import Link from 'next/link';
@@ -23,7 +23,7 @@ export default function VillagerIcon({ villager, customOnClick } : {
   const isResident = !!historyMap.get(villager);
 
   return <VillagerTooltip villager={villager}>
-    <Link href={`/villagers/${villager}`} replace={dialogActive} scroll={false}>
+    <Link href={`/villagers/${fixName(villager)}`} replace={dialogActive} scroll={false}>
       <Box>
         <CRBadge invisible={!historyMap.get(villager)?.currentResident}>
           <Image

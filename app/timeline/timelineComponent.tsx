@@ -122,12 +122,7 @@ export default function Timeline() {
   const [barLabels, setBarLabels] = useState(timelineLabels);
   const [barColors, setBarColors] = useState(timelineColors);
   const [barBackground, setBarBackground] = useState<number[][] | number[]>([0]);
-  const lastBackgroundIndex = useRef(0);
-  const lastBackgroundIndex2 = useRef(0);
-  const lastBackgroundIndex3 = useRef(0);
-  const timelineBackground = useRef<number[][]>(Array(historyMap.size).fill([]));
-  const timelineBackground2 = useRef<number[]>(Array(historyMap.size).fill(0));
-  const timelineBackground3 = useRef<number[]>(Array(historyMap.size).fill(0));
+  const nodeRef = useRef(null);
 
   useEffect(() => {
     options.plugins.tooltip.external = ({ tooltip }: { tooltip: any }) => {
@@ -181,22 +176,19 @@ export default function Timeline() {
       return;
     }
     if (timelineMode === 0) {
-      timelineBackground.current[lastBackgroundIndex.current] = [];
-      lastBackgroundIndex.current = timelineNameMap.get(timelineVillager)!;
-      timelineBackground.current[lastBackgroundIndex.current] = [options.scales.x.min, options.scales.x.max];
-      setBarBackground(timelineBackground.current);
+      const temp = Array(historyMap.size).fill([]);
+      temp[timelineNameMap.get(timelineVillager)!] = [options.scales.x.min, options.scales.x.max];
+      setBarBackground(temp);
     } else if (timelineMode === 1) {
-      timelineBackground2.current[lastBackgroundIndex2.current] = 0;
-      lastBackgroundIndex2.current = timelineNameMap.get(timelineVillager)!;
-      timelineBackground2.current[lastBackgroundIndex2.current] = options2.scales.x.max;
-      setBarBackground(timelineBackground2.current);
+      const temp = Array(historyMap.size).fill(0);
+      temp[timelineNameMap.get(timelineVillager)!] = options2.scales.x.max;
+      setBarBackground(temp);
     } else if (timelineMode === 2) {
-      timelineBackground3.current[lastBackgroundIndex3.current] = 0;
-      lastBackgroundIndex3.current = timelineNameMap3.get(timelineVillager)!;
-      timelineBackground3.current[lastBackgroundIndex3.current] = options2.scales.x.max;
-      setBarBackground(timelineBackground3.current);
+      const temp = Array(historyMap.size).fill(0);
+      temp[timelineNameMap3.get(timelineVillager)!] = options2.scales.x.max;
+      setBarBackground(temp);
     }
-  }, [timelineVillager, timelineMode, timelineNameMap, timelineNameMap3]);
+  }, [timelineVillager, timelineMode, timelineNameMap, timelineNameMap3, historyMap]);
 
   return <Box sx={{
     position: "relative",
@@ -253,6 +245,7 @@ export default function Timeline() {
       handle="#dragFab"
       bounds="parent"
       cancel="#changeViewButton"
+      nodeRef={nodeRef}
     >
       <Box
         sx={{
@@ -260,6 +253,7 @@ export default function Timeline() {
           right: "1%",
           top: "50%",
         }}
+        ref={nodeRef}
       >
         <Badge
           id="dragFab"

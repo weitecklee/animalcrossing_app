@@ -3,7 +3,7 @@
 import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import { Box, Grid, Link, Stack, Typography } from '@mui/material';
 import { useContext } from "react";
-import { dateFormatter, dayOrDays } from '@/lib/functions';
+import { dateFormatter, dayOrDays, fixName } from '@/lib/functions';
 import CRIcon from '@/components/crIcon';
 import nookipediaData from "@/lib/nookipediaData";
 import { DataContext } from '@/lib/dataContext';
@@ -20,14 +20,16 @@ const unit3 = `${baseDim * 3}px`;
 
 export default function VillagerInfo({ params } : { params: { villager: string } }) {
 
-  const villagerData = nookipediaData.get(params.villager);
+  const villagerName = fixName(params.villager);
+
+  const villagerData = nookipediaData.get(villagerName);
   const { historyMap } = useContext(DataContext);
 
   if (!villagerData) {
     notFound();
   }
 
-  const history = historyMap.get(params.villager);
+  const history = historyMap.get(villagerName);
 
   return (<>
     <Grid item xs={12} sm={6} md={5} position="relative">
