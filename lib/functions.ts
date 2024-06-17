@@ -40,3 +40,10 @@ export function rgbDataURL(blurColor: string): string {
       triplet(0, r, g) + triplet(b, 255, 255)
     }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
 }
+
+export function fixName(name: string): string {
+  if (/ /.test(name)) {
+    return name.replace(/ /g, '_');
+  }
+  return name.replace(/_/g, ' ');
+}

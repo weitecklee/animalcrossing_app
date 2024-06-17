@@ -7,7 +7,7 @@ import CameraAltRoundedIcon from '@mui/icons-material/CameraAltRounded';
 import { Box, Grid, Paper, Stack, Typography, useTheme } from '@mui/material';
 import Image from 'next/image';
 import { useContext, useState } from 'react';
-import { dayOrDays, rgbDataURL } from '@/lib/functions';
+import { dayOrDays, fixName, rgbDataURL } from '@/lib/functions';
 import { History, NookipediaVillager } from '@/types';
 import IconWithText from '@/components/iconWithText';
 import { ScreenContext } from '@/lib/screenContext';
@@ -32,7 +32,7 @@ export default function VillagerCard({ history, villagerData }: {
       item
       minWidth={mediumScreen ? 'calc(128px + 9rem)': 'calc(192px + 12rem)'}
     >
-      <Link href={`/villagers/${history.name}`} scroll={false}>
+      <Link href={`/villagers/${fixName(history.name)}`} scroll={false}>
         <Paper
           elevation={elevation}
           sx={{

@@ -12,7 +12,7 @@ import Draggable from 'react-draggable';
 import { History, NookipediaVillager } from '@/types';
 import CRBadge from '@/components/crBadge';
 import IconWithText from '@/components/iconWithText';
-import { dayOrDays, rgbDataURL } from '@/lib/functions';
+import { dayOrDays, fixName, rgbDataURL } from '@/lib/functions';
 import { ScreenContext } from '@/lib/screenContext';
 import { coustard } from '@/app/theme';
 import Link from 'next/link';
@@ -62,7 +62,7 @@ export default function TimelineTooltip({ villagerData, history }: {
         left: '1%',
       }}
     />
-    <Link href={`/villagers/${history.name}`}>
+    <Link href={`/villagers/${fixName(history.name)}`}>
     <Box
       sx={{
         cursor: 'pointer',
