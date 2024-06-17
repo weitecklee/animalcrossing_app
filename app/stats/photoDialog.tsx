@@ -1,24 +1,22 @@
-import CustomDialog from '@/components/customDialog';
+'use client';
+
 import { dayOrDays } from '@/lib/functions';
 import { ScreenContext } from '@/lib/screenContext';
 import VillagerIcon from '@/components/villagerIcon';
 import { Duration, History } from '@/types';
 import { ArrowBackRounded, ArrowForwardRounded } from '@mui/icons-material';
-import { Box, Chip, Collapse, DialogContent, Divider, Fab, List, ListItem, Stack, Typography } from '@mui/material';
-import { Dispatch, SetStateAction, useContext, useState } from 'react';
+import { Box, Chip, Slide, Divider, Fab, List, ListItem, Stack, Typography } from '@mui/material';
+import { useContext, useState } from 'react';
 import TitleChip from './titleChip';
 
-export default function PhotoDialog({ photoData, noPhotoData, historyMap, showPhotoDialog, setShowPhotoDialog, showPhotoCollapse, setShowPhotoCollapse }: {
+export default function PhotoDialog({ photoData, noPhotoData, historyMap }: {
   photoData: Duration[],
   noPhotoData: Duration[]
   historyMap: Map<string, History>,
-  showPhotoDialog: boolean,
-  setShowPhotoDialog: Dispatch<SetStateAction<boolean>>,
-  showPhotoCollapse: boolean,
-  setShowPhotoCollapse: Dispatch<SetStateAction<boolean>>,
 }) {
 
   const { smallScreen } = useContext(ScreenContext);
+  const [showPhotoSlide, setShowPhotoSlide] = useState(true);
   const [photoDialogTab, setPhotoDialogTab] = useState(true);
 
   const PhotoDialogContent = (
@@ -72,25 +70,21 @@ export default function PhotoDialog({ photoData, noPhotoData, historyMap, showPh
   );
 
   if (smallScreen) {
-    return <CustomDialog
-      open={smallScreen && showPhotoDialog}
-      onClose={() => setShowPhotoDialog(false)}
-      maxWidth={false}
-      zIndex={1200}
-    >
-      <Collapse
-        in={showPhotoCollapse}
-        orientation="horizontal"
+    return <>
+      <Slide
+        in={showPhotoSlide}
+        appear={false}
         onExited={() => {
           setPhotoDialogTab((a) => !a);
-          setShowPhotoCollapse(true);
+          setShowPhotoSlide(true);
         }}
+        direction={ photoDialogTab ? 'right' : 'left'}
       >
-        <DialogContent>
-          <TitleChip title='Photos' />
+        <Box>
+          <TitleChip title='Photos Breakdown' />
           {photoDialogTab ? PhotoDialogContent : PhotoDialogContent2}
-        </DialogContent>
-      </Collapse>
+        </Box>
+      </Slide>
       <Fab
         size="small"
         color="secondary"
@@ -103,7 +97,7 @@ export default function PhotoDialog({ photoData, noPhotoData, historyMap, showPh
           top: "50%",
           left: 8,
         }}
-        onClick={() => setShowPhotoCollapse(false)}
+        onClick={() => setShowPhotoSlide(false)}
       >
         <ArrowBackRounded />
       </Fab>
@@ -119,27 +113,20 @@ export default function PhotoDialog({ photoData, noPhotoData, historyMap, showPh
           top: "50%",
           right: 8,
         }}
-        onClick={() => setShowPhotoCollapse(false)}
+        onClick={() => setShowPhotoSlide(false)}
       >
         <ArrowForwardRounded />
       </Fab>
-    </CustomDialog>
+    </>
   }
 
-  return <CustomDialog
-    open={!smallScreen && showPhotoDialog}
-    onClose={() => setShowPhotoDialog(false)}
-    maxWidth={false}
-    zIndex={1200}
-  >
-    <DialogContent>
-      <TitleChip title='Photos' />
-      <Stack direction="row" spacing={2}>
-        {PhotoDialogContent}
-        <Divider orientation='vertical' flexItem/>
-        {PhotoDialogContent2}
-      </Stack>
-    </DialogContent>
-  </CustomDialog>
+  return <>
+    <TitleChip title='Photos Breakdown' />
+    <Stack direction="row" spacing={2} justifyContent="center">
+      {PhotoDialogContent}
+      <Divider orientation='vertical' flexItem/>
+      {PhotoDialogContent2}
+    </Stack>
+  </>
 
 }

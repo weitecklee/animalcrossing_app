@@ -8,7 +8,7 @@ export default function CustomImage({ blurColor, ...props}: CustomImageProps) {
   return <Image
     {...props}
     alt={alt}
-    sizes="100vw"
+    sizes="(max-width: 600px) 50vw, (max-width: 1200px) 40vw, 30vw"
     style={{
       objectFit: 'contain',
     }}

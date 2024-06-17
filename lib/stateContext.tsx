@@ -1,31 +1,21 @@
 'use client';
 
-import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
+import { createContext, useState, ReactNode, Dispatch, SetStateAction } from "react";
 
-export const StateContext = createContext<{
-  showVillagerDialog: boolean,
-  setShowVillagerDialog: Dispatch<SetStateAction<boolean>>,
-  dialogVillager: string,
-  setDialogVillager: Dispatch<SetStateAction<string>>,
-}>({
-  showVillagerDialog: false,
-  setShowVillagerDialog: () => {},
-  dialogVillager: '',
-  setDialogVillager: () => {},
+export const StateContext = createContext({
+  dialogActive: false,
+  setDialogActive: () => {},
+} as {
+  dialogActive: boolean,
+  setDialogActive: Dispatch<SetStateAction<boolean>>,
 });
 
-export const StateProvider = ({children}: {children: ReactNode}) => {
+export const StateProvider = ({ children }: {children: ReactNode}) => {
 
-  const [showVillagerDialog, setShowVillagerDialog] = useState(false);
-  const [dialogVillager, setDialogVillager] = useState('');
+  const [dialogActive, setDialogActive] = useState(false);
 
   return (
-    <StateContext.Provider value={{
-      showVillagerDialog,
-      setShowVillagerDialog,
-      dialogVillager,
-      setDialogVillager,
-    }}>
+    <StateContext.Provider value={{dialogActive, setDialogActive}}>
       {children}
     </StateContext.Provider>
   )

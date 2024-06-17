@@ -6,9 +6,8 @@ import { theme } from "@/app/theme";
 import TopBar from "./topBar";
 import { ScreenProvider } from "@/lib/screenContext";
 import { Container, CssBaseline } from "@mui/material";
-import { StateProvider } from "@/lib/stateContext";
-import VillagerDialog from "@/components/villagerDialog";
 import { DataProvider } from "@/lib/dataContext";
+import { StateProvider } from "@/lib/stateContext";
 
 export const metadata: Metadata = {
   title: "My Animal Crossing Island",
@@ -18,8 +17,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  villagerDialog,
+  statDialog
 }: Readonly<{
   children: React.ReactNode;
+  villagerDialog: React.ReactNode;
+  statDialog: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -34,7 +37,8 @@ export default function RootLayout({
                   <Container maxWidth='xl' sx={{pt: 1, pb: 2}}>
                     {children}
                   </Container>
-                  <VillagerDialog />
+                  {villagerDialog}
+                  {statDialog}
                 </StateProvider>
               </ScreenProvider>
             </DataProvider>

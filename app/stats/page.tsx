@@ -1,34 +1,23 @@
 'use client';
 
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import { Box, Button, Chip, ClickAwayListener, DialogContent, Divider, List, ListItem, Stack, Tooltip, Typography } from '@mui/material';
+import { Button, ClickAwayListener, Stack, Tooltip, Typography } from '@mui/material';
 import { useContext, useState } from 'react';
 import { dayOrDays } from '@/lib/functions';
 import { DataContext } from "@/lib/dataContext";
-import { Trait } from '@/types';
 import CRIcon from '@/components/crIcon';
-import CustomDialog from '@/components/customDialog';
 import IconGrid from '@/components/iconGrid';
-import VillagerIcon from '@/components/villagerIcon';
 import calculateStats from '@/lib/calculateStats';
 import { coustard } from '@/app/theme';
 import Loading from '@/app/loading';
-import PhotoDialog from './photoDialog';
-import TitleChip from './titleChip';
 import StatsDivider from './statsDivider';
+import Link from 'next/link';
 
 export default function Stats() {
 
   const { historyMap } = useContext(DataContext);
 
-  const [dialogTraitData, setDialogTraitData] = useState<Trait[]>([]);
-  const [showTraitDialog, setShowTraitDialog] = useState(false);
-  const [showDurationDialog, setShowDurationDialog] = useState(false);
-  const [showPhotoDialog, setShowPhotoDialog] = useState(false);
-  const [showIslandmatesDialog, setShowIslandmatesDialog] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
-  const [showPhotoCollapse, setShowPhotoCollapse] = useState(false);
-  const [traitDialogTitle, setTraitDialogTitle] = useState('');
 
   if (!historyMap.size) {
     return <Loading />;
@@ -43,37 +32,26 @@ export default function Stats() {
     currentResidents,
     islandmatesData,
     durationData,
-    noPhotoData,
     photoStats2,
   } = calculateStats(historyMap);
 
-  const BreakdownLink = ({traitData, onClick, trait} : {
-    traitData?: Trait[],
-    onClick?: () => void,
-    trait?: string,
+  const BreakdownLink = ({stat} : {
+    stat: string,
   }) => (
-    <Button
-      size="small"
-      variant="contained"
-      disableElevation
-      color="secondary"
-      sx={{
-        fontFamily: coustard.style.fontFamily,
-      }}
-      onClick={() => {
-        if (traitData && trait) {
-          setTraitDialogTitle(trait);
-          setDialogTraitData(traitData);
-          setShowTraitDialog(true);
-        } else {
-          onClick!();
-        }
-      }}
-    >
-      Full breakdown
-    </Button>
+    <Link href={`/stats/${stat}`} scroll={false}>
+      <Button
+        size="small"
+        variant="contained"
+        disableElevation
+        color="secondary"
+        sx={{
+          fontFamily: coustard.style.fontFamily,
+        }}
+      >
+        Full breakdown
+      </Button>
+    </Link>
   );
-
 
   return <>
     <Typography>
@@ -102,7 +80,7 @@ export default function Stats() {
     <IconGrid
       traitData={durationData[durationData.length - 1]}
     />
-    <BreakdownLink onClick={() => {setShowDurationDialog(true);}} />
+    <BreakdownLink stat='lengthOfStay' />
     <StatsDivider label='Species' />
     <Typography>
       Most common: {speciesData[0].trait}
@@ -111,7 +89,7 @@ export default function Stats() {
       traitData={speciesData[0]}
     />
     <Typography>
-      <BreakdownLink traitData={speciesData} trait='Species'/>
+      <BreakdownLink stat='species'/>
     </Typography>
     <StatsDivider label='Personality' />
     <Typography>
@@ -121,7 +99,7 @@ export default function Stats() {
       traitData={personalityData[0]}
     />
     <Typography>
-      <BreakdownLink traitData={personalityData} trait='Personality' />
+      <BreakdownLink stat='personality' />
     </Typography>
     <StatsDivider label='Gender' />
     <Typography>
@@ -129,7 +107,7 @@ export default function Stats() {
       <br />
       {genderData[1].trait}: {genderData[1].count}
       <br />
-      <BreakdownLink traitData={genderData} trait='Gender' />
+      <BreakdownLink stat='gender' />
     </Typography>
     <StatsDivider
       label="Photos"
@@ -183,7 +161,7 @@ export default function Stats() {
     <IconGrid
       traitData={photoStats2.longestWithoutGiving}
     />
-    <BreakdownLink onClick={() => {setShowPhotoDialog(true); setShowPhotoCollapse(true);}} />
+    <BreakdownLink stat='photos' />
     <StatsDivider label='Islandmates' />
     <Typography>
       Most islandmates: {islandmatesData[0].trait}
@@ -197,84 +175,7 @@ export default function Stats() {
     <IconGrid
       traitData={islandmatesData[islandmatesData.length - 1]}
       />
-    <BreakdownLink onClick={() => {setShowIslandmatesDialog(true);}} />
-    <CustomDialog
-      open={showDurationDialog}
-      onClose={() => setShowDurationDialog(false)}
-      maxWidth={false}
-      zIndex={1200}
-    >
-      <DialogContent>
-        <TitleChip title={'Length of Stay'}/>
-        <List>
-          {durationData.map((duration) => (
-            duration.villagers.map((villager) => (
-              <ListItem key={villager} disablePadding sx={{display: 'flex', justifyContent: 'center'}}>
-                <Box display="flex" alignItems="center">
-                  <VillagerIcon
-                    villager={villager}
-                  />
-                  <Typography>
-                    &nbsp;&nbsp;{dayOrDays(duration.trait)}
-                  </Typography>
-                </Box>
-              </ListItem>
-          ))))}
-        </List>
-      </DialogContent>
-    </CustomDialog>
-    <CustomDialog
-      open={showTraitDialog}
-      onClose={() => setShowTraitDialog(false)}
-      maxWidth={false}
-      zIndex={1200}
-    >
-      <DialogContent>
-        <TitleChip title={traitDialogTitle}/>
-        {dialogTraitData.map((traitData) => (<Box key={traitData.trait}>
-          <Divider>
-            <Chip label={`${traitData.trait}: ${traitData.count}`} color="secondary" />
-          </Divider>
-          <IconGrid
-            traitData={traitData}
-          />
-        </Box>))}
-      </DialogContent>
-    </CustomDialog>
-    <PhotoDialog
-      photoData={photoData}
-      noPhotoData={noPhotoData}
-      historyMap={historyMap}
-      showPhotoCollapse={showPhotoCollapse}
-      setShowPhotoCollapse={setShowPhotoCollapse}
-      showPhotoDialog={showPhotoDialog}
-      setShowPhotoDialog={setShowPhotoDialog}
-    />
-    <CustomDialog
-      open={showIslandmatesDialog}
-      onClose={() => setShowIslandmatesDialog(false)}
-      maxWidth={false}
-      zIndex={1200}
-    >
-      <DialogContent>
-        <TitleChip title='Islandmates' />
-        <List>
-          {islandmatesData.map((islandmates) => (
-            islandmates.villagers.map((villager) => (
-              <ListItem key={villager} disablePadding sx={{display: 'flex', justifyContent: 'center'}}>
-                <Box display="flex" alignItems="center">
-                  <VillagerIcon
-                    villager={villager}
-                  />
-                  <Typography>
-                    &nbsp;&nbsp;{islandmates.trait}
-                  </Typography>
-                </Box>
-              </ListItem>
-          ))))}
-        </List>
-      </DialogContent>
-    </CustomDialog>
+    <BreakdownLink stat='islandmates' />
   </>
 
 }
