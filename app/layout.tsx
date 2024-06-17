@@ -8,6 +8,7 @@ import { ScreenProvider } from "@/lib/screenContext";
 import { Container, CssBaseline } from "@mui/material";
 import { DataProvider } from "@/lib/dataContext";
 import { StateProvider } from "@/lib/stateContext";
+import CustomBackdrop from "./customBackdrop";
 
 export const metadata: Metadata = {
   title: "My Animal Crossing Island",
@@ -37,6 +38,7 @@ export default function RootLayout({
                   <Container maxWidth='xl' sx={{pt: 1, pb: 2}}>
                     {children}
                   </Container>
+                  <CustomBackdrop />
                   {villagerDialog}
                   {statDialog}
                 </StateProvider>
