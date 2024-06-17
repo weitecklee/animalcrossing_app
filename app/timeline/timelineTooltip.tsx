@@ -7,7 +7,7 @@ import OpenWithRoundedIcon from '@mui/icons-material/OpenWithRounded';
 import { Box, Stack, Typography } from '@mui/material';
 import Paper, { PaperProps } from '@mui/material/Paper';
 import Image from 'next/image';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import Draggable from 'react-draggable';
 import { History, NookipediaVillager } from '@/types';
 import CRBadge from '@/components/crBadge';
@@ -18,10 +18,12 @@ import { coustard } from '@/app/theme';
 import Link from 'next/link';
 
 function DraggablePaper(props: PaperProps) {
+  const nodeRef = useRef(null);
   return (
     <Draggable
       handle="#dragHandle"
       bounds="parent"
+      nodeRef={nodeRef}
     >
       <Paper
         {...props}
@@ -33,6 +35,7 @@ function DraggablePaper(props: PaperProps) {
           padding: 2
         }}
         className="tooltipPaper"
+        ref={nodeRef}
       />
     </Draggable>
   )

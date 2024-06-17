@@ -128,6 +128,7 @@ export default function Timeline() {
   const timelineBackground = useRef<number[][]>(Array(historyMap.size).fill([]));
   const timelineBackground2 = useRef<number[]>(Array(historyMap.size).fill(0));
   const timelineBackground3 = useRef<number[]>(Array(historyMap.size).fill(0));
+  const nodeRef = useRef(null);
 
   useEffect(() => {
     options.plugins.tooltip.external = ({ tooltip }: { tooltip: any }) => {
@@ -253,6 +254,7 @@ export default function Timeline() {
       handle="#dragFab"
       bounds="parent"
       cancel="#changeViewButton"
+      nodeRef={nodeRef}
     >
       <Box
         sx={{
@@ -260,6 +262,7 @@ export default function Timeline() {
           right: "1%",
           top: "50%",
         }}
+        ref={nodeRef}
       >
         <Badge
           id="dragFab"
