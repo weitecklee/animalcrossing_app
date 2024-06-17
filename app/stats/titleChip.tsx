@@ -11,5 +11,5 @@ export default function TitleChip({title}: {title: string}) {
     bgcolor={theme.palette.secondary.main}
     borderRadius={Number.MAX_SAFE_INTEGER}
   >
-    <Typography fontFamily={coustard.style.fontFamily} fontSize='1.2rem'>{title}</Typography>
+    <Typography fontFamily={coustard.style.fontFamily} fontSize='1.2rem' textAlign='center'>{title}</Typography>
   </Box>}
