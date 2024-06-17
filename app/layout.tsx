@@ -18,9 +18,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
   villagerDialog,
+  statDialog
 }: Readonly<{
   children: React.ReactNode;
   villagerDialog: React.ReactNode;
+  statDialog: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -36,6 +38,7 @@ export default function RootLayout({
                     {children}
                   </Container>
                   {villagerDialog}
+                  {statDialog}
                 </StateProvider>
               </ScreenProvider>
             </DataProvider>
