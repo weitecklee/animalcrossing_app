@@ -8,6 +8,7 @@ import { rgbDataURL } from '@/lib/functions';
 import nookipediaData from '@/lib/nookipediaData';
 import VillagerTooltip from './villagerTooltip';
 import Link from 'next/link';
+import { StateContext } from '@/lib/stateContext';
 
 export default function VillagerIcon({ villager, customOnClick } : {
   villager: string,
@@ -16,12 +17,13 @@ export default function VillagerIcon({ villager, customOnClick } : {
 
   const { mediumScreen } = useContext(ScreenContext);
   const { historyMap } = useContext(DataContext);
+  const { dialogActive } = useContext(StateContext);
 
   const villagerData = nookipediaData.get(villager)!;
   const isResident = !!historyMap.get(villager);
 
   return <VillagerTooltip villager={villager}>
-    <Link href={`/villagers/${villager}`}>
+    <Link href={`/villagers/${villager}`} replace={dialogActive} scroll={false}>
       <Box>
         <CRBadge invisible={!historyMap.get(villager)?.currentResident}>
           <Image
@@ -30,8 +32,6 @@ export default function VillagerIcon({ villager, customOnClick } : {
             title={villager}
             height={mediumScreen ? 48 : 64}
             width={mediumScreen ? 48 : 64}
-            onClick={() => {
-            }}
             style={{
               cursor: 'pointer',
               opacity: isResident ? 1 : .4,

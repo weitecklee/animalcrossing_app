@@ -32,7 +32,7 @@ export default function VillagerCard({ history, villagerData }: {
       item
       minWidth={mediumScreen ? 'calc(128px + 9rem)': 'calc(192px + 12rem)'}
     >
-      <Link href={`/villagers/${history.name}`}>
+      <Link href={`/villagers/${history.name}`} scroll={false}>
         <Paper
           elevation={elevation}
           sx={{
