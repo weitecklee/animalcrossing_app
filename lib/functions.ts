@@ -44,9 +44,16 @@ export function rgbDataURL(blurColor: string): string {
   }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
 }
 
+const nameMapping = new Map([
+  ["O'Hare", 'O_Hare'],
+  ['O_Hare', "O'Hare"],
+  ['Étoile', 'Etoile'],
+  ['Etoile', 'Étoile'],
+]);
+
 export function fixName(name: string): string {
-  if (/ /.test(name)) {
-    return name.replace(/ /g, '_');
+  if (nameMapping.has(name)) {
+    return nameMapping.get(name)!;
   }
-  return name.replace(/_/g, ' ');
+  return name.includes(' ') ? name.replace(/ /g, '_') : name.replace(/_/g, ' ');
 }

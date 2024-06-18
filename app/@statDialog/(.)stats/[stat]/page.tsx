@@ -1,25 +1,18 @@
-'use client';
+import StatDialog from './statDialog';
 
-import CustomDialog from '@/components/customDialog';
-import { useRouter } from 'next/navigation';
-import StatBreakdown from '@/app/stats/[stat]/page';
-import { DialogContent } from '@mui/material';
+export const dynamicParams = false;
 
-export default function StatDialog({ params }: { params: { stat: string } }) {
-  const router = useRouter();
+export function generateStaticParams() {
+  return [
+    { stat: 'lengthOfStay' },
+    { stat: 'species' },
+    { stat: 'personality' },
+    { stat: 'gender' },
+    { stat: 'photos' },
+    { stat: 'islandmates' },
+  ];
+}
 
-  return (
-    <CustomDialog
-      open={true}
-      onClose={() => {
-        router.back();
-      }}
-      zIndex={1200}
-      maxWidth={false}
-    >
-      <DialogContent>
-        <StatBreakdown params={params} />
-      </DialogContent>
-    </CustomDialog>
-  );
+export default function Page({ params }: { params: { stat: string } }) {
+  return <StatDialog params={params} />;
 }
