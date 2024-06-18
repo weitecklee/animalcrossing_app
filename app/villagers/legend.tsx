@@ -11,35 +11,39 @@ import CRIcon from '@/components/crIcon';
 import { useContext } from 'react';
 
 export default function Legend() {
-
   const { mediumScreen } = useContext(ScreenContext);
 
-  return <>
-    <Stack direction="row" alignItems="center">
-      <CRIcon />
-      <Typography variant={mediumScreen ? 'caption' : 'body1'} component='span'>
-        &ensp;Current Resident
-      </Typography>
-    </Stack>
-    <IconWithText
-      Icon={ArrowForwardRoundedIcon}
-      text={'Move-in date'}
-      screenBoolean={mediumScreen}
-    />
-    <IconWithText
-      Icon={CameraAltRoundedIcon}
-      text={'Photo date'}
-      screenBoolean={mediumScreen}
-    />
-    <IconWithText
-      Icon={ArrowBackRoundedIcon}
-      text={'Move-out date'}
-      screenBoolean={mediumScreen}
-    />
-    <IconWithText
-      Icon={AccessTimeRoundedIcon}
-      text={'Length of stay'}
-      screenBoolean={mediumScreen}
-    />
-  </>
+  return (
+    <>
+      <Stack direction="row" alignItems="center">
+        <CRIcon />
+        <Typography
+          variant={mediumScreen ? 'caption' : 'body1'}
+          component="span"
+        >
+          &ensp;Current Resident
+        </Typography>
+      </Stack>
+      <IconWithText
+        Icon={ArrowForwardRoundedIcon}
+        text={'Move-in date'}
+        screenBoolean={mediumScreen}
+      />
+      <IconWithText
+        Icon={CameraAltRoundedIcon}
+        text={'Photo date'}
+        screenBoolean={mediumScreen}
+      />
+      <IconWithText
+        Icon={ArrowBackRoundedIcon}
+        text={'Move-out date'}
+        screenBoolean={mediumScreen}
+      />
+      <IconWithText
+        Icon={AccessTimeRoundedIcon}
+        text={'Length of stay'}
+        screenBoolean={mediumScreen}
+      />
+    </>
+  );
 }

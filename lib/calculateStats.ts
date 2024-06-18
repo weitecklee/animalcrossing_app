@@ -1,10 +1,16 @@
-import { CalculatedStats, Duration, History, PhotoStats, PhotoStats2, Trait } from "@/types";
-import nookipediaData from "./nookipediaData";
-import { calculateDays } from "./functions";
-import { cache } from "react";
+import {
+  CalculatedStats,
+  Duration,
+  History,
+  PhotoStats,
+  PhotoStats2,
+  Trait,
+} from '@/types';
+import nookipediaData from './nookipediaData';
+import { calculateDays } from './functions';
+import { cache } from 'react';
 
 function calculateStats(historyMap: Map<string, History>): CalculatedStats {
-
   const durationMap: Map<number, Duration> = new Map();
   const noPhotoMap: Map<number, Duration> = new Map();
   const speciesMap: Map<string, Trait> = new Map();
@@ -35,7 +41,7 @@ function calculateStats(historyMap: Map<string, History>): CalculatedStats {
       villagers: [],
       duration: 0,
     },
-  }
+  };
   const currentResidents: string[] = [];
   const timelineLabels: string[] = [];
   const timelineData: number[][] = [];
@@ -56,17 +62,22 @@ function calculateStats(historyMap: Map<string, History>): CalculatedStats {
           count: 0,
           villagers: [],
           duration: history.daysToPhoto,
-        })
+        });
       }
       const tmp = photoMap.get(history.daysToPhoto)!;
       tmp.count++;
       tmp.villagers.push(history.name);
-      const stayAfterGiving = calculateDays(history.photoDateDate, history.endDateDate);
+      const stayAfterGiving = calculateDays(
+        history.photoDateDate,
+        history.endDateDate,
+      );
       if (!history.currentResident) {
         if (stayAfterGiving < photoStats2.shortestAfterGiving.duration) {
           photoStats2.shortestAfterGiving.duration = stayAfterGiving;
           photoStats2.shortestAfterGiving.villagers = [history.name];
-        } else if (stayAfterGiving === photoStats2.shortestAfterGiving.duration) {
+        } else if (
+          stayAfterGiving === photoStats2.shortestAfterGiving.duration
+        ) {
           photoStats2.shortestAfterGiving.villagers.push(history.name);
         }
       }
@@ -95,7 +106,7 @@ function calculateStats(historyMap: Map<string, History>): CalculatedStats {
         count: 0,
         villagers: [],
         duration: history.duration,
-      })
+      });
     }
     const tmpDuration = durationMap.get(history.duration)!;
     tmpDuration.count++;
@@ -145,8 +156,11 @@ function calculateStats(historyMap: Map<string, History>): CalculatedStats {
     tmp4.count++;
     tmp4.villagers.push(history.name);
     timelineLabels.push(history.name);
-    timelineData.push([history.startDateDate.valueOf(), history.endDateDate.valueOf()])
-    timelineColors.push('#' + nookipediaData.get(history.name)?.title_color!)
+    timelineData.push([
+      history.startDateDate.valueOf(),
+      history.endDateDate.valueOf(),
+    ]);
+    timelineColors.push('#' + nookipediaData.get(history.name)?.title_color!);
     timelineData2.push(history.duration);
     timelineNameMap.set(history.name, i);
   });
@@ -169,8 +183,10 @@ function calculateStats(historyMap: Map<string, History>): CalculatedStats {
   noPhotoData.sort((a, b) => b.duration - a.duration);
 
   photoStats2.longestWithoutGiving = noPhotoData[0];
-  photoStats2.longestAfterGiving.trait = photoStats2.longestAfterGiving.duration.toString();
-  photoStats2.shortestAfterGiving.trait = photoStats2.shortestAfterGiving.duration.toString();
+  photoStats2.longestAfterGiving.trait =
+    photoStats2.longestAfterGiving.duration.toString();
+  photoStats2.shortestAfterGiving.trait =
+    photoStats2.shortestAfterGiving.duration.toString();
 
   const timelineData3: number[] = [];
   const timelineLabels3: string[] = [];
@@ -209,8 +225,7 @@ function calculateStats(historyMap: Map<string, History>): CalculatedStats {
     timelineLabels3,
     timelineNameMap,
     timelineNameMap3,
-  }
-
+  };
 }
 
-export default cache(calculateStats)
+export default cache(calculateStats);

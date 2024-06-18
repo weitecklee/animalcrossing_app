@@ -11,18 +11,17 @@ export default function VillagerDialog() {
   const router = useRouter();
   const { dialogActive, dialogVillager } = useContext(StateContext);
 
-  return <CustomDialog
-    open={dialogActive}
-    onClose={() => {router.back();}}
-    zIndex={1300}
-  >
-    <Grid
-      container
-      justifyContent='center'
-      padding={4}
-      spacing={4}
+  return (
+    <CustomDialog
+      open={dialogActive}
+      onClose={() => {
+        router.back();
+      }}
+      zIndex={1300}
     >
-      <VillagerInfo params={{villager: dialogVillager}}/>
-    </Grid>
-  </CustomDialog>
+      <Grid container justifyContent="center" padding={4} spacing={4}>
+        <VillagerInfo params={{ villager: dialogVillager }} />
+      </Grid>
+    </CustomDialog>
+  );
 }

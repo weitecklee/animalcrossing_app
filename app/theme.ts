@@ -1,7 +1,7 @@
 'use client';
 
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
-import { Coustard, Montserrat } from "next/font/google";
+import { Coustard, Montserrat } from 'next/font/google';
 
 declare module '@mui/material/styles' {
   interface TypographyVariants {
@@ -38,24 +38,24 @@ declare module '@mui/material/Button' {
 
 const montserrat = Montserrat({
   weight: 'variable',
-  subsets: ["latin"],
+  subsets: ['latin'],
 });
 export const coustard = Coustard({
   weight: ['400'],
-  subsets: ["latin"],
+  subsets: ['latin'],
 });
 
 const theme0 = createTheme({
   palette: {
     primary: {
-      main: "#418869",
+      main: '#418869',
     },
     secondary: {
-      main: "#79d6c2",
+      main: '#79d6c2',
     },
     success: {
-      main: "#F5F7E1"
-    }
+      main: '#F5F7E1',
+    },
   },
   typography: {
     fontFamily: montserrat.style.fontFamily,
@@ -64,7 +64,7 @@ const theme0 = createTheme({
     },
     boldSpan: {
       fontFamily: coustard.style.fontFamily, // Zilla Slab, Sanchez
-    }
+    },
   },
 
   components: {
@@ -72,22 +72,22 @@ const theme0 = createTheme({
       styleOverrides: {
         root: {
           fontFamily: coustard.style.fontFamily,
-        }
-      }
+        },
+      },
     },
     MuiChip: {
       styleOverrides: {
         label: {
           fontFamily: coustard.style.fontFamily,
-        }
-      }
+        },
+      },
     },
     MuiMenuItem: {
       styleOverrides: {
         root: {
           fontFamily: coustard.style.fontFamily,
-        }
-      }
+        },
+      },
     },
     MuiButton: {
       variants: [
@@ -96,10 +96,10 @@ const theme0 = createTheme({
           style: {
             fontFamily: coustard.style.fontFamily,
             marginLeft: 1,
-          }
-        }
-      ]
-    }
+          },
+        },
+      ],
+    },
   },
   breakpoints: {
     values: {
@@ -109,7 +109,7 @@ const theme0 = createTheme({
       lg: 1200,
       xl: 1400,
     },
-  }
+  },
 });
 
 export const theme = responsiveFontSizes(theme0, {

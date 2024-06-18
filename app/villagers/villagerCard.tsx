@@ -18,11 +18,13 @@ import Link from 'next/link';
 const lowElevation = 4;
 const highElevation = 14;
 
-export default function VillagerCard({ history, villagerData }: {
-  history: History,
-  villagerData: NookipediaVillager,
+export default function VillagerCard({
+  history,
+  villagerData,
+}: {
+  history: History;
+  villagerData: NookipediaVillager;
 }) {
-
   const { mediumScreen } = useContext(ScreenContext);
   const theme = useTheme();
   const [elevation, setElevation] = useState(lowElevation);
@@ -30,7 +32,7 @@ export default function VillagerCard({ history, villagerData }: {
   return (
     <Grid
       item
-      minWidth={mediumScreen ? 'calc(128px + 9rem)': 'calc(192px + 12rem)'}
+      minWidth={mediumScreen ? 'calc(128px + 9rem)' : 'calc(192px + 12rem)'}
     >
       <Link href={`/villagers/${fixName(history.name)}`} scroll={false}>
         <Paper
@@ -54,14 +56,15 @@ export default function VillagerCard({ history, villagerData }: {
               title={history.name}
               width={mediumScreen ? 128 : 192}
               height={mediumScreen ? 128 : 192}
-              placeholder='blur'
+              placeholder="blur"
               blurDataURL={rgbDataURL(villagerData.title_color)}
             />
-            <Box
-              padding={1}
-            >
+            <Box padding={1}>
               <Stack direction="row" spacing={1} alignItems="center">
-                <Typography variant={mediumScreen ? 'subtitle2' : 'h6'} fontFamily={coustard.style.fontFamily}>
+                <Typography
+                  variant={mediumScreen ? 'subtitle2' : 'h6'}
+                  fontFamily={coustard.style.fontFamily}
+                >
                   {history.name}
                 </Typography>
                 {history.currentResident ? <CRIcon /> : ''}
@@ -71,18 +74,24 @@ export default function VillagerCard({ history, villagerData }: {
                 text={history.startDateString}
                 screenBoolean={mediumScreen}
               />
-              {history.photo ?
+              {history.photo ? (
                 <IconWithText
                   Icon={CameraAltRoundedIcon}
                   text={history.photoDateString}
                   screenBoolean={mediumScreen}
-                /> : ''}
-              {!history.currentResident ?
+                />
+              ) : (
+                ''
+              )}
+              {!history.currentResident ? (
                 <IconWithText
                   Icon={ArrowBackRoundedIcon}
                   text={history.endDateString}
                   screenBoolean={mediumScreen}
-                /> : ''}
+                />
+              ) : (
+                ''
+              )}
               <IconWithText
                 Icon={AccessTimeRoundedIcon}
                 text={dayOrDays(history.duration)}

@@ -1,10 +1,12 @@
 'use server';
 
-import { EventDocument, HistoryDocument } from "@/types";
-import { cache } from "react";
+import { EventDocument, HistoryDocument } from '@/types';
+import { cache } from 'react';
 
-async function getData(): Promise<{historyData: HistoryDocument[], eventsData: EventDocument[]}> {
-
+async function getData(): Promise<{
+  historyData: HistoryDocument[];
+  eventsData: EventDocument[];
+}> {
   const payload = {
     dataSource: 'AnimalCrossing',
     database: 'lasagnark',
@@ -15,11 +17,12 @@ async function getData(): Promise<{historyData: HistoryDocument[], eventsData: E
     method: 'POST',
     headers: {
       'api-key': `${process.env.API_KEY}`,
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(payload)
+    body: JSON.stringify(payload),
   });
-  const historyResults: {documents: (HistoryDocument & {_id: any})[]} = await res.json();
+  const historyResults: { documents: (HistoryDocument & { _id: any })[] } =
+    await res.json();
   const historyData = historyResults.documents.map((doc) => {
     const { _id, ...others } = doc;
     return others;
@@ -39,18 +42,18 @@ async function getData(): Promise<{historyData: HistoryDocument[], eventsData: E
     method: 'POST',
     headers: {
       'api-key': `${process.env.API_KEY}`,
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(payload2)
+    body: JSON.stringify(payload2),
   });
-  const eventsResults: {documents: (EventDocument & {_id: any})[]} = await res2.json();
+  const eventsResults: { documents: (EventDocument & { _id: any })[] } =
+    await res2.json();
   const eventsData = eventsResults.documents.map((doc) => {
     const { _id, ...others } = doc;
     return others;
   });
 
-  return {historyData, eventsData};
-
+  return { historyData, eventsData };
 }
 
-export default cache(getData)
+export default cache(getData);
