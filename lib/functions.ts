@@ -44,9 +44,26 @@ export function rgbDataURL(blurColor: string): string {
   }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
 }
 
+const nameMapping = new Map([
+  ['Agent S', 'Agent_S'],
+  ['Agent_S', 'Agent S'],
+  ['Big Top', 'Big_Top'],
+  ['Big_Top', 'Big Top'],
+  ['Kid Cat', 'Kid_Cat'],
+  ['Kid_Cat', 'Kid Cat'],
+  ["O'Hare", 'O_Hare'],
+  ['O_Hare', "O'Hare"],
+  ['Renée', 'Renee'],
+  ['Renee', 'Renée'],
+  ['Wart Jr.', 'Wart_Jr.'],
+  ['Wart_Jr.', 'Wart Jr.'],
+  ['Étoile', 'Etoile'],
+  ['Etoile', 'Étoile'],
+]);
+
 export function fixName(name: string): string {
-  if (/ /.test(name)) {
-    return name.replace(/ /g, '_');
+  if (nameMapping.has(name)) {
+    return nameMapping.get(name)!;
   }
-  return name.replace(/_/g, ' ');
+  return name;
 }
