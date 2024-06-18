@@ -1,5 +1,5 @@
-import { LinearProgress } from "@mui/material";
+import { LinearProgress } from '@mui/material';
 
 export default function Loading() {
-  return <LinearProgress sx={{m: 2}}/>
+  return <LinearProgress sx={{ m: 2 }} />;
 }

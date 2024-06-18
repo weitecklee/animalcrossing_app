@@ -1,5 +1,8 @@
 export function calculateDays(startDate: Date, endDate: Date): number {
-  return Math.round((endDate.getTime() - startDate.getTime()) / (1000 * 3600 * 24)) + 1;
+  return (
+    Math.round((endDate.getTime() - startDate.getTime()) / (1000 * 3600 * 24)) +
+    1
+  );
 }
 
 export function dayOrDays(duration: number | string): string {
@@ -37,8 +40,8 @@ export function rgbDataURL(blurColor: string): string {
   const b = bigint & 255;
 
   return `data:image/gif;base64,R0lGODlhAQABAPAA${
-      triplet(0, r, g) + triplet(b, 255, 255)
-    }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
+    triplet(0, r, g) + triplet(b, 255, 255)
+  }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
 }
 
 export function fixName(name: string): string {

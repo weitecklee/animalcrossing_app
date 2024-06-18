@@ -1,6 +1,15 @@
 'use client';
 
-import { Paper, Chip, Divider, List, ListItem, ListItemAvatar, ListItemText, useTheme } from '@mui/material';
+import {
+  Paper,
+  Chip,
+  Divider,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemText,
+  useTheme,
+} from '@mui/material';
 import { useContext } from 'react';
 import { dateFormatter } from '@/lib/functions';
 import { DataContext } from '@/lib/dataContext';
@@ -10,14 +19,14 @@ import VillagerIcon from '@/components/villagerIcon';
 import Loading from './loading';
 
 export default function Events() {
-
   const { smallScreen, mediumScreen } = useContext(ScreenContext);
   const theme = useTheme();
   const { eventsData } = useContext(DataContext);
 
-  const determinePronoun = (villager: string) => nookipediaData.get(villager)!.gender === 'Male' ? 'his' : 'her';
+  const determinePronoun = (villager: string) =>
+    nookipediaData.get(villager)!.gender === 'Male' ? 'his' : 'her';
 
-  const rewordEvent = (villager: string, event: string) : string => {
+  const rewordEvent = (villager: string, event: string): string => {
     if (event === 'gave photo') {
       return `${villager} gave ${determinePronoun(villager)} photo`;
     }
@@ -25,30 +34,40 @@ export default function Events() {
       return `${villager} celebrated ${determinePronoun(villager)} birthday`;
     }
     return `${villager} ${event}`;
-  }
+  };
 
-  return <Paper
-    elevation={4}
-    sx={{
-      background: theme.palette.success.light,
-      px: mediumScreen ? 1 : 2,
-    }}
-  >
-    <List dense={mediumScreen} >
-      <Divider>
-        <Chip label="Latest Happenings" color="secondary" />
-      </Divider>
-      {!!eventsData.length ? eventsData.slice(0, smallScreen ? 3 : 10).map((eventDatum) => {
-        const {date, event, villager} = eventDatum;
-        const listItemKey = `${villager} ${event}`;
-        return <ListItem key={listItemKey}>
-          <ListItemAvatar sx={{pr: 1}}>
-            <VillagerIcon villager={villager}/>
-          </ListItemAvatar>
-          <ListItemText primary={rewordEvent(villager, event)} secondary={dateFormatter(new Date(date))}/>
-        </ListItem>
-        }) : <Loading />}
-    </List>
-  </Paper>
-
+  return (
+    <Paper
+      elevation={4}
+      sx={{
+        background: theme.palette.success.light,
+        px: mediumScreen ? 1 : 2,
+      }}
+    >
+      <List dense={mediumScreen}>
+        <Divider>
+          <Chip label="Latest Happenings" color="secondary" />
+        </Divider>
+        {!!eventsData.length ? (
+          eventsData.slice(0, smallScreen ? 3 : 10).map((eventDatum) => {
+            const { date, event, villager } = eventDatum;
+            const listItemKey = `${villager} ${event}`;
+            return (
+              <ListItem key={listItemKey}>
+                <ListItemAvatar sx={{ pr: 1 }}>
+                  <VillagerIcon villager={villager} />
+                </ListItemAvatar>
+                <ListItemText
+                  primary={rewordEvent(villager, event)}
+                  secondary={dateFormatter(new Date(date))}
+                />
+              </ListItem>
+            );
+          })
+        ) : (
+          <Loading />
+        )}
+      </List>
+    </Paper>
+  );
 }
