@@ -9,6 +9,7 @@ import { Container, CssBaseline } from '@mui/material';
 import { DataProvider } from '@/lib/dataContext';
 import { StateProvider } from '@/lib/stateContext';
 import VillagerDialog from './villagerDialog';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: 'My Animal Crossing Island',
@@ -47,6 +48,7 @@ export default function RootLayout({
             </DataProvider>
           </ThemeProvider>
         </AppRouterCacheProvider>
+        <Analytics />
       </body>
     </html>
   );
