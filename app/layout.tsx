@@ -10,6 +10,7 @@ import { DataProvider } from '@/lib/dataContext';
 import { StateProvider } from '@/lib/stateContext';
 import VillagerDialog from './villagerDialog';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   title: 'My Animal Crossing Island',
@@ -49,6 +50,7 @@ export default function RootLayout({
           </ThemeProvider>
         </AppRouterCacheProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
