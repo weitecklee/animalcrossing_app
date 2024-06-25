@@ -26,6 +26,7 @@ async function searchByFilter(searchOptions: SearchOptions): Promise<string[]> {
     database: 'lasagnark',
     collection: 'data',
     filter: searchFilter,
+    projection: { name: 1, _id: 0 },
   };
 
   const res = await fetch(`${process.env.API_URL}/action/find`, {
@@ -38,12 +39,8 @@ async function searchByFilter(searchOptions: SearchOptions): Promise<string[]> {
     body: JSON.stringify(payload),
   });
 
-  const filteredResults: { documents: (NookipediaVillager & { _id: any })[] } =
-    await res.json();
-  const filteredNames = filteredResults.documents.map((doc) => {
-    return doc.name;
-  });
-  return filteredNames;
+  const filteredResults: { documents: { name: string }[] } = await res.json();
+  return filteredResults.documents.map((a) => a.name);
 }
 
 export default cache(searchByFilter);
