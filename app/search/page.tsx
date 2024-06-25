@@ -1,9 +1,10 @@
 'use client';
 
 import IconGrid from '@/components/iconGrid';
-import { NAMES } from '@/lib/constants';
+import { NAMES, PERSONALITIES, SPECIES } from '@/lib/constants';
 import searchByFilter from '@/lib/searchByFilter';
-import { Autocomplete, Box, TextField } from '@mui/material';
+import { SearchOptions } from '@/types';
+import { Autocomplete, TextField, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 function useDebounce(value: any, delay: number) {
@@ -26,25 +27,57 @@ export default function Page() {
   const [nameFilter, setNameFilter] = useState('');
   const debouncedNameFilter = useDebounce(nameFilter, 500);
   const [filteredVillagers, setFilteredVillagers] = useState<string[]>([]);
+  const [searchOptions, setSearchOptions] = useState<SearchOptions>({
+    name: '',
+    species: null,
+    personality: null,
+  });
 
   useEffect(() => {
-    if (debouncedNameFilter) {
-      searchByFilter(debouncedNameFilter).then((res) => {
+    setSearchOptions((prev) => ({ ...prev, name: debouncedNameFilter }));
+  }, [debouncedNameFilter]);
+
+  useEffect(() => {
+    if (!Object.values(searchOptions).every((a) => !a)) {
+      searchByFilter(searchOptions).then((res) => {
         setFilteredVillagers(res);
       });
     } else {
       setFilteredVillagers([]);
     }
-  }, [debouncedNameFilter]);
+  }, [searchOptions]);
 
   return (
     <>
       <TextField
         label="Name"
         value={nameFilter}
+        sx={{ width: '20rem' }}
         onChange={(e) => setNameFilter(e.target.value)}
       />
-      <IconGrid villagers={filteredVillagers} />
+      <Autocomplete
+        options={SPECIES}
+        sx={{ width: '20rem' }}
+        value={searchOptions.species}
+        onChange={(e, species) =>
+          setSearchOptions((prev) => ({ ...prev, species }))
+        }
+        renderInput={(params) => <TextField {...params} label="Species" />}
+      />
+      <Autocomplete
+        options={PERSONALITIES}
+        sx={{ width: '20rem' }}
+        value={searchOptions.personality}
+        onChange={(e, personality) =>
+          setSearchOptions((prev) => ({ ...prev, personality }))
+        }
+        renderInput={(params) => <TextField {...params} label="Personality" />}
+      />
+      {filteredVillagers.length ? (
+        <IconGrid villagers={filteredVillagers} />
+      ) : (
+        <Typography>No results</Typography>
+      )}
     </>
   );
 }
