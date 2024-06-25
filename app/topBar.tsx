@@ -27,7 +27,7 @@ import { ScreenContext } from '@/lib/screenContext';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-const pages = ['Villagers', 'Timeline', 'Stats', 'About'];
+const pages = ['Villagers', 'Timeline', 'Stats', 'Search', 'About'];
 
 export default function TopBar() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
