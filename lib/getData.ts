@@ -12,6 +12,7 @@ async function getData(): Promise<{
     database: 'lasagnark',
     collection: 'history',
     filter: {},
+    projection: { _id: 0 },
   };
   const res = await fetch(`${process.env.API_URL}/action/find`, {
     method: 'POST',
@@ -21,12 +22,7 @@ async function getData(): Promise<{
     },
     body: JSON.stringify(payload),
   });
-  const historyResults: { documents: (HistoryDocument & { _id: any })[] } =
-    await res.json();
-  const historyData = historyResults.documents.map((doc) => {
-    const { _id, ...others } = doc;
-    return others;
-  });
+  const historyResults: { documents: HistoryDocument[] } = await res.json();
 
   const payload2 = {
     dataSource: 'AnimalCrossing',
@@ -37,6 +33,7 @@ async function getData(): Promise<{
       _id: -1,
     },
     limit: 10,
+    projection: { _id: 0 },
   };
   const res2 = await fetch(`${process.env.API_URL}/action/find`, {
     method: 'POST',
@@ -46,14 +43,12 @@ async function getData(): Promise<{
     },
     body: JSON.stringify(payload2),
   });
-  const eventsResults: { documents: (EventDocument & { _id: any })[] } =
-    await res2.json();
-  const eventsData = eventsResults.documents.map((doc) => {
-    const { _id, ...others } = doc;
-    return others;
-  });
+  const eventsResults: { documents: EventDocument[] } = await res2.json();
 
-  return { historyData, eventsData };
+  return {
+    historyData: historyResults.documents,
+    eventsData: eventsResults.documents,
+  };
 }
 
 export default cache(getData);
