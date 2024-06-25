@@ -15,11 +15,11 @@ async function searchByFilter(searchOptions: SearchOptions): Promise<string[]> {
       $options: 'i',
     };
   }
-  if (searchOptions.species) {
-    searchFilter.species = searchOptions.species;
+  if (searchOptions.species.length) {
+    searchFilter.species = { $in: searchOptions.species };
   }
-  if (searchOptions.personality) {
-    searchFilter.personality = searchOptions.personality;
+  if (searchOptions.personality.length) {
+    searchFilter.personality = { $in: searchOptions.personality };
   }
   const payload = {
     dataSource: 'AnimalCrossing',

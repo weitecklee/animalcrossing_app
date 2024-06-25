@@ -23,14 +23,18 @@ function useDebounce(value: any, delay: number) {
   return debouncedValue;
 }
 
+function checkSearchOptions(opt: SearchOptions) {
+  return opt.name || opt.species.length || opt.personality.length;
+}
+
 export default function Page() {
   const [nameFilter, setNameFilter] = useState('');
   const debouncedNameFilter = useDebounce(nameFilter, 500);
   const [filteredVillagers, setFilteredVillagers] = useState<string[]>([]);
   const [searchOptions, setSearchOptions] = useState<SearchOptions>({
     name: '',
-    species: null,
-    personality: null,
+    species: [],
+    personality: [],
   });
 
   useEffect(() => {
@@ -38,7 +42,7 @@ export default function Page() {
   }, [debouncedNameFilter]);
 
   useEffect(() => {
-    if (!Object.values(searchOptions).every((a) => !a)) {
+    if (checkSearchOptions(searchOptions)) {
       searchByFilter(searchOptions).then((res) => {
         setFilteredVillagers(res);
       });
@@ -56,6 +60,8 @@ export default function Page() {
         onChange={(e) => setNameFilter(e.target.value)}
       />
       <Autocomplete
+        multiple
+        disableCloseOnSelect
         options={SPECIES}
         sx={{ width: '20rem' }}
         value={searchOptions.species}
@@ -65,6 +71,8 @@ export default function Page() {
         renderInput={(params) => <TextField {...params} label="Species" />}
       />
       <Autocomplete
+        multiple
+        disableCloseOnSelect
         options={PERSONALITIES}
         sx={{ width: '20rem' }}
         value={searchOptions.personality}

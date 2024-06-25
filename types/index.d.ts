@@ -137,12 +137,12 @@ export interface VillagerTooltipProps extends Omit<TooltipProps, 'title'> {
 
 export interface SearchOptions {
   name: string;
-  species: string | null;
-  personality: string | null;
+  species: string[];
+  personality: string[];
 }
 
 export interface SearchFilter {
   name?: { $regex: string; $options: string };
-  species?: string;
-  personality?: string;
+  species?: { $in: string[] };
+  personality?: { $in: string[] };
 }
