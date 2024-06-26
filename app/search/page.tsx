@@ -1,6 +1,7 @@
 'use client';
 
 import IconGrid from '@/components/iconGrid';
+import IconGridAll from '@/components/iconGridAll';
 import { NAMES, PERSONALITIES, SPECIES } from '@/lib/constants';
 import searchByFilter from '@/lib/searchByFilter';
 import { SearchOptions } from '@/types';
@@ -24,18 +25,19 @@ function useDebounce(value: any, delay: number) {
 }
 
 function checkSearchOptions(opt: SearchOptions) {
-  return opt.name || opt.species.length || opt.personality.length;
+  return !!(opt.name || opt.species.length || opt.personality.length);
 }
 
 export default function Page() {
   const [nameFilter, setNameFilter] = useState('');
-  const debouncedNameFilter = useDebounce(nameFilter, 500);
+  const debouncedNameFilter = useDebounce(nameFilter, 250);
   const [filteredVillagers, setFilteredVillagers] = useState<string[]>([]);
   const [searchOptions, setSearchOptions] = useState<SearchOptions>({
     name: '',
     species: [],
     personality: [],
   });
+  const [conductSearch, setConductSearch] = useState(false);
 
   useEffect(() => {
     setSearchOptions((prev) => ({ ...prev, name: debouncedNameFilter }));
@@ -43,10 +45,12 @@ export default function Page() {
 
   useEffect(() => {
     if (checkSearchOptions(searchOptions)) {
+      setConductSearch(true);
       searchByFilter(searchOptions).then((res) => {
         setFilteredVillagers(res);
       });
     } else {
+      setConductSearch(false);
       setFilteredVillagers([]);
     }
   }, [searchOptions]);
@@ -93,10 +97,14 @@ export default function Page() {
           />
         </Grid>
       </Grid>
-      {filteredVillagers.length ? (
-        <IconGrid villagers={filteredVillagers} />
+      {conductSearch ? (
+        filteredVillagers.length ? (
+          <IconGrid villagers={filteredVillagers} />
+        ) : (
+          <Typography>No results.</Typography>
+        )
       ) : (
-        <Typography>No results</Typography>
+        <IconGridAll />
       )}
     </>
   );
