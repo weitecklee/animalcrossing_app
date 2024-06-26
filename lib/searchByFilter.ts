@@ -21,6 +21,9 @@ async function searchByFilter(searchOptions: SearchOptions): Promise<string[]> {
   if (searchOptions.personality.length) {
     searchFilter.personality = { $in: searchOptions.personality };
   }
+  if (searchOptions.gender !== 'All') {
+    searchFilter.gender = searchOptions.gender;
+  }
   const payload = {
     dataSource: 'AnimalCrossing',
     database: 'lasagnark',

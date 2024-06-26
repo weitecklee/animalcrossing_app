@@ -5,7 +5,20 @@ import IconGridAll from '@/components/iconGridAll';
 import { NAMES, PERSONALITIES, SPECIES } from '@/lib/constants';
 import searchByFilter from '@/lib/searchByFilter';
 import { SearchOptions } from '@/types';
-import { Autocomplete, Grid, TextField, Typography } from '@mui/material';
+import {
+  Autocomplete,
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  Grid,
+  InputLabel,
+  MenuItem,
+  Radio,
+  RadioGroup,
+  Select,
+  TextField,
+  Typography,
+} from '@mui/material';
 import { useEffect, useState } from 'react';
 
 function useDebounce(value: any, delay: number) {
@@ -25,7 +38,12 @@ function useDebounce(value: any, delay: number) {
 }
 
 function checkSearchOptions(opt: SearchOptions) {
-  return !!(opt.name || opt.species.length || opt.personality.length);
+  return !!(
+    opt.name ||
+    opt.species.length ||
+    opt.personality.length ||
+    opt.gender !== 'All'
+  );
 }
 
 export default function Page() {
@@ -36,6 +54,7 @@ export default function Page() {
     name: '',
     species: [],
     personality: [],
+    gender: 'All',
   });
   const [conductSearch, setConductSearch] = useState(false);
   const [resultsFound, setResultsFound] = useState(true);
@@ -101,6 +120,25 @@ export default function Page() {
               <TextField {...params} label="Personality" />
             )}
           />
+        </Grid>
+        <Grid item>
+          <FormControl sx={{ width: '10rem' }}>
+            <InputLabel>Gender</InputLabel>
+            <Select
+              value={searchOptions.gender}
+              onChange={(e) =>
+                setSearchOptions((prev) => ({
+                  ...prev,
+                  gender: e.target.value,
+                }))
+              }
+              label="Gender"
+            >
+              <MenuItem value="All">All</MenuItem>
+              <MenuItem value="Female">Female</MenuItem>
+              <MenuItem value="Male">Male</MenuItem>
+            </Select>
+          </FormControl>
         </Grid>
       </Grid>
       {conductSearch ? (

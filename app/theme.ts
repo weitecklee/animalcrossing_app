@@ -82,13 +82,6 @@ const theme0 = createTheme({
         },
       },
     },
-    MuiMenuItem: {
-      styleOverrides: {
-        root: {
-          fontFamily: coustard.style.fontFamily,
-        },
-      },
-    },
     MuiButton: {
       variants: [
         {
