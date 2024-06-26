@@ -38,6 +38,7 @@ export default function Page() {
     personality: [],
   });
   const [conductSearch, setConductSearch] = useState(false);
+  const [resultsFound, setResultsFound] = useState(true);
 
   useEffect(() => {
     setSearchOptions((prev) => ({ ...prev, name: debouncedNameFilter }));
@@ -47,7 +48,12 @@ export default function Page() {
     if (checkSearchOptions(searchOptions)) {
       setConductSearch(true);
       searchByFilter(searchOptions).then((res) => {
-        setFilteredVillagers(res);
+        if (res.length) {
+          setResultsFound(true);
+          setFilteredVillagers(res);
+        } else {
+          setResultsFound(false);
+        }
       });
     } else {
       setConductSearch(false);
@@ -98,7 +104,7 @@ export default function Page() {
         </Grid>
       </Grid>
       {conductSearch ? (
-        filteredVillagers.length ? (
+        resultsFound ? (
           <IconGrid villagers={filteredVillagers} />
         ) : (
           <Typography>No results.</Typography>
