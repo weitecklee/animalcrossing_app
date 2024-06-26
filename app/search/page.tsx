@@ -4,7 +4,7 @@ import IconGrid from '@/components/iconGrid';
 import { NAMES, PERSONALITIES, SPECIES } from '@/lib/constants';
 import searchByFilter from '@/lib/searchByFilter';
 import { SearchOptions } from '@/types';
-import { Autocomplete, TextField, Typography } from '@mui/material';
+import { Autocomplete, Grid, TextField, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 function useDebounce(value: any, delay: number) {
@@ -53,34 +53,46 @@ export default function Page() {
 
   return (
     <>
-      <TextField
-        label="Name"
-        value={nameFilter}
-        sx={{ width: '20rem' }}
-        onChange={(e) => setNameFilter(e.target.value)}
-      />
-      <Autocomplete
-        multiple
-        disableCloseOnSelect
-        options={SPECIES}
-        sx={{ width: '20rem' }}
-        value={searchOptions.species}
-        onChange={(e, species) =>
-          setSearchOptions((prev) => ({ ...prev, species }))
-        }
-        renderInput={(params) => <TextField {...params} label="Species" />}
-      />
-      <Autocomplete
-        multiple
-        disableCloseOnSelect
-        options={PERSONALITIES}
-        sx={{ width: '20rem' }}
-        value={searchOptions.personality}
-        onChange={(e, personality) =>
-          setSearchOptions((prev) => ({ ...prev, personality }))
-        }
-        renderInput={(params) => <TextField {...params} label="Personality" />}
-      />
+      <Grid container spacing={1} paddingY={1}>
+        <Grid item>
+          <Autocomplete
+            freeSolo
+            options={NAMES}
+            sx={{ width: '15rem' }}
+            inputValue={nameFilter}
+            onInputChange={(e, name) => setNameFilter(name)}
+            renderInput={(params) => <TextField {...params} label="Name" />}
+          />
+        </Grid>
+        <Grid item>
+          <Autocomplete
+            multiple
+            disableCloseOnSelect
+            options={SPECIES}
+            sx={{ width: '15rem' }}
+            value={searchOptions.species}
+            onChange={(e, species) =>
+              setSearchOptions((prev) => ({ ...prev, species }))
+            }
+            renderInput={(params) => <TextField {...params} label="Species" />}
+          />
+        </Grid>
+        <Grid item>
+          <Autocomplete
+            multiple
+            disableCloseOnSelect
+            options={PERSONALITIES}
+            sx={{ width: '15rem' }}
+            value={searchOptions.personality}
+            onChange={(e, personality) =>
+              setSearchOptions((prev) => ({ ...prev, personality }))
+            }
+            renderInput={(params) => (
+              <TextField {...params} label="Personality" />
+            )}
+          />
+        </Grid>
+      </Grid>
       {filteredVillagers.length ? (
         <IconGrid villagers={filteredVillagers} />
       ) : (
