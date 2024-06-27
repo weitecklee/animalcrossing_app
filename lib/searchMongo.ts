@@ -1,13 +1,14 @@
 'use server';
 
-import { NookipediaVillager, SearchFilter, SearchOptions } from '@/types';
-import { cache } from 'react';
+import { SearchFilter, SearchOptions } from '@/types';
 
 function escapeRegExp(regexString: string) {
   return regexString.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-async function searchByFilter(searchOptions: SearchOptions): Promise<string[]> {
+export default async function searchMongo(
+  searchOptions: SearchOptions,
+): Promise<string[]> {
   const searchFilter = {} as SearchFilter;
   if (searchOptions.name) {
     searchFilter.name = {
@@ -45,5 +46,3 @@ async function searchByFilter(searchOptions: SearchOptions): Promise<string[]> {
   const filteredResults: { documents: { name: string }[] } = await res.json();
   return filteredResults.documents.map((a) => a.name);
 }
-
-export default cache(searchByFilter);

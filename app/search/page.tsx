@@ -3,19 +3,18 @@
 import IconGrid from '@/components/iconGrid';
 import IconGridAll from '@/components/iconGridAll';
 import { NAMES, PERSONALITIES, SPECIES } from '@/lib/constants';
-import searchByFilter from '@/lib/searchByFilter';
+import searchLocal from '@/lib/searchLocal';
+import searchMongo from '@/lib/searchMongo';
 import { SearchOptions } from '@/types';
 import {
   Autocomplete,
   FormControl,
   FormControlLabel,
-  FormLabel,
   Grid,
   InputLabel,
   MenuItem,
-  Radio,
-  RadioGroup,
   Select,
+  Switch,
   TextField,
   Typography,
 } from '@mui/material';
@@ -58,6 +57,7 @@ export default function Page() {
   });
   const [conductSearch, setConductSearch] = useState(false);
   const [resultsFound, setResultsFound] = useState(true);
+  const [shouldUseMongo, setShouldUseMongo] = useState(false);
 
   useEffect(() => {
     setSearchOptions((prev) => ({ ...prev, name: debouncedNameFilter }));
@@ -66,19 +66,33 @@ export default function Page() {
   useEffect(() => {
     if (checkSearchOptions(searchOptions)) {
       setConductSearch(true);
-      searchByFilter(searchOptions).then((res) => {
-        if (res.length) {
-          setResultsFound(true);
-          setFilteredVillagers(res);
-        } else {
-          setResultsFound(false);
-        }
-      });
+      console.time('search');
+      if (shouldUseMongo) {
+        searchMongo(searchOptions).then((res) => {
+          if (res.length) {
+            setResultsFound(true);
+            setFilteredVillagers(res);
+          } else {
+            setResultsFound(false);
+          }
+          console.timeEnd('search');
+        });
+      } else {
+        searchLocal(searchOptions).then((res) => {
+          if (res.length) {
+            setResultsFound(true);
+            setFilteredVillagers(res);
+          } else {
+            setResultsFound(false);
+          }
+          console.timeEnd('search');
+        });
+      }
     } else {
       setConductSearch(false);
       setFilteredVillagers([]);
     }
-  }, [searchOptions]);
+  }, [searchOptions, shouldUseMongo]);
 
   return (
     <>
@@ -139,6 +153,17 @@ export default function Page() {
               <MenuItem value="Male">Male</MenuItem>
             </Select>
           </FormControl>
+        </Grid>
+        <Grid item>
+          <FormControlLabel
+            control={
+              <Switch
+                checked={shouldUseMongo}
+                onChange={(e) => setShouldUseMongo(e.target.checked)}
+              />
+            }
+            label="Mongo"
+          />
         </Grid>
       </Grid>
       {conductSearch ? (
