@@ -33,11 +33,15 @@ export default function Home() {
           <br />
           &emsp;&emsp;
           <Typography variant="boldSpan">Timeline</Typography>
-          : a timeline chart of the villagers
+          : a timeline chart of the villagers&apos; stays
           <br />
           &emsp;&emsp;
           <Typography variant="boldSpan">Stats</Typography>
           : all sorts of fun stats
+          <br />
+          &emsp;&emsp;
+          <Typography variant="boldSpan">Search</Typography>
+          : find villagers by traits
           <br />
           &emsp;&emsp;
           <Typography variant="boldSpan">About</Typography>
