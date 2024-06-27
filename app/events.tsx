@@ -2,7 +2,6 @@
 
 import {
   Paper,
-  Chip,
   Divider,
   List,
   ListItem,
@@ -17,6 +16,7 @@ import { ScreenContext } from '@/lib/screenContext';
 import nookipediaData from '@/lib/nookipediaData';
 import VillagerIcon from '@/components/villagerIcon';
 import Loading from './loading';
+import CustomChip from '@/components/customChip';
 
 export default function Events() {
   const { smallScreen, mediumScreen } = useContext(ScreenContext);
@@ -46,7 +46,7 @@ export default function Events() {
     >
       <List dense={mediumScreen}>
         <Divider>
-          <Chip label="Latest Happenings" color="secondary" />
+          <CustomChip label="Latest Happenings" />
         </Divider>
         {!!eventsData.length ? (
           eventsData.slice(0, smallScreen ? 3 : 10).map((eventDatum) => {

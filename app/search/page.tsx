@@ -105,6 +105,7 @@ export default function Page() {
                 renderInput={(params) => (
                   <TextField {...params} label="Species" />
                 )}
+                ChipProps={{ variant: 'outlined' }}
               />
             </Grid>
             <Grid item>
@@ -120,6 +121,7 @@ export default function Page() {
                 renderInput={(params) => (
                   <TextField {...params} label="Personality" />
                 )}
+                ChipProps={{ variant: 'outlined' }}
               />
             </Grid>
             <Grid item>

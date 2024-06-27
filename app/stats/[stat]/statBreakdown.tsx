@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Chip, Divider, List, ListItem, Typography } from '@mui/material';
+import { Box, Divider, List, ListItem, Typography } from '@mui/material';
 import { useContext } from 'react';
 import { dayOrDays } from '@/lib/functions';
 import { DataContext } from '@/lib/dataContext';
@@ -11,6 +11,7 @@ import Loading from '@/app/loading';
 import PhotoDialog from '../photoDialog';
 import TitleChip from '../titleChip';
 import { notFound } from 'next/navigation';
+import CustomChip from '@/components/customChip';
 
 export default function StatBreakdown({
   params,
@@ -66,10 +67,7 @@ export default function StatBreakdown({
         {speciesData.map((traitData) => (
           <Box key={traitData.trait}>
             <Divider>
-              <Chip
-                label={`${traitData.trait}: ${traitData.count}`}
-                color="secondary"
-              />
+              <CustomChip label={`${traitData.trait}: ${traitData.count}`} />
             </Divider>
             <IconGrid traitData={traitData} />
           </Box>
@@ -85,10 +83,7 @@ export default function StatBreakdown({
         {personalityData.map((traitData) => (
           <Box key={traitData.trait}>
             <Divider>
-              <Chip
-                label={`${traitData.trait}: ${traitData.count}`}
-                color="secondary"
-              />
+              <CustomChip label={`${traitData.trait}: ${traitData.count}`} />
             </Divider>
             <IconGrid traitData={traitData} />
           </Box>
@@ -104,10 +99,7 @@ export default function StatBreakdown({
         {genderData.map((traitData) => (
           <Box key={traitData.trait}>
             <Divider>
-              <Chip
-                label={`${traitData.trait}: ${traitData.count}`}
-                color="secondary"
-              />
+              <CustomChip label={`${traitData.trait}: ${traitData.count}`} />
             </Divider>
             <IconGrid traitData={traitData} />
           </Box>
