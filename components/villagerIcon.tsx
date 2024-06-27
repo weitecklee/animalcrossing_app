@@ -10,13 +10,7 @@ import VillagerTooltip from './villagerTooltip';
 import Link from 'next/link';
 import { StateContext } from '@/lib/stateContext';
 
-export default function VillagerIcon({
-  villager,
-  customOnClick,
-}: {
-  villager: string;
-  customOnClick?: () => void;
-}) {
+export default function VillagerIcon({ villager }: { villager: string }) {
   const { mediumScreen } = useContext(ScreenContext);
   const { historyMap } = useContext(DataContext);
   const { dialogActive } = useContext(StateContext);

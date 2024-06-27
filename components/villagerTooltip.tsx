@@ -21,7 +21,7 @@ export default function VillagerTooltip({
   const { smallScreen } = useContext(ScreenContext);
 
   const villagerData = nookipediaData.get(villager)!;
-  const history = historyMap.get(villager)!;
+  const history = historyMap.get(villager);
 
   return (
     <Tooltip
@@ -30,7 +30,7 @@ export default function VillagerTooltip({
       title={
         <Box padding={1}>
           <Stack>
-            <CRBadge invisible={!history.currentResident}>
+            <CRBadge invisible={history ? !history.currentResident : true}>
               <Image
                 src={villagerData.nh_details.icon_url}
                 alt={villagerData.name}
@@ -49,25 +49,31 @@ export default function VillagerTooltip({
             >
               {villagerData.name}
             </Typography>
-            <IconWithText
-              Icon={ArrowForwardRoundedIcon}
-              text={history.startDateString}
-              screenBoolean={smallScreen}
-            />
-            {!history.currentResident ? (
-              <IconWithText
-                Icon={ArrowBackRoundedIcon}
-                text={history.endDateString}
-                screenBoolean={smallScreen}
-              />
+            {history ? (
+              <>
+                <IconWithText
+                  Icon={ArrowForwardRoundedIcon}
+                  text={history.startDateString}
+                  screenBoolean={smallScreen}
+                />{' '}
+                {!history.currentResident ? (
+                  <IconWithText
+                    Icon={ArrowBackRoundedIcon}
+                    text={history.endDateString}
+                    screenBoolean={smallScreen}
+                  />
+                ) : (
+                  ''
+                )}
+                <IconWithText
+                  Icon={AccessTimeRoundedIcon}
+                  text={dayOrDays(history.duration)}
+                  screenBoolean={smallScreen}
+                />
+              </>
             ) : (
               ''
             )}
-            <IconWithText
-              Icon={AccessTimeRoundedIcon}
-              text={dayOrDays(history.duration)}
-              screenBoolean={smallScreen}
-            />
           </Stack>
         </Box>
       }

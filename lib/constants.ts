@@ -464,3 +464,6 @@ export const PERSONALITIES = [
 ];
 
 export const GENDERS = ['Female', 'Male'];
+
+export const BLURDATAURL =
+  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOsvHaoHgAGcwKSuMVquwAAAABJRU5ErkJggg==';

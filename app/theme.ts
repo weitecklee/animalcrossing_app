@@ -75,20 +75,6 @@ const theme0 = createTheme({
         },
       },
     },
-    MuiChip: {
-      styleOverrides: {
-        label: {
-          fontFamily: coustard.style.fontFamily,
-        },
-      },
-    },
-    MuiMenuItem: {
-      styleOverrides: {
-        root: {
-          fontFamily: coustard.style.fontFamily,
-        },
-      },
-    },
     MuiButton: {
       variants: [
         {

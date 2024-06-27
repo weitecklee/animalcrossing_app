@@ -26,8 +26,9 @@ import FavIcon from '@/public/lasagnark8.png';
 import { ScreenContext } from '@/lib/screenContext';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { coustard } from './theme';
 
-const pages = ['Villagers', 'Timeline', 'Stats', 'About'];
+const pages = ['Villagers', 'Timeline', 'Stats', 'Search', 'About'];
 
 export default function TopBar() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -35,7 +36,7 @@ export default function TopBar() {
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
+  const handleClose = (): void => {
     setAnchorEl(null);
   };
   const { smallScreen } = useContext(ScreenContext);
@@ -62,7 +63,12 @@ export default function TopBar() {
                 >
                   <MenuIcon />
                 </IconButton>
-                <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
+                <Menu
+                  anchorEl={anchorEl}
+                  open={open}
+                  onClose={handleClose}
+                  slotProps={{ paper: { sx: { bgcolor: 'secondary.main' } } }}
+                >
                   {pages.map((page) => (
                     <MenuItem
                       key={page}
@@ -75,6 +81,7 @@ export default function TopBar() {
                         ':hover': {
                           bgcolor: 'success.main',
                         },
+                        fontFamily: coustard.style.fontFamily,
                       }}
                     >
                       {<Link href={`/${page.toLowerCase()}`}>{page}</Link>}

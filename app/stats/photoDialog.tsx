@@ -7,7 +7,6 @@ import { Duration, History } from '@/types';
 import { ArrowBackRounded, ArrowForwardRounded } from '@mui/icons-material';
 import {
   Box,
-  Chip,
   Slide,
   Divider,
   Fab,
@@ -18,6 +17,7 @@ import {
 } from '@mui/material';
 import { useContext, useState } from 'react';
 import TitleChip from './titleChip';
+import CustomChip from '@/components/customChip';
 
 export default function PhotoDialog({
   photoData,
@@ -39,7 +39,7 @@ export default function PhotoDialog({
       }}
     >
       <Divider>
-        <Chip label="Time to give (stay after giving)" color="secondary" />
+        <CustomChip label="Time to give (stay after giving)" />
       </Divider>
       <List>
         {photoData.map((photo) =>
@@ -69,7 +69,7 @@ export default function PhotoDialog({
       }}
     >
       <Divider>
-        <Chip label="Stay without giving" color="secondary" />
+        <CustomChip label="Stay without giving" />
       </Divider>
       <List>
         {noPhotoData.map((noPhoto) =>

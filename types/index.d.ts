@@ -134,3 +134,17 @@ export interface CustomImageProps extends ImageProps {
 export interface VillagerTooltipProps extends Omit<TooltipProps, 'title'> {
   villager: string;
 }
+
+export interface SearchOptions {
+  name: string;
+  species: string[];
+  personality: string[];
+  gender: string;
+}
+
+export interface SearchFilter {
+  name?: { $regex: string; $options: string };
+  species?: { $in: string[] };
+  personality?: { $in: string[] };
+  gender: string;
+}
