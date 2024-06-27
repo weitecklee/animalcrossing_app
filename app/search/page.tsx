@@ -18,6 +18,7 @@ import {
   Typography,
 } from '@mui/material';
 import { useEffect, useState } from 'react';
+import Loading from '../loading';
 
 function useDebounce(value: any, delay: number) {
   const [debouncedValue, setDebouncedValue] = useState(value);
@@ -60,6 +61,7 @@ export default function Page() {
     'medium',
   );
   const { smallScreen } = useScreen();
+  const [searching, setSearching] = useState(false);
 
   useEffect(() => {
     setSearchOptions((prev) => ({ ...prev, name: debouncedNameFilter }));
@@ -68,7 +70,9 @@ export default function Page() {
   useEffect(() => {
     if (checkSearchOptions(searchOptions)) {
       setConductSearch(true);
+      setSearching(true);
       searchLocal(searchOptions).then((res) => {
+        setSearching(false);
         if (res.length) {
           setResultsFound(true);
           setFilteredVillagers(res);
@@ -170,7 +174,9 @@ export default function Page() {
         />
         <Grid item xs>
           {conductSearch ? (
-            resultsFound ? (
+            searching ? (
+              <Loading />
+            ) : resultsFound ? (
               <IconGrid villagers={filteredVillagers} />
             ) : (
               <Typography>No results.</Typography>
