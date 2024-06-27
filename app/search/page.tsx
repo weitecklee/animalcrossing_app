@@ -4,10 +4,11 @@ import IconGrid from '@/components/iconGrid';
 import IconGridAll from '@/components/iconGridAll';
 import { NAMES, PERSONALITIES, SPECIES } from '@/lib/constants';
 import searchLocal from '@/lib/searchLocal';
+import useScreen from '@/lib/useScreen';
 import { SearchOptions } from '@/types';
 import {
   Autocomplete,
-  Box,
+  Divider,
   FormControl,
   Grid,
   InputLabel,
@@ -55,6 +56,10 @@ export default function Page() {
   });
   const [conductSearch, setConductSearch] = useState(false);
   const [resultsFound, setResultsFound] = useState(true);
+  const [autocompleteSize, setAutocompleteSize] = useState<'small' | 'medium'>(
+    'medium',
+  );
+  const { smallScreen } = useScreen();
 
   useEffect(() => {
     setSearchOptions((prev) => ({ ...prev, name: debouncedNameFilter }));
@@ -77,9 +82,18 @@ export default function Page() {
     }
   }, [searchOptions]);
 
+  useEffect(() => {
+    setAutocompleteSize(smallScreen ? 'small' : 'medium');
+  }, [smallScreen]);
+
   return (
     <>
-      <Grid container spacing={2} paddingY={1}>
+      <Grid
+        container
+        spacing={1}
+        paddingY={1}
+        direction={{ xs: 'column', sm: 'row' }}
+      >
         <Grid item xs={12} sm="auto">
           <Grid container spacing={2} direction={{ xs: 'row', sm: 'column' }}>
             <Grid item>
@@ -90,6 +104,7 @@ export default function Page() {
                 inputValue={nameFilter}
                 onInputChange={(e, name) => setNameFilter(name)}
                 renderInput={(params) => <TextField {...params} label="Name" />}
+                size={autocompleteSize}
               />
             </Grid>
             <Grid item>
@@ -106,6 +121,7 @@ export default function Page() {
                   <TextField {...params} label="Species" />
                 )}
                 ChipProps={{ variant: 'outlined' }}
+                size={autocompleteSize}
               />
             </Grid>
             <Grid item>
@@ -122,6 +138,7 @@ export default function Page() {
                   <TextField {...params} label="Personality" />
                 )}
                 ChipProps={{ variant: 'outlined' }}
+                size={autocompleteSize}
               />
             </Grid>
             <Grid item>
@@ -136,6 +153,7 @@ export default function Page() {
                     }))
                   }
                   label="Gender"
+                  size={autocompleteSize}
                 >
                   <MenuItem value="All">All</MenuItem>
                   <MenuItem value="Female">Female</MenuItem>
@@ -145,6 +163,11 @@ export default function Page() {
             </Grid>
           </Grid>
         </Grid>
+        <Divider
+          orientation={smallScreen ? 'horizontal' : 'vertical'}
+          flexItem
+          sx={{ padding: 1 }}
+        />
         <Grid item xs>
           {conductSearch ? (
             resultsFound ? (
