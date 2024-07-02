@@ -2,7 +2,6 @@
 
 import { Box, Divider, List, ListItem, Typography } from '@mui/material';
 import { useContext } from 'react';
-import { dayOrDays } from '@/lib/functions';
 import { DataContext } from '@/lib/dataContext';
 import IconGrid from '@/components/iconGrid';
 import VillagerIcon from '@/components/villagerIcon';
@@ -12,6 +11,7 @@ import PhotoDialog from '../photoDialog';
 import TitleChip from '../titleChip';
 import { notFound } from 'next/navigation';
 import CustomChip from '@/components/customChip';
+import LengthOfStay from './lengthOfStay';
 
 export default function StatBreakdown({
   params,
@@ -35,29 +35,7 @@ export default function StatBreakdown({
   } = calculateStats(historyMap);
 
   if (params.stat === 'lengthOfStay') {
-    return (
-      <>
-        <TitleChip title={'Length of Stay Breakdown'} />
-        <List>
-          {durationData.map((duration) =>
-            duration.villagers.map((villager) => (
-              <ListItem
-                key={villager}
-                disablePadding
-                sx={{ display: 'flex', justifyContent: 'center' }}
-              >
-                <Box display="flex" alignItems="center">
-                  <VillagerIcon villager={villager} />
-                  <Typography>
-                    &nbsp;&nbsp;{dayOrDays(duration.trait)}
-                  </Typography>
-                </Box>
-              </ListItem>
-            )),
-          )}
-        </List>
-      </>
-    );
+    return <LengthOfStay durationData={durationData} historyMap={historyMap} />;
   }
 
   if (params.stat === 'species') {
