@@ -92,7 +92,7 @@ export default function LengthOfStay({
   return (
     <>
       <TitleChip title={'Length of Stay Breakdown'} />
-      <Table size="small" key="regularScreenTable">
+      <Table size="small">
         <TableHead>
           <TableRow>
             <TableCell align="center">Villager</TableCell>
@@ -109,7 +109,7 @@ export default function LengthOfStay({
               return (
                 <TableRow key={villager}>
                   <TableCell align="center">
-                    <VillagerIcon villager={history.name} />
+                    <VillagerIcon villager={villager} />
                   </TableCell>
                   <TableCell align="center">{duration.duration}</TableCell>
                   <TableCell align="center">
