@@ -17,7 +17,7 @@ import { useContext, useState } from 'react';
 import { ScreenContext } from '@/lib/screenContext';
 import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 
-function SmallScreenRow({
+function LengthOfStayRow({
   duration,
   history,
 }: {
@@ -25,9 +25,10 @@ function SmallScreenRow({
   history: History;
 }) {
   const [showCollapse, setShowCollapse] = useState(false);
+
   return (
     <>
-      <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
+      <TableRow>
         <TableCell align="center">
           <VillagerIcon villager={history.name} />
         </TableCell>
@@ -36,13 +37,9 @@ function SmallScreenRow({
           <IconButton onClick={() => setShowCollapse((a) => !a)}>
             {showCollapse ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
           </IconButton>
-        </TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell colSpan={2} sx={{ pb: 0, pt: 0 }}>
-          <Collapse in={showCollapse} unmountOnExit>
+          <Collapse in={showCollapse}>
             <Typography margin={1} fontSize="inherit">
-              Dates: {history.startDateString} -{' '}
+              {history.startDateString} -{' '}
               {history.currentResident ? 'Present' : history.endDateString}
             </Typography>
           </Collapse>
@@ -60,22 +57,48 @@ export default function LengthOfStay({
   historyMap: Map<string, History>;
 }) {
   const { smallScreen } = useContext(ScreenContext);
+
+  if (smallScreen) {
+    return (
+      <>
+        <TitleChip title={'Length of Stay Breakdown'} />
+        <Table size="small" key="smallScreenTable">
+          <TableHead>
+            <TableRow>
+              <TableCell align="center">Villager</TableCell>
+              <TableCell align="center">Length of Stay (days)</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {durationData.map((duration) =>
+              duration.villagers.map((villager) => {
+                const history = historyMap.get(villager)!;
+
+                return (
+                  <LengthOfStayRow
+                    key={villager}
+                    duration={duration}
+                    history={history}
+                  />
+                );
+              }),
+            )}
+          </TableBody>
+        </Table>
+      </>
+    );
+  }
+
   return (
     <>
       <TitleChip title={'Length of Stay Breakdown'} />
-      <Table size="small">
+      <Table size="small" key="regularScreenTable">
         <TableHead>
           <TableRow>
             <TableCell align="center">Villager</TableCell>
             <TableCell align="center">Length of Stay (days)</TableCell>
-            {smallScreen ? (
-              ''
-            ) : (
-              <>
-                <TableCell align="center">Move-in Date</TableCell>
-                <TableCell align="center">Move-out Date</TableCell>
-              </>
-            )}
+            <TableCell align="center">Move-in Date</TableCell>
+            <TableCell align="center">Move-out Date</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -83,19 +106,10 @@ export default function LengthOfStay({
             duration.villagers.map((villager) => {
               const history = historyMap.get(villager)!;
 
-              if (smallScreen) {
-                return (
-                  <SmallScreenRow
-                    key={villager}
-                    duration={duration}
-                    history={history}
-                  />
-                );
-              }
               return (
                 <TableRow key={villager}>
                   <TableCell align="center">
-                    <VillagerIcon villager={villager} />
+                    <VillagerIcon villager={history.name} />
                   </TableCell>
                   <TableCell align="center">{duration.duration}</TableCell>
                   <TableCell align="center">
