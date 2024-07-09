@@ -1,17 +1,56 @@
 'use client';
 
 import {
+  Collapse,
+  IconButton,
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableRow,
+  Typography,
 } from '@mui/material';
 import VillagerIcon from '@/components/villagerIcon';
 import TitleChip from '../titleChip';
 import { Duration, History } from '@/types';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ScreenContext } from '@/lib/screenContext';
+import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
+
+function SmallScreenRow({
+  duration,
+  history,
+}: {
+  duration: Duration;
+  history: History;
+}) {
+  const [showCollapse, setShowCollapse] = useState(false);
+  return (
+    <>
+      <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
+        <TableCell align="center">
+          <VillagerIcon villager={history.name} />
+        </TableCell>
+        <TableCell align="center">
+          {duration.duration}
+          <IconButton onClick={() => setShowCollapse((a) => !a)}>
+            {showCollapse ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+          </IconButton>
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell colSpan={2} sx={{ pb: 0, pt: 0 }}>
+          <Collapse in={showCollapse} unmountOnExit>
+            <Typography margin={1} fontSize="inherit">
+              Dates: {history.startDateString} -{' '}
+              {history.currentResident ? 'Present' : history.endDateString}
+            </Typography>
+          </Collapse>
+        </TableCell>
+      </TableRow>
+    </>
+  );
+}
 
 export default function LengthOfStay({
   durationData,
@@ -43,24 +82,28 @@ export default function LengthOfStay({
           {durationData.map((duration) =>
             duration.villagers.map((villager) => {
               const history = historyMap.get(villager)!;
+
+              if (smallScreen) {
+                return (
+                  <SmallScreenRow
+                    key={villager}
+                    duration={duration}
+                    history={history}
+                  />
+                );
+              }
               return (
                 <TableRow key={villager}>
                   <TableCell align="center">
                     <VillagerIcon villager={villager} />
                   </TableCell>
                   <TableCell align="center">{duration.duration}</TableCell>
-                  {smallScreen ? (
-                    ''
-                  ) : (
-                    <>
-                      <TableCell align="center">
-                        {history.startDateString}
-                      </TableCell>
-                      <TableCell align="center">
-                        {history.currentResident ? '-' : history.endDateString}
-                      </TableCell>
-                    </>
-                  )}
+                  <TableCell align="center">
+                    {history.startDateString}
+                  </TableCell>
+                  <TableCell align="center">
+                    {history.currentResident ? '-' : history.endDateString}
+                  </TableCell>
                 </TableRow>
               );
             }),
