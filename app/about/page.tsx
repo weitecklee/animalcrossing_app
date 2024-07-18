@@ -23,7 +23,7 @@ export default function About() {
         </Box>
         &nbsp;is a simulation game made by Nintendo. In it, the player develops
         and customizes their own island, building facilities and decorating the
-        landscape as they choose, as well as inviting anthromorphic animals to
+        landscape as they choose, as well as inviting anthropomorphic animals to
         join as residents (a.k.a. villagers). The island can have up to 10 of
         these villagers at a time living on it.
       </Typography>
