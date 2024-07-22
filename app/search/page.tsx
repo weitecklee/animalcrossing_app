@@ -8,6 +8,7 @@ import useScreen from '@/lib/useScreen';
 import { SearchOptions } from '@/types';
 import {
   Autocomplete,
+  Button,
   Divider,
   FormControl,
   Grid,
@@ -164,6 +165,24 @@ export default function Page() {
                   <MenuItem value="Male">Male</MenuItem>
                 </Select>
               </FormControl>
+            </Grid>
+            <Grid item>
+              <Button
+                disableElevation
+                color="inherit"
+                variant="contained"
+                onClick={() => {
+                  setNameFilter('');
+                  setSearchOptions({
+                    name: '',
+                    species: [],
+                    personality: [],
+                    gender: 'All',
+                  });
+                }}
+              >
+                Reset
+              </Button>
             </Grid>
           </Grid>
         </Grid>
