@@ -168,6 +168,32 @@ test.describe('Stats', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/stats');
   });
+
+  test('should show general stats', async ({ page }) => {
+    const section = page.getByTestId('generalBox');
+    await expect(section.getByText('Number of Villagers')).toBeVisible();
+    await expect(section.getByText('Number of Villagers')).toHaveText(
+      /Villagers: \d+/,
+    );
+    await expect(section.getByText('Current Residents:')).toBeVisible();
+    await expect(section.getByRole('link')).toHaveCount(10);
+  });
+
+  test('should show Length of Stay stats', async ({ page }) => {
+    const section = page.getByTestId('lengthOfStayBox');
+    await expect(section.getByText('Length of Stay')).toBeVisible();
+    await expect(section.getByText('Average')).toBeVisible();
+    await expect(section.getByText('Average')).toHaveText(/: [\d.]+ days$/);
+    await expect(section.getByText('Longest')).toBeVisible();
+    await expect(section.getByText('Longest')).toHaveText(/: \d+ days$/);
+    await expect(section.getByText('Shortest')).toBeVisible();
+    await expect(section.getByText('Shortest')).toHaveText(/: \d+ days?$/);
+    const count = await section.getByRole('link').count();
+    expect(count).toBeGreaterThanOrEqual(3);
+    await expect(
+      section.getByRole('button', { name: 'Full breakdown' }),
+    ).toBeVisible();
+  });
 });
 
 test.describe('Search', () => {

@@ -2,6 +2,7 @@
 
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import {
+  Box,
   Button,
   ClickAwayListener,
   Stack,
@@ -58,30 +59,36 @@ export default function Stats() {
 
   return (
     <>
-      <Typography>Number of Villagers: {historyMap.size}</Typography>
-      <Stack direction="row" alignItems="center">
-        <CRIcon />
-        <Typography component="span">&ensp;Current Residents:</Typography>
-      </Stack>
-      <IconGrid villagers={currentResidents} />
-      <StatsDivider label="Length of Stay" />
-      <Typography>
-        Average:{' '}
-        {(
-          Array.from(historyMap.values()).reduce((a, b) => a + b.duration, 0) /
-          historyMap.size
-        ).toFixed(2)}{' '}
-        days
-        <br />
-        Longest: {durationData[0].duration} days
-        <br />
-      </Typography>
-      <IconGrid traitData={durationData[0]} />
-      <Typography>
-        Shortest: {dayOrDays(durationData[durationData.length - 1].duration)}
-      </Typography>
-      <IconGrid traitData={durationData[durationData.length - 1]} />
-      <BreakdownLink stat="lengthOfStay" />
+      <Box data-testid="generalBox">
+        <Typography>Number of Villagers: {historyMap.size}</Typography>
+        <Stack direction="row" alignItems="center">
+          <CRIcon />
+          <Typography component="span">&ensp;Current Residents:</Typography>
+        </Stack>
+        <IconGrid villagers={currentResidents} />
+      </Box>
+      <Box data-testid="lengthOfStayBox">
+        <StatsDivider label="Length of Stay" />
+        <Typography>
+          Average:{' '}
+          {(
+            Array.from(historyMap.values()).reduce(
+              (a, b) => a + b.duration,
+              0,
+            ) / historyMap.size
+          ).toFixed(2)}{' '}
+          days
+          <br />
+          Longest: {durationData[0].duration} days
+          <br />
+        </Typography>
+        <IconGrid traitData={durationData[0]} />
+        <Typography>
+          Shortest: {dayOrDays(durationData[durationData.length - 1].duration)}
+        </Typography>
+        <IconGrid traitData={durationData[durationData.length - 1]} />
+        <BreakdownLink stat="lengthOfStay" />
+      </Box>
       <StatsDivider label="Species" />
       <Typography>Most common: {speciesData[0].trait}</Typography>
       <IconGrid traitData={speciesData[0]} />
