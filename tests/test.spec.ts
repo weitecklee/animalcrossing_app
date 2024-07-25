@@ -74,3 +74,110 @@ test.describe('Index', () => {
     await expect(page.getByText(/\w+ \d{1,2}, \d{4}/)).toHaveCount(10);
   });
 });
+
+test.describe('Villagers', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/villagers');
+    await page
+      .locator('.MuiGrid-root > div')
+      .first()
+      .waitFor({ state: 'visible' });
+  });
+
+  test('app bar disappears/reappears on scroll down/up ', async ({ page }) => {
+    await page.mouse.wheel(0, 500);
+    await page.waitForTimeout(500);
+    await expect(
+      page.getByRole('heading', { name: 'My Animal Crossing Island' }),
+    ).not.toBeVisible();
+    await page.mouse.wheel(0, -500);
+    await page.waitForTimeout(500);
+    await expect(
+      page.getByRole('heading', { name: 'My Animal Crossing Island' }),
+    ).toBeVisible();
+  });
+
+  test('show legend', async ({ page }) => {
+    await expect(page.getByText('Current Resident').first()).toBeInViewport();
+    await expect(page.getByText('Move-in date').first()).toBeInViewport();
+    await expect(page.getByText('Photo date').first()).toBeInViewport();
+    await expect(page.getByText('Move-out date').first()).toBeInViewport();
+    await expect(page.getByText('Length of stay').first()).toBeInViewport();
+    await expect(
+      page.getByText('Current Resident').nth(1),
+    ).not.toBeInViewport();
+    await expect(page.getByText('Move-in date').nth(1)).not.toBeInViewport();
+    await expect(page.getByText('Photo date').nth(1)).not.toBeInViewport();
+    await expect(page.getByText('Move-out date').nth(1)).not.toBeInViewport();
+    await expect(page.getByText('Length of stay').nth(1)).not.toBeInViewport();
+  });
+
+  test('show scroll buttons on scroll', async ({ page }) => {
+    await page.mouse.wheel(0, 10);
+    await page.locator('.MuiStack-root > button').first().waitFor();
+    await expect(page.locator('.MuiStack-root > button').first()).toBeVisible();
+    await expect(page.locator('.MuiStack-root > button').nth(1)).toBeVisible();
+  });
+
+  test('scroll buttons scroll to bottom/top of page', async ({ page }) => {
+    await page.mouse.wheel(0, 10);
+    await page.locator('.MuiStack-root > button').first().waitFor();
+    await expect(page.locator('.MuiStack-root > button').first()).toBeVisible();
+    await expect(page.locator('.MuiStack-root > button').nth(1)).toBeVisible();
+    await page.locator('.MuiStack-root > button').nth(1).click();
+    await expect(
+      page.getByText('Current Resident').first(),
+    ).not.toBeInViewport();
+    await expect(page.getByText('Move-in date').first()).not.toBeInViewport();
+    await expect(page.getByText('Photo date').first()).not.toBeInViewport();
+    await expect(page.getByText('Move-out date').first()).not.toBeInViewport();
+    await expect(page.getByText('Length of stay').first()).not.toBeInViewport();
+    await expect(page.getByText('Move-in date').nth(1)).toBeInViewport();
+    await expect(page.getByText('Photo date').nth(1)).toBeInViewport();
+    await expect(page.getByText('Move-out date').nth(1)).toBeInViewport();
+    await expect(page.getByText('Length of stay').nth(1)).toBeInViewport();
+    await page.mouse.wheel(0, -10);
+    await expect(page.locator('.MuiStack-root > button').first()).toBeVisible();
+    await expect(page.locator('.MuiStack-root > button').nth(1)).toBeVisible();
+    await page.locator('.MuiStack-root > button').first().click();
+    await expect(page.getByText('Current Resident').first()).toBeInViewport();
+    await expect(page.getByText('Move-in date').first()).toBeInViewport();
+    await expect(page.getByText('Photo date').first()).toBeInViewport();
+    await expect(page.getByText('Move-out date').first()).toBeInViewport();
+    await expect(page.getByText('Length of stay').first()).toBeInViewport();
+    await expect(page.getByText('Move-in date').nth(1)).not.toBeInViewport();
+    await expect(page.getByText('Photo date').nth(1)).not.toBeInViewport();
+    await expect(page.getByText('Move-out date').nth(1)).not.toBeInViewport();
+    await expect(page.getByText('Length of stay').nth(1)).not.toBeInViewport();
+    await expect(
+      page.locator('.MuiStack-root > button').first(),
+    ).not.toBeVisible();
+    await expect(
+      page.locator('.MuiStack-root > button').nth(1),
+    ).not.toBeVisible();
+  });
+});
+
+test.describe('Timeline', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/timeline');
+  });
+});
+
+test.describe('Stats', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/stats');
+  });
+});
+
+test.describe('Search', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/search');
+  });
+});
+
+test.describe('About', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/about');
+  });
+});
