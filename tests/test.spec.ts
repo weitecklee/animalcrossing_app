@@ -35,7 +35,6 @@ test.describe('Navigation', () => {
       .getByRole('heading', { name: 'My Animal Crossing Island' })
       .click();
     await expect(page).toHaveURL(/3000\/?$/);
-
     await page.getByRole('button', { name: 'Animal Crossing Leaf' }).click();
     await expect(page).toHaveURL(/3000\/?$/);
   });
@@ -45,9 +44,11 @@ test.describe('Index', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
   });
+
   test('has title', async ({ page }) => {
     await expect(page).toHaveTitle(/My Animal Crossing Island/);
   });
+
   test('show app bar', async ({ page }) => {
     await expect(
       page.getByRole('heading', { name: 'My Animal Crossing Island' }),
@@ -61,8 +62,15 @@ test.describe('Index', () => {
     await expect(page.getByRole('link', { name: 'Search' })).toBeVisible();
     await expect(page.getByRole('link', { name: 'About' })).toBeVisible();
   });
-  test('show welcome text', async ({ page }) => {
+
+  test('show welcome content', async ({ page }) => {
     await expect(page.getByText('Hello there!')).toBeVisible();
     await expect(page.getByRole('img', { name: 'My Villager' })).toBeVisible();
+  });
+
+  test('show latest happenings', async ({ page }) => {
+    await expect(page.getByText('Latest Happenings')).toBeVisible();
+    await expect(page.getByRole('listitem')).toHaveCount(10);
+    await expect(page.getByText(/\w+ \d{1,2}, \d{4}/)).toHaveCount(10);
   });
 });
