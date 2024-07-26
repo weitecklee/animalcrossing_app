@@ -244,6 +244,44 @@ test.describe('Stats', () => {
   test('should show Photos stats', async ({ page }) => {
     const section = page.getByTestId('photosBox');
     await expect(section.getByText(/Photos/)).toBeVisible();
+    await section.getByTestId('InfoOutlinedIcon').click();
+    await expect(page.getByText(/You can interact with/)).toBeVisible();
+    await section.getByTestId('InfoOutlinedIcon').click();
+    await expect(section.getByText(/You can interact with/)).not.toBeVisible();
+    await expect(section.getByText(/Given/)).toBeVisible();
+    await expect(section.getByText(/Given/)).toHaveText(
+      /^Given: \d+ \(\d+\.\d{2}%\)$/,
+    );
+    await expect(section.getByText(/Average time to give/)).toBeVisible();
+    await expect(section.getByText(/Average time to give/)).toHaveText(
+      /^Average time to give: \d+\.\d{2} days$/,
+    );
+    await expect(section.getByText(/Quickest/)).toBeVisible();
+    await expect(section.getByText(/Quickest/)).toHaveText(
+      /^Quickest: \d+ days$/,
+    );
+    await expect(section.getByText(/Slowest/)).toBeVisible();
+    await expect(section.getByText(/Slowest/)).toHaveText(
+      /^Slowest: \d+ days$/,
+    );
+    await expect(
+      section.getByText(/Shortest stay after giving photo/),
+    ).toBeVisible();
+    await expect(
+      section.getByText(/Shortest stay after giving photo/),
+    ).toHaveText(/^Shortest stay after giving photo: \d+ days$/);
+    await expect(
+      section.getByText(/Longest stay after giving photo/),
+    ).toBeVisible();
+    await expect(
+      section.getByText(/Longest stay after giving photo/),
+    ).toHaveText(/^Longest stay after giving photo: \d+ days$/);
+    await expect(
+      section.getByText(/Longest stay without giving photo/),
+    ).toBeVisible();
+    await expect(
+      section.getByText(/Longest stay without giving photo/),
+    ).toHaveText(/^Longest stay without giving photo: \d+ days$/);
     await expect(
       section.getByRole('button', { name: 'Full breakdown' }),
     ).toBeVisible();
@@ -253,6 +291,14 @@ test.describe('Stats', () => {
   test('should show Islandmates stats', async ({ page }) => {
     const section = page.getByTestId('islandmatesBox');
     await expect(section.getByText(/Islandmates/)).toBeVisible();
+    await expect(section.getByText(/Most islandmates/)).toBeVisible();
+    await expect(section.getByText(/Most islandmates/)).toHaveText(
+      /^Most islandmates: \d+$/,
+    );
+    await expect(section.getByText(/Fewest islandmates/)).toBeVisible();
+    await expect(section.getByText(/Fewest islandmates/)).toHaveText(
+      /^Fewest islandmates: \d+$/,
+    );
     await expect(
       section.getByRole('button', { name: 'Full breakdown' }),
     ).toBeVisible();
