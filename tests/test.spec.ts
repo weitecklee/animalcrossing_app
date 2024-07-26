@@ -64,12 +64,12 @@ test.describe('Index', () => {
   });
 
   test('show welcome content', async ({ page }) => {
-    await expect(page.getByText('Hello there!')).toBeVisible();
+    await expect(page.getByText(/Hello there!/)).toBeVisible();
     await expect(page.getByRole('img', { name: 'My Villager' })).toBeVisible();
   });
 
   test('show latest happenings', async ({ page }) => {
-    await expect(page.getByText('Latest Happenings')).toBeVisible();
+    await expect(page.getByText(/Latest Happenings/)).toBeVisible();
     await expect(page.getByRole('listitem')).toHaveCount(10);
     await expect(page.getByText(/\w+ \d{1,2}, \d{4}/)).toHaveCount(10);
   });
@@ -98,18 +98,18 @@ test.describe('Villagers', () => {
   });
 
   test('show legend', async ({ page }) => {
-    await expect(page.getByText('Current Resident').first()).toBeInViewport();
-    await expect(page.getByText('Move-in date').first()).toBeInViewport();
-    await expect(page.getByText('Photo date').first()).toBeInViewport();
-    await expect(page.getByText('Move-out date').first()).toBeInViewport();
-    await expect(page.getByText('Length of stay').first()).toBeInViewport();
+    await expect(page.getByText(/Current Resident/).first()).toBeInViewport();
+    await expect(page.getByText(/Move-in date/).first()).toBeInViewport();
+    await expect(page.getByText(/Photo date/).first()).toBeInViewport();
+    await expect(page.getByText(/Move-out date/).first()).toBeInViewport();
+    await expect(page.getByText(/Length of stay/).first()).toBeInViewport();
     await expect(
-      page.getByText('Current Resident').nth(1),
+      page.getByText(/Current Resident/).nth(1),
     ).not.toBeInViewport();
-    await expect(page.getByText('Move-in date').nth(1)).not.toBeInViewport();
-    await expect(page.getByText('Photo date').nth(1)).not.toBeInViewport();
-    await expect(page.getByText('Move-out date').nth(1)).not.toBeInViewport();
-    await expect(page.getByText('Length of stay').nth(1)).not.toBeInViewport();
+    await expect(page.getByText(/Move-in date/).nth(1)).not.toBeInViewport();
+    await expect(page.getByText(/Photo date/).nth(1)).not.toBeInViewport();
+    await expect(page.getByText(/Move-out date/).nth(1)).not.toBeInViewport();
+    await expect(page.getByText(/Length of stay/).nth(1)).not.toBeInViewport();
   });
 
   test('show scroll buttons on scroll', async ({ page }) => {
@@ -126,29 +126,29 @@ test.describe('Villagers', () => {
     await expect(page.locator('.MuiStack-root > button').nth(1)).toBeVisible();
     await page.locator('.MuiStack-root > button').nth(1).click();
     await expect(
-      page.getByText('Current Resident').first(),
+      page.getByText(/Current Resident/).first(),
     ).not.toBeInViewport();
-    await expect(page.getByText('Move-in date').first()).not.toBeInViewport();
-    await expect(page.getByText('Photo date').first()).not.toBeInViewport();
-    await expect(page.getByText('Move-out date').first()).not.toBeInViewport();
-    await expect(page.getByText('Length of stay').first()).not.toBeInViewport();
-    await expect(page.getByText('Move-in date').nth(1)).toBeInViewport();
-    await expect(page.getByText('Photo date').nth(1)).toBeInViewport();
-    await expect(page.getByText('Move-out date').nth(1)).toBeInViewport();
-    await expect(page.getByText('Length of stay').nth(1)).toBeInViewport();
+    await expect(page.getByText(/Move-in date/).first()).not.toBeInViewport();
+    await expect(page.getByText(/Photo date/).first()).not.toBeInViewport();
+    await expect(page.getByText(/Move-out date/).first()).not.toBeInViewport();
+    await expect(page.getByText(/Length of stay/).first()).not.toBeInViewport();
+    await expect(page.getByText(/Move-in date/).nth(1)).toBeInViewport();
+    await expect(page.getByText(/Photo date/).nth(1)).toBeInViewport();
+    await expect(page.getByText(/Move-out date/).nth(1)).toBeInViewport();
+    await expect(page.getByText(/Length of stay/).nth(1)).toBeInViewport();
     await page.mouse.wheel(0, -10);
     await expect(page.locator('.MuiStack-root > button').first()).toBeVisible();
     await expect(page.locator('.MuiStack-root > button').nth(1)).toBeVisible();
     await page.locator('.MuiStack-root > button').first().click();
-    await expect(page.getByText('Current Resident').first()).toBeInViewport();
-    await expect(page.getByText('Move-in date').first()).toBeInViewport();
-    await expect(page.getByText('Photo date').first()).toBeInViewport();
-    await expect(page.getByText('Move-out date').first()).toBeInViewport();
-    await expect(page.getByText('Length of stay').first()).toBeInViewport();
-    await expect(page.getByText('Move-in date').nth(1)).not.toBeInViewport();
-    await expect(page.getByText('Photo date').nth(1)).not.toBeInViewport();
-    await expect(page.getByText('Move-out date').nth(1)).not.toBeInViewport();
-    await expect(page.getByText('Length of stay').nth(1)).not.toBeInViewport();
+    await expect(page.getByText(/Current Resident/).first()).toBeInViewport();
+    await expect(page.getByText(/Move-in date/).first()).toBeInViewport();
+    await expect(page.getByText(/Photo date/).first()).toBeInViewport();
+    await expect(page.getByText(/Move-out date/).first()).toBeInViewport();
+    await expect(page.getByText(/Length of stay/).first()).toBeInViewport();
+    await expect(page.getByText(/Move-in date/).nth(1)).not.toBeInViewport();
+    await expect(page.getByText(/Photo date/).nth(1)).not.toBeInViewport();
+    await expect(page.getByText(/Move-out date/).nth(1)).not.toBeInViewport();
+    await expect(page.getByText(/Length of stay/).nth(1)).not.toBeInViewport();
     await expect(
       page.locator('.MuiStack-root > button').first(),
     ).not.toBeVisible();
@@ -171,28 +171,92 @@ test.describe('Stats', () => {
 
   test('should show general stats', async ({ page }) => {
     const section = page.getByTestId('generalBox');
-    await expect(section.getByText('Number of Villagers')).toBeVisible();
-    await expect(section.getByText('Number of Villagers')).toHaveText(
-      /Villagers: \d+/,
+    await expect(section.getByText(/Number of Villagers/)).toBeVisible();
+    await expect(section.getByText(/Number of Villagers/)).toHaveText(
+      /^Number of Villagers: \d+$/,
     );
-    await expect(section.getByText('Current Residents:')).toBeVisible();
+    await expect(section.getByText(/Current Residents:/)).toBeVisible();
     await expect(section.getByRole('link')).toHaveCount(10);
   });
 
   test('should show Length of Stay stats', async ({ page }) => {
     const section = page.getByTestId('lengthOfStayBox');
-    await expect(section.getByText('Length of Stay')).toBeVisible();
-    await expect(section.getByText('Average')).toBeVisible();
-    await expect(section.getByText('Average')).toHaveText(/: [\d.]+ days$/);
-    await expect(section.getByText('Longest')).toBeVisible();
-    await expect(section.getByText('Longest')).toHaveText(/: \d+ days$/);
-    await expect(section.getByText('Shortest')).toBeVisible();
-    await expect(section.getByText('Shortest')).toHaveText(/: \d+ days?$/);
+    await expect(section.getByText(/Length of Stay/)).toBeVisible();
+    await expect(section.getByText(/Average/)).toBeVisible();
+    await expect(section.getByText(/Average/)).toHaveText(
+      /^Average: \d+\.\d{2} days$/,
+    );
+    await expect(section.getByText(/Longest/)).toBeVisible();
+    await expect(section.getByText(/Longest/)).toHaveText(
+      /^Longest: \d+ days$/,
+    );
+    await expect(section.getByText(/Shortest/)).toBeVisible();
+    await expect(section.getByText(/Shortest/)).toHaveText(
+      /^Shortest: \d+ days?$/,
+    );
     const count = await section.getByRole('link').count();
     expect(count).toBeGreaterThanOrEqual(3);
     await expect(
       section.getByRole('button', { name: 'Full breakdown' }),
     ).toBeVisible();
+    // TODO: test Length of Stay Breakdown
+  });
+
+  test('should show Species stats', async ({ page }) => {
+    const section = page.getByTestId('speciesBox');
+    await expect(section.getByText(/Species/)).toBeVisible();
+    await expect(section.getByText(/Most common/)).toBeVisible();
+    await expect(section.getByText(/Most common/)).toHaveText(
+      /^Most common: \w+$/,
+    );
+    await expect(
+      section.getByRole('button', { name: 'Full breakdown' }),
+    ).toBeVisible();
+    // TODO: test Species Breakdown
+  });
+
+  test('should show Personality stats', async ({ page }) => {
+    const section = page.getByTestId('personalityBox');
+    await expect(section.getByText(/Personality/)).toBeVisible();
+    await expect(section.getByText(/Most common/)).toBeVisible();
+    await expect(section.getByText(/Most common/)).toHaveText(
+      /^Most common: \w+$/,
+    );
+    await expect(
+      section.getByRole('button', { name: 'Full breakdown' }),
+    ).toBeVisible();
+    // TODO: test Personality Breakdown
+  });
+
+  test('should show Gender stats', async ({ page }) => {
+    const section = page.getByTestId('genderBox');
+    await expect(section.getByText(/Gender/)).toBeVisible();
+    await expect(section.getByText(/Female/)).toBeVisible();
+    await expect(section.getByText(/Female/)).toHaveText(/^Female: \d+$/);
+    await expect(section.getByText(/Male/)).toBeVisible();
+    await expect(section.getByText(/Male/)).toHaveText(/^Male: \d+$/);
+    await expect(
+      section.getByRole('button', { name: 'Full breakdown' }),
+    ).toBeVisible();
+    // TODO: test Gender Breakdown
+  });
+
+  test('should show Photos stats', async ({ page }) => {
+    const section = page.getByTestId('photosBox');
+    await expect(section.getByText(/Photos/)).toBeVisible();
+    await expect(
+      section.getByRole('button', { name: 'Full breakdown' }),
+    ).toBeVisible();
+    // TODO: test Photos Breakdown
+  });
+
+  test('should show Islandmates stats', async ({ page }) => {
+    const section = page.getByTestId('islandmatesBox');
+    await expect(section.getByText(/Islandmates/)).toBeVisible();
+    await expect(
+      section.getByRole('button', { name: 'Full breakdown' }),
+    ).toBeVisible();
+    // TODO: test Islandmates Breakdown
   });
 });
 
