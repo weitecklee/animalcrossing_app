@@ -161,6 +161,7 @@ test.describe('Timeline', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/timeline');
   });
+  // TODO: test Timeline page
 });
 
 test.describe('Stats', () => {
@@ -394,21 +395,35 @@ test.describe('Stats', () => {
     await expect(page).toHaveURL(/stats\/islandmates$/);
     await expect(page.getByText('Islandmates Breakdown')).toBeVisible();
   });
-});
 
-test('should show Islandmates breakdown', async ({ page }) => {
-  await page.goto('/stats/islandmates');
-  await expect(page.getByText('Islandmates Breakdown')).toBeVisible();
+  test('should show Islandmates breakdown', async ({ page }) => {
+    await page.goto('/stats/islandmates');
+    await expect(page.getByText('Islandmates Breakdown')).toBeVisible();
+  });
 });
 
 test.describe('Search', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/search');
   });
+  // TODO: test Search page
 });
 
 test.describe('About', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/about');
+  });
+
+  test('should show About page', async ({ page }) => {
+    await expect(
+      page.getByRole('img', { name: 'Animal Crossing: New Horizons' }),
+    ).toBeVisible();
+    await expect(
+      page.getByText('Animal Crossing: New Horizons is a simulation game'),
+    ).toBeVisible();
+    await expect(page.getByRole('img', { name: 'My Villager' })).toBeVisible();
+    await expect(
+      page.getByText('I have been playing Animal Crossing'),
+    ).toBeVisible();
   });
 });
