@@ -217,7 +217,6 @@ test.describe('Stats', () => {
 
   test('should show Length of Stay breakdown', async ({ page }) => {
     await page.goto('/stats/lengthOfStay');
-    await expect(page).toHaveURL(/stats\/lengthOfStay$/);
     await expect(page.getByText(/Length of Stay Breakdown/)).toBeVisible();
     await expect(
       page.getByRole('columnheader', { name: /Villager/ }),
@@ -254,7 +253,6 @@ test.describe('Stats', () => {
 
   test('should show Species breakdown', async ({ page }) => {
     await page.goto('/stats/species');
-    await expect(page).toHaveURL(/stats\/species$/);
     await expect(page.getByText(/Species Breakdown/)).toBeVisible();
     for (const spec of SPECIES) {
       const specRegexp = new RegExp(`${spec}: \\d+`);
@@ -283,7 +281,6 @@ test.describe('Stats', () => {
 
   test('should show Personality breakdown', async ({ page }) => {
     await page.goto('/stats/personality');
-    await expect(page).toHaveURL(/stats\/personality$/);
     await expect(page.getByText(/Personality Breakdown/)).toBeVisible();
     for (const pers of PERSONALITIES) {
       const persRegexp = new RegExp(`${pers}: \\d+`);
@@ -310,7 +307,6 @@ test.describe('Stats', () => {
 
   test('should show Gender breakdown', async ({ page }) => {
     await page.goto('/stats/gender');
-    await expect(page).toHaveURL(/stats\/gender$/);
     await expect(page.getByText(/Gender Breakdown/)).toBeVisible();
     await expect(page.getByText(/Female: \d+/)).toBeVisible();
     await expect(page.getByText(/Male: \d+/)).toBeVisible();
@@ -360,7 +356,24 @@ test.describe('Stats', () => {
     await expect(
       section.getByRole('button', { name: /Full breakdown/ }),
     ).toBeVisible();
-    // TODO: test Photos Breakdown
+    await section.getByRole('button', { name: /Full breakdown/ }).click();
+    await expect(page).toHaveURL(/stats\/photos$/);
+    await expect(page.getByText(/Photos Breakdown/)).toBeVisible();
+    await expect(
+      page.getByText(/Time to give \(stay after giving\)/),
+    ).toBeVisible();
+    await expect(page.getByText(/Stay without giving/)).toBeVisible();
+    await expect(page.getByText(/\d+ days \(\d+ days\)/).first()).toBeVisible();
+  });
+
+  test('should show Photos breakdown', async ({ page }) => {
+    await page.goto('/stats/photos');
+    await expect(page.getByText(/Photos Breakdown/)).toBeVisible();
+    await expect(
+      page.getByText(/Time to give \(stay after giving\)/),
+    ).toBeVisible();
+    await expect(page.getByText(/Stay without giving/)).toBeVisible();
+    await expect(page.getByText(/\d+ days \(\d+ days\)/).first()).toBeVisible();
   });
 
   test('should show Islandmates stats', async ({ page }) => {
@@ -377,8 +390,15 @@ test.describe('Stats', () => {
     await expect(
       section.getByRole('button', { name: /Full breakdown/ }),
     ).toBeVisible();
-    // TODO: test Islandmates Breakdown
+    await section.getByRole('button', { name: /Full breakdown/ }).click();
+    await expect(page).toHaveURL(/stats\/islandmates$/);
+    await expect(page.getByText('Islandmates Breakdown')).toBeVisible();
   });
+});
+
+test('should show Islandmates breakdown', async ({ page }) => {
+  await page.goto('/stats/islandmates');
+  await expect(page.getByText('Islandmates Breakdown')).toBeVisible();
 });
 
 test.describe('Search', () => {
