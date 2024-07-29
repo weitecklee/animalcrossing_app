@@ -1,3 +1,4 @@
+import { SPECIES } from '@/lib/constants';
 import { test, expect } from '@playwright/test';
 
 test.describe('Navigation', () => {
@@ -6,36 +7,36 @@ test.describe('Navigation', () => {
   });
 
   test('should navigate to Villagers page', async ({ page }) => {
-    await page.getByRole('link', { name: 'Villagers' }).click();
+    await page.getByRole('link', { name: /Villagers/ }).click();
     await expect(page).toHaveURL(/villagers$/);
   });
 
   test('should navigate to Timeline page', async ({ page }) => {
-    await page.getByRole('link', { name: 'Timeline' }).click();
+    await page.getByRole('link', { name: /Timeline/ }).click();
     await expect(page).toHaveURL(/timeline$/);
   });
 
   test('should navigate to Stats page', async ({ page }) => {
-    await page.getByRole('link', { name: 'Stats' }).click();
+    await page.getByRole('link', { name: /Stats/ }).click();
     await expect(page).toHaveURL(/stats$/);
   });
 
   test('should navigate to Search page', async ({ page }) => {
-    await page.getByRole('link', { name: 'Search' }).click();
+    await page.getByRole('link', { name: /Search/ }).click();
     await expect(page).toHaveURL(/search$/);
   });
 
   test('should navigate to About page', async ({ page }) => {
-    await page.getByRole('link', { name: 'About' }).click();
+    await page.getByRole('link', { name: /About/ }).click();
     await expect(page).toHaveURL(/about$/);
   });
 
   test('should navigate to index page', async ({ page }) => {
     await page
-      .getByRole('heading', { name: 'My Animal Crossing Island' })
+      .getByRole('heading', { name: /My Animal Crossing Island/ })
       .click();
     await expect(page).toHaveURL(/3000\/?$/);
-    await page.getByRole('button', { name: 'Animal Crossing Leaf' }).click();
+    await page.getByRole('button', { name: /Animal Crossing Leaf/ }).click();
     await expect(page).toHaveURL(/3000\/?$/);
   });
 });
@@ -51,21 +52,21 @@ test.describe('Index', () => {
 
   test('show app bar', async ({ page }) => {
     await expect(
-      page.getByRole('heading', { name: 'My Animal Crossing Island' }),
+      page.getByRole('heading', { name: /My Animal Crossing Island/ }),
     ).toBeVisible();
     await expect(
-      page.getByRole('button', { name: 'Animal Crossing Leaf' }),
+      page.getByRole('button', { name: /Animal Crossing Leaf/ }),
     ).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Villagers' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Timeline' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Stats' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Search' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'About' })).toBeVisible();
+    await expect(page.getByRole('link', { name: /Villagers/ })).toBeVisible();
+    await expect(page.getByRole('link', { name: /Timeline/ })).toBeVisible();
+    await expect(page.getByRole('link', { name: /Stats/ })).toBeVisible();
+    await expect(page.getByRole('link', { name: /Search/ })).toBeVisible();
+    await expect(page.getByRole('link', { name: /About/ })).toBeVisible();
   });
 
   test('show welcome content', async ({ page }) => {
     await expect(page.getByText(/Hello there!/)).toBeVisible();
-    await expect(page.getByRole('img', { name: 'My Villager' })).toBeVisible();
+    await expect(page.getByRole('img', { name: /My Villager/ })).toBeVisible();
   });
 
   test('show latest happenings', async ({ page }) => {
@@ -86,14 +87,12 @@ test.describe('Villagers', () => {
 
   test('app bar disappears/reappears on scroll down/up ', async ({ page }) => {
     await page.mouse.wheel(0, 500);
-    await page.waitForTimeout(500);
     await expect(
-      page.getByRole('heading', { name: 'My Animal Crossing Island' }),
+      page.getByRole('heading', { name: /My Animal Crossing Island/ }),
     ).not.toBeVisible();
     await page.mouse.wheel(0, -500);
-    await page.waitForTimeout(500);
     await expect(
-      page.getByRole('heading', { name: 'My Animal Crossing Island' }),
+      page.getByRole('heading', { name: /My Animal Crossing Island/ }),
     ).toBeVisible();
   });
 
@@ -197,9 +196,41 @@ test.describe('Stats', () => {
     const count = await section.getByRole('link').count();
     expect(count).toBeGreaterThanOrEqual(3);
     await expect(
-      section.getByRole('button', { name: 'Full breakdown' }),
+      section.getByRole('button', { name: /Full breakdown/ }),
     ).toBeVisible();
-    // TODO: test Length of Stay Breakdown
+    await section.getByRole('button', { name: /Full breakdown/ }).click();
+    await expect(page).toHaveURL(/stats\/lengthOfStay$/);
+    await expect(page.getByText(/Length of Stay Breakdown/)).toBeVisible();
+    await expect(
+      page.getByRole('columnheader', { name: /Villager/ }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole('columnheader', { name: /Length of Stay \(days\)/ }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole('columnheader', { name: /Move-in Date/ }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole('columnheader', { name: /Move-out Date/ }),
+    ).toBeVisible();
+  });
+
+  test('should show Length of Stay breakdown', async ({ page }) => {
+    await page.goto('/stats/lengthOfStay');
+    await expect(page).toHaveURL(/stats\/lengthOfStay$/);
+    await expect(page.getByText(/Length of Stay Breakdown/)).toBeVisible();
+    await expect(
+      page.getByRole('columnheader', { name: /Villager/ }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole('columnheader', { name: /Length of Stay \(days\)/ }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole('columnheader', { name: /Move-in Date/ }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole('columnheader', { name: /Move-out Date/ }),
+    ).toBeVisible();
   });
 
   test('should show Species stats', async ({ page }) => {
@@ -210,9 +241,25 @@ test.describe('Stats', () => {
       /^Most common: \w+$/,
     );
     await expect(
-      section.getByRole('button', { name: 'Full breakdown' }),
+      section.getByRole('button', { name: /Full breakdown/ }),
     ).toBeVisible();
-    // TODO: test Species Breakdown
+    await section.getByRole('button', { name: /Full breakdown/ }).click();
+    await expect(page).toHaveURL(/stats\/species$/);
+    await expect(page.getByText(/Species Breakdown/)).toBeVisible();
+    for (const spec of SPECIES) {
+      const specRegexp = new RegExp(`${spec}: \\d+`);
+      await expect(page.getByText(specRegexp)).toBeVisible();
+    }
+  });
+
+  test('should show Species breakdown', async ({ page }) => {
+    await page.goto('/stats/species');
+    await expect(page).toHaveURL(/stats\/species$/);
+    await expect(page.getByText(/Species Breakdown/)).toBeVisible();
+    for (const spec of SPECIES) {
+      const specRegexp = new RegExp(`${spec}: \\d+`);
+      await expect(page.getByText(specRegexp)).toBeVisible();
+    }
   });
 
   test('should show Personality stats', async ({ page }) => {
@@ -223,8 +270,9 @@ test.describe('Stats', () => {
       /^Most common: \w+$/,
     );
     await expect(
-      section.getByRole('button', { name: 'Full breakdown' }),
+      section.getByRole('button', { name: /Full breakdown/ }),
     ).toBeVisible();
+    await section.getByRole('button', { name: /Full breakdown/ }).click();
     // TODO: test Personality Breakdown
   });
 
@@ -236,7 +284,7 @@ test.describe('Stats', () => {
     await expect(section.getByText(/Male/)).toBeVisible();
     await expect(section.getByText(/Male/)).toHaveText(/^Male: \d+$/);
     await expect(
-      section.getByRole('button', { name: 'Full breakdown' }),
+      section.getByRole('button', { name: /Full breakdown/ }),
     ).toBeVisible();
     // TODO: test Gender Breakdown
   });
@@ -283,7 +331,7 @@ test.describe('Stats', () => {
       section.getByText(/Longest stay without giving photo/),
     ).toHaveText(/^Longest stay without giving photo: \d+ days$/);
     await expect(
-      section.getByRole('button', { name: 'Full breakdown' }),
+      section.getByRole('button', { name: /Full breakdown/ }),
     ).toBeVisible();
     // TODO: test Photos Breakdown
   });
@@ -300,7 +348,7 @@ test.describe('Stats', () => {
       /^Fewest islandmates: \d+$/,
     );
     await expect(
-      section.getByRole('button', { name: 'Full breakdown' }),
+      section.getByRole('button', { name: /Full breakdown/ }),
     ).toBeVisible();
     // TODO: test Islandmates Breakdown
   });
