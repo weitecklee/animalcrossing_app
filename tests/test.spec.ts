@@ -1,4 +1,4 @@
-import { SPECIES } from '@/lib/constants';
+import { PERSONALITIES, SPECIES } from '@/lib/constants';
 import { test, expect } from '@playwright/test';
 
 test.describe('Navigation', () => {
@@ -273,7 +273,22 @@ test.describe('Stats', () => {
       section.getByRole('button', { name: /Full breakdown/ }),
     ).toBeVisible();
     await section.getByRole('button', { name: /Full breakdown/ }).click();
-    // TODO: test Personality Breakdown
+    await expect(page).toHaveURL(/stats\/personality$/);
+    await expect(page.getByText(/Personality Breakdown/)).toBeVisible();
+    for (const pers of PERSONALITIES) {
+      const persRegexp = new RegExp(`${pers}: \\d+`);
+      await expect(page.getByText(persRegexp)).toBeVisible();
+    }
+  });
+
+  test('should show Personality breakdown', async ({ page }) => {
+    await page.goto('/stats/personality');
+    await expect(page).toHaveURL(/stats\/personality$/);
+    await expect(page.getByText(/Personality Breakdown/)).toBeVisible();
+    for (const pers of PERSONALITIES) {
+      const persRegexp = new RegExp(`${pers}: \\d+`);
+      await expect(page.getByText(persRegexp)).toBeVisible();
+    }
   });
 
   test('should show Gender stats', async ({ page }) => {
@@ -286,7 +301,19 @@ test.describe('Stats', () => {
     await expect(
       section.getByRole('button', { name: /Full breakdown/ }),
     ).toBeVisible();
-    // TODO: test Gender Breakdown
+    await section.getByRole('button', { name: /Full breakdown/ }).click();
+    await expect(page).toHaveURL(/stats\/gender$/);
+    await expect(page.getByText(/Gender Breakdown/)).toBeVisible();
+    await expect(page.getByText(/Female: \d+/)).toHaveCount(2);
+    await expect(page.getByText(/Male: \d+/)).toHaveCount(2);
+  });
+
+  test('should show Gender breakdown', async ({ page }) => {
+    await page.goto('/stats/gender');
+    await expect(page).toHaveURL(/stats\/gender$/);
+    await expect(page.getByText(/Gender Breakdown/)).toBeVisible();
+    await expect(page.getByText(/Female: \d+/)).toBeVisible();
+    await expect(page.getByText(/Male: \d+/)).toBeVisible();
   });
 
   test('should show Photos stats', async ({ page }) => {
