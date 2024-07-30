@@ -445,7 +445,85 @@ test.describe('Search', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/search');
   });
-  // TODO: test Search page
+
+  test('should show Search page', async ({ page }) => {
+    await expect(page.getByLabel(/^Name$/)).toBeVisible();
+    await expect(page.getByLabel(/^Species$/)).toBeVisible();
+    await expect(page.getByLabel(/^Personality$/)).toBeVisible();
+    await expect(page.getByText(/^All$/)).toBeVisible();
+    const resetButton = page.getByRole('button', { name: /^Reset$/ });
+    await expect(resetButton).toBeVisible();
+    const searchResults = page.getByTestId('searchResults');
+    await expect(searchResults.getByRole('link')).toHaveCount(413);
+    // combobox.fill doesn't seem to work with webkit
+    // await page.getByRole('combobox', { name: /^Name$/ }).fill('z');
+    await page.getByRole('combobox', { name: /^Name$/ }).pressSequentially('z');
+    await expect(searchResults.getByRole('link')).toHaveCount(13);
+    // await page.getByRole('combobox', { name: /^Name$/ }).fill('za');
+    await page.getByRole('combobox', { name: /^Name$/ }).pressSequentially('a');
+    await expect(searchResults.getByRole('link')).toHaveCount(1);
+    await resetButton.click();
+    await expect(searchResults.getByRole('link')).toHaveCount(413);
+    await page.getByLabel(/^Species$/).click();
+    await page.getByRole('option', { name: /^Alligator$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(8);
+    await page.getByRole('option', { name: /^Anteater$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(16);
+    await page.getByLabel(/^Clear$/).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(413);
+    await page
+      .getByLabel(/^Species$/)
+      .first()
+      .click();
+    await page.getByLabel(/^Personality$/).click();
+    await page.getByRole('option', { name: /^Cranky$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(57);
+    await page.getByRole('option', { name: /^Big sister$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(83);
+    await page.getByLabel(/^Clear$/).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(413);
+    await page
+      .getByLabel(/^Personality$/)
+      .first()
+      .click();
+    await page.getByText('All').click();
+    await page.getByRole('option', { name: /^Female$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(199);
+    await resetButton.click();
+    await expect(searchResults.getByRole('link')).toHaveCount(413);
+    await page.getByLabel(/^Species$/).click();
+    await page.getByRole('option', { name: /^Cat$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(23);
+    await page
+      .getByLabel(/^Species$/)
+      .first()
+      .click();
+    await page.getByLabel(/^Personality$/).click();
+    await page.getByRole('option', { name: /^Peppy$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(5);
+    await page
+      .getByLabel(/^Personality$/)
+      .first()
+      .click();
+    await page.getByText(/^All$/).click();
+    await page.getByRole('option', { name: /^Male$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(0);
+    await expect(searchResults.getByText(/^No results.$/)).toBeVisible();
+    await page
+      .getByText(/^Male$/)
+      .first()
+      .click();
+    await page.getByRole('option', { name: /^Female$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(5);
+    await page.getByRole('combobox', { name: /^Name$/ }).fill('n');
+    await expect(searchResults.getByRole('link')).toHaveCount(1);
+    await expect(
+      searchResults.getByRole('link', { name: 'Tangy' }),
+    ).toBeVisible();
+    await page.getByRole('combobox', { name: /^Name$/ }).press('Escape');
+    await resetButton.click();
+    await expect(searchResults.getByRole('link')).toHaveCount(413);
+  });
 });
 
 test.describe('About', () => {

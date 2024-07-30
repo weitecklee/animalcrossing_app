@@ -191,7 +191,7 @@ export default function Page() {
           flexItem
           sx={{ padding: 1 }}
         />
-        <Grid item xs>
+        <Grid item xs data-testid="searchResults">
           {conductSearch ? (
             searching ? (
               <Loading />
