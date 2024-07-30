@@ -167,6 +167,12 @@ test.describe('Timeline', () => {
     await expect(
       page.getByRole('button', { name: /Timeline view/ }),
     ).toBeVisible();
+  });
+
+  test('should switch views on button click', async ({ page }) => {
+    await expect(
+      page.getByRole('button', { name: /Timeline view/ }),
+    ).toBeVisible();
     await page.getByRole('button', { name: /Timeline view/ }).click();
     await expect(
       page.getByRole('button', { name: /Lined-up view/ }),
@@ -179,6 +185,24 @@ test.describe('Timeline', () => {
     await expect(
       page.getByRole('button', { name: /Timeline view/ }),
     ).toBeVisible();
+  });
+
+  test('should be able to drag button', async ({ page }) => {
+    await expect(page.locator('#dragFab')).toBeVisible();
+    const draggableTimelineMode = page
+      .locator('#dragFab')
+      .getByTestId('OpenWithRoundedIcon');
+    const origLocation = await draggableTimelineMode.boundingBox();
+    await draggableTimelineMode.dragTo(page.locator('canvas'), {
+      targetPosition: { x: 100, y: 100 },
+    });
+    const newLocation = await draggableTimelineMode.boundingBox();
+    expect(origLocation!.x).not.toEqual(newLocation!.x);
+    expect(origLocation!.y).not.toEqual(newLocation!.y);
+  });
+
+  test('should show draggable tooltip', async ({ page }) => {
+    await expect(page.locator('canvas')).toBeVisible();
     await page.waitForTimeout(1000);
     await expect(page.locator('#dragHandle')).not.toBeVisible();
     const canvasBox = await page.locator('canvas').boundingBox();
@@ -189,15 +213,12 @@ test.describe('Timeline', () => {
       { steps: 10 },
     );
     await expect(page.locator('#dragHandle')).toBeVisible();
-    await expect(page.locator('#dragFab')).toBeVisible();
-    const draggableTimelineMode = page
-      .locator('#dragFab')
-      .getByTestId('OpenWithRoundedIcon');
-    const origLocation = await draggableTimelineMode.boundingBox();
-    await draggableTimelineMode.dragTo(page.locator('canvas'), {
+    const draggableTooltip = page.locator('#dragHandle');
+    const origLocation = await draggableTooltip.boundingBox();
+    await draggableTooltip.dragTo(page.locator('canvas'), {
       targetPosition: { x: 100, y: 100 },
     });
-    const newLocation = await draggableTimelineMode.boundingBox();
+    const newLocation = await draggableTooltip.boundingBox();
     expect(origLocation!.x).not.toEqual(newLocation!.x);
     expect(origLocation!.y).not.toEqual(newLocation!.y);
   });
@@ -451,10 +472,14 @@ test.describe('Search', () => {
     await expect(page.getByLabel(/^Species$/)).toBeVisible();
     await expect(page.getByLabel(/^Personality$/)).toBeVisible();
     await expect(page.getByText(/^All$/)).toBeVisible();
-    const resetButton = page.getByRole('button', { name: /^Reset$/ });
-    await expect(resetButton).toBeVisible();
+    await expect(page.getByRole('button', { name: /^Reset$/ })).toBeVisible();
+    await expect(
+      page.getByTestId('searchResults').getByRole('link'),
+    ).toHaveCount(413);
+  });
+
+  test('should show results when searched by Name', async ({ page }) => {
     const searchResults = page.getByTestId('searchResults');
-    await expect(searchResults.getByRole('link')).toHaveCount(413);
     // combobox.fill doesn't seem to work with webkit
     // await page.getByRole('combobox', { name: /^Name$/ }).fill('z');
     await page.getByRole('combobox', { name: /^Name$/ }).pressSequentially('z');
@@ -462,8 +487,12 @@ test.describe('Search', () => {
     // await page.getByRole('combobox', { name: /^Name$/ }).fill('za');
     await page.getByRole('combobox', { name: /^Name$/ }).pressSequentially('a');
     await expect(searchResults.getByRole('link')).toHaveCount(1);
-    await resetButton.click();
+    await page.getByRole('button', { name: /^Reset$/ }).click();
     await expect(searchResults.getByRole('link')).toHaveCount(413);
+  });
+
+  test('should show results when searched by Species', async ({ page }) => {
+    const searchResults = page.getByTestId('searchResults');
     await page.getByLabel(/^Species$/).click();
     await page.getByRole('option', { name: /^Alligator$/ }).click();
     await expect(searchResults.getByRole('link')).toHaveCount(8);
@@ -471,10 +500,10 @@ test.describe('Search', () => {
     await expect(searchResults.getByRole('link')).toHaveCount(16);
     await page.getByLabel(/^Clear$/).click();
     await expect(searchResults.getByRole('link')).toHaveCount(413);
-    await page
-      .getByLabel(/^Species$/)
-      .first()
-      .click();
+  });
+
+  test('should show results when searched by Personality', async ({ page }) => {
+    const searchResults = page.getByTestId('searchResults');
     await page.getByLabel(/^Personality$/).click();
     await page.getByRole('option', { name: /^Cranky$/ }).click();
     await expect(searchResults.getByRole('link')).toHaveCount(57);
@@ -482,14 +511,27 @@ test.describe('Search', () => {
     await expect(searchResults.getByRole('link')).toHaveCount(83);
     await page.getByLabel(/^Clear$/).click();
     await expect(searchResults.getByRole('link')).toHaveCount(413);
-    await page
-      .getByLabel(/^Personality$/)
-      .first()
-      .click();
+  });
+
+  test('should show results when searched by Gender', async ({ page }) => {
+    const searchResults = page.getByTestId('searchResults');
     await page.getByText('All').click();
     await page.getByRole('option', { name: /^Female$/ }).click();
     await expect(searchResults.getByRole('link')).toHaveCount(199);
-    await resetButton.click();
+    await page
+      .getByText(/^Female$/)
+      .first()
+      .click();
+    await page.getByRole('option', { name: /^Male$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(214);
+    await page.getByRole('button', { name: /^Reset$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(413);
+  });
+
+  test('should show results when searched with multiple filters', async ({
+    page,
+  }) => {
+    const searchResults = page.getByTestId('searchResults');
     await expect(searchResults.getByRole('link')).toHaveCount(413);
     await page.getByLabel(/^Species$/).click();
     await page.getByRole('option', { name: /^Cat$/ }).click();
@@ -521,7 +563,7 @@ test.describe('Search', () => {
       searchResults.getByRole('link', { name: 'Tangy' }),
     ).toBeVisible();
     await page.getByRole('combobox', { name: /^Name$/ }).press('Escape');
-    await resetButton.click();
+    await page.getByRole('button', { name: /^Reset$/ }).click();
     await expect(searchResults.getByRole('link')).toHaveCount(413);
   });
 });
