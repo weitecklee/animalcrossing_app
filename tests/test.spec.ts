@@ -161,6 +161,67 @@ test.describe('Timeline', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/timeline');
   });
+
+  test('should show timeline', async ({ page }) => {
+    await expect(page.locator('canvas')).toBeVisible();
+    await expect(
+      page.getByRole('button', { name: /Timeline view/ }),
+    ).toBeVisible();
+  });
+
+  test('should switch views on button click', async ({ page }) => {
+    await expect(
+      page.getByRole('button', { name: /Timeline view/ }),
+    ).toBeVisible();
+    await page.getByRole('button', { name: /Timeline view/ }).click();
+    await expect(
+      page.getByRole('button', { name: /Lined-up view/ }),
+    ).toBeVisible();
+    await page.getByRole('button', { name: /Lined-up view/ }).click();
+    await expect(
+      page.getByRole('button', { name: /Sorted view/ }),
+    ).toBeVisible();
+    await page.getByRole('button', { name: /Sorted view/ }).click();
+    await expect(
+      page.getByRole('button', { name: /Timeline view/ }),
+    ).toBeVisible();
+  });
+
+  test('should be able to drag button', async ({ page }) => {
+    await expect(page.locator('#dragFab')).toBeVisible();
+    const draggableTimelineMode = page
+      .locator('#dragFab')
+      .getByTestId('OpenWithRoundedIcon');
+    const origLocation = await draggableTimelineMode.boundingBox();
+    await draggableTimelineMode.dragTo(page.locator('canvas'), {
+      targetPosition: { x: 100, y: 100 },
+    });
+    const newLocation = await draggableTimelineMode.boundingBox();
+    expect(origLocation!.x).not.toEqual(newLocation!.x);
+    expect(origLocation!.y).not.toEqual(newLocation!.y);
+  });
+
+  test('should show draggable tooltip', async ({ page }) => {
+    await expect(page.locator('canvas')).toBeVisible();
+    await page.waitForTimeout(1000);
+    await expect(page.locator('#dragHandle')).not.toBeVisible();
+    const canvasBox = await page.locator('canvas').boundingBox();
+    await page.mouse.move(canvasBox!.x, canvasBox!.y);
+    await page.mouse.move(
+      canvasBox!.x + canvasBox!.width,
+      canvasBox!.y + canvasBox!.height,
+      { steps: 10 },
+    );
+    await expect(page.locator('#dragHandle')).toBeVisible();
+    const draggableTooltip = page.locator('#dragHandle');
+    const origLocation = await draggableTooltip.boundingBox();
+    await draggableTooltip.dragTo(page.locator('canvas'), {
+      targetPosition: { x: 100, y: 100 },
+    });
+    const newLocation = await draggableTooltip.boundingBox();
+    expect(origLocation!.x).not.toEqual(newLocation!.x);
+    expect(origLocation!.y).not.toEqual(newLocation!.y);
+  });
 });
 
 test.describe('Stats', () => {
@@ -394,21 +455,134 @@ test.describe('Stats', () => {
     await expect(page).toHaveURL(/stats\/islandmates$/);
     await expect(page.getByText('Islandmates Breakdown')).toBeVisible();
   });
-});
 
-test('should show Islandmates breakdown', async ({ page }) => {
-  await page.goto('/stats/islandmates');
-  await expect(page.getByText('Islandmates Breakdown')).toBeVisible();
+  test('should show Islandmates breakdown', async ({ page }) => {
+    await page.goto('/stats/islandmates');
+    await expect(page.getByText('Islandmates Breakdown')).toBeVisible();
+  });
 });
 
 test.describe('Search', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/search');
   });
+
+  test('should show Search page', async ({ page }) => {
+    await expect(page.getByLabel(/^Name$/)).toBeVisible();
+    await expect(page.getByLabel(/^Species$/)).toBeVisible();
+    await expect(page.getByLabel(/^Personality$/)).toBeVisible();
+    await expect(page.getByText(/^All$/)).toBeVisible();
+    await expect(page.getByRole('button', { name: /^Reset$/ })).toBeVisible();
+    await expect(
+      page.getByTestId('searchResults').getByRole('link'),
+    ).toHaveCount(413);
+  });
+
+  test('should show results when searched by Name', async ({ page }) => {
+    const searchResults = page.getByTestId('searchResults');
+    // combobox.fill doesn't seem to work with webkit
+    // await page.getByRole('combobox', { name: /^Name$/ }).fill('z');
+    await page.getByRole('combobox', { name: /^Name$/ }).pressSequentially('z');
+    await expect(searchResults.getByRole('link')).toHaveCount(13);
+    // await page.getByRole('combobox', { name: /^Name$/ }).fill('za');
+    await page.getByRole('combobox', { name: /^Name$/ }).pressSequentially('a');
+    await expect(searchResults.getByRole('link')).toHaveCount(1);
+    await page.getByRole('button', { name: /^Reset$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(413);
+  });
+
+  test('should show results when searched by Species', async ({ page }) => {
+    const searchResults = page.getByTestId('searchResults');
+    await page.getByLabel(/^Species$/).click();
+    await page.getByRole('option', { name: /^Alligator$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(8);
+    await page.getByRole('option', { name: /^Anteater$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(16);
+    await page.getByLabel(/^Clear$/).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(413);
+  });
+
+  test('should show results when searched by Personality', async ({ page }) => {
+    const searchResults = page.getByTestId('searchResults');
+    await page.getByLabel(/^Personality$/).click();
+    await page.getByRole('option', { name: /^Cranky$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(57);
+    await page.getByRole('option', { name: /^Big sister$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(83);
+    await page.getByLabel(/^Clear$/).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(413);
+  });
+
+  test('should show results when searched by Gender', async ({ page }) => {
+    const searchResults = page.getByTestId('searchResults');
+    await page.getByText('All').click();
+    await page.getByRole('option', { name: /^Female$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(199);
+    await page
+      .getByText(/^Female$/)
+      .first()
+      .click();
+    await page.getByRole('option', { name: /^Male$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(214);
+    await page.getByRole('button', { name: /^Reset$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(413);
+  });
+
+  test('should show results when searched with multiple filters', async ({
+    page,
+  }) => {
+    const searchResults = page.getByTestId('searchResults');
+    await expect(searchResults.getByRole('link')).toHaveCount(413);
+    await page.getByLabel(/^Species$/).click();
+    await page.getByRole('option', { name: /^Cat$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(23);
+    await page
+      .getByLabel(/^Species$/)
+      .first()
+      .click();
+    await page.getByLabel(/^Personality$/).click();
+    await page.getByRole('option', { name: /^Peppy$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(5);
+    await page
+      .getByLabel(/^Personality$/)
+      .first()
+      .click();
+    await page.getByText(/^All$/).click();
+    await page.getByRole('option', { name: /^Male$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(0);
+    await expect(searchResults.getByText(/^No results.$/)).toBeVisible();
+    await page
+      .getByText(/^Male$/)
+      .first()
+      .click();
+    await page.getByRole('option', { name: /^Female$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(5);
+    await page.getByRole('combobox', { name: /^Name$/ }).fill('n');
+    await expect(searchResults.getByRole('link')).toHaveCount(1);
+    await expect(
+      searchResults.getByRole('link', { name: 'Tangy' }),
+    ).toBeVisible();
+    await page.getByRole('combobox', { name: /^Name$/ }).press('Escape');
+    await page.getByRole('button', { name: /^Reset$/ }).click();
+    await expect(searchResults.getByRole('link')).toHaveCount(413);
+  });
 });
 
 test.describe('About', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/about');
+  });
+
+  test('should show About page', async ({ page }) => {
+    await expect(
+      page.getByRole('img', { name: 'Animal Crossing: New Horizons' }),
+    ).toBeVisible();
+    await expect(
+      page.getByText('Animal Crossing: New Horizons is a simulation game'),
+    ).toBeVisible();
+    await expect(page.getByRole('img', { name: 'My Villager' })).toBeVisible();
+    await expect(
+      page.getByText('I have been playing Animal Crossing'),
+    ).toBeVisible();
   });
 });
