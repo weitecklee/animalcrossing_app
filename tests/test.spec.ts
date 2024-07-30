@@ -161,7 +161,46 @@ test.describe('Timeline', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/timeline');
   });
-  // TODO: test Timeline page
+
+  test('should show timeline', async ({ page }) => {
+    await expect(page.locator('canvas')).toBeVisible();
+    await expect(
+      page.getByRole('button', { name: /Timeline view/ }),
+    ).toBeVisible();
+    await page.getByRole('button', { name: /Timeline view/ }).click();
+    await expect(
+      page.getByRole('button', { name: /Lined-up view/ }),
+    ).toBeVisible();
+    await page.getByRole('button', { name: /Lined-up view/ }).click();
+    await expect(
+      page.getByRole('button', { name: /Sorted view/ }),
+    ).toBeVisible();
+    await page.getByRole('button', { name: /Sorted view/ }).click();
+    await expect(
+      page.getByRole('button', { name: /Timeline view/ }),
+    ).toBeVisible();
+    await page.waitForTimeout(1000);
+    await expect(page.locator('#dragHandle')).not.toBeVisible();
+    const canvasBox = await page.locator('canvas').boundingBox();
+    await page.mouse.move(canvasBox!.x, canvasBox!.y);
+    await page.mouse.move(
+      canvasBox!.x + canvasBox!.width,
+      canvasBox!.y + canvasBox!.height,
+      { steps: 10 },
+    );
+    await expect(page.locator('#dragHandle')).toBeVisible();
+    await expect(page.locator('#dragFab')).toBeVisible();
+    const draggableTimelineMode = page
+      .locator('#dragFab')
+      .getByTestId('OpenWithRoundedIcon');
+    const origLocation = await draggableTimelineMode.boundingBox();
+    await draggableTimelineMode.dragTo(page.locator('canvas'), {
+      targetPosition: { x: 100, y: 100 },
+    });
+    const newLocation = await draggableTimelineMode.boundingBox();
+    expect(origLocation!.x).not.toEqual(newLocation!.x);
+    expect(origLocation!.y).not.toEqual(newLocation!.y);
+  });
 });
 
 test.describe('Stats', () => {
