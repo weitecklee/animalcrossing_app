@@ -14,6 +14,7 @@ import { ScreenContext } from '@/lib/screenContext';
 import { coustard } from '@/app/theme';
 import CRIcon from '@/components/crIcon';
 import Link from 'next/link';
+import CustomImage from '@/components/customImage';
 
 const lowElevation = 4;
 const highElevation = 14;
@@ -30,10 +31,7 @@ export default function VillagerCard({
   const [elevation, setElevation] = useState(lowElevation);
 
   return (
-    <Grid
-      item
-      minWidth={mediumScreen ? 'calc(128px + 9rem)' : 'calc(192px + 12rem)'}
-    >
+    <Grid item>
       <Link href={`/villagers/${fixName(history.name)}`} scroll={false}>
         <Paper
           elevation={elevation}
@@ -49,56 +47,64 @@ export default function VillagerCard({
             setElevation(lowElevation);
           }}
         >
-          <Stack direction="row">
-            <Image
-              src={villagerData.nh_details.photo_url}
-              alt={`${history.name} photo`}
-              title={history.name}
-              width={mediumScreen ? 128 : 192}
-              height={mediumScreen ? 128 : 192}
-              placeholder="blur"
-              blurDataURL={rgbDataURL(villagerData.title_color)}
-            />
-            <Box padding={1}>
-              <Stack direction="row" spacing={1} alignItems="center">
-                <Typography
-                  variant={mediumScreen ? 'subtitle2' : 'h6'}
-                  fontFamily={coustard.style.fontFamily}
-                >
-                  {history.name}
-                </Typography>
-                {history.currentResident ? <CRIcon /> : ''}
-              </Stack>
-              <IconWithText
-                Icon={ArrowForwardRoundedIcon}
-                text={history.startDateString}
-                screenBoolean={mediumScreen}
-              />
-              {history.photo ? (
+          <Box width={mediumScreen ? '14rem' : '20rem'}>
+            <Stack direction="row">
+              <Box
+                position="relative"
+                height={mediumScreen ? '7rem' : '10rem'}
+                width={mediumScreen ? '14rem' : '20rem'}
+                maxWidth="50%"
+                maxHeight="100%"
+              >
+                <CustomImage
+                  src={villagerData.nh_details.photo_url}
+                  alt={`${history.name} photo`}
+                  title={history.name}
+                  fill
+                  blurColor={villagerData.title_color}
+                />
+              </Box>
+              <Box padding={1}>
+                <Stack direction="row" spacing={1} alignItems="center">
+                  <Typography
+                    variant={mediumScreen ? 'subtitle2' : 'h6'}
+                    fontFamily={coustard.style.fontFamily}
+                  >
+                    {history.name}
+                  </Typography>
+                  {history.currentResident ? <CRIcon /> : ''}
+                </Stack>
                 <IconWithText
-                  Icon={CameraAltRoundedIcon}
-                  text={history.photoDateString}
+                  Icon={ArrowForwardRoundedIcon}
+                  text={history.startDateString}
                   screenBoolean={mediumScreen}
                 />
-              ) : (
-                ''
-              )}
-              {!history.currentResident ? (
+                {history.photo ? (
+                  <IconWithText
+                    Icon={CameraAltRoundedIcon}
+                    text={history.photoDateString}
+                    screenBoolean={mediumScreen}
+                  />
+                ) : (
+                  ''
+                )}
+                {!history.currentResident ? (
+                  <IconWithText
+                    Icon={ArrowBackRoundedIcon}
+                    text={history.endDateString}
+                    screenBoolean={mediumScreen}
+                  />
+                ) : (
+                  ''
+                )}
                 <IconWithText
-                  Icon={ArrowBackRoundedIcon}
-                  text={history.endDateString}
+                  Icon={AccessTimeRoundedIcon}
+                  text={dayOrDays(history.duration)}
                   screenBoolean={mediumScreen}
                 />
-              ) : (
-                ''
-              )}
-              <IconWithText
-                Icon={AccessTimeRoundedIcon}
-                text={dayOrDays(history.duration)}
-                screenBoolean={mediumScreen}
-              />
-            </Box>
-          </Stack>
+              </Box>
+            </Stack>
+          </Box>
         </Paper>
       </Link>
     </Grid>
