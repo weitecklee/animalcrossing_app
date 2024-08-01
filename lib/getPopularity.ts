@@ -2,7 +2,7 @@
 
 import { load } from 'cheerio';
 
-export default async function getPopularity() {
+export default async function getPopularity(): Promise<Map<string, number>> {
   const url =
     'https://www.animalcrossingportal.com/tier-lists/new-horizons/all-villagers/';
 
@@ -22,5 +22,5 @@ export default async function getPopularity() {
     popularity.set(v, i + 1);
   });
 
-  console.log(popularity);
+  return popularity;
 }

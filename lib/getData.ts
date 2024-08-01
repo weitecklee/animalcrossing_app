@@ -3,10 +3,7 @@
 import { EventDocument, HistoryDocument } from '@/types';
 import { cache } from 'react';
 
-async function getData(): Promise<{
-  historyData: HistoryDocument[];
-  eventsData: EventDocument[];
-}> {
+async function getHistory(): Promise<HistoryDocument[]> {
   const payload = {
     dataSource: 'AnimalCrossing',
     database: 'lasagnark',
@@ -23,7 +20,10 @@ async function getData(): Promise<{
     body: JSON.stringify(payload),
   });
   const historyResults: { documents: HistoryDocument[] } = await res.json();
+  return historyResults.documents;
+}
 
+async function getEvents(): Promise<EventDocument[]> {
   const payload2 = {
     dataSource: 'AnimalCrossing',
     database: 'lasagnark',
@@ -44,10 +44,21 @@ async function getData(): Promise<{
     body: JSON.stringify(payload2),
   });
   const eventsResults: { documents: EventDocument[] } = await res2.json();
+  return eventsResults.documents;
+}
+
+async function getData(): Promise<{
+  historyData: HistoryDocument[];
+  eventsData: EventDocument[];
+}> {
+  const [historyData, eventsData] = await Promise.all([
+    getHistory(),
+    getEvents(),
+  ]);
 
   return {
-    historyData: historyResults.documents,
-    eventsData: eventsResults.documents,
+    historyData,
+    eventsData,
   };
 }
 
