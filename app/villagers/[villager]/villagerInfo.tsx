@@ -26,7 +26,7 @@ export default function VillagerInfo({
   const villagerName = fixName(params.villager);
 
   const villagerData = nookipediaData.get(villagerName);
-  const { historyMap } = useContext(DataContext);
+  const { historyMap, popularityMap } = useContext(DataContext);
 
   if (!villagerData) {
     notFound();
@@ -113,20 +113,24 @@ export default function VillagerInfo({
         <Typography>
           {villagerData.personality} {villagerData.gender}{' '}
           {villagerData.species}
-          <br />
+        </Typography>
+        <Typography>
           Birthday: {villagerData.birthday_month} {villagerData.birthday_day}
-          <br />
+        </Typography>
+        <Typography>
           Quote:{' '}
           <Box component="span" sx={{ fontStyle: 'italic' }}>
             &quot;{villagerData.nh_details.quote}&quot;
           </Box>
-          <br />
+        </Typography>
+        <Typography>
           Catchphrase:{' '}
           <Box component="span" sx={{ fontStyle: 'italic' }}>
             &quot;{villagerData.nh_details.catchphrase}&quot;&ensp;「
             {villagerData.ja_phrase}」
           </Box>
         </Typography>
+        <Typography>Popularity: #{popularityMap.get(villagerName)}</Typography>
         {!historyMap.size ? <Loading /> : ''}
         {history ? (
           <Typography>
@@ -137,11 +141,12 @@ export default function VillagerInfo({
           ''
         )}
         {history?.photo ? (
-          <Typography>
-            Gave photo on {dateFormatter(history.photoDateDate)}
-            <br />
-            Time to give: {history.daysToPhoto} days
-          </Typography>
+          <>
+            <Typography>
+              Gave photo on {dateFormatter(history.photoDateDate)}
+            </Typography>
+            <Typography>Time to give: {history.daysToPhoto} days</Typography>
+          </>
         ) : (
           ''
         )}
@@ -158,10 +163,9 @@ export default function VillagerInfo({
               Length of stay:&nbsp;
               {dayOrDays(history.duration)}
               {history.currentResident && ' and counting'}
-              <br />
-              <br />
-              {history.islandmates.length} islandmates:
             </Typography>
+            <br />
+            <Typography>{history.islandmates.length} islandmates:</Typography>
             <IconGrid villagers={history.islandmates} />
           </>
         ) : (

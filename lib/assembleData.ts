@@ -8,8 +8,9 @@ import { cache } from 'react';
 async function assembleData(): Promise<{
   historyMap: Map<string, History>;
   eventsData: EventDocument[];
+  popularityMap: Map<string, number>;
 }> {
-  const { eventsData, historyData } = await getData();
+  const { eventsData, historyData, popularityMap } = await getData();
   const historyMap: Map<string, History> = new Map();
 
   historyData.sort((a, b) => (a.startDate < b.startDate ? -1 : 1));
@@ -58,6 +59,7 @@ async function assembleData(): Promise<{
   return {
     historyMap,
     eventsData,
+    popularityMap,
   };
 }
 

@@ -7,12 +7,14 @@ import { DataContextProps } from '@/types';
 export const DataContext = createContext({
   historyMap: new Map(),
   eventsData: [],
+  popularityMap: new Map(),
 } as DataContextProps);
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
   const [data, setData] = useState({
     historyMap: new Map(),
     eventsData: [],
+    popularityMap: new Map(),
   } as DataContextProps);
 
   useEffect(() => {

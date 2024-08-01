@@ -2,6 +2,7 @@
 
 import { EventDocument, HistoryDocument } from '@/types';
 import { cache } from 'react';
+import getPopularity from './getPopularity';
 
 async function getHistory(): Promise<HistoryDocument[]> {
   const payload = {
@@ -50,15 +51,18 @@ async function getEvents(): Promise<EventDocument[]> {
 async function getData(): Promise<{
   historyData: HistoryDocument[];
   eventsData: EventDocument[];
+  popularityMap: Map<string, number>;
 }> {
-  const [historyData, eventsData] = await Promise.all([
+  const [historyData, eventsData, popularityMap] = await Promise.all([
     getHistory(),
     getEvents(),
+    getPopularity(),
   ]);
 
   return {
     historyData,
     eventsData,
+    popularityMap,
   };
 }
 

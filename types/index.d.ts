@@ -121,6 +121,7 @@ export interface CalculatedStats {
 export interface DataContextProps {
   historyMap: Map<string, History>;
   eventsData: EventDocument[];
+  popularityMap: Map<string, number>;
 }
 
 export interface CustomDialogProps extends DialogProps {
