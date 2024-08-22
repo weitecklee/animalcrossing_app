@@ -5,9 +5,8 @@ import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 import CameraAltRoundedIcon from '@mui/icons-material/CameraAltRounded';
 import { Box, Grid, Paper, Stack, Typography, useTheme } from '@mui/material';
-import Image from 'next/image';
 import { useContext, useState } from 'react';
-import { dayOrDays, fixName, rgbDataURL } from '@/lib/functions';
+import { dayOrDays, fixName } from '@/lib/functions';
 import { History, NookipediaVillager } from '@/types';
 import IconWithText from '@/components/iconWithText';
 import { ScreenContext } from '@/lib/screenContext';
@@ -47,13 +46,13 @@ export default function VillagerCard({
             setElevation(lowElevation);
           }}
         >
-          <Box width={mediumScreen ? '14rem' : '20rem'}>
-            <Stack direction="row">
+          <Box width={mediumScreen ? '7rem' : '20rem'}>
+            <Stack direction={mediumScreen ? 'column' : 'row'}>
               <Box
                 position="relative"
                 height={mediumScreen ? '7rem' : '10rem'}
-                width={mediumScreen ? '14rem' : '20rem'}
-                maxWidth="50%"
+                width={mediumScreen ? '7rem' : '20rem'}
+                maxWidth={mediumScreen ? '100%' : '50%'}
                 maxHeight="100%"
               >
                 <CustomImage
