@@ -34,6 +34,7 @@ interface NH_Details {
   house_flooring: string;
   house_music: string;
   house_music_note: string;
+  umbrella: string;
 }
 
 export interface NookipediaVillager {

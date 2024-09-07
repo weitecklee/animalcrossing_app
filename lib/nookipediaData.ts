@@ -24,7 +24,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/91/Ace_amiibo.png',
-      photo_url: 'https://dodo.ac/np/images/6/61/Ace%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/1/12/Ace%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/4f/Ace_NH_Villager_Icon.png',
       quote:
         'If you love something, let it go. Then chase it down. What were you thinking?',
@@ -42,6 +42,7 @@ const data = [
       house_flooring: 'green-paint flooring',
       house_music: 'K.K. Hop',
       house_music_note: '',
+      umbrella: 'two-tone umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'NH', 'PC'],
     ja_name: 'フェザー',
@@ -70,7 +71,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/ed/Admiral_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/02/Admiral%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/0a/Admiral%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/82/Admiral_NH_Villager_Icon.png',
       quote: 'Only quitters give up.',
       'sub-personality': 'A',
@@ -88,6 +89,7 @@ const data = [
       house_flooring: 'Tatami',
       house_music: 'Steep Hill',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'イッテツ',
@@ -95,7 +97,7 @@ const data = [
   },
   {
     name: 'Agent S',
-    url: 'https://nookipedia.com/wiki/Agent_S',
+    url: 'https://nookipedia.com/wiki/Agent%20S',
     alt_name: '',
     title_color: '0961f6',
     text_color: 'fffce9',
@@ -116,7 +118,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a7/Agent_S_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/9e/Agent_S%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/b3/Agent_S%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/51/Agent_S_NH_Villager_Icon.png',
       quote: 'You gotta put the pedal to the metal!',
       'sub-personality': 'B',
@@ -134,6 +136,7 @@ const data = [
       house_flooring: 'Colorful Tile Flooring',
       house_music: 'Go K.K. Rider',
       house_music_note: '',
+      umbrella: 'beach umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: '２ごう',
@@ -162,7 +165,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/42/Agnes_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/8e/Agnes%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/27/Agnes%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/27/Agnes_NH_Villager_Icon.png',
       quote: 'You reap what you sow.',
       'sub-personality': 'A',
@@ -180,6 +183,7 @@ const data = [
       house_flooring: 'Arabesque Flooring',
       house_music: 'K.K. House',
       house_music_note: '',
+      umbrella: 'peach umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アグネス',
@@ -207,7 +211,7 @@ const data = [
     prev_phrases: ['hoo hoo ha'],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c4/Al_NH.png',
-      photo_url: 'https://dodo.ac/np/images/2/21/Al%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/7/7e/Al%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/62/Al_NH_Villager_Icon.png',
       quote: 'Life is a buffet. Always go back for seconds.',
       'sub-personality': 'B',
@@ -224,6 +228,7 @@ const data = [
       house_flooring: 'Green Rubber Flooring',
       house_music: 'Go K.K. Rider',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'mush umbrella',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'たもつ',
@@ -252,7 +257,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/e4/Alfonso_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/fd/Alfonso%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/e8/Alfonso%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0a/Alfonso_NH_Villager_Icon.png',
       quote: 'Slow and steady wins the race.',
       'sub-personality': 'B',
@@ -270,6 +275,7 @@ const data = [
       house_flooring: 'Green Honeycomb Tile',
       house_music: 'Forest Life',
       house_music_note: '',
+      umbrella: 'pear umbrella',
     },
     appearances: [
       'DNM',
@@ -310,7 +316,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/e1/Alice_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/64/Alice%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/73/Alice%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/1f/Alice_NH_Villager_Icon.png',
       quote: 'Treat others as you would like to be treated.',
       'sub-personality': 'B',
@@ -328,6 +334,7 @@ const data = [
       house_flooring: 'Light Parquet Flooring',
       house_music: 'Aloha K.K.',
       house_music_note: '',
+      umbrella: 'hydrangea umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'メルボルン',
@@ -355,8 +362,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/8e/Alli_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/7/72/Alli%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/7/71/Alli%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/54/Alli_NH_Villager_Icon.png',
       quote: 'Think before you act.',
       'sub-personality': 'B',
@@ -373,6 +379,7 @@ const data = [
       house_flooring: 'Rosewood Flooring',
       house_music: 'K.K. Soul',
       house_music_note: '',
+      umbrella: 'patterned vinyl umbrella',
     },
     appearances: [
       'DNM',
@@ -412,7 +419,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/ab/Amelia_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/cb/Amelia%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c3/Amelia%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d9/Amelia_NH_Villager_Icon.png',
       quote: 'Pampering yourself is as important as food, water, and shelter!',
       'sub-personality': 'B',
@@ -430,8 +437,20 @@ const data = [
       house_flooring: 'Common Flooring',
       house_music: 'K.K. Condor',
       house_music_note: '',
+      umbrella: 'spider umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: [
+      'DNM',
+      'AC',
+      'E_PLUS',
+      'WW',
+      'CF',
+      'NL',
+      'WA',
+      'NH',
+      'HHD',
+      'PC',
+    ],
     ja_name: 'アンデス',
     ja_phrase: 'カラカラ',
   },
@@ -458,7 +477,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d8/Anabelle_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/cb/Anabelle%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/25/Anabelle%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/ba/Anabelle_NH_Villager_Icon.png',
       quote: "Dance like no one's watching!",
       'sub-personality': 'B',
@@ -476,6 +495,7 @@ const data = [
       house_flooring: 'Yellow Floral Flooring',
       house_music: 'Aloha K.K.',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'fairy-tale umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'あるみ',
@@ -504,7 +524,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/ea/Anchovy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/fe/Anchovy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a0/Anchovy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/81/Anchovy_NH_Villager_Icon.png',
       quote: 'Why do today what you can put off until tomorrow?',
       'sub-personality': 'B',
@@ -522,6 +542,7 @@ const data = [
       house_flooring: 'Simple Red Flooring',
       house_music: 'K.K. Ragtime',
       house_music_note: '',
+      umbrella: 'kiwi umbrella',
     },
     appearances: [
       'DNM',
@@ -561,7 +582,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/5f/Angus_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/e8/Angus%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/32/Angus%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e4/Angus_NH_Villager_Icon.png',
       quote: 'Even strong bulls cry.',
       'sub-personality': 'B',
@@ -579,6 +600,7 @@ const data = [
       house_flooring: 'Red-and-Black Vinyl Flooring',
       house_music: 'K.K. Calypso',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'セルバンテス',
@@ -607,7 +629,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/80/Anicotti_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/2b/Anicotti%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/b1/Anicotti%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/07/Anicotti_NH_Villager_Icon.png',
       quote: 'The walls have ears.',
       'sub-personality': 'B',
@@ -625,6 +647,7 @@ const data = [
       house_flooring: 'Kitschy Tile',
       house_music: 'Neapolitan',
       house_music_note: '',
+      umbrella: 'apple umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ラザニア',
@@ -653,7 +676,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/56/Ankha_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/5e/Ankha%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/ae/Ankha%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/1c/Ankha_NH_Villager_Icon.png',
       quote: 'All that glitters is not gold.',
       'sub-personality': 'B',
@@ -671,6 +694,7 @@ const data = [
       house_flooring: 'Pyramid Tile',
       house_music: 'K.K. Bazaar',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'ghost umbrella',
     },
     appearances: ['AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ナイル',
@@ -699,7 +723,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/f0/Annalisa_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/10/Annalisa%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/68/Annalisa%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/3d/Annalisa_NH_Villager_Icon.png',
       quote: 'Home is where the heart is.',
       'sub-personality': 'A',
@@ -717,6 +741,7 @@ const data = [
       house_flooring: 'Tatami',
       house_music: 'King K.K.',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'cherry-blossom umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'みやび',
@@ -745,7 +770,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c4/Annalise_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/19/Annalise%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/b3/Annalise%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/54/Annalise_NH_Villager_Icon.png',
       quote: 'Let gossip go in one ear and out the other.',
       'sub-personality': 'B',
@@ -763,6 +788,7 @@ const data = [
       house_flooring: 'Yellow Floral Flooring',
       house_music: 'Aloha K.K.',
       house_music_note: '',
+      umbrella: 'fairy-tale umbrella',
     },
     appearances: ['AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'シルブプレ',
@@ -791,7 +817,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d4/Antonio_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/67/Antonio%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/89/Antonio%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/34/Antonio_NH_Villager_Icon.png',
       quote: 'Always go for the burn!',
       'sub-personality': 'B',
@@ -809,6 +835,7 @@ const data = [
       house_flooring: 'Wooden-Knot Flooring',
       house_music: 'K.K. Ragtime',
       house_music_note: '',
+      umbrella: 'blue umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'マコト',
@@ -837,7 +864,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/0e/Apollo_NH_Transparent.png',
       photo_url:
-        'https://dodo.ac/np/images/8/82/Apollo%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/25/Apollo%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0b/Apollo_NH_Villager_Icon.png',
       quote: 'What goes up must come down.',
       'sub-personality': 'B',
@@ -855,6 +882,7 @@ const data = [
       house_flooring: 'Slate Flooring',
       house_music: 'K.K. Rock',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: [
       'DNM',
@@ -895,7 +923,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/57/Apple_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/76/Apple%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/71/Apple%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/91/Apple_NH_Villager_Icon.png',
       quote: 'One rotten apple spoils the barrel.',
       'sub-personality': 'A',
@@ -913,6 +941,7 @@ const data = [
       house_flooring: 'Simple White Flooring',
       house_music: 'I Love You',
       house_music_note: '',
+      umbrella: 'Toad parasol',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アップル',
@@ -941,7 +970,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d5/Astrid_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/d8/Astrid%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/94/Astrid%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/2a/Astrid_NH_Villager_Icon.png',
       quote: "The apple doesn't fall far from the tree.",
       'sub-personality': 'B',
@@ -959,6 +988,7 @@ const data = [
       house_flooring: 'Backyard Lawn',
       house_music: 'K.K. Gumbo',
       house_music_note: '',
+      umbrella: 'spider umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'キッズ',
@@ -987,7 +1017,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/1b/Audie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/46/Audie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/66/Audie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/9e/Audie_NH_Villager_Icon.png',
       quote: "Be the kind of person your future self won't regret having been.",
       'sub-personality': 'A',
@@ -1005,6 +1035,7 @@ const data = [
       house_flooring: 'Green Floral Flooring',
       house_music: 'K.K. Island',
       house_music_note: '',
+      umbrella: 'fairy-tale umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'モニカ',
@@ -1033,7 +1064,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/59/Aurora_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/2b/Aurora%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/ce/Aurora%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/25/Aurora_NH_Villager_Icon.png',
       quote: 'Always keep your cool.',
       'sub-personality': 'B',
@@ -1051,6 +1082,7 @@ const data = [
       house_flooring: 'Ice Flooring',
       house_music: 'Stale Cupcakes',
       house_music_note: '',
+      umbrella: 'snowflake umbrella',
     },
     appearances: [
       'DNM',
@@ -1089,7 +1121,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/cc/Ava_NH.png',
-      photo_url: 'https://dodo.ac/np/images/6/6d/Ava%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/d/d6/Ava%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/73/Ava_NH_Villager_Icon.png',
       quote: 'Early to bed, early to rise.',
       'sub-personality': 'B',
@@ -1106,6 +1138,7 @@ const data = [
       house_flooring: 'Simple White Flooring',
       house_music: 'K.K. Love Song',
       house_music_note: '',
+      umbrella: 'Toad parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ドミグラ',
@@ -1134,7 +1167,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/dd/Avery_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/59/Avery%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/9c/Avery%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e2/Avery_NH_Villager_Icon.png',
       quote: 'What goes around comes around.',
       'sub-personality': 'B',
@@ -1152,6 +1185,7 @@ const data = [
       house_flooring: 'Rocky-Mountain Flooring',
       house_music: 'K.K. Condor',
       house_music_note: '',
+      umbrella: 'camo umbrella',
     },
     appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'クスケチャ',
@@ -1179,8 +1213,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/09/Axel_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/7/7c/Axel%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/e/e3/Axel%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/93/Axel_NH_Villager_Icon.png',
       quote: 'Do not compare a fly with an elephant.',
       'sub-personality': 'B',
@@ -1197,8 +1230,9 @@ const data = [
       house_flooring: 'Blue Rubber Flooring',
       house_music: 'K.K. Dixie',
       house_music_note: '',
+      umbrella: 'two-tone umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'エックスエル',
     ja_phrase: 'でゴンス',
   },
@@ -1225,7 +1259,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/ef/Azalea_amiibo.png',
       photo_url:
-        'https://dodo.ac/np/images/d/dc/Azalea%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/0e/Azalea%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d4/Azalea_NH_Villager_Icon.png',
       quote: 'Colorful petals, deep roots.',
       'sub-personality': 'B',
@@ -1243,6 +1277,7 @@ const data = [
       house_flooring: 'Wooden-Knot Flooring',
       house_music: 'K.K. Lovers',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'petal parasol',
     },
     appearances: ['E_PLUS', 'NH', 'PC'],
     ja_name: 'ペチュニア',
@@ -1271,7 +1306,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/df/Baabara_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/8b/Baabara%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/80/Baabara%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/4c/Baabara_NH_Villager_Icon.png',
       quote: "Don't just follow the flock.",
       'sub-personality': 'B',
@@ -1289,6 +1324,7 @@ const data = [
       house_flooring: 'Brown Iron-Parquet Flooring',
       house_music: "K.K. Cruisin'",
       house_music_note: '',
+      umbrella: 'raindrop umbrella',
     },
     appearances: [
       'DNM',
@@ -1327,7 +1363,7 @@ const data = [
     prev_phrases: ['boosh', 'prang'],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/2b/Bam_NH.png',
-      photo_url: 'https://dodo.ac/np/images/f/f0/Bam%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/e/ec/Bam%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/fd/Bam_NH_Villager_Icon.png',
       quote: "Get while the getting's good.",
       'sub-personality': 'A',
@@ -1344,6 +1380,7 @@ const data = [
       house_flooring: 'Blue Rubber Flooring',
       house_music: 'K.K. Blues',
       house_music_note: '',
+      umbrella: 'green umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'タケル',
@@ -1372,7 +1409,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/68/Bangle_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/22/Bangle%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/34/Bangle%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/ec/Bangle_NH_Villager_Icon.png',
       quote: "Don't blink or you'll miss it.",
       'sub-personality': 'B',
@@ -1390,8 +1427,9 @@ const data = [
       house_flooring: 'Blue Floral Flooring',
       house_music: 'K.K. Soul',
       house_music_note: '',
+      umbrella: 'rainbow umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ルーズ',
     ja_phrase: 'なのぉー',
   },
@@ -1418,7 +1456,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/9d/Barold_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/7f/Barold%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/5/57/Barold%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b5/Barold_NH_Villager_Icon.png',
       quote: 'Please DO feed the bears!',
       'sub-personality': 'A',
@@ -1436,8 +1474,9 @@ const data = [
       house_flooring: 'Monochromatic Tile Flooring',
       house_music: 'K.K. Song',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'vinyl umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ニッシー',
     ja_phrase: 'いっそ',
   },
@@ -1463,7 +1502,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c2/Bea_NH.png',
-      photo_url: 'https://dodo.ac/np/images/a/ab/Bea%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/c/c1/Bea%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f6/Bea_NH_Villager_Icon.png',
       quote: 'The perfect pair complements each other.',
       'sub-personality': 'A',
@@ -1480,6 +1519,7 @@ const data = [
       house_flooring: 'Cork Flooring',
       house_music: "Drivin'",
       house_music_note: '',
+      umbrella: 'mint umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ベーグル',
@@ -1508,7 +1548,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c0/Beardo_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/0b/Beardo%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/46/Beardo%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/89/Beardo_NH_Villager_Icon.png',
       quote: 'Fashion first!',
       'sub-personality': 'A',
@@ -1526,6 +1566,7 @@ const data = [
       house_flooring: 'Simple Purple Flooring',
       house_music: 'K.K. Milonga',
       house_music_note: '',
+      umbrella: 'tartan-check umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ベアード',
@@ -1553,8 +1594,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d4/Beau_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/a/a0/Beau%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/8/8f/Beau%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d3/Beau_NH_Villager_Icon.png',
       quote: 'You snooze, you lose.',
       'sub-personality': 'A',
@@ -1571,6 +1611,7 @@ const data = [
       house_flooring: 'Daisy Meadow',
       house_music: 'Mountain Song',
       house_music_note: '',
+      umbrella: 'melon umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ペーター',
@@ -1599,7 +1640,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/74/Becky_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/7e/Becky%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/4f/Becky%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0c/Becky_NH_Villager_Icon.png',
       quote: 'A fool and his Bells are soon parted.',
       'sub-personality': 'B',
@@ -1617,8 +1658,9 @@ const data = [
       house_flooring: 'Palace Tile',
       house_music: 'K.K. Chorale',
       house_music_note: '',
+      umbrella: 'green chic umbrella',
     },
-    appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アリア',
     ja_phrase: 'ハレルヤ',
   },
@@ -1645,7 +1687,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c0/Bella_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/77/Bella%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/6b/Bella%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/53/Bella_NH_Villager_Icon.png',
       quote: 'A glamour shot is worth a thousand words.',
       'sub-personality': 'B',
@@ -1663,6 +1705,7 @@ const data = [
       house_flooring: 'Skull-Print Flooring',
       house_music: 'K.K. Metal',
       house_music_note: '',
+      umbrella: 'spider umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'イザベラ',
@@ -1691,7 +1734,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3a/Benedict_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/38/Benedict%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a9/Benedict%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/40/Benedict_NH_Villager_Icon.png',
       quote: "Don't put all your eggs in one basket.",
       'sub-personality': 'B',
@@ -1709,6 +1752,7 @@ const data = [
       house_flooring: 'Backyard Lawn',
       house_music: 'I Love You',
       house_music_note: '',
+      umbrella: 'snowflake umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ぺしみち',
@@ -1737,7 +1781,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/97/Benjamin_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/85/Benjamin%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/9e/Benjamin%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/57/Benjamin_NH_Villager_Icon.png',
       quote: 'A good dog deserves a good treat.',
       'sub-personality': 'A',
@@ -1755,8 +1799,9 @@ const data = [
       house_flooring: 'Common Flooring',
       house_music: 'Mr. K.K.',
       house_music_note: '',
+      umbrella: 'kabuki umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ハチ',
     ja_phrase: 'ではでは',
   },
@@ -1783,7 +1828,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a7/Bertha_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/6d/Bertha%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/48/Bertha%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/78/Bertha_NH_Villager_Icon.png',
       quote: 'The best part of spring is the picnics!',
       'sub-personality': 'B',
@@ -1801,6 +1846,7 @@ const data = [
       house_flooring: 'Rose Flooring',
       house_music: 'Two Days Ago',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'picnic umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'あんこ',
@@ -1829,7 +1875,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/bd/Bettina_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/20/Bettina%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/0c/Bettina%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a5/Bettina_NH_Villager_Icon.png',
       quote: 'No time like the present!',
       'sub-personality': 'B',
@@ -1847,6 +1893,7 @@ const data = [
       house_flooring: 'Birch Flooring',
       house_music: 'Animal City',
       house_music_note: '',
+      umbrella: 'sunny parasol',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'マルコ',
@@ -1875,7 +1922,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/6f/Bianca_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/35/Bianca%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/79/Bianca%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/ab/Bianca_NH_Villager_Icon.png',
       quote: 'There is such a thing as love at first sight.',
       'sub-personality': 'A',
@@ -1893,6 +1940,7 @@ const data = [
       house_flooring: 'Leopard-Print Flooring',
       house_music: 'K.K. House',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'mini-flower-print umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'コユキ',
@@ -1920,8 +1968,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/9c/Biff_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/2/2b/Biff%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/6/6e/Biff%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/07/Biff_NH_Villager_Icon.png',
       quote: 'Eighth place is just the seventh loser.',
       'sub-personality': 'B',
@@ -1938,14 +1985,15 @@ const data = [
       house_flooring: 'Paintball Flooring',
       house_music: 'The K. Funk',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ガブリエル',
     ja_phrase: 'じゃけん',
   },
   {
     name: 'Big Top',
-    url: 'https://nookipedia.com/wiki/Big_Top',
+    url: 'https://nookipedia.com/wiki/Big%20Top',
     alt_name: '',
     title_color: '78dd62',
     text_color: '28665a',
@@ -1966,7 +2014,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/80/Big_Top_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/70/Big_Top%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/47/Big_Top%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/4a/Big_Top_NH_Villager_Icon.png',
       quote: 'A big nose never spoiled a handsome face.',
       'sub-personality': 'B',
@@ -1984,6 +2032,7 @@ const data = [
       house_flooring: 'Steel Flooring',
       house_music: 'Go K.K. Rider',
       house_music_note: '',
+      umbrella: 'green umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: '３ごう',
@@ -2011,8 +2060,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c1/Bill_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/2/2e/Bill%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/1/11/Bill%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0e/Bill_NH_Villager_Icon.png',
       quote: "Even though there's no 'I' in team, there is a 'me'!",
       'sub-personality': 'A',
@@ -2029,6 +2077,7 @@ const data = [
       house_flooring: 'Bamboo Flooring',
       house_music: 'Imperial K.K.',
       house_music_note: '',
+      umbrella: 'fairy-tale umbrella',
     },
     appearances: [
       'DNM',
@@ -2068,7 +2117,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/26/Billy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/aa/Billy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/72/Billy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d1/Billy_NH_Villager_Icon.png',
       quote: 'Old dogs can learn new tricks.',
       'sub-personality': 'A',
@@ -2086,6 +2135,7 @@ const data = [
       house_flooring: 'Garbage-Heap Flooring',
       house_music: 'K.K. Song',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'paper parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'アーシンド',
@@ -2114,7 +2164,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/78/Biskit_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/cc/Biskit%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/e2/Biskit%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/25/Biskit_NH_Villager_Icon.png',
       quote: 'Let sleeping dogs lie.',
       'sub-personality': 'B',
@@ -2132,6 +2182,7 @@ const data = [
       house_flooring: 'Backyard Lawn',
       house_music: 'K.K. Mambo',
       house_music_note: '',
+      umbrella: 'pineapple umbrella',
     },
     appearances: [
       'DNM',
@@ -2171,7 +2222,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/74/Bitty_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/6f/Bitty%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/9a/Bitty%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/43/Bitty_NH_Villager_Icon.png',
       quote: 'Necessity is the mother of all invention.',
       'sub-personality': 'A',
@@ -2189,6 +2240,7 @@ const data = [
       house_flooring: 'Lobby Flooring',
       house_music: 'K.K. Disco',
       house_music_note: '',
+      umbrella: 'purple shiny-bows parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'エーミー',
@@ -2217,7 +2269,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/73/Blaire_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/5c/Blaire%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/9c/Blaire%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/ac/Blaire_NH_Villager_Icon.png',
       quote: 'Practice makes perfect.',
       'sub-personality': 'B',
@@ -2235,6 +2287,7 @@ const data = [
       house_flooring: 'Gold Iron-Parquet Flooring',
       house_music: 'K.K. Bossa',
       house_music_note: '',
+      umbrella: 'hydrangea umbrella',
     },
     appearances: [
       'DNM',
@@ -2274,7 +2327,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/df/Blanche_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/cd/Blanche%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/60/Blanche%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/28/Blanche_NH_Villager_Icon.png',
       quote: 'Nothing beats personal experience.',
       'sub-personality': 'A',
@@ -2292,6 +2345,7 @@ const data = [
       house_flooring: 'Tatami Flooring',
       house_music: 'K.K. Jongara',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'black lace umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'しのぶ',
@@ -2320,7 +2374,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/49/Bluebear_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/39/Bluebear%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/1c/Bluebear%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/52/Bluebear_NH_Villager_Icon.png',
       quote: "Candy makes the world go 'round.",
       'sub-personality': 'B',
@@ -2338,6 +2392,7 @@ const data = [
       house_flooring: 'Blue Dot Flooring',
       house_music: 'Only Me',
       house_music_note: '',
+      umbrella: 'strawberry umbrella',
     },
     appearances: [
       'DNM',
@@ -2376,7 +2431,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/ea/Bob_NH.png',
-      photo_url: 'https://dodo.ac/np/images/3/3c/Bob%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/8/8e/Bob%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f4/Bob_NH_Villager_Icon.png',
       quote: 'You only live once...or nine times.',
       'sub-personality': 'B',
@@ -2393,6 +2448,7 @@ const data = [
       house_flooring: 'Colorful Puzzle Flooring',
       house_music: 'Neapolitan',
       house_music_note: '',
+      umbrella: 'eggy parasol',
     },
     appearances: [
       'DNM',
@@ -2432,7 +2488,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/cc/Bonbon_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c2/Bonbon%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/9d/Bonbon%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/3a/Bonbon_NH_Villager_Icon.png',
       quote: 'Hindsight is always 20/20.',
       'sub-personality': 'A',
@@ -2450,6 +2506,7 @@ const data = [
       house_flooring: 'White-Paint Flooring',
       house_music: 'Bubblegum K.K.',
       house_music_note: '',
+      umbrella: 'strawberry umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ミミィ',
@@ -2478,7 +2535,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/2b/Bones_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/3c/Bones%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/21/Bones%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/41/Bones_NH_Villager_Icon.png',
       quote: 'A snack a day keeps the vacuum away.',
       'sub-personality': 'B',
@@ -2496,6 +2553,7 @@ const data = [
       house_flooring: 'Light Wood-Pattern Flooring',
       house_music: 'K.K. Étude',
       house_music_note: '',
+      umbrella: 'kiwi umbrella',
     },
     appearances: [
       'DNM',
@@ -2535,7 +2593,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7d/Boomer_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/44/Boomer%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a7/Boomer%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/5e/Boomer_NH_Villager_Icon.png',
       quote: 'Flying is believing.',
       'sub-personality': 'B',
@@ -2553,6 +2611,7 @@ const data = [
       house_flooring: 'Iceberg Flooring',
       house_music: 'Farewell',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'bat umbrella',
     },
     appearances: ['AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ショーイ',
@@ -2581,7 +2640,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/19/Boone_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/a9/Boone%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/24/Boone%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/7e/Boone_NH_Villager_Icon.png',
       quote: 'Never settle for second best.',
       'sub-personality': 'B',
@@ -2599,6 +2658,7 @@ const data = [
       house_flooring: 'Wooden-Knot Flooring',
       house_music: 'Mountain Song',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'camo umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'まんたろう',
@@ -2627,7 +2687,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3e/Boots_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f9/Boots%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/81/Boots%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/56/Boots_NH_Villager_Icon.png',
       quote: 'Strength lies in muscles.',
       'sub-personality': 'A',
@@ -2645,6 +2705,7 @@ const data = [
       house_flooring: 'Dirt Flooring',
       house_music: 'Wandering',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'beach umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ホウサク',
@@ -2673,7 +2734,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/ef/Boris_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/cf/Boris%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/71/Boris%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/cc/Boris_NH_Villager_Icon.png',
       quote: "Life's short. Eat chocolate.",
       'sub-personality': 'A',
@@ -2691,6 +2752,7 @@ const data = [
       house_flooring: 'Rocky-Mountain Flooring',
       house_music: 'K.K. Oasis',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ダリー',
@@ -2718,8 +2780,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/21/Boyd_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/2/2b/Boyd%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/2/24/Boyd%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/5b/Boyd_NH_Villager_Icon.png',
       quote: "There's always time to take a second look.",
       'sub-personality': 'A',
@@ -2736,6 +2797,7 @@ const data = [
       house_flooring: 'Sidewalk Flooring',
       house_music: 'K.K. Groove',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'two-tone umbrella',
     },
     appearances: ['E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ボイド',
@@ -2763,8 +2825,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/12/Bree_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/3/39/Bree%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/b/bd/Bree%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/2d/Bree_NH_Villager_Icon.png',
       quote: 'The gift says more about the giver.',
       'sub-personality': 'B',
@@ -2781,6 +2842,7 @@ const data = [
       house_flooring: 'Blue Moroccan Flooring',
       house_music: 'K.K. Bossa',
       house_music_note: '',
+      umbrella: 'lacy parasol',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'サラ',
@@ -2809,7 +2871,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/69/Broccolo_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b4/Broccolo%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/73/Broccolo%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b9/Broccolo_NH_Villager_Icon.png',
       quote: 'One nap leads to another.',
       'sub-personality': 'B',
@@ -2827,6 +2889,7 @@ const data = [
       house_flooring: 'Pastel Puzzle Flooring',
       house_music: 'I Love You',
       house_music_note: '',
+      umbrella: 'frog umbrella',
     },
     appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ブロッコリー',
@@ -2855,7 +2918,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7a/Broffina_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/ef/Broffina%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/25/Broffina%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/eb/Broffina_NH_Villager_Icon.png',
       quote: "Don't peck the hand that feeds you.",
       'sub-personality': 'A',
@@ -2873,6 +2936,7 @@ const data = [
       house_flooring: 'Rosewood Flooring',
       house_music: 'K.K. Flamenco',
       house_music_note: '',
+      umbrella: 'black lace umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'カサンドラ',
@@ -2901,7 +2965,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/08/Bruce_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/bd/Bruce%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/0e/Bruce%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/9b/Bruce_NH_Villager_Icon.png',
       quote: "Nobody's perfect.",
       'sub-personality': 'A',
@@ -2919,6 +2983,7 @@ const data = [
       house_flooring: 'Paintball Flooring',
       house_music: 'K.K. Blues',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ブルース',
@@ -2947,7 +3012,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/0e/Bubbles_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/ab/Bubbles%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/6b/Bubbles%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/1d/Bubbles_NH_Villager_Icon.png',
       quote: "It's best to keep your lips and purse sealed.",
       'sub-personality': 'B',
@@ -2965,8 +3030,9 @@ const data = [
       house_flooring: 'Pine-Board Flooring',
       house_music: 'K.K. Stroll',
       house_music_note: '',
+      umbrella: 'grape umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'チャコ',
     ja_phrase: 'でガンス',
   },
@@ -2992,8 +3058,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7f/Buck_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/2/2c/Buck%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/c/c6/Buck%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/1f/Buck_NH_Villager_Icon.png',
       quote: 'Keep your eyes on the prize.',
       'sub-personality': 'B',
@@ -3010,6 +3075,7 @@ const data = [
       house_flooring: 'Green Vinyl Flooring',
       house_music: 'My Place',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
     appearances: [
       'DNM',
@@ -3048,7 +3114,7 @@ const data = [
     prev_phrases: ['dood', 'maaan'],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/1f/Bud_NH.png',
-      photo_url: 'https://dodo.ac/np/images/2/25/Bud%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/c/ce/Bud%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/34/Bud_NH_Villager_Icon.png',
       quote: "You're not living unless you're sweating!",
       'sub-personality': 'B',
@@ -3065,6 +3131,7 @@ const data = [
       house_flooring: 'Sandy-Beach Flooring',
       house_music: 'Aloha K.K.',
       house_music_note: '',
+      umbrella: 'rainbow umbrella',
     },
     appearances: ['AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'グラさん',
@@ -3093,7 +3160,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b2/Bunnie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/ef/Bunnie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/f9/Bunnie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f5/Bunnie_NH_Villager_Icon.png',
       quote: 'Hare today, gone tomorrow.',
       'sub-personality': 'B',
@@ -3111,6 +3178,7 @@ const data = [
       house_flooring: 'White-Paint Flooring',
       house_music: 'Forest Life',
       house_music_note: '',
+      umbrella: 'Toad parasol',
     },
     appearances: [
       'DNM',
@@ -3150,7 +3218,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/2b/Butch_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/86/Butch%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/85/Butch%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/52/Butch_NH_Villager_Icon.png',
       quote: 'A house without either a cat or a dog is a sad house indeed.',
       'sub-personality': 'B',
@@ -3168,6 +3236,7 @@ const data = [
       house_flooring: 'Highway Flooring',
       house_music: 'K.K. Western',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: [
       'DNM',
@@ -3206,8 +3275,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/05/Buzz_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/6/63/Buzz%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/7/71/Buzz%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e5/Buzz_NH_Villager_Icon.png',
       quote: "Pride'll put you in a pickle.",
       'sub-personality': 'A',
@@ -3224,6 +3292,7 @@ const data = [
       house_flooring: 'Parking Flooring',
       house_music: "Drivin'",
       house_music_note: '',
+      umbrella: 'paper parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ひでよし',
@@ -3252,7 +3321,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a6/Cally_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/23/Cally%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/d/d5/Cally%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c0/Cally_NH_Villager_Icon.png',
       quote: "It's always teatime somewhere.",
       'sub-personality': 'B',
@@ -3270,6 +3339,7 @@ const data = [
       house_flooring: 'Daisy Meadow',
       house_music: 'K.K. Stroll',
       house_music_note: '',
+      umbrella: 'mush umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'パセリ',
@@ -3298,7 +3368,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/e1/Camofrog_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/0d/Camofrog%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/9f/Camofrog%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/ff/Camofrog_NH_Villager_Icon.png',
       quote: "What you can't see can't hurt you.",
       'sub-personality': 'B',
@@ -3316,6 +3386,7 @@ const data = [
       house_flooring: 'Camo Flooring',
       house_music: 'K.K. Safari',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
     appearances: [
       'DNM',
@@ -3355,7 +3426,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/e6/Canberra_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/9d/Canberra%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/95/Canberra%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/62/Canberra_NH_Villager_Icon.png',
       quote: "It's never too late to start over.",
       'sub-personality': 'A',
@@ -3373,8 +3444,9 @@ const data = [
       house_flooring: 'Starry-Sands Flooring',
       house_music: 'K.K. Island',
       house_music_note: '',
+      umbrella: 'melon umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'キャンベラ',
     ja_phrase: 'え～',
   },
@@ -3401,7 +3473,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/57/Candi_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/fd/Candi%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a4/Candi%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/6e/Candi_NH_Villager_Icon.png',
       quote: 'The players may change, but the music stays the same.',
       'sub-personality': 'A',
@@ -3419,6 +3491,7 @@ const data = [
       house_flooring: 'Mint Dot Flooring',
       house_music: 'Neapolitan',
       house_music_note: '',
+      umbrella: 'blue shiny-bows parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'かんゆ',
@@ -3447,7 +3520,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/eb/Carmen_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/67/Carmen%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/bc/Carmen%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/08/Carmen_NH_Villager_Icon.png',
       quote: 'Absence makes the heart grow fonder.',
       'sub-personality': 'B',
@@ -3465,6 +3538,7 @@ const data = [
       house_flooring: 'Mint Dot Flooring',
       house_music: 'K.K. Stroll',
       house_music_note: '',
+      umbrella: 'orange umbrella',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'チョコ',
@@ -3493,7 +3567,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/26/Caroline_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/4e/Caroline%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/00/Caroline%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d8/Caroline_NH_Villager_Icon.png',
       quote: 'New brooms sweep clean.',
       'sub-personality': 'B',
@@ -3511,6 +3585,7 @@ const data = [
       house_flooring: 'Wooden-Knot Flooring',
       house_music: 'Pondering',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'petal parasol',
     },
     appearances: ['AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'キャロライン',
@@ -3539,7 +3614,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/6a/Carrie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/15/Carrie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/e5/Carrie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/88/Carrie_NH_Villager_Icon.png',
       quote: "A mother's work is never done.",
       'sub-personality': 'A',
@@ -3557,6 +3632,7 @@ const data = [
       house_flooring: 'Cork Flooring',
       house_music: 'I Love You',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'Toad parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'マミィ',
@@ -3585,7 +3661,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/eb/Cashmere_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/e2/Cashmere%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/37/Cashmere%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/5f/Cashmere_NH_Villager_Icon.png',
       quote: '100% Wool.',
       'sub-personality': 'A',
@@ -3603,6 +3679,7 @@ const data = [
       house_flooring: 'Slate Flooring',
       house_music: 'Farewell',
       house_music_note: '',
+      umbrella: 'exquisite parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ラムール',
@@ -3631,7 +3708,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/00/Celia_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/04/Celia%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/2c/Celia%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b2/Celia_NH_Villager_Icon.png',
       quote: "It's the thought that counts.",
       'sub-personality': 'A',
@@ -3649,6 +3726,7 @@ const data = [
       house_flooring: 'Light Herringbone Flooring',
       house_music: 'K.K. Soul',
       house_music_note: '',
+      umbrella: 'lacy parasol',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ティファニー',
@@ -3661,7 +3739,7 @@ const data = [
     title_color: 'bfbfbf',
     text_color: '5e5e5e',
     id: 'ocp04',
-    image_url: 'https://dodo.ac/np/images/b/b5/Cephalobot_amiibo.png',
+    image_url: 'https://dodo.ac/np/images/9/9b/Cephalobot_NH.png',
     species: 'Octopus',
     personality: 'Smug',
     gender: 'Male',
@@ -3677,7 +3755,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b5/Cephalobot_amiibo.png',
       photo_url:
-        'https://dodo.ac/np/images/e/ed/Cephalobot%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/b3/Cephalobot%27s_Photo_NH_Texture.png',
       icon_url:
         'https://dodo.ac/np/images/c/c3/Cephalobot_NH_Villager_Icon.png',
       quote: 'Take me to your pizza.',
@@ -3696,6 +3774,7 @@ const data = [
       house_flooring: 'Sci-Fi Flooring',
       house_music: 'K.K. Robot Synth',
       house_music_note: '',
+      umbrella: 'rainbow umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'ギーガー',
@@ -3724,7 +3803,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/23/Cesar_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c6/Cesar%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/bd/Cesar%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/20/Cesar_NH_Villager_Icon.png',
       quote: 'As soon as you can grow a mustache, do it.',
       'sub-personality': 'B',
@@ -3742,6 +3821,7 @@ const data = [
       house_flooring: 'Simple Blue Flooring',
       house_music: "K.K. Cruisin'",
       house_music_note: '',
+      umbrella: 'logo umbrella',
     },
     appearances: [
       'DNM',
@@ -3782,7 +3862,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/60/Chabwick_amiibo.png',
       photo_url:
-        'https://dodo.ac/np/images/8/88/Chabwick%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/d/d2/Chabwick%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0d/Chabwick_NH_Villager_Icon.png',
       quote: 'Live, laugh, lasagna.',
       'sub-personality': 'A',
@@ -3800,6 +3880,7 @@ const data = [
       house_flooring: 'Ice Flooring',
       house_music: 'K.K. Dub',
       house_music_note: '',
+      umbrella: 'snowflake umbrella',
     },
     appearances: ['E_PLUS', 'NH', 'PC'],
     ja_name: 'のぶお',
@@ -3828,7 +3909,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/32/Chadder_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/3a/Chadder%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c0/Chadder%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/ef/Chadder_NH_Villager_Icon.png',
       quote: 'Meeting is just the start of us saying goodbye.',
       'sub-personality': 'A',
@@ -3846,6 +3927,7 @@ const data = [
       house_flooring: 'Dark Wood-Pattern Flooring',
       house_music: 'K.K. Soul',
       house_music_note: '',
+      umbrella: 'mint umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'チーズ',
@@ -3873,8 +3955,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: '',
-      photo_url:
-        'https://dodo.ac/np/images/8/8c/Chai%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/5/51/Chai%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/ac/Chai_NH_Villager_Icon.png',
       quote: 'He who chases two rabbits catches none.',
       'sub-personality': 'A',
@@ -3891,6 +3972,7 @@ const data = [
       house_flooring: 'Cinnamoroll Flooring',
       house_music: 'K.K. Bossa',
       house_music_note: '',
+      umbrella: 'raindrop umbrella',
     },
     appearances: ['WA', 'NH', 'PC'],
     ja_name: 'フィーカ',
@@ -3919,7 +4001,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/ac/Charlise_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f1/Charlise%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/14/Charlise%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/aa/Charlise_NH_Villager_Icon.png',
       quote: 'Actions speak louder than words.',
       'sub-personality': 'B',
@@ -3937,6 +4019,7 @@ const data = [
       house_flooring: 'Racetrack Flooring',
       house_music: 'Mr. K.K.',
       house_music_note: '',
+      umbrella: 'gelato umbrella',
     },
     appearances: ['E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'チャーミー',
@@ -3965,7 +4048,7 @@ const data = [
     nh_details: {
       image_url: '',
       photo_url:
-        'https://dodo.ac/np/images/b/bd/Chelsea%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/04/Chelsea%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/40/Chelsea_NH_Villager_Icon.png',
       quote: 'Always look a gift horse in the mouth.',
       'sub-personality': 'A',
@@ -3983,6 +4066,7 @@ const data = [
       house_flooring: 'My Melody Flooring',
       house_music: 'K.K. Stroll',
       house_music_note: '',
+      umbrella: 'candy umbrella',
     },
     appearances: ['WA', 'NH', 'PC'],
     ja_name: 'チェルシー',
@@ -4011,7 +4095,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d5/Cheri_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/3d/Cheri%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/85/Cheri%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/96/Cheri_NH_Villager_Icon.png',
       quote: 'Good things come in small packages.',
       'sub-personality': 'B',
@@ -4029,6 +4113,7 @@ const data = [
       house_flooring: 'Simple White Flooring',
       house_music: 'K.K. Disco',
       house_music_note: '',
+      umbrella: 'kiwi umbrella',
     },
     appearances: ['AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アセロラ',
@@ -4057,7 +4142,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3e/Cherry_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/de/Cherry%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/bc/Cherry%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/73/Cherry_NH_Villager_Icon.png',
       quote: 'One dog barks at something, the rest bark at him.',
       'sub-personality': 'A',
@@ -4075,6 +4160,7 @@ const data = [
       house_flooring: 'Skull-Print Flooring',
       house_music: 'K.K. D&B',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'spider umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ハンナ',
@@ -4103,7 +4189,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/af/Chester_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/20/Chester%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c7/Chester%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/cd/Chester_NH_Villager_Icon.png',
       quote: 'Sleep early. Wake late.',
       'sub-personality': 'B',
@@ -4121,6 +4207,7 @@ const data = [
       house_flooring: 'Bamboo Flooring',
       house_music: 'Imperial K.K.',
       house_music_note: '',
+      umbrella: 'rainbow umbrella',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'パンタ',
@@ -4149,7 +4236,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c9/Chevre_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f0/Chevre%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/ea/Chevre%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/db/Chevre_NH_Villager_Icon.png',
       quote: "If you're gonna dream, dream big.",
       'sub-personality': 'B',
@@ -4167,6 +4254,7 @@ const data = [
       house_flooring: 'Black Iron-Parquet Flooring',
       house_music: 'K.K. Chorale',
       house_music_note: '',
+      umbrella: 'mini-flower-print umbrella',
     },
     appearances: [
       'DNM',
@@ -4206,7 +4294,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/13/Chief_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/94/Chief%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/08/Chief%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e6/Chief_NH_Villager_Icon.png',
       quote: "Don't wish it were easier; wish you were better.",
       'sub-personality': 'B',
@@ -4224,6 +4312,7 @@ const data = [
       house_flooring: 'Paintball Flooring',
       house_music: "Rockin' K.K.",
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
     appearances: [
       'DNM',
@@ -4263,7 +4352,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/32/Chops_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b4/Chops%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/29/Chops%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/fd/Chops_NH_Villager_Icon.png',
       quote: "You can't have your cake and eat it too.",
       'sub-personality': 'A',
@@ -4281,8 +4370,9 @@ const data = [
       house_flooring: 'Simple Red Flooring',
       house_music: 'K.K. Moody',
       house_music_note: '',
+      umbrella: 'two-tone umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'トンファン',
     ja_phrase: 'だトン',
   },
@@ -4308,8 +4398,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d1/Chow_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/f/ff/Chow%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/8/8a/Chow%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b5/Chow_NH_Villager_Icon.png',
       quote: 'All good things must come to an end.',
       'sub-personality': 'B',
@@ -4326,8 +4415,20 @@ const data = [
       house_flooring: 'Bamboo Flooring',
       house_music: 'Imperial K.K.',
       house_music_note: '',
+      umbrella: 'busted umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: [
+      'DNM',
+      'AC',
+      'E_PLUS',
+      'WW',
+      'CF',
+      'NL',
+      'WA',
+      'NH',
+      'HHD',
+      'PC',
+    ],
     ja_name: 'チャウヤン',
     ja_phrase: 'アルヨ',
   },
@@ -4354,7 +4455,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/6a/Chrissy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/5e/Chrissy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c3/Chrissy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/43/Chrissy_NH_Villager_Icon.png',
       quote: 'A fool and their Bells are soon parted.',
       'sub-personality': 'B',
@@ -4372,6 +4473,7 @@ const data = [
       house_flooring: 'Cute Red-Tile Flooring',
       house_music: 'Bubblegum K.K.',
       house_music_note: '',
+      umbrella: 'white shiny-bows parasol',
     },
     appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'クリスチーヌ',
@@ -4400,7 +4502,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/1f/Claude_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/e5/Claude%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/15/Claude%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d3/Claude_NH_Villager_Icon.png',
       quote: "Don't judge a rabbit by its ears.",
       'sub-personality': 'A',
@@ -4418,6 +4520,7 @@ const data = [
       house_flooring: 'Simple White Flooring',
       house_music: 'Pondering',
       house_music_note: '',
+      umbrella: 'kiwi umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ビネガー',
@@ -4446,7 +4549,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d6/Claudia_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/02/Claudia%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/bf/Claudia%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0d/Claudia_NH_Villager_Icon.png',
       quote: "A tiger can't change its stripes.",
       'sub-personality': 'A',
@@ -4464,6 +4567,7 @@ const data = [
       house_flooring: 'Simple Red Flooring',
       house_music: 'K.K. Synth',
       house_music_note: '',
+      umbrella: 'purple chic umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'マリリン',
@@ -4491,8 +4595,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/6c/Clay_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/0/02/Clay%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/7/71/Clay%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/20/Clay_NH_Villager_Icon.png',
       quote: 'Life is just a bowl of cherries.',
       'sub-personality': 'A',
@@ -4509,6 +4612,7 @@ const data = [
       house_flooring: 'Dig-Site Flooring',
       house_music: 'K.K. Safari',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'maple-leaf umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'どぐろう',
@@ -4536,8 +4640,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/e9/Cleo_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/f/fe/Cleo%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/f/f9/Cleo%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/4a/Cleo_NH_Villager_Icon.png',
       quote: "There's something lovable in all of us.",
       'sub-personality': 'A',
@@ -4554,6 +4657,7 @@ const data = [
       house_flooring: 'Monochromatic Tile Flooring',
       house_music: 'K.K. Fusion',
       house_music_note: '',
+      umbrella: 'lacy parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'アイソトープ',
@@ -4582,7 +4686,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/bb/Clyde_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c0/Clyde%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/f3/Clyde%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/5a/Clyde_NH_Villager_Icon.png',
       quote: 'The grass is always greener.',
       'sub-personality': 'B',
@@ -4600,6 +4704,7 @@ const data = [
       house_flooring: 'Birch Flooring',
       house_music: 'Neapolitan',
       house_music_note: '',
+      umbrella: 'lemon umbrella',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'デースケ',
@@ -4628,7 +4733,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c1/Coach_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/4e/Coach%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/8d/Coach%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/76/Coach_NH_Villager_Icon.png',
       quote: 'Fool me once, shame on you. Fool me twice, shame on me.',
       'sub-personality': 'A',
@@ -4646,8 +4751,9 @@ const data = [
       house_flooring: 'Racetrack Flooring',
       house_music: 'Mr. K.K.',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'busted umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'テッチャン',
     ja_phrase: 'ジョリッ',
   },
@@ -4673,8 +4779,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/9d/Cobb_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/5/54/Cobb%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/1/16/Cobb%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/ce/Cobb_NH_Villager_Icon.png',
       quote: 'Might makes right.',
       'sub-personality': 'B',
@@ -4691,6 +4796,7 @@ const data = [
       house_flooring: 'Concrete Flooring',
       house_music: 'Pondering',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'camo umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ハカセ',
@@ -4718,8 +4824,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/83/Coco_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/2/2a/Coco%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/d/d2/Coco%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c2/Coco_NH_Villager_Icon.png',
       quote: "Don't put off till tomorrow what you can do today.",
       'sub-personality': 'B',
@@ -4736,6 +4841,7 @@ const data = [
       house_flooring: 'Floral Rush-Mat Flooring',
       house_music: 'K.K. Jongara',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'leaf umbrella',
     },
     appearances: [
       'DNM',
@@ -4774,8 +4880,7 @@ const data = [
     prev_phrases: ['duuude'],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/f6/Cole_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/c/c1/Cole%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/5/59/Cole%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/79/Cole_NH_Villager_Icon.png',
       quote: 'Little pitchers have big ears.',
       'sub-personality': 'A',
@@ -4792,6 +4897,7 @@ const data = [
       house_flooring: 'Sandy-Beach Flooring',
       house_music: 'K.K. Faire',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'orange umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アマミン',
@@ -4820,7 +4926,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/8c/Colton_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/3a/Colton%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/4a/Colton%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c5/Colton_NH_Villager_Icon.png',
       quote: 'Make hay while the sun shines.',
       'sub-personality': 'A',
@@ -4838,6 +4944,7 @@ const data = [
       house_flooring: 'Palace Tile',
       house_music: 'K.K. Chorale',
       house_music_note: '',
+      umbrella: 'gelato umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アンソニー',
@@ -4866,7 +4973,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d9/Cookie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b8/Cookie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/94/Cookie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d9/Cookie_NH_Villager_Icon.png',
       quote: "Don't lose sight of what you're really after.",
       'sub-personality': 'B',
@@ -4884,6 +4991,7 @@ const data = [
       house_flooring: 'Birch Flooring',
       house_music: 'Bubblegum K.K.',
       house_music_note: '',
+      umbrella: 'blue shiny-bows parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ペリーヌ',
@@ -4912,7 +5020,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/1c/Cousteau_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/e9/Cousteau%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/01/Cousteau%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/3a/Cousteau_NH_Villager_Icon.png',
       quote: 'Jump first, ask questions later.',
       'sub-personality': 'B',
@@ -4930,6 +5038,7 @@ const data = [
       house_flooring: 'Imperial Tile',
       house_music: 'Imperial K.K.',
       house_music_note: '',
+      umbrella: 'kabuki umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ハルマキ',
@@ -4958,7 +5067,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b7/Cranston_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/32/Cranston%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/39/Cranston%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/8a/Cranston_NH_Villager_Icon.png',
       quote: 'Hard work beats talent.',
       'sub-personality': 'A',
@@ -4976,6 +5085,7 @@ const data = [
       house_flooring: 'Stone Tile',
       house_music: 'K.K. Faire',
       house_music_note: '',
+      umbrella: 'camo umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'トキオ',
@@ -5004,7 +5114,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/70/Croque_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/4f/Croque%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/eb/Croque%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/75/Croque_NH_Villager_Icon.png',
       quote: "Where there's smoke, there's fire.",
       'sub-personality': 'A',
@@ -5022,8 +5132,9 @@ const data = [
       house_flooring: 'Colored-Leaves Flooring',
       house_music: 'K.K. Folk',
       house_music_note: '',
+      umbrella: 'paper parasol',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'タイシ',
     ja_phrase: 'しからば',
   },
@@ -5049,8 +5160,7 @@ const data = [
     prev_phrases: ['d-d-dude'],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/10/Cube_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/1/1b/Cube%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/7/73/Cube%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/be/Cube_NH_Villager_Icon.png',
       quote: 'Sometimes you gotta learn to chill.',
       'sub-personality': 'B',
@@ -5067,6 +5177,7 @@ const data = [
       house_flooring: 'Simple White Flooring',
       house_music: 'Farewell',
       house_music_note: '',
+      umbrella: 'blue dot parasol',
     },
     appearances: [
       'DNM',
@@ -5106,7 +5217,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/37/Curlos_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/14/Curlos%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c6/Curlos%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d0/Curlos_NH_Villager_Icon.png',
       quote: 'If you want to know yourself better, ask your neighbors.',
       'sub-personality': 'B',
@@ -5124,8 +5235,9 @@ const data = [
       house_flooring: 'Dark Herringbone Flooring',
       house_music: 'K.K. Salsa',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
-    appearances: ['E_PLUS', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'カルロス',
     ja_phrase: 'ベイビー',
   },
@@ -5152,7 +5264,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3d/Curly_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/d8/Curly%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/73/Curly%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a3/Curly_NH_Villager_Icon.png',
       quote: 'Get fired up!',
       'sub-personality': 'B',
@@ -5170,6 +5282,7 @@ const data = [
       house_flooring: 'Wooden-Knot Flooring',
       house_music: 'K.K. Reggae',
       house_music_note: '',
+      umbrella: 'blue umbrella',
     },
     appearances: [
       'DNM',
@@ -5208,8 +5321,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/27/Curt_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/9/9d/Curt%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/4/40/Curt%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f5/Curt_NH_Villager_Icon.png',
       quote: 'A Bell saved is a Bell earned.',
       'sub-personality': 'A',
@@ -5226,6 +5338,7 @@ const data = [
       house_flooring: 'Sandlot',
       house_music: 'Comrade K.K.',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ガンテツ',
@@ -5253,7 +5366,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/5d/Cyd_NH.png',
-      photo_url: 'https://dodo.ac/np/images/3/31/Cyd%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/1/1e/Cyd%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/42/Cyd_NH_Villager_Icon.png',
       quote: 'Do what you want, but do it loud!',
       'sub-personality': 'A',
@@ -5270,6 +5383,7 @@ const data = [
       house_flooring: 'Skull-Print Flooring',
       house_music: 'K.K. Metal',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'パンクス',
@@ -5298,7 +5412,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/48/Cyrano_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/68/Cyrano%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/02/Cyrano%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b4/Cyrano_NH_Villager_Icon.png',
       quote: "Don't punch your nose to spite your face.",
       'sub-personality': 'B',
@@ -5316,6 +5430,7 @@ const data = [
       house_flooring: 'Tatami',
       house_music: 'K.K. Lament',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'paper parasol',
     },
     appearances: [
       'DNM',
@@ -5356,7 +5471,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/96/Daisy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/6c/Daisy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/f0/Daisy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/4a/Daisy_NH_Villager_Icon.png',
       quote: "It's not always a dog-eat-dog world.",
       'sub-personality': 'B',
@@ -5374,6 +5489,7 @@ const data = [
       house_flooring: 'Simple White Flooring',
       house_music: 'Forest Life',
       house_music_note: '',
+      umbrella: 'peach umbrella',
     },
     appearances: [
       'DNM',
@@ -5413,7 +5529,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b8/Deena_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/1b/Deena%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/63/Deena%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b9/Deena_NH_Villager_Icon.png',
       quote: 'Duck...duck...GOOSE!',
       'sub-personality': 'B',
@@ -5431,6 +5547,7 @@ const data = [
       house_flooring: 'Natural-Block Flooring',
       house_music: 'Mr. K.K.',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'strawberry umbrella',
     },
     appearances: [
       'DNM',
@@ -5470,7 +5587,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3c/Deirdre_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/0f/Deirdre%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/08/Deirdre%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/3a/Deirdre_NH_Villager_Icon.png',
       quote: 'Legs of an antelope, heart of an eagle.',
       'sub-personality': 'A',
@@ -5488,6 +5605,7 @@ const data = [
       house_flooring: 'Colored-Leaves Flooring',
       house_music: 'K.K. Bossa',
       house_music_note: '',
+      umbrella: 'cherry umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ナディア',
@@ -5515,7 +5633,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/46/Del_NH.png',
-      photo_url: 'https://dodo.ac/np/images/7/7d/Del%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/c/c7/Del%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/8b/Del_NH_Villager_Icon.png',
       quote: 'The hero is brave in deeds as well as words.',
       'sub-personality': 'B',
@@ -5532,6 +5650,7 @@ const data = [
       house_flooring: 'Ship Deck',
       house_music: 'Pondering',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'bat umbrella',
     },
     appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ヤマト',
@@ -5559,8 +5678,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/30/Deli_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/9/9f/Deli%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/f/ff/Deli%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/da/Deli_NH_Villager_Icon.png',
       quote: 'Righty tighty, lefty loosey.',
       'sub-personality': 'A',
@@ -5577,6 +5695,7 @@ const data = [
       house_flooring: 'Simple Blue Flooring',
       house_music: 'K.K. Étude',
       house_music_note: '',
+      umbrella: 'pear umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'デリー',
@@ -5605,7 +5724,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/98/Derwin_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/12/Derwin%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/1a/Derwin%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/62/Derwin_NH_Villager_Icon.png',
       quote: 'Everything in moderation. Except for snacks.',
       'sub-personality': 'B',
@@ -5623,6 +5742,7 @@ const data = [
       house_flooring: 'Backyard Lawn',
       house_music: 'K.K. Stroll',
       house_music_note: '',
+      umbrella: 'green umbrella',
     },
     appearances: [
       'DNM',
@@ -5662,7 +5782,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/1f/Diana_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/56/Diana%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a4/Diana%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c3/Diana_NH_Villager_Icon.png',
       quote: 'Sometimes you have to lose to win.',
       'sub-personality': 'A',
@@ -5680,6 +5800,7 @@ const data = [
       house_flooring: 'Stone Tile',
       house_music: 'Farewell',
       house_music_note: '',
+      umbrella: 'black chic umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ナタリー',
@@ -5707,8 +5828,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/44/Diva_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/1/12/Diva%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/c/c1/Diva%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/5b/Diva_NH_Villager_Icon.png',
       quote: 'Eyes are the windows to the soul.',
       'sub-personality': 'A',
@@ -5725,6 +5845,7 @@ const data = [
       house_flooring: 'Rocky-Mountain Flooring',
       house_music: 'K.K. Oasis',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'red chic umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アイーダ',
@@ -5753,7 +5874,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/63/Dizzy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/bc/Dizzy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/1f/Dizzy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/77/Dizzy_NH_Villager_Icon.png',
       quote: 'Keep it mellow.',
       'sub-personality': 'B',
@@ -5771,8 +5892,20 @@ const data = [
       house_flooring: 'Backyard Lawn',
       house_music: 'Two Days Ago',
       house_music_note: '',
+      umbrella: 'rainbow umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: [
+      'DNM',
+      'AC',
+      'E_PLUS',
+      'WW',
+      'CF',
+      'NL',
+      'WA',
+      'NH',
+      'HHD',
+      'PC',
+    ],
     ja_name: 'ヒュージ',
     ja_phrase: 'だゾウ',
   },
@@ -5799,7 +5932,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/76/Dobie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b8/Dobie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/1e/Dobie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/ab/Dobie_NH_Villager_Icon.png',
       quote: 'Old longings never truly fade.',
       'sub-personality': 'A',
@@ -5817,6 +5950,7 @@ const data = [
       house_flooring: 'Dark Herringbone Flooring',
       house_music: 'Agent K.K.',
       house_music_note: '',
+      umbrella: 'busted umbrella',
     },
     appearances: ['AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'けん',
@@ -5844,7 +5978,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/cd/Doc_NH.png',
-      photo_url: 'https://dodo.ac/np/images/1/1c/Doc%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/4/40/Doc%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/6b/Doc_NH_Villager_Icon.png',
       quote: 'One cannot live on carrots alone.',
       'sub-personality': 'B',
@@ -5861,8 +5995,9 @@ const data = [
       house_flooring: 'Dark-Block Flooring',
       house_music: 'Pondering',
       house_music_note: '',
+      umbrella: 'green umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'トビオ',
     ja_phrase: 'ですね',
   },
@@ -5888,7 +6023,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/75/Dom_NH.png',
-      photo_url: 'https://dodo.ac/np/images/2/2c/Dom%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/8/8b/Dom%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e1/Dom_NH_Villager_Icon.png',
       quote: 'Be true to your most shiny self.',
       'sub-personality': 'A',
@@ -5905,6 +6040,7 @@ const data = [
       house_flooring: 'Backyard Lawn',
       house_music: 'K.K. Country',
       house_music_note: '',
+      umbrella: 'red umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'ちゃちゃまる',
@@ -5932,8 +6068,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/de/Dora_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/2/20/Dora%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/5/52/Dora%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/7f/Dora_NH_Villager_Icon.png',
       quote: 'The squeaky wheel gets the cheese.',
       'sub-personality': 'B',
@@ -5950,6 +6085,7 @@ const data = [
       house_flooring: 'Floral Rush-Mat Flooring',
       house_music: 'K.K. Faire',
       house_music_note: '',
+      umbrella: 'maple-leaf umbrella',
     },
     appearances: [
       'DNM',
@@ -5989,7 +6125,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/cc/Dotty_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/09/Dotty%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/b1/Dotty%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c7/Dotty_NH_Villager_Icon.png',
       quote: "It's always a good hare day.",
       'sub-personality': 'B',
@@ -6007,6 +6143,7 @@ const data = [
       house_flooring: 'Pine-Board Flooring',
       house_music: "Drivin'",
       house_music_note: '',
+      umbrella: 'lacy parasol',
     },
     appearances: [
       'DNM',
@@ -6046,7 +6183,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/f9/Drago_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c0/Drago%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/d/d4/Drago%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/bd/Drago_NH_Villager_Icon.png',
       quote: 'There is no room for two dragons in one pond.',
       'sub-personality': 'A',
@@ -6064,6 +6201,7 @@ const data = [
       house_flooring: 'Imperial Tile',
       house_music: 'Imperial K.K.',
       house_music_note: '',
+      umbrella: 'panda umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'タツオ',
@@ -6092,7 +6230,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/e0/Drake_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/da/Drake%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/0d/Drake%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/be/Drake_NH_Villager_Icon.png',
       quote: '...Quack.',
       'sub-personality': 'B',
@@ -6110,6 +6248,7 @@ const data = [
       house_flooring: 'Common Flooring',
       house_music: 'K.K. Blues',
       house_music_note: '',
+      umbrella: 'gelato umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'フォアグラ',
@@ -6138,7 +6277,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/ac/Drift_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/92/Drift%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/49/Drift%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a7/Drift_NH_Villager_Icon.png',
       quote: 'Always go for the gold!',
       'sub-personality': 'B',
@@ -6156,6 +6295,7 @@ const data = [
       house_flooring: 'Skull-Print Flooring',
       house_music: 'K.K. Metal',
       house_music_note: '',
+      umbrella: 'leaf umbrella',
     },
     appearances: ['AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ドク',
@@ -6183,7 +6323,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c9/Ed_NH.png',
-      photo_url: 'https://dodo.ac/np/images/3/3f/Ed%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/4/49/Ed%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/4e/Ed_NH_Villager_Icon.png',
       quote: 'Beauty is pretty!',
       'sub-personality': 'B',
@@ -6200,6 +6340,7 @@ const data = [
       house_flooring: 'Rosewood Flooring',
       house_music: 'K.K. Ballad',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'キザノホマレ',
@@ -6228,7 +6369,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3f/Egbert_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/da/Egbert%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/65/Egbert%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c3/Egbert_NH_Villager_Icon.png',
       quote: 'You gotta break a few eggs to make an omelet.',
       'sub-personality': 'B',
@@ -6246,6 +6387,7 @@ const data = [
       house_flooring: 'Wooden-Knot Flooring',
       house_music: 'Lucky K.K.',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'leaf umbrella',
     },
     appearances: [
       'DNM',
@@ -6285,7 +6427,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/0c/Elise_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/27/Elise%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/3c/Elise%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/28/Elise_NH_Villager_Icon.png',
       quote: 'Do as I say, not as I do.',
       'sub-personality': 'B',
@@ -6303,6 +6445,7 @@ const data = [
       house_flooring: 'Simple Purple Flooring',
       house_music: 'K.K. Bossa',
       house_music_note: '',
+      umbrella: 'red chic umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'モンこ',
@@ -6331,7 +6474,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/38/Ellie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/37/Ellie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/3d/Ellie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b3/Ellie_NH_Villager_Icon.png',
       quote: 'You need the sour to highlight the sweet.',
       'sub-personality': 'A',
@@ -6349,6 +6492,7 @@ const data = [
       house_flooring: 'Rose Flooring',
       house_music: 'K.K. Ballad',
       house_music_note: '',
+      umbrella: 'pink shiny-bows parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'エクレア',
@@ -6377,7 +6521,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/60/Elmer_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/05/Elmer%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/09/Elmer%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b1/Elmer_NH_Villager_Icon.png',
       quote: "The horse doesn't pull the cart, the oats do.",
       'sub-personality': 'B',
@@ -6395,6 +6539,7 @@ const data = [
       house_flooring: 'Backyard Lawn',
       house_music: 'K.K. Country',
       house_music_note: '',
+      umbrella: 'blue dot parasol',
     },
     appearances: [
       'DNM',
@@ -6434,7 +6579,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b1/Eloise_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/2f/Eloise%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/65/Eloise%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/bb/Eloise_NH_Villager_Icon.png',
       quote: 'An elephant never forgets.',
       'sub-personality': 'B',
@@ -6452,6 +6597,7 @@ const data = [
       house_flooring: 'Brown Floral Flooring',
       house_music: 'K.K. Soul',
       house_music_note: '',
+      umbrella: 'mint umbrella',
     },
     appearances: [
       'DNM',
@@ -6491,7 +6637,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/cc/Elvis_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/17/Elvis%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/76/Elvis%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/2a/Elvis_NH_Villager_Icon.png',
       quote: 'Better a live coward than a forgotten hero.',
       'sub-personality': 'B',
@@ -6509,6 +6655,7 @@ const data = [
       house_flooring: 'Palace Tile',
       house_music: 'K.K. Casbah',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'bat umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'キング',
@@ -6536,8 +6683,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/88/Erik_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/8/86/Erik%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/e/ed/Erik%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b7/Erik_NH_Villager_Icon.png',
       quote: "If you're afraid of wolves, don't go to the woods.",
       'sub-personality': 'A',
@@ -6554,6 +6700,7 @@ const data = [
       house_flooring: 'Ski-Slope Flooring',
       house_music: "Drivin'",
       house_music_note: '',
+      umbrella: 'snowflake umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'チャック',
@@ -6561,7 +6708,7 @@ const data = [
   },
   {
     name: 'Étoile',
-    url: 'https://nookipedia.com/wiki/Étoile',
+    url: 'https://nookipedia.com/wiki/%C3%89toile',
     alt_name: '',
     title_color: 'b99fff',
     text_color: 'ffd7eb',
@@ -6582,7 +6729,7 @@ const data = [
     nh_details: {
       image_url: '',
       photo_url:
-        'https://dodo.ac/np/images/a/a8/%C3%89toile%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/03/%C3%89toile%27s_Photo_NH_Texture.png',
       icon_url:
         'https://dodo.ac/np/images/2/21/%C3%89toile_NH_Villager_Icon.png',
       quote: 'Who knows what the stars have in store for us?',
@@ -6601,6 +6748,7 @@ const data = [
       house_flooring: 'Kiki & Lala Flooring',
       house_music: 'K.K. Lullaby',
       house_music_note: '',
+      umbrella: 'purple shiny-bows parasol',
     },
     appearances: ['WA', 'NH', 'PC'],
     ja_name: 'エトワール',
@@ -6629,7 +6777,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/ab/Eugene_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/d4/Eugene%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/4b/Eugene%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/02/Eugene_NH_Villager_Icon.png',
       quote: 'Imitation is the sincerest form of flattery.',
       'sub-personality': 'A',
@@ -6647,6 +6795,7 @@ const data = [
       house_flooring: 'Monochromatic Tile Flooring',
       house_music: 'Agent K.K.',
       house_music_note: '',
+      umbrella: 'busted umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ロッキー',
@@ -6675,7 +6824,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/97/Eunice_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/aa/Eunice%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/1b/Eunice%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/55/Eunice_NH_Villager_Icon.png',
       quote: 'There is a point to every encounter.',
       'sub-personality': 'B',
@@ -6693,6 +6842,7 @@ const data = [
       house_flooring: 'Blue Rubber Flooring',
       house_music: 'K.K. Disco',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'sunny parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'モヘア',
@@ -6721,14 +6871,14 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/58/Faith_amiibo.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c0/Faith%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/09/Faith%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f9/Faith_NH_Villager_Icon.png',
       quote: 'Never let your mind be what holds you back.',
       'sub-personality': 'B',
       catchphrase: 'aloha',
       clothing: 'hula top',
       clothing_variation: 'Red',
-      fav_styles: ['Elegant', 'Gorgeous'],
+      fav_styles: ['Elegant', 'Cute'],
       fav_colors: ['Red', 'White'],
       hobby: 'Music',
       house_interior_url:
@@ -6739,6 +6889,7 @@ const data = [
       house_flooring: 'Sandy-Beach Flooring',
       house_music: 'K.K. Slack-Key',
       house_music_note: '',
+      umbrella: 'pineapple umbrella',
     },
     appearances: ['AC', 'E_PLUS', 'NH', 'PC'],
     ja_name: 'マーチ',
@@ -6766,8 +6917,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/9d/Fang_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/d/d9/Fang%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/8/8d/Fang%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/75/Fang_NH_Villager_Icon.png',
       quote: 'You mess with the wolf, you get the fangs.',
       'sub-personality': 'B',
@@ -6784,6 +6934,7 @@ const data = [
       house_flooring: 'Brown Honeycomb Tile',
       house_music: 'K.K. Steppe',
       house_music_note: '',
+      umbrella: 'snowflake umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'シベリア',
@@ -6812,7 +6963,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/91/Fauna_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c1/Fauna%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a5/Fauna%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/29/Fauna_NH_Villager_Icon.png',
       quote: 'The first step is always the hardest.',
       'sub-personality': 'A',
@@ -6830,6 +6981,7 @@ const data = [
       house_flooring: 'Mint Dot Flooring',
       house_music: 'K.K. Stroll',
       house_music_note: '',
+      umbrella: 'raindrop umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ドレミ',
@@ -6858,7 +7010,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c7/Felicity_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/78/Felicity%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/48/Felicity%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f3/Felicity_NH_Villager_Icon.png',
       quote: 'Love has no bounds.',
       'sub-personality': 'B',
@@ -6876,6 +7028,7 @@ const data = [
       house_flooring: 'Daisy Meadow',
       house_music: 'K.K. Stroll',
       house_music_note: '',
+      umbrella: 'mini-flower-print umbrella',
     },
     appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'みかっち',
@@ -6904,7 +7057,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/81/Filbert_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/8d/Filbert%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/4e/Filbert%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/70/Filbert_NH_Villager_Icon.png',
       quote: "Don't go nuts or anything.",
       'sub-personality': 'A',
@@ -6922,6 +7075,7 @@ const data = [
       house_flooring: 'Blue Dot Flooring',
       house_music: 'Stale Cupcakes',
       house_music_note: '',
+      umbrella: 'pineapple umbrella',
     },
     appearances: [
       'DNM',
@@ -6960,8 +7114,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c3/Flip_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/0/03/Flip%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/b/b4/Flip%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f3/Flip_NH_Villager_Icon.png',
       quote: 'See no donut, hear no donut, speak no donut.',
       'sub-personality': 'A',
@@ -6978,6 +7131,7 @@ const data = [
       house_flooring: 'Gravel Flooring',
       house_music: 'K.K. Rally',
       house_music_note: '',
+      umbrella: 'kabuki umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'さすけ',
@@ -7005,7 +7159,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/bb/Flo_NH.png',
-      photo_url: 'https://dodo.ac/np/images/8/87/Flo%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/7/74/Flo%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/37/Flo_NH_Villager_Icon.png',
       quote: 'Always keep a straight face.',
       'sub-personality': 'A',
@@ -7022,6 +7176,7 @@ const data = [
       house_flooring: 'Ice Flooring',
       house_music: 'Space K.K.',
       house_music_note: '',
+      umbrella: 'lemon umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'レイラ',
@@ -7050,7 +7205,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/8e/Flora_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/53/Flora%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/10/Flora%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/04/Flora_NH_Villager_Icon.png',
       quote: 'Pink is the new black.',
       'sub-personality': 'A',
@@ -7068,6 +7223,7 @@ const data = [
       house_flooring: 'Oasis Flooring',
       house_music: 'K.K. Condor',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'hydrangea umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'フララ',
@@ -7096,7 +7252,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/03/Flurry_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/ca/Flurry%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/96/Flurry%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c7/Flurry_NH_Villager_Icon.png',
       quote: 'Squeak your mind, even if your voice shakes.',
       'sub-personality': 'A',
@@ -7114,6 +7270,7 @@ const data = [
       house_flooring: 'Arabesque Flooring',
       house_music: 'Hypno K.K.',
       house_music_note: '',
+      umbrella: 'snowflake umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ゆきみ',
@@ -7142,7 +7299,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/34/Francine_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/90/Francine%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/f0/Francine%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/1c/Francine_NH_Villager_Icon.png',
       quote: "You can't have wise folks if you don't have fools too.",
       'sub-personality': 'B',
@@ -7160,6 +7317,7 @@ const data = [
       house_flooring: 'Blue Dot Flooring',
       house_music: "K.K. Cruisin'",
       house_music_note: '',
+      umbrella: 'white shiny-bows parasol',
     },
     appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'フランソワ',
@@ -7188,7 +7346,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/75/Frank_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/ed/Frank%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/6a/Frank%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0e/Frank_NH_Villager_Icon.png',
       quote: 'Today is the last day of the rest of your life.',
       'sub-personality': 'B',
@@ -7206,6 +7364,7 @@ const data = [
       house_flooring: 'Boxing-Ring Mat',
       house_music: 'K.K. Casbah',
       house_music_note: '',
+      umbrella: 'two-tone umbrella',
     },
     appearances: ['E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ハルク',
@@ -7234,7 +7393,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7d/Freckles_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/29/Freckles%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/5/55/Freckles%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/75/Freckles_NH_Villager_Icon.png',
       quote: 'Act now before you change your mind!',
       'sub-personality': 'B',
@@ -7252,8 +7411,20 @@ const data = [
       house_flooring: 'Bamboo Flooring',
       house_music: 'Marine Song 2001',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'sunny parasol',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: [
+      'DNM',
+      'AC',
+      'E_PLUS',
+      'WW',
+      'CF',
+      'NL',
+      'WA',
+      'NH',
+      'HHD',
+      'PC',
+    ],
     ja_name: 'マグロ',
     ja_phrase: 'ぎょぎょ',
   },
@@ -7280,7 +7451,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b3/Frett_amiibo.png',
       photo_url:
-        'https://dodo.ac/np/images/2/24/Frett%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/97/Frett%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/43/Frett_NH_Villager_Icon.png',
       quote: "I'm in the prime of my life.",
       'sub-personality': 'B',
@@ -7298,6 +7469,7 @@ const data = [
       house_flooring: 'Old Board Flooring',
       house_music: 'Comrade K.K.',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'camo umbrella',
     },
     appearances: ['E_PLUS', 'NH', 'PC'],
     ja_name: 'シャンペン',
@@ -7326,7 +7498,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/ee/Freya_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/fd/Freya%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/d/d6/Freya%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/29/Freya_NH_Villager_Icon.png',
       quote: "Don't stray too far from the pack.",
       'sub-personality': 'B',
@@ -7344,6 +7516,7 @@ const data = [
       house_flooring: 'Rose Flooring',
       house_music: 'Lucky K.K.',
       house_music_note: '',
+      umbrella: 'lacy parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ツンドラ',
@@ -7372,7 +7545,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/8c/Friga_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/e7/Friga%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/f5/Friga%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/37/Friga_NH_Villager_Icon.png',
       quote: "You can't learn a life lesson from a fortune cookie.",
       'sub-personality': 'B',
@@ -7390,6 +7563,7 @@ const data = [
       house_flooring: 'Stone Tile',
       house_music: 'Farewell',
       house_music_note: '',
+      umbrella: 'candy umbrella',
     },
     appearances: [
       'DNM',
@@ -7429,7 +7603,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d5/Frita_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/ad/Frita%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/6a/Frita%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0f/Frita_NH_Villager_Icon.png',
       quote: "Don't sweat the small potatoes.",
       'sub-personality': 'A',
@@ -7447,6 +7621,7 @@ const data = [
       house_flooring: 'Yellow Floral Flooring',
       house_music: 'K.K. Rockabilly',
       house_music_note: '',
+      umbrella: 'rainbow umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ウェンディ',
@@ -7475,7 +7650,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3b/Frobert_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/29/Frobert%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/85/Frobert%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/19/Frobert_NH_Villager_Icon.png',
       quote: 'Always aim high!',
       'sub-personality': 'B',
@@ -7493,6 +7668,7 @@ const data = [
       house_flooring: 'Green Vinyl Flooring',
       house_music: 'K.K. Ragtime',
       house_music_note: '',
+      umbrella: 'maple-leaf umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'コージィ',
@@ -7521,7 +7697,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/67/Fuchsia_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/05/Fuchsia%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/5/50/Fuchsia%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/08/Fuchsia_NH_Villager_Icon.png',
       quote: 'It takes one to know one.',
       'sub-personality': 'A',
@@ -7539,6 +7715,7 @@ const data = [
       house_flooring: 'Brown Floral Flooring',
       house_music: 'K.K. Rock',
       house_music_note: '',
+      umbrella: 'Toad parasol',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ジェシカ',
@@ -7566,8 +7743,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/86/Gabi_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/9/9c/Gabi%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/c/c9/Gabi%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e9/Gabi_NH_Villager_Icon.png',
       quote: 'The more the merrier.',
       'sub-personality': 'B',
@@ -7584,6 +7760,7 @@ const data = [
       house_flooring: 'Orange Retro Flooring',
       house_music: 'Neapolitan',
       house_music_note: '',
+      umbrella: 'tartan-check umbrella',
     },
     appearances: [
       'DNM',
@@ -7622,8 +7799,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/e6/Gala_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/0/07/Gala%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/b/bb/Gala%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f9/Gala_NH_Villager_Icon.png',
       quote: 'Still waters run deep.',
       'sub-personality': 'B',
@@ -7640,6 +7816,7 @@ const data = [
       house_flooring: 'Light Wood-Pattern Flooring',
       house_music: 'Animal City',
       house_music_note: '',
+      umbrella: 'mini-flower-print umbrella',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ためこ',
@@ -7668,7 +7845,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/59/Gaston_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/88/Gaston%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/f3/Gaston%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/cd/Gaston_NH_Villager_Icon.png',
       quote: 'An ear for an ear makes it hard to hear.',
       'sub-personality': 'B',
@@ -7686,6 +7863,7 @@ const data = [
       house_flooring: 'Ramshackle Flooring',
       house_music: 'K.K. Song',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'bat umbrella',
     },
     appearances: [
       'DNM',
@@ -7725,7 +7903,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/5e/Gayle_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/16/Gayle%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/f1/Gayle%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/20/Gayle_NH_Villager_Icon.png',
       quote: 'An ounce of prevention is worth a pound of cure.',
       'sub-personality': 'A',
@@ -7743,6 +7921,7 @@ const data = [
       house_flooring: 'Pine-Board Flooring',
       house_music: 'Bubblegum K.K.',
       house_music_note: '',
+      umbrella: 'pink shiny-bows parasol',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アリゲッティ',
@@ -7771,7 +7950,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/67/Genji_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/49/Genji%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/3b/Genji%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/5d/Genji_NH_Villager_Icon.png',
       quote: 'Fall down seven times, get up eight.',
       'sub-personality': 'B',
@@ -7789,6 +7968,7 @@ const data = [
       house_flooring: 'Mossy-Garden Flooring',
       house_music: 'King K.K.',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'maple-leaf umbrella',
     },
     appearances: [
       'DNM',
@@ -7827,8 +8007,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/86/Gigi_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/c/cd/Gigi%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/8/82/Gigi%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/10/Gigi_NH_Villager_Icon.png',
       quote: 'Look at the world through rose-colored glasses.',
       'sub-personality': 'B',
@@ -7845,6 +8024,7 @@ const data = [
       house_flooring: 'Purple Moroccan Flooring',
       house_music: 'K.K. Swing',
       house_music_note: '',
+      umbrella: 'black lace umbrella',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'リンダ',
@@ -7873,7 +8053,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/35/Gladys_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/5e/Gladys%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a3/Gladys%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b3/Gladys_NH_Villager_Icon.png',
       quote: 'Smiles are free.',
       'sub-personality': 'B',
@@ -7891,6 +8071,7 @@ const data = [
       house_flooring: 'Tatami',
       house_music: 'K.K. Folk',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'paper parasol',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ちとせ',
@@ -7919,7 +8100,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/14/Gloria_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/11/Gloria%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/38/Gloria%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/4d/Gloria_NH_Villager_Icon.png',
       quote: 'Time is money.',
       'sub-personality': 'B',
@@ -7937,6 +8118,7 @@ const data = [
       house_flooring: 'Sidewalk Flooring',
       house_music: 'Animal City',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'black lace umbrella',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'スワンソン',
@@ -7965,7 +8147,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/83/Goldie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/64/Goldie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/2f/Goldie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/ce/Goldie_NH_Villager_Icon.png',
       quote: 'A little bit of happiness is better than a lot of anguish.',
       'sub-personality': 'B',
@@ -7983,6 +8165,7 @@ const data = [
       house_flooring: 'Light Parquet Flooring',
       house_music: 'K.K. Bossa',
       house_music_note: '',
+      umbrella: 'strawberry umbrella',
     },
     appearances: [
       'DNM',
@@ -8022,7 +8205,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/09/Gonzo_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/ec/Gonzo%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/2a/Gonzo%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/40/Gonzo_NH_Villager_Icon.png',
       quote: 'Brothers are brothers, cheese is cheese.',
       'sub-personality': 'A',
@@ -8040,6 +8223,7 @@ const data = [
       house_flooring: 'Wooden-Knot Flooring',
       house_music: "Surfin' K.K.",
       house_music_note: '',
+      umbrella: 'green umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ゴンゾー',
@@ -8068,7 +8252,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/91/Goose_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/8a/Goose%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/e7/Goose%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d3/Goose_NH_Villager_Icon.png',
       quote: 'Birds of a feather crow together.',
       'sub-personality': 'B',
@@ -8086,6 +8270,7 @@ const data = [
       house_flooring: 'Artsy Parquet Flooring',
       house_music: 'K.K. Country',
       house_music_note: '',
+      umbrella: 'rainbow umbrella',
     },
     appearances: [
       'DNM',
@@ -8125,7 +8310,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a1/Graham_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/21/Graham%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/4b/Graham%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e2/Graham_NH_Villager_Icon.png',
       quote: 'Knowledge is power.',
       'sub-personality': 'A',
@@ -8143,6 +8328,7 @@ const data = [
       house_flooring: 'Monochromatic Tile Flooring',
       house_music: 'Bubblegum K.K.',
       house_music_note: '',
+      umbrella: 'melon umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'グラハム',
@@ -8171,7 +8357,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/bd/Greta_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c0/Greta%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/20/Greta%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d7/Greta_NH_Villager_Icon.png',
       quote: 'The world is a stage.',
       'sub-personality': 'A',
@@ -8189,6 +8375,7 @@ const data = [
       house_flooring: 'Common Flooring',
       house_music: 'Comrade K.K.',
       house_music_note: '',
+      umbrella: 'paper parasol',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ふくこ',
@@ -8217,7 +8404,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/4b/Grizzly_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/45/Grizzly%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/fb/Grizzly%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/9b/Grizzly_NH_Villager_Icon.png',
       quote: "Those who live in glass houses shouldn't throw stones.",
       'sub-personality': 'B',
@@ -8235,6 +8422,7 @@ const data = [
       house_flooring: "Saharah's Desert",
       house_music: 'K.K. Condor',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'logo umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ムー',
@@ -8263,7 +8451,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/1d/Groucho_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/a8/Groucho%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/78/Groucho%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/45/Groucho_NH_Villager_Icon.png',
       quote: 'Rocky road is more than just a flavor of ice cream.',
       'sub-personality': 'B',
@@ -8281,6 +8469,7 @@ const data = [
       house_flooring: 'Skull-Print Flooring',
       house_music: 'K.K. Metal',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'クロー',
@@ -8309,7 +8498,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/25/Gruff_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/72/Gruff%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/6c/Gruff%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/9c/Gruff_NH_Villager_Icon.png',
       quote: "Don't burn bridges.",
       'sub-personality': 'B',
@@ -8327,6 +8516,7 @@ const data = [
       house_flooring: 'Gray Vinyl Flooring',
       house_music: 'K.K. Rockabilly',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ビリー',
@@ -8354,8 +8544,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/be/Gwen_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/6/64/Gwen%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/8/83/Gwen%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/ed/Gwen_NH_Villager_Icon.png',
       quote: 'Mind your manners, or someone else will.',
       'sub-personality': 'B',
@@ -8372,8 +8561,20 @@ const data = [
       house_flooring: 'Ice Flooring',
       house_music: "Drivin'",
       house_music_note: '',
+      umbrella: 'fairy-tale umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: [
+      'DNM',
+      'AC',
+      'E_PLUS',
+      'WW',
+      'CF',
+      'NL',
+      'WA',
+      'NH',
+      'HHD',
+      'PC',
+    ],
     ja_name: 'ポーラ',
     ja_phrase: 'ウフフ',
   },
@@ -8400,7 +8601,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/46/Hamlet_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/09/Hamlet%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/62/Hamlet%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a0/Hamlet_NH_Villager_Icon.png',
       quote: "The ear's the thing.",
       'sub-personality': 'A',
@@ -8418,6 +8619,7 @@ const data = [
       house_flooring: 'Colorful Puzzle Flooring',
       house_music: 'K.K. Reggae',
       house_music_note: '',
+      umbrella: 'frog umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ハムスケ',
@@ -8446,7 +8648,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a9/Hamphrey_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c4/Hamphrey%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/23/Hamphrey%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a1/Hamphrey_NH_Villager_Icon.png',
       quote: 'Children should be seen and not heard.',
       'sub-personality': 'A',
@@ -8464,8 +8666,9 @@ const data = [
       house_flooring: 'Rush Tatami',
       house_music: 'Comrade K.K.',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ハムジ',
     ja_phrase: 'カーッ',
   },
@@ -8491,8 +8694,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/15/Hans_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/9/95/Hans%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/9/96/Hans%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/ce/Hans_NH_Villager_Icon.png',
       quote: 'One good turn deserves another.',
       'sub-personality': 'A',
@@ -8509,6 +8711,7 @@ const data = [
       house_flooring: 'Ski-Slope Flooring',
       house_music: 'K.K. Sonata',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'snowflake umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'スナイル',
@@ -8537,7 +8740,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/1a/Harry_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/5f/Harry%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/d/de/Harry%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b4/Harry_NH_Villager_Icon.png',
       quote: 'Patience is a virtue for folks with time.',
       'sub-personality': 'B',
@@ -8555,6 +8758,7 @@ const data = [
       house_flooring: 'White Mosaic-Tile Flooring',
       house_music: 'K.K. Rally',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'camo umbrella',
     },
     appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'オリバー',
@@ -8583,7 +8787,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/17/Hazel_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/43/Hazel%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/ec/Hazel%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/ac/Hazel_NH_Villager_Icon.png',
       quote: 'Never say never!',
       'sub-personality': 'A',
@@ -8601,8 +8805,9 @@ const data = [
       house_flooring: 'Wooden-Knot Flooring',
       house_music: 'DJ K.K.',
       house_music_note: '',
+      umbrella: 'apple umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アイリス',
     ja_phrase: 'だもんね',
   },
@@ -8629,7 +8834,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/26/Henry_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/75/Henry%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/79/Henry%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/2f/Henry_NH_Villager_Icon.png',
       quote: "The way to a frog's heart is through his stomach.",
       'sub-personality': 'A',
@@ -8647,6 +8852,7 @@ const data = [
       house_flooring: 'Modern Wood Flooring',
       house_music: 'K.K. Soul',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ヘンリー',
@@ -8675,7 +8881,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/26/Hippeux_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/d1/Hippeux%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/9d/Hippeux%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/ec/Hippeux_NH_Villager_Icon.png',
       quote: 'Mottoes are for the unoriginal.',
       'sub-personality': 'A',
@@ -8693,6 +8899,7 @@ const data = [
       house_flooring: 'Dark Herringbone Flooring',
       house_music: 'K.K. Sonata',
       house_music_note: '',
+      umbrella: 'mint umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ディビッド',
@@ -8721,7 +8928,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c1/Hopkins_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c3/Hopkins%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/ab/Hopkins%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/4b/Hopkins_NH_Villager_Icon.png',
       quote: 'A wise mammal gives danger a wide berth.',
       'sub-personality': 'A',
@@ -8739,6 +8946,7 @@ const data = [
       house_flooring: 'Cool Vinyl Flooring',
       house_music: 'Pondering',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'vinyl umbrella',
     },
     appearances: ['E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'プースケ',
@@ -8767,7 +8975,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/cb/Hopper_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b1/Hopper%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/b6/Hopper%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/82/Hopper_NH_Villager_Icon.png',
       quote: 'Always have a comeback.',
       'sub-personality': 'B',
@@ -8785,6 +8993,7 @@ const data = [
       house_flooring: 'Iceberg Flooring',
       house_music: 'Comrade K.K.',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'bat umbrella',
     },
     appearances: [
       'DNM',
@@ -8825,7 +9034,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/95/Hornsby_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/6f/Hornsby%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/16/Hornsby%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/77/Hornsby_NH_Villager_Icon.png',
       quote: "You can't hit a mosquito with a horseshoe.",
       'sub-personality': 'A',
@@ -8843,6 +9052,7 @@ const data = [
       house_flooring: 'Rush Tatami',
       house_music: 'K.K. Lament',
       house_music_note: '',
+      umbrella: 'green umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'みつお',
@@ -8870,8 +9080,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/17/Huck_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/a/ab/Huck%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/a/a2/Huck%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c4/Huck_NH_Villager_Icon.png',
       quote: 'Cold coffee makes for a cold demeanor.',
       'sub-personality': 'A',
@@ -8888,6 +9097,7 @@ const data = [
       house_flooring: 'Dirt Flooring',
       house_music: 'To the Edge',
       house_music_note: '',
+      umbrella: 'grape umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ストロー',
@@ -8915,8 +9125,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b6/Hugh_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/6/6b/Hugh%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/e/e0/Hugh%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b0/Hugh_NH_Villager_Icon.png',
       quote: 'Keep it real. Real chill.',
       'sub-personality': 'B',
@@ -8933,8 +9142,20 @@ const data = [
       house_flooring: 'Colorful Puzzle Flooring',
       house_music: 'My Place',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: [
+      'DNM',
+      'AC',
+      'E_PLUS',
+      'WW',
+      'CF',
+      'NL',
+      'WA',
+      'NH',
+      'HHD',
+      'PC',
+    ],
     ja_name: 'クッチャネ',
     ja_phrase: 'とかね',
   },
@@ -8961,7 +9182,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/68/Iggly_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b8/Iggly%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/fd/Iggly%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/11/Iggly_NH_Villager_Icon.png',
       quote: 'Six of one, half dozen of the other.',
       'sub-personality': 'B',
@@ -8979,8 +9200,9 @@ const data = [
       house_flooring: 'Ice Flooring',
       house_music: 'I Love You',
       house_music_note: '',
+      umbrella: 'kiwi umbrella',
     },
-    appearances: ['CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'のりまき',
     ja_phrase: 'クルクル',
   },
@@ -9006,7 +9228,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/34/Ike_NH.png',
-      photo_url: 'https://dodo.ac/np/images/3/3a/Ike%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/7/7f/Ike%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c9/Ike_NH_Villager_Icon.png',
       quote: 'The higher you climb, the smaller things look.',
       'sub-personality': 'A',
@@ -9023,6 +9245,7 @@ const data = [
       house_flooring: 'Steel Flooring',
       house_music: 'K.K. Rock',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'camo umbrella',
     },
     appearances: ['E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ダイク',
@@ -9050,8 +9273,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/40/Ione_amiibo.png',
-      photo_url:
-        'https://dodo.ac/np/images/0/05/Ione%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/6/6a/Ione%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/62/Ione_NH_Villager_Icon.png',
       quote: 'I was born under a lucky star.',
       'sub-personality': 'B',
@@ -9068,6 +9290,7 @@ const data = [
       house_flooring: 'Simple Blue Flooring',
       house_music: 'Chillwave',
       house_music_note: '',
+      umbrella: 'fairy-tale umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'スピカ',
@@ -9096,7 +9319,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3e/Jacob_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/d4/Jacob%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/82/Jacob%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/fa/Jacob_NH_Villager_Icon.png',
       quote: 'Your greatest strength can be your greatest weakness.',
       'sub-personality': 'A',
@@ -9114,6 +9337,7 @@ const data = [
       house_flooring: 'Garbage-Heap Flooring',
       house_music: 'K.K. Song',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'gelato umbrella',
     },
     appearances: ['E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ジャコテン',
@@ -9142,7 +9366,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/03/Jacques_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/71/Jacques%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/4b/Jacques%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/73/Jacques_NH_Villager_Icon.png',
       quote:
         'Better to have loved and squawked than to have never loved at all.',
@@ -9161,6 +9385,7 @@ const data = [
       house_flooring: 'Steel Flooring',
       house_music: 'K.K. Technopop',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ジョッキー',
@@ -9189,7 +9414,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/35/Jambette_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/4e/Jambette%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/06/Jambette%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/53/Jambette_NH_Villager_Icon.png',
       quote: 'It takes more muscles to frown than smile.',
       'sub-personality': 'B',
@@ -9207,8 +9432,9 @@ const data = [
       house_flooring: 'Rosewood Flooring',
       house_music: "K.K. Cruisin'",
       house_music_note: '',
+      umbrella: 'pink shiny-bows parasol',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'エスメラルダ',
     ja_phrase: 'ですわよ',
   },
@@ -9234,7 +9460,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7f/Jay_NH.png',
-      photo_url: 'https://dodo.ac/np/images/e/e4/Jay%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/5/5d/Jay%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/ab/Jay_NH_Villager_Icon.png',
       quote: 'He who hesitates has lost.',
       'sub-personality': 'B',
@@ -9251,6 +9477,7 @@ const data = [
       house_flooring: 'Rosewood Flooring',
       house_music: 'K.K. Country',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'green umbrella',
     },
     appearances: [
       'DNM',
@@ -9290,7 +9517,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/93/Jeremiah_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c2/Jeremiah%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/8b/Jeremiah%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/ce/Jeremiah_NH_Villager_Icon.png',
       quote: 'Sleep before you leap.',
       'sub-personality': 'B',
@@ -9308,6 +9535,7 @@ const data = [
       house_flooring: 'Blue Dot Flooring',
       house_music: 'Hypno K.K.',
       house_music_note: '',
+      umbrella: 'pineapple umbrella',
     },
     appearances: [
       'DNM',
@@ -9347,7 +9575,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a6/Jitters_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b9/Jitters%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/f8/Jitters%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/51/Jitters_NH_Villager_Icon.png',
       quote: "When you're a team of one, you're always captain!",
       'sub-personality': 'B',
@@ -9365,6 +9593,7 @@ const data = [
       house_flooring: 'Backyard Lawn',
       house_music: 'K.K. Adventure',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'logo umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ジーニョ',
@@ -9392,8 +9621,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/66/Joey_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/1/16/Joey%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/a/af/Joey%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a1/Joey_NH_Villager_Icon.png',
       quote: "Don't get your feathers all ruffled. Just chill.",
       'sub-personality': 'B',
@@ -9410,8 +9638,20 @@ const data = [
       house_flooring: 'Sandy-Beach Flooring',
       house_music: 'Marine Song 2001',
       house_music_note: '',
+      umbrella: 'bear umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: [
+      'DNM',
+      'AC',
+      'E_PLUS',
+      'WW',
+      'CF',
+      'NL',
+      'WA',
+      'NH',
+      'HHD',
+      'PC',
+    ],
     ja_name: 'リチャード',
     ja_phrase: 'でヤンス',
   },
@@ -9437,8 +9677,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d4/Judy_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/0/0d/Judy%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/f/f8/Judy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c1/Judy_NH_Villager_Icon.png',
       quote: "I'm dancing my dreams away.",
       'sub-personality': 'A',
@@ -9455,6 +9694,7 @@ const data = [
       house_flooring: 'Blue Dot Flooring',
       house_music: 'K.K. Lullaby',
       house_music_note: '',
+      umbrella: 'white shiny-bows parasol',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'みすず',
@@ -9483,7 +9723,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/42/Julia_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/a7/Julia%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/5/51/Julia%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f4/Julia_NH_Villager_Icon.png',
       quote: 'Cut once, measure twice... Wait— reverse that.',
       'sub-personality': 'A',
@@ -9501,6 +9741,7 @@ const data = [
       house_flooring: 'Simple Blue Flooring',
       house_music: 'K.K. Sonata',
       house_music_note: '',
+      umbrella: 'rainbow umbrella',
     },
     appearances: ['E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ジュリア',
@@ -9529,7 +9770,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/f2/Julian_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/03/Julian%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/61/Julian%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/20/Julian_NH_Villager_Icon.png',
       quote: 'Never trot when you can prance.',
       'sub-personality': 'A',
@@ -9547,6 +9788,7 @@ const data = [
       house_flooring: 'Cloud Flooring',
       house_music: 'Space K.K.',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'rainbow umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ジュリー',
@@ -9574,8 +9816,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/85/June_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/6/6c/June%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/7/7c/June%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/29/June_NH_Villager_Icon.png',
       quote: 'Dream big, expect little.',
       'sub-personality': 'A',
@@ -9592,6 +9833,7 @@ const data = [
       house_flooring: 'Starry-Sands Flooring',
       house_music: 'K.K. Island',
       house_music_note: '',
+      umbrella: 'pineapple umbrella',
     },
     appearances: ['AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'メイ',
@@ -9620,7 +9862,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/2a/Kabuki_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/cb/Kabuki%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/0f/Kabuki%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/64/Kabuki_NH_Villager_Icon.png',
       quote: 'If you make your opponent flinch, you have already won.',
       'sub-personality': 'B',
@@ -9638,6 +9880,7 @@ const data = [
       house_flooring: 'Tatami',
       house_music: 'K.K. Jongara',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'paper parasol',
     },
     appearances: [
       'DNM',
@@ -9676,8 +9919,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c9/Katt_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/3/3f/Katt%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/b/bf/Katt%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/1b/Katt_NH_Villager_Icon.png',
       quote: 'MeowMEOWmeow!',
       'sub-personality': 'A',
@@ -9694,6 +9936,7 @@ const data = [
       house_flooring: 'Steel Flooring',
       house_music: 'K.K. Disco',
       house_music_note: '',
+      umbrella: 'spider umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ちょい',
@@ -9722,7 +9965,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3b/Keaton_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b4/Keaton%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/b7/Keaton%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/28/Keaton_NH_Villager_Icon.png',
       quote: 'Even in a room full of fools, someone is the smartest.',
       'sub-personality': 'A',
@@ -9740,6 +9983,7 @@ const data = [
       house_flooring: 'Parking Flooring',
       house_music: "Drivin'",
       house_music_note: '',
+      umbrella: 'logo umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'フランク',
@@ -9767,7 +10011,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/e0/Ken_NH.png',
-      photo_url: 'https://dodo.ac/np/images/3/33/Ken%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/e/ec/Ken%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/26/Ken_NH_Villager_Icon.png',
       quote: "C'est la vie!",
       'sub-personality': 'A',
@@ -9784,8 +10028,9 @@ const data = [
       house_flooring: 'Tatami',
       house_music: 'K.K. Rally',
       house_music_note: '',
+      umbrella: 'paper parasol',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'クロベエ',
     ja_phrase: 'コッケイ',
   },
@@ -9812,7 +10057,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/42/Ketchup_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/ed/Ketchup%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/be/Ketchup%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e5/Ketchup_NH_Villager_Icon.png',
       quote: 'When in doubt, eat a tomato!',
       'sub-personality': 'A',
@@ -9830,6 +10075,7 @@ const data = [
       house_flooring: 'Backyard Lawn',
       house_music: 'Neapolitan',
       house_music_note: '',
+      umbrella: 'fairy-tale umbrella',
     },
     appearances: ['E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ケチャップ',
@@ -9858,7 +10104,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/71/Kevin_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/da/Kevin%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/64/Kevin%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/89/Kevin_NH_Villager_Icon.png',
       quote: "Sometimes it's OK to get dirty.",
       'sub-personality': 'A',
@@ -9876,6 +10122,7 @@ const data = [
       house_flooring: 'Concrete Flooring',
       house_music: 'K.K. Rockabilly',
       house_music_note: '',
+      umbrella: 'busted umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'イノッチ',
@@ -9883,7 +10130,7 @@ const data = [
   },
   {
     name: 'Kid Cat',
-    url: 'https://nookipedia.com/wiki/Kid_Cat',
+    url: 'https://nookipedia.com/wiki/Kid%20Cat',
     alt_name: '',
     title_color: 'ff4040',
     text_color: 'fffad4',
@@ -9904,7 +10151,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c3/Kid_Cat_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/49/Kid_Cat%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c2/Kid_Cat%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/18/Kid_Cat_NH_Villager_Icon.png',
       quote: "Crime doesn't pay!",
       'sub-personality': 'B',
@@ -9922,6 +10169,7 @@ const data = [
       house_flooring: 'Sandlot',
       house_music: 'Go K.K. Rider',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: '１ごう',
@@ -9949,8 +10197,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7a/Kidd_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/4/42/Kidd%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/f/f5/Kidd%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/64/Kidd_NH_Villager_Icon.png',
       quote: 'Be yourself, everyone else is already taken.',
       'sub-personality': 'B',
@@ -9967,6 +10214,7 @@ const data = [
       house_flooring: 'Purple Moroccan Flooring',
       house_music: 'K.K. Tango',
       house_music_note: '',
+      umbrella: 'logo umbrella',
     },
     appearances: ['E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'やさお',
@@ -9994,8 +10242,7 @@ const data = [
     prev_phrases: ['kittycat'],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c5/Kiki_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/3/3d/Kiki%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/0/05/Kiki%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/cb/Kiki_NH_Villager_Icon.png',
       quote: 'Nothing ventured, nothing gained.',
       'sub-personality': 'B',
@@ -10012,6 +10259,7 @@ const data = [
       house_flooring: 'Simple White Flooring',
       house_music: 'Only Me',
       house_music_note: '',
+      umbrella: 'sunny parasol',
     },
     appearances: [
       'DNM',
@@ -10050,8 +10298,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/75/Kitt_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/8/82/Kitt%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/d/d8/Kitt%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/fe/Kitt_NH_Villager_Icon.png',
       quote: 'Funny parents have funny kids.',
       'sub-personality': 'B',
@@ -10068,6 +10315,7 @@ const data = [
       house_flooring: 'Simple White Flooring',
       house_music: 'Stale Cupcakes',
       house_music_note: '',
+      umbrella: 'eggy parasol',
     },
     appearances: [
       'DNM',
@@ -10107,7 +10355,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/21/Kitty_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/84/Kitty%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/74/Kitty%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a4/Kitty_NH_Villager_Icon.png',
       quote: 'If you want something done well, do it yourself.',
       'sub-personality': 'B',
@@ -10125,6 +10373,7 @@ const data = [
       house_flooring: 'Arabesque Flooring',
       house_music: 'K.K. Chorale',
       house_music_note: '',
+      umbrella: 'striped umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ショコラ',
@@ -10153,7 +10402,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/5c/Klaus_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/71/Klaus%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/16/Klaus%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/20/Klaus_NH_Villager_Icon.png',
       quote: 'Pride goes before a fall.',
       'sub-personality': 'A',
@@ -10171,6 +10420,7 @@ const data = [
       house_flooring: 'Stone Tile',
       house_music: 'K.K. Sonata',
       house_music_note: '',
+      umbrella: 'two-tone umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'クマロス',
@@ -10198,8 +10448,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/03/Knox_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/0/07/Knox%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/d/d4/Knox%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/40/Knox_NH_Villager_Icon.png',
       quote: "A chicken's coop is its castle.",
       'sub-personality': 'B',
@@ -10216,6 +10465,7 @@ const data = [
       house_flooring: 'Palace Tile',
       house_music: 'K.K. Chorale',
       house_music_note: '',
+      umbrella: 'two-tone umbrella',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'キンカク',
@@ -10243,8 +10493,7 @@ const data = [
     prev_phrases: ['okey-dokey'],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/20/Kody_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/9/9d/Kody%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/6/65/Kody%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d3/Kody_NH_Villager_Icon.png',
       quote: "The sky's the limit!",
       'sub-personality': 'B',
@@ -10261,6 +10510,7 @@ const data = [
       house_flooring: 'Blue Dot Flooring',
       house_music: 'My Place',
       house_music_note: '',
+      umbrella: 'orange umbrella',
     },
     appearances: [
       'DNM',
@@ -10299,8 +10549,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/46/Kyle_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/e/ed/Kyle%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/d/dc/Kyle%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/44/Kyle_NH_Villager_Icon.png',
       quote: "Never trust a sheep in wolf's clothing.",
       'sub-personality': 'A',
@@ -10317,6 +10566,7 @@ const data = [
       house_flooring: 'Steel Flooring',
       house_music: 'K.K. Metal',
       house_music_note: '',
+      umbrella: 'spider umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'リカルド',
@@ -10345,7 +10595,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/0a/Leonardo_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/3d/Leonardo%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/f0/Leonardo%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/ca/Leonardo_NH_Villager_Icon.png',
       quote: "That's the way the energy bar crumbles.",
       'sub-personality': 'B',
@@ -10363,6 +10613,7 @@ const data = [
       house_flooring: 'Leopard-Print Flooring',
       house_music: 'K.K. Metal',
       house_music_note: '',
+      umbrella: 'red umbrella',
     },
     appearances: ['E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ヒョウタ',
@@ -10391,7 +10642,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3a/Leopold_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/ee/Leopold%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c8/Leopold%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/72/Leopold_NH_Villager_Icon.png',
       quote: 'The bigger the fish, the bigger your dinner.',
       'sub-personality': 'A',
@@ -10409,6 +10660,7 @@ const data = [
       house_flooring: 'Natural-Block Flooring',
       house_music: 'Mr. K.K.',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'logo umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ティーチャー',
@@ -10436,8 +10688,7 @@ const data = [
     prev_phrases: ['zzrrbbitt'],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/42/Lily_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/4/41/Lily%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/e/ef/Lily%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f4/Lily_NH_Villager_Icon.png',
       quote: "Don't jump to conclusions!",
       'sub-personality': 'B',
@@ -10454,6 +10705,7 @@ const data = [
       house_flooring: 'Blue Dot Flooring',
       house_music: 'Farewell',
       house_music_note: '',
+      umbrella: 'petal parasol',
     },
     appearances: [
       'DNM',
@@ -10493,7 +10745,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b0/Limberg_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/30/Limberg%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/85/Limberg%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/21/Limberg_NH_Villager_Icon.png',
       quote: "Don't build a better mousetrap.",
       'sub-personality': 'B',
@@ -10511,6 +10763,7 @@ const data = [
       house_flooring: 'Mossy-Garden Flooring',
       house_music: 'K.K. Folk',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: [
       'DNM',
@@ -10550,7 +10803,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/bb/Lionel_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/6d/Lionel%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/10/Lionel%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f4/Lionel_NH_Villager_Icon.png',
       quote: 'Love is blind.',
       'sub-personality': 'A',
@@ -10568,6 +10821,7 @@ const data = [
       house_flooring: 'Simple Blue Flooring',
       house_music: 'K.K. Moody',
       house_music_note: '',
+      umbrella: 'green umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ライオネル',
@@ -10595,8 +10849,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d1/Lobo_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/6/64/Lobo%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/c/c1/Lobo%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/01/Lobo_NH_Villager_Icon.png',
       quote: "If it's not one thing, it's another.",
       'sub-personality': 'B',
@@ -10613,6 +10866,7 @@ const data = [
       house_flooring: 'Rosewood Flooring',
       house_music: 'K.K. Rock',
       house_music_note: '',
+      umbrella: 'paper parasol',
     },
     appearances: [
       'DNM',
@@ -10652,7 +10906,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/16/Lolly_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f2/Lolly%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/13/Lolly%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/6c/Lolly_NH_Villager_Icon.png',
       quote: 'Laughter is the best medicine.',
       'sub-personality': 'B',
@@ -10670,6 +10924,7 @@ const data = [
       house_flooring: 'Green Vinyl Flooring',
       house_music: 'Forest Life',
       house_music_note: '',
+      umbrella: 'snowflake umbrella',
     },
     appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ラムネ',
@@ -10698,7 +10953,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/53/Lopez_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/1f/Lopez%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/79/Lopez%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/54/Lopez_NH_Villager_Icon.png',
       quote: 'Always look both ways before crossing the street.',
       'sub-personality': 'A',
@@ -10716,8 +10971,9 @@ const data = [
       house_flooring: 'Modern Wood Flooring',
       house_music: 'K.K. Jazz',
       house_music_note: '',
+      umbrella: 'gelato umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'トムソン',
     ja_phrase: 'がぜん',
   },
@@ -10744,7 +11000,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/5a/Louie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/06/Louie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/08/Louie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/10/Louie_NH_Villager_Icon.png',
       quote: "It's all about the muscle.",
       'sub-personality': 'A',
@@ -10762,6 +11018,7 @@ const data = [
       house_flooring: 'Colorful Tile Flooring',
       house_music: 'K.K. Fusion',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'マッスル',
@@ -10790,7 +11047,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/4a/Lucha_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/58/Lucha%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/1a/Lucha%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/5d/Lucha_NH_Villager_Icon.png',
       quote: 'Birds of a feather, et cetera, et cetera...',
       'sub-personality': 'A',
@@ -10808,8 +11065,9 @@ const data = [
       house_flooring: 'Boxing-Ring Mat',
       house_music: 'K.K. Western',
       house_music_note: '',
+      umbrella: 'camo umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'マスカラス',
     ja_phrase: 'カァー',
   },
@@ -10836,7 +11094,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/59/Lucky_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/2d/Lucky%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/7e/Lucky%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/13/Lucky_NH_Villager_Icon.png',
       quote: "Don't bite the hand that feeds you.",
       'sub-personality': 'B',
@@ -10854,6 +11112,7 @@ const data = [
       house_flooring: 'Swamp Flooring',
       house_music: 'K.K. Dirge',
       house_music_note: '',
+      umbrella: 'orange umbrella',
     },
     appearances: [
       'DNM',
@@ -10892,8 +11151,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/e5/Lucy_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/a/af/Lucy%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/1/1c/Lucy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/ba/Lucy_NH_Villager_Icon.png',
       quote: 'The best is yet to come.',
       'sub-personality': 'B',
@@ -10910,6 +11168,7 @@ const data = [
       house_flooring: 'Wooden-Knot Flooring',
       house_music: 'K.K. Sonata',
       house_music_note: '',
+      umbrella: 'cherry umbrella',
     },
     appearances: [
       'DNM',
@@ -10949,7 +11208,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a5/Lyman_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/36/Lyman%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/19/Lyman%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a4/Lyman_NH_Villager_Icon.png',
       quote: 'Eucalyptus is the spice of life.',
       'sub-personality': 'A',
@@ -10967,6 +11226,7 @@ const data = [
       house_flooring: 'Light Parquet Flooring',
       house_music: 'K.K. Safari',
       house_music_note: '',
+      umbrella: 'tartan-check umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'オズモンド',
@@ -10994,7 +11254,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/ab/Mac_NH.png',
-      photo_url: 'https://dodo.ac/np/images/b/b2/Mac%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/0/01/Mac%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b3/Mac_NH_Villager_Icon.png',
       quote: 'Sometimes life is rough.',
       'sub-personality': 'B',
@@ -11011,8 +11271,9 @@ const data = [
       house_flooring: 'Sandlot',
       house_music: 'My Place',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'camo umbrella',
     },
-    appearances: ['CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'チャンプ',
     ja_phrase: 'モグ',
   },
@@ -11039,7 +11300,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/06/Maddie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/ce/Maddie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/e4/Maddie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/bb/Maddie_NH_Villager_Icon.png',
       quote: 'The IT revolution is under way.',
       'sub-personality': 'A',
@@ -11057,6 +11318,7 @@ const data = [
       house_flooring: 'Wildflower Meadow',
       house_music: 'K.K. Stroll',
       house_music_note: '',
+      umbrella: 'picnic umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'マロン',
@@ -11085,7 +11347,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/93/Maelle_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/e7/Maelle%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/ab/Maelle%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c2/Maelle_NH_Villager_Icon.png',
       quote: 'A wise duck takes care of its bill.',
       'sub-personality': 'B',
@@ -11103,6 +11365,7 @@ const data = [
       house_flooring: 'Sidewalk Flooring',
       house_music: 'Café K.K.',
       house_music_note: '',
+      umbrella: 'Toad parasol',
     },
     appearances: ['AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アンヌ',
@@ -11131,7 +11394,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b8/Maggie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f4/Maggie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/eb/Maggie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/8a/Maggie_NH_Villager_Icon.png',
       quote: 'All a plant needs is love...and sun and water and soil.',
       'sub-personality': 'A',
@@ -11149,6 +11412,7 @@ const data = [
       house_flooring: 'Flagstone Flooring',
       house_music: "Drivin'",
       house_music_note: '',
+      umbrella: 'petal parasol',
     },
     appearances: ['E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'マーガレット',
@@ -11177,7 +11441,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/28/Mallary_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/41/Mallary%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/6a/Mallary%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/02/Mallary_NH_Villager_Icon.png',
       quote: 'Purple is the color of royalty.',
       'sub-personality': 'B',
@@ -11195,6 +11459,7 @@ const data = [
       house_flooring: 'Backyard Lawn',
       house_music: 'K.K. Bossa',
       house_music_note: '',
+      umbrella: 'striped umbrella',
     },
     appearances: [
       'DNM',
@@ -11234,7 +11499,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a2/Maple_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/50/Maple%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/6d/Maple%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/45/Maple_NH_Villager_Icon.png',
       quote: 'Waste not, want not.',
       'sub-personality': 'B',
@@ -11252,6 +11517,7 @@ const data = [
       house_flooring: 'Wooden-Knot Flooring',
       house_music: 'Forest Life',
       house_music_note: '',
+      umbrella: 'candy umbrella',
     },
     appearances: [
       'DNM',
@@ -11291,7 +11557,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3e/Marcel_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f7/Marcel%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/31/Marcel%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a7/Marcel_NH_Villager_Icon.png',
       quote: "There's not a dog so bad that he won't wag his tail.",
       'sub-personality': 'B',
@@ -11309,6 +11575,7 @@ const data = [
       house_flooring: 'Rush Tatami',
       house_music: 'Comrade K.K.',
       house_music_note: '',
+      umbrella: 'paper parasol',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'もんじゃ',
@@ -11337,7 +11604,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/2b/Marcie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/e0/Marcie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/30/Marcie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d5/Marcie_NH_Villager_Icon.png',
       quote: "The road to a friend's house is never long.",
       'sub-personality': 'A',
@@ -11355,6 +11622,7 @@ const data = [
       house_flooring: 'Pine-Board Flooring',
       house_music: 'K.K. Aria',
       house_music_note: '',
+      umbrella: 'pink shiny-bows parasol',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'マリア',
@@ -11383,7 +11651,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/54/Margie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/8c/Margie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/1c/Margie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/8a/Margie_NH_Villager_Icon.png',
       quote: 'Keep your feet on the ground.',
       'sub-personality': 'B',
@@ -11401,6 +11669,7 @@ const data = [
       house_flooring: 'Bamboo Flooring',
       house_music: 'K.K. Marathon',
       house_music_note: '',
+      umbrella: 'hydrangea umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'FILM', 'HHD', 'PC'],
     ja_name: 'サリー',
@@ -11429,7 +11698,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/25/Marina_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/85/Marina%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/3b/Marina%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0f/Marina_NH_Villager_Icon.png',
       quote: "If you can't say something nice, don't say anything at all.",
       'sub-personality': 'B',
@@ -11447,6 +11716,7 @@ const data = [
       house_flooring: 'Berry-Chocolates Flooring',
       house_music: 'Soulful K.K.',
       house_music_note: '',
+      umbrella: 'candy umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'タコリーナ',
@@ -11475,7 +11745,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c1/Marlo_amiibo.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b2/Marlo%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/6b/Marlo%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/03/Marlo_NH_Villager_Icon.png',
       quote: "You gotta walk the walk if you're gonna talk the talk.",
       'sub-personality': 'B',
@@ -11493,6 +11763,7 @@ const data = [
       house_flooring: 'Stone Tile',
       house_music: 'K.K. Break',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'ドンチャン',
@@ -11521,7 +11792,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/da/Marshal_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c8/Marshal%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/e6/Marshal%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/99/Marshal_NH_Villager_Icon.png',
       quote: 'Seize the day.',
       'sub-personality': 'A',
@@ -11539,6 +11810,7 @@ const data = [
       house_flooring: 'Modern Wood Flooring',
       house_music: 'K.K. Bossa',
       house_music_note: '',
+      umbrella: 'logo umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ジュン',
@@ -11567,7 +11839,7 @@ const data = [
     nh_details: {
       image_url: '',
       photo_url:
-        'https://dodo.ac/np/images/1/15/Marty%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/74/Marty%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/08/Marty_NH_Villager_Icon.png',
       quote: 'Just wait until I get started!',
       'sub-personality': 'A',
@@ -11585,6 +11857,7 @@ const data = [
       house_flooring: 'Pompompurin Flooring',
       house_music: 'My Place',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'mint umbrella',
     },
     appearances: ['WA', 'NH', 'PC'],
     ja_name: 'マーティー',
@@ -11613,7 +11886,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/58/Mathilda_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/cb/Mathilda%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/2c/Mathilda%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/7f/Mathilda_NH_Villager_Icon.png',
       quote: 'Nail polish is thicker than water.',
       'sub-personality': 'B',
@@ -11631,8 +11904,20 @@ const data = [
       house_flooring: 'Arabesque Flooring',
       house_music: 'K.K. Chorale',
       house_music_note: '',
+      umbrella: 'patterned vinyl umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: [
+      'DNM',
+      'AC',
+      'E_PLUS',
+      'WW',
+      'CF',
+      'NL',
+      'WA',
+      'NH',
+      'HHD',
+      'PC',
+    ],
     ja_name: 'アザラク',
     ja_phrase: 'ッハ',
   },
@@ -11659,7 +11944,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/55/Megan_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/34/Megan%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/7d/Megan%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/66/Megan_NH_Villager_Icon.png',
       quote: "Take a page out of someone else's book, if it's a good book.",
       'sub-personality': 'A',
@@ -11677,6 +11962,7 @@ const data = [
       house_flooring: 'Dark Herringbone Flooring',
       house_music: 'Forest Life',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'raindrop umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'キャンディ',
@@ -11705,7 +11991,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/43/Melba_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/1f/Melba%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/f9/Melba%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0a/Melba_NH_Villager_Icon.png',
       quote: 'A friend who shares is a friend who cares.',
       'sub-personality': 'B',
@@ -11723,6 +12009,7 @@ const data = [
       house_flooring: 'Green-Paint Flooring',
       house_music: 'K.K. Stroll',
       house_music_note: '',
+      umbrella: 'strawberry umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アデレード',
@@ -11751,7 +12038,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/0c/Merengue_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/4a/Merengue%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/30/Merengue%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e8/Merengue_NH_Villager_Icon.png',
       quote: 'Life is a piece of cake.',
       'sub-personality': 'A',
@@ -11769,6 +12056,7 @@ const data = [
       house_flooring: 'Mint Dot Flooring',
       house_music: 'K.K. Ballad',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'lacy parasol',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'パティ',
@@ -11797,7 +12085,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/4f/Merry_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/d3/Merry%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/ad/Merry%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/ed/Merry_NH_Villager_Icon.png',
       quote: 'A smile increases your face value.',
       'sub-personality': 'B',
@@ -11815,6 +12103,7 @@ const data = [
       house_flooring: 'Orange Retro Flooring',
       house_music: 'Neapolitan',
       house_music_note: '',
+      umbrella: 'fairy-tale umbrella',
     },
     appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'さっち',
@@ -11843,7 +12132,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/af/Midge_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/4e/Midge%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a0/Midge%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0f/Midge_NH_Villager_Icon.png',
       quote: 'When the world gets cold, just fly south.',
       'sub-personality': 'B',
@@ -11861,6 +12150,7 @@ const data = [
       house_flooring: 'Cute White-Tile Flooring',
       house_music: 'K.K. Stroll',
       house_music_note: '',
+      umbrella: 'petal parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'うずまき',
@@ -11888,8 +12178,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/5b/Mint_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/2/25/Mint%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/d/d5/Mint%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/bf/Mint_NH_Villager_Icon.png',
       quote: 'Always lead by example.',
       'sub-personality': 'B',
@@ -11906,6 +12195,7 @@ const data = [
       house_flooring: 'Mint Dot Flooring',
       house_music: 'K.K. Soul',
       house_music_note: '',
+      umbrella: 'peach umbrella',
     },
     appearances: [
       'DNM',
@@ -11944,8 +12234,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d1/Mira_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/a/a1/Mira%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/d/da/Mira%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/44/Mira_NH_Villager_Icon.png',
       quote: 'Always help a friend in need.',
       'sub-personality': 'A',
@@ -11962,6 +12251,7 @@ const data = [
       house_flooring: 'Wooden-Knot Flooring',
       house_music: 'Go K.K. Rider',
       house_music_note: '',
+      umbrella: 'rainbow umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ミラコ',
@@ -11990,7 +12280,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/8c/Miranda_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/04/Miranda%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/88/Miranda%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/83/Miranda_NH_Villager_Icon.png',
       quote: 'If the world is flooded, it will be easy for the duck.',
       'sub-personality': 'B',
@@ -12008,6 +12298,7 @@ const data = [
       house_flooring: 'Brown Iron-Parquet Flooring',
       house_music: 'K.K. Sonata',
       house_music_note: '',
+      umbrella: 'lacy parasol',
     },
     appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ミランダ',
@@ -12036,7 +12327,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/63/Mitzi_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/e1/Mitzi%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/04/Mitzi%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/67/Mitzi_NH_Villager_Icon.png',
       quote: 'Practice makes purrrfect!',
       'sub-personality': 'B',
@@ -12054,6 +12345,7 @@ const data = [
       house_flooring: 'Light Herringbone Flooring',
       house_music: 'K.K. Love Song',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'raindrop umbrella',
     },
     appearances: [
       'DNM',
@@ -12092,7 +12384,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a4/Moe_NH.png',
-      photo_url: 'https://dodo.ac/np/images/d/d6/Moe%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/7/76/Moe%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/03/Moe_NH_Villager_Icon.png',
       quote: 'Ignorance is bliss.',
       'sub-personality': 'B',
@@ -12109,6 +12401,7 @@ const data = [
       house_flooring: 'Stripe Flooring',
       house_music: 'Two Days Ago',
       house_music_note: '',
+      umbrella: 'pineapple umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ジンペイ',
@@ -12137,7 +12430,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/29/Molly_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/21/Molly%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/41/Molly%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d8/Molly_NH_Villager_Icon.png',
       quote: "Like water off a duck's back.",
       'sub-personality': 'A',
@@ -12155,6 +12448,7 @@ const data = [
       house_flooring: 'Light Herringbone Flooring',
       house_music: 'K.K. Ballad',
       house_music_note: '',
+      umbrella: 'white shiny-bows parasol',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'カモミ',
@@ -12183,7 +12477,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/cc/Monique_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/17/Monique%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/ca/Monique%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/22/Monique_NH_Villager_Icon.png',
       quote: 'All publicity is good publicity!',
       'sub-personality': 'B',
@@ -12201,6 +12495,7 @@ const data = [
       house_flooring: 'Rosewood Flooring',
       house_music: "K.K. Cruisin'",
       house_music_note: '',
+      umbrella: 'purple chic umbrella',
     },
     appearances: [
       'DNM',
@@ -12240,7 +12535,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d7/Monty_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f7/Monty%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/83/Monty%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/15/Monty_NH_Villager_Icon.png',
       quote: 'No news is good news.',
       'sub-personality': 'B',
@@ -12258,8 +12553,9 @@ const data = [
       house_flooring: 'Forest Flooring',
       house_music: 'To the Edge',
       house_music_note: '',
+      umbrella: 'camo umbrella',
     },
-    appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'サルモンティ',
     ja_phrase: 'バナーナ',
   },
@@ -12286,7 +12582,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/ee/Moose_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/29/Moose%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/2b/Moose%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/47/Moose_NH_Villager_Icon.png',
       quote: 'A cornered rat will summon the courage to bite a cat.',
       'sub-personality': 'B',
@@ -12304,8 +12600,9 @@ const data = [
       house_flooring: 'Blue Camo Flooring',
       house_music: 'K.K. Rockabilly',
       house_music_note: '',
+      umbrella: 'gelato umbrella',
     },
-    appearances: ['CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ピン',
     ja_phrase: 'にゃろ',
   },
@@ -12331,8 +12628,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b8/Mott_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/2/2c/Mott%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/8/88/Mott%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/40/Mott_NH_Villager_Icon.png',
       quote: "The lion's share goes to the lion.",
       'sub-personality': 'B',
@@ -12349,8 +12645,9 @@ const data = [
       house_flooring: 'Pine-Board Flooring',
       house_music: 'K.K. Fusion',
       house_music_note: '',
+      umbrella: 'camo umbrella',
     },
-    appearances: ['CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'リック',
     ja_phrase: 'ハハハ',
   },
@@ -12377,7 +12674,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/16/Muffy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/a0/Muffy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/e5/Muffy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/73/Muffy_NH_Villager_Icon.png',
       quote: "There's a black sheep in every family.",
       'sub-personality': 'A',
@@ -12395,6 +12692,7 @@ const data = [
       house_flooring: 'Purple Moroccan Flooring',
       house_music: 'K.K. Sonata',
       house_music_note: '',
+      umbrella: 'black chic umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'フリル',
@@ -12423,7 +12721,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7c/Murphy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/95/Murphy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/cc/Murphy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/93/Murphy_NH_Villager_Icon.png',
       quote: 'More money, more problems.',
       'sub-personality': 'A',
@@ -12441,6 +12739,7 @@ const data = [
       house_flooring: 'Jungle Flooring',
       house_music: 'K.K. Safari',
       house_music_note: '',
+      umbrella: 'maple-leaf umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'のりお',
@@ -12468,7 +12767,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b8/Nan_NH.png',
-      photo_url: 'https://dodo.ac/np/images/3/33/Nan%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/2/24/Nan%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/df/Nan_NH_Villager_Icon.png',
       quote: 'Nanny-nanny boo-boo!',
       'sub-personality': 'B',
@@ -12485,6 +12784,7 @@ const data = [
       house_flooring: 'White Iron-Parquet Flooring',
       house_music: 'K.K. Étude',
       house_music_note: '',
+      umbrella: 'raindrop umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'スミ',
@@ -12512,8 +12812,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b1/Nana_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/e/e7/Nana%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/4/46/Nana%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/26/Nana_NH_Villager_Icon.png',
       quote: 'Bread always falls peanut-butter side down.',
       'sub-personality': 'B',
@@ -12530,6 +12829,7 @@ const data = [
       house_flooring: 'Cork Flooring',
       house_music: 'K.K. Ballad',
       house_music_note: '',
+      umbrella: 'picnic umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'チッチ',
@@ -12558,7 +12858,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/f6/Naomi_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b5/Naomi%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/0d/Naomi%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a8/Naomi_NH_Villager_Icon.png',
       quote: "Moo like there's no tomorrow.",
       'sub-personality': 'A',
@@ -12576,6 +12876,7 @@ const data = [
       house_flooring: 'Lobby Flooring',
       house_music: 'K.K. Milonga',
       house_music_note: '',
+      umbrella: 'spider umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ハナコ',
@@ -12603,8 +12904,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/55/Nate_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/9/9f/Nate%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/c/c0/Nate%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/72/Nate_NH_Villager_Icon.png',
       quote: 'Be true to yourself.',
       'sub-personality': 'B',
@@ -12621,6 +12921,7 @@ const data = [
       house_flooring: 'Daisy Meadow',
       house_music: 'Forest Life',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'watermelon umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'バッカス',
@@ -12649,7 +12950,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/97/Nibbles_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/00/Nibbles%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/76/Nibbles%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/26/Nibbles_NH_Villager_Icon.png',
       quote: 'Appearances are, like, totally deceiving.',
       'sub-personality': 'B',
@@ -12667,8 +12968,20 @@ const data = [
       house_flooring: 'Olive Moroccan Flooring',
       house_music: 'K.K. Disco',
       house_music_note: '',
+      umbrella: 'watermelon umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: [
+      'DNM',
+      'AC',
+      'E_PLUS',
+      'WW',
+      'CF',
+      'NL',
+      'WA',
+      'NH',
+      'HHD',
+      'PC',
+    ],
     ja_name: 'ガリガリ',
     ja_phrase: 'ガジガジ',
   },
@@ -12695,7 +13008,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/e7/Norma_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c9/Norma%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/9f/Norma%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/69/Norma_NH_Villager_Icon.png',
       quote: "If you want what you have, then you'll have what you want.",
       'sub-personality': 'A',
@@ -12713,6 +13026,7 @@ const data = [
       house_flooring: 'Daisy Meadow',
       house_music: 'Mountain Song',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'cherry umbrella',
     },
     appearances: ['E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'いさこ',
@@ -12720,7 +13034,7 @@ const data = [
   },
   {
     name: "O'Hare",
-    url: "https://nookipedia.com/wiki/O'Hare",
+    url: 'https://nookipedia.com/wiki/O%27Hare',
     alt_name: '',
     title_color: '7a2500',
     text_color: 'fffce9',
@@ -12741,7 +13055,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/cf/O%27Hare_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/d6/O%27Hare%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/11/O%27Hare%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b2/O%27Hare_NH_Villager_Icon.png',
       quote: "It's not old; it's vintage.",
       'sub-personality': 'B',
@@ -12759,6 +13073,7 @@ const data = [
       house_flooring: 'Water Flooring',
       house_music: 'K.K. Island',
       house_music_note: '',
+      umbrella: 'gelato umbrella',
     },
     appearances: ['AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'サントス',
@@ -12787,7 +13102,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/1b/Octavian_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/cd/Octavian%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c2/Octavian%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a0/Octavian_NH_Villager_Icon.png',
       quote: "Don't be a sucker!",
       'sub-personality': 'B',
@@ -12805,6 +13120,7 @@ const data = [
       house_flooring: 'Lunar Surface',
       house_music: 'K.K. D&B',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'vinyl umbrella',
     },
     appearances: [
       'DNM',
@@ -12843,8 +13159,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/11/Olaf_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/c/c3/Olaf%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/a/ab/Olaf%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/78/Olaf_NH_Villager_Icon.png',
       quote: 'Keep your nose clean.',
       'sub-personality': 'A',
@@ -12861,8 +13176,9 @@ const data = [
       house_flooring: 'Simple Red Flooring',
       house_music: 'K.K. Milonga',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'spider umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アントニオ',
     ja_phrase: 'ムーチョ',
   },
@@ -12889,7 +13205,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/5c/Olive_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/63/Olive%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/77/Olive%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/db/Olive_NH_Villager_Icon.png',
       quote: 'Sticky fingers attract bees.',
       'sub-personality': 'A',
@@ -12907,6 +13223,7 @@ const data = [
       house_flooring: 'Mint Dot Flooring',
       house_music: 'Neapolitan',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'mush umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ピッコロ',
@@ -12935,7 +13252,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/36/Olivia_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/79/Olivia%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/6f/Olivia%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/1e/Olivia_NH_Villager_Icon.png',
       quote: "There's an exception to every rule.",
       'sub-personality': 'B',
@@ -12953,6 +13270,7 @@ const data = [
       house_flooring: 'Simple Blue Flooring',
       house_music: 'K.K. Sonata',
       house_music_note: '',
+      umbrella: 'black chic umbrella',
     },
     appearances: [
       'DNM',
@@ -12992,8 +13310,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/ce/Opal_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/1/1e/Opal%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/c/c1/Opal%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/78/Opal_NH_Villager_Icon.png',
       quote:
         "However little you think of an elephant, you can't say it won't fill a pot.",
@@ -13011,6 +13328,7 @@ const data = [
       house_flooring: 'Olive Moroccan Flooring',
       house_music: "K.K. Cruisin'",
       house_music_note: '',
+      umbrella: 'striped umbrella',
     },
     appearances: [
       'DNM',
@@ -13050,7 +13368,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3a/Ozzie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/40/Ozzie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/27/Ozzie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/cb/Ozzie_NH_Villager_Icon.png',
       quote: 'Half a loaf is better than none.',
       'sub-personality': 'B',
@@ -13068,8 +13386,9 @@ const data = [
       house_flooring: 'Cork Flooring',
       house_music: 'Mr. K.K.',
       house_music_note: '',
+      umbrella: 'mint umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ドングリ',
     ja_phrase: 'ククッ',
   },
@@ -13096,7 +13415,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/ec/Pancetti_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c0/Pancetti%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/95/Pancetti%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/40/Pancetti_NH_Villager_Icon.png',
       quote: 'Always get it in writing.',
       'sub-personality': 'A',
@@ -13114,6 +13433,7 @@ const data = [
       house_flooring: 'Yellow Floral Flooring',
       house_music: "K.K. Cruisin'",
       house_music_note: '',
+      umbrella: 'pink umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ブリトニー',
@@ -13142,7 +13462,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d5/Pango_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/57/Pango%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/5/53/Pango%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/7f/Pango_NH_Villager_Icon.png',
       quote: 'A thing of beauty is a joy forever.',
       'sub-personality': 'B',
@@ -13160,6 +13480,7 @@ const data = [
       house_flooring: 'Gold Iron-Parquet Flooring',
       house_music: 'K.K. Oasis',
       house_music_note: '',
+      umbrella: 'sunny parasol',
     },
     appearances: [
       'DNM',
@@ -13199,7 +13520,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/59/Paolo_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/d3/Paolo%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/44/Paolo%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/df/Paolo_NH_Villager_Icon.png',
       quote: 'When it works, it works.',
       'sub-personality': 'A',
@@ -13217,6 +13538,7 @@ const data = [
       house_flooring: 'Blue Mosaic-Tile Flooring',
       house_music: 'To the Edge',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'beach umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'パオロ',
@@ -13244,8 +13566,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a7/Papi_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/3/36/Papi%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/d/de/Papi%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/09/Papi_NH_Villager_Icon.png',
       quote: 'Never say neigh.',
       'sub-personality': 'A',
@@ -13262,8 +13583,9 @@ const data = [
       house_flooring: 'Jointed-Mat Flooring',
       house_music: 'Hypno K.K.',
       house_music_note: '',
+      umbrella: 'green umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'オカッピ',
     ja_phrase: 'だっけ',
   },
@@ -13290,7 +13612,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3e/Pashmina_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f7/Pashmina%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/8f/Pashmina%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/6b/Pashmina_NH_Villager_Icon.png',
       quote: 'Before you judge someone, walk a mile in their hooves.',
       'sub-personality': 'A',
@@ -13308,8 +13630,9 @@ const data = [
       house_flooring: 'Cute White-Tile Flooring',
       house_music: 'K.K. Disco',
       house_music_note: '',
+      umbrella: 'tartan-check umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'バーバラ',
     ja_phrase: 'かな',
   },
@@ -13335,8 +13658,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/6b/Pate_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/b/b9/Pate%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/7/79/Pate%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e5/Pate_NH_Villager_Icon.png',
       quote: "A duck won't bite you.",
       'sub-personality': 'B',
@@ -13353,6 +13675,7 @@ const data = [
       house_flooring: 'Hexagonal Floral Flooring',
       house_music: 'K.K. Soul',
       house_music_note: '',
+      umbrella: 'cherry umbrella',
     },
     appearances: [
       'DNM',
@@ -13392,7 +13715,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/f1/Patty_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/84/Patty%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c0/Patty%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/fe/Patty_NH_Villager_Icon.png',
       quote: 'A friend in need is a friend indeed!',
       'sub-personality': 'B',
@@ -13410,6 +13733,7 @@ const data = [
       house_flooring: 'Wildflower Meadow',
       house_music: 'K.K. Calypso',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'pear umbrella',
     },
     appearances: [
       'DNM',
@@ -13449,7 +13773,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/0f/Paula_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b3/Paula%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/d/d4/Paula%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e4/Paula_NH_Villager_Icon.png',
       quote: 'Trends always make a comeback.',
       'sub-personality': 'B',
@@ -13467,8 +13791,9 @@ const data = [
       house_flooring: 'Berry-Chocolates Flooring',
       house_music: 'K.K. Disco',
       house_music_note: '',
+      umbrella: 'rainbow umbrella',
     },
-    appearances: ['E_PLUS', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'レイチェル',
     ja_phrase: 'ヤッホー',
   },
@@ -13495,7 +13820,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/0d/Peaches_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/57/Peaches%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/fc/Peaches%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e3/Peaches_NH_Villager_Icon.png',
       quote: 'Every day is a gift.',
       'sub-personality': 'B',
@@ -13513,6 +13838,7 @@ const data = [
       house_flooring: 'Dirt Flooring',
       house_music: 'Forest Life',
       house_music_note: '',
+      umbrella: 'blue dot parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ドサコ',
@@ -13541,7 +13867,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d5/Peanut_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/ec/Peanut%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a8/Peanut%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/4b/Peanut_NH_Villager_Icon.png',
       quote: 'Never take a nibble when you can take a bite.',
       'sub-personality': 'B',
@@ -13559,6 +13885,7 @@ const data = [
       house_flooring: 'Cute White-Tile Flooring',
       house_music: 'Forest Life',
       house_music_note: '',
+      umbrella: 'cherry umbrella',
     },
     appearances: [
       'DNM',
@@ -13598,7 +13925,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/60/Pecan_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/95/Pecan%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/e0/Pecan%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/12/Pecan_NH_Villager_Icon.png',
       quote: "Promises are like pie crusts— they're made to be broken.",
       'sub-personality': 'B',
@@ -13616,6 +13943,7 @@ const data = [
       house_flooring: 'Simple White Flooring',
       house_music: 'K.K. Love Song',
       house_music_note: '',
+      umbrella: 'lacy parasol',
     },
     appearances: [
       'DNM',
@@ -13654,8 +13982,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/44/Peck_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/3/30/Peck%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/1/1a/Peck%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c8/Peck_NH_Villager_Icon.png',
       quote: 'The best defense is a good offense.',
       'sub-personality': 'A',
@@ -13672,6 +13999,7 @@ const data = [
       house_flooring: 'Blue-Paint Flooring',
       house_music: 'My Place',
       house_music_note: '',
+      umbrella: 'orange umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ふみたろう',
@@ -13700,7 +14028,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/2a/Peewee_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/9d/Peewee%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/26/Peewee%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/24/Peewee_NH_Villager_Icon.png',
       quote: 'Look behind you.',
       'sub-personality': 'B',
@@ -13718,6 +14046,7 @@ const data = [
       house_flooring: 'Concrete Flooring',
       house_music: 'K.K. Rock',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: [
       'DNM',
@@ -13757,7 +14086,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/28/Peggy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/99/Peggy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/f0/Peggy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d9/Peggy_NH_Villager_Icon.png',
       quote: "We're all diamonds in the rough.",
       'sub-personality': 'B',
@@ -13775,6 +14104,7 @@ const data = [
       house_flooring: 'Birch Flooring',
       house_music: 'K.K. Bossa',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'apple umbrella',
     },
     appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ちえり',
@@ -13803,7 +14133,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/df/Pekoe_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/40/Pekoe%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/90/Pekoe%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c4/Pekoe_NH_Villager_Icon.png',
       quote: 'Let bygones be bygones.',
       'sub-personality': 'B',
@@ -13821,6 +14151,7 @@ const data = [
       house_flooring: 'Bamboo Flooring',
       house_music: 'Imperial K.K.',
       house_music_note: '',
+      umbrella: 'exquisite parasol',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ジャスミン',
@@ -13849,7 +14180,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/15/Penelope_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/55/Penelope%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/0b/Penelope%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/32/Penelope_NH_Villager_Icon.png',
       quote: 'One mile or a thousand makes no difference to love.',
       'sub-personality': 'A',
@@ -13867,6 +14198,7 @@ const data = [
       house_flooring: 'Red Dot Flooring',
       house_music: 'Bubblegum K.K.',
       house_music_note: '',
+      umbrella: 'mini-flower-print umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'チューこ',
@@ -13895,7 +14227,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7e/Petri_amiibo.png',
       photo_url:
-        'https://dodo.ac/np/images/e/ec/Petri%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/09/Petri%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/59/Petri_NH_Villager_Icon.png',
       quote: 'Our DNA is only the beginning of the story.',
       'sub-personality': 'A',
@@ -13913,6 +14245,7 @@ const data = [
       house_flooring: 'Green Rubber Flooring',
       house_music: 'Pondering',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'hydrangea umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'リカ',
@@ -13940,8 +14273,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/f2/Phil_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/b/ba/Phil%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/b/bf/Phil%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/15/Phil_NH_Villager_Icon.png',
       quote: 'Best not to say too much.',
       'sub-personality': 'A',
@@ -13958,8 +14290,9 @@ const data = [
       house_flooring: 'Simple Red Flooring',
       house_music: 'K.K. Moody',
       house_music_note: '',
+      umbrella: 'red umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ケイン',
     ja_phrase: 'ホロロ',
   },
@@ -13986,7 +14319,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/50/Phoebe_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f9/Phoebe%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/e0/Phoebe%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/71/Phoebe_NH_Villager_Icon.png',
       quote: "You can't keep a good bird down.",
       'sub-personality': 'A',
@@ -14004,6 +14337,7 @@ const data = [
       house_flooring: 'Lava Flooring',
       house_music: 'K.K. Flamenco',
       house_music_note: '',
+      umbrella: 'spider umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ヒノコ',
@@ -14032,7 +14366,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/80/Pierce_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/04/Pierce%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/97/Pierce%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/8d/Pierce_NH_Villager_Icon.png',
       quote: 'When someone says fly, you ask how high!',
       'sub-personality': 'B',
@@ -14050,6 +14384,7 @@ const data = [
       house_flooring: 'Simple Blue Flooring',
       house_music: 'K.K. Gumbo',
       house_music_note: '',
+      umbrella: 'beach umbrella',
     },
     appearances: [
       'DNM',
@@ -14089,7 +14424,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/fb/Pietro_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/27/Pietro%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a5/Pietro%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/56/Pietro_NH_Villager_Icon.png',
       quote: 'Be the class clown.',
       'sub-personality': 'A',
@@ -14107,6 +14442,7 @@ const data = [
       house_flooring: 'Cloud Flooring',
       house_music: 'K.K. Parade',
       house_music_note: '',
+      umbrella: 'rainbow umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ジュペッティ',
@@ -14135,7 +14471,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/bf/Pinky_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/61/Pinky%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/2c/Pinky%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0f/Pinky_NH_Villager_Icon.png',
       quote: 'Time spent with friends is time well spent.',
       'sub-personality': 'B',
@@ -14153,6 +14489,7 @@ const data = [
       house_flooring: 'Floral Rush-Mat Flooring',
       house_music: 'Imperial K.K.',
       house_music_note: '',
+      umbrella: 'exquisite parasol',
     },
     appearances: [
       'DNM',
@@ -14192,7 +14529,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/09/Piper_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/60/Piper%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/31/Piper%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/ec/Piper_NH_Villager_Icon.png',
       quote: "Where there's life, there's hope.",
       'sub-personality': 'A',
@@ -14210,6 +14547,7 @@ const data = [
       house_flooring: 'Monochromatic Tile Flooring',
       house_music: 'K.K. Synth',
       house_music_note: '',
+      umbrella: 'purple chic umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'レイコ',
@@ -14238,7 +14576,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a1/Pippy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/5b/Pippy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/9c/Pippy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/6b/Pippy_NH_Villager_Icon.png',
       quote: 'Fake it till you make it.',
       'sub-personality': 'B',
@@ -14256,6 +14594,7 @@ const data = [
       house_flooring: 'Blue-Paint Flooring',
       house_music: "Drivin'",
       house_music_note: '',
+      umbrella: 'mint umbrella',
     },
     appearances: [
       'DNM',
@@ -14295,7 +14634,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/63/Plucky_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f1/Plucky%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/9b/Plucky%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/5d/Plucky_NH_Villager_Icon.png',
       quote: 'Keep your crumbs out of the bed.',
       'sub-personality': 'A',
@@ -14313,6 +14652,7 @@ const data = [
       house_flooring: 'Starry-Sands Flooring',
       house_music: 'K.K. Island',
       house_music_note: '',
+      umbrella: 'orange umbrella',
     },
     appearances: ['AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'パタヤ',
@@ -14341,7 +14681,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/32/Pompom_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/14/Pompom%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/fe/Pompom%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/91/Pompom_NH_Villager_Icon.png',
       quote: 'Happiness is a rainy day!',
       'sub-personality': 'B',
@@ -14359,6 +14699,7 @@ const data = [
       house_flooring: 'Green Retro Flooring',
       house_music: 'K.K. Soul',
       house_music_note: '',
+      umbrella: 'peach umbrella',
     },
     appearances: [
       'DNM',
@@ -14398,7 +14739,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/f0/Poncho_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/55/Poncho%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/eb/Poncho%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/44/Poncho_NH_Villager_Icon.png',
       quote: 'Fortune favors the brave!',
       'sub-personality': 'B',
@@ -14416,6 +14757,7 @@ const data = [
       house_flooring: 'Blue-Paint Flooring',
       house_music: 'K.K. Blues',
       house_music_note: '',
+      umbrella: 'kiwi umbrella',
     },
     appearances: [
       'DNM',
@@ -14455,7 +14797,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c4/Poppy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/41/Poppy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/42/Poppy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/44/Poppy_NH_Villager_Icon.png',
       quote: "It's all about positive thinking!",
       'sub-personality': 'B',
@@ -14473,6 +14815,7 @@ const data = [
       house_flooring: 'Colored-Leaves Flooring',
       house_music: 'Forest Life',
       house_music_note: '',
+      umbrella: 'mini-flower-print umbrella',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'グミ',
@@ -14501,7 +14844,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/ce/Portia_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/0c/Portia%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a2/Portia%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/de/Portia_NH_Villager_Icon.png',
       quote: 'Charity begins at home.',
       'sub-personality': 'B',
@@ -14519,6 +14862,7 @@ const data = [
       house_flooring: 'Rosewood Flooring',
       house_music: 'K.K. Disco',
       house_music_note: '',
+      umbrella: 'red chic umbrella',
     },
     appearances: [
       'DNM',
@@ -14558,7 +14902,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a6/Prince_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/29/Prince%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/9a/Prince%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/99/Prince_NH_Villager_Icon.png',
       quote: 'Catch more flies with honey than vinegar.',
       'sub-personality': 'B',
@@ -14576,6 +14920,7 @@ const data = [
       house_flooring: 'Daisy Meadow',
       house_music: 'Only Me',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'gelato umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'カール',
@@ -14603,8 +14948,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/53/Puck_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/e/e6/Puck%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/5/5d/Puck%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/6b/Puck_NH_Villager_Icon.png',
       quote: 'A bad attitude will land you in the penalty box.',
       'sub-personality': 'B',
@@ -14621,6 +14965,7 @@ const data = [
       house_flooring: 'Ice Flooring',
       house_music: 'K.K. March',
       house_music_note: '',
+      umbrella: 'ghost umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ホッケー',
@@ -14649,7 +14994,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/f9/Puddles_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/7b/Puddles%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/04/Puddles%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f8/Puddles_NH_Villager_Icon.png',
       quote: 'Look before you leap.',
       'sub-personality': 'B',
@@ -14667,8 +15012,20 @@ const data = [
       house_flooring: 'Mint Dot Flooring',
       house_music: 'K.K. Disco',
       house_music_note: '',
+      umbrella: 'candy umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: [
+      'DNM',
+      'AC',
+      'E_PLUS',
+      'WW',
+      'CF',
+      'NL',
+      'WA',
+      'NH',
+      'HHD',
+      'PC',
+    ],
     ja_name: 'チョキ',
     ja_phrase: 'っちゃ',
   },
@@ -14695,7 +15052,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/87/Pudge_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/0f/Pudge%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/33/Pudge%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/4a/Pudge_NH_Villager_Icon.png',
       quote: "There's no such thing as a free lunch.",
       'sub-personality': 'B',
@@ -14713,6 +15070,7 @@ const data = [
       house_flooring: 'Colorful Puzzle Flooring',
       house_music: 'K.K. Stroll',
       house_music_note: '',
+      umbrella: 'frog umbrella',
     },
     appearances: [
       'DNM',
@@ -14752,7 +15110,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/6d/Punchy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/53/Punchy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/d/d0/Punchy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/50/Punchy_NH_Villager_Icon.png',
       quote: "There's always more fish in the sea!",
       'sub-personality': 'B',
@@ -14770,6 +15128,7 @@ const data = [
       house_flooring: 'Jointed-Mat Flooring',
       house_music: 'Forest Life',
       house_music_note: '',
+      umbrella: 'frog umbrella',
     },
     appearances: ['AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ビンタ',
@@ -14798,7 +15157,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a2/Purrl_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/70/Purrl%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c1/Purrl%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a0/Purrl_NH_Villager_Icon.png',
       quote: 'Let them drink cream.',
       'sub-personality': 'B',
@@ -14816,6 +15175,7 @@ const data = [
       house_flooring: 'Dark Herringbone Flooring',
       house_music: 'K.K. Chorale',
       house_music_note: '',
+      umbrella: 'hydrangea umbrella',
     },
     appearances: [
       'DNM',
@@ -14855,7 +15215,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/f1/Queenie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/ce/Queenie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/b0/Queenie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/15/Queenie_NH_Villager_Icon.png',
       quote: 'You never get a second chance to make a first impression.',
       'sub-personality': 'B',
@@ -14873,6 +15233,7 @@ const data = [
       house_flooring: 'Dark Parquet Flooring',
       house_music: 'K.K. Gumbo',
       house_music_note: '',
+      umbrella: 'black lace umbrella',
     },
     appearances: [
       'DNM',
@@ -14912,7 +15273,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/e4/Quillson_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c5/Quillson%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/0d/Quillson%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/1c/Quillson_NH_Villager_Icon.png',
       quote: 'There is beauty in everything.',
       'sub-personality': 'A',
@@ -14930,6 +15291,7 @@ const data = [
       house_flooring: 'Simple Purple Flooring',
       house_music: 'K.K. Groove',
       house_music_note: '',
+      umbrella: 'tartan-check umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'タックン',
@@ -14958,7 +15320,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a2/Quinn_amiibo.png',
       photo_url:
-        'https://dodo.ac/np/images/e/e0/Quinn%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/07/Quinn%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/38/Quinn_NH_Villager_Icon.png',
       quote: "Step on a violet, and you'll smell forgiveness.",
       'sub-personality': 'A',
@@ -14976,6 +15338,7 @@ const data = [
       house_flooring: 'Black Iron-Parquet Flooring',
       house_music: 'K.K. Bashment',
       house_music_note: '',
+      umbrella: 'black chic umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'シオン',
@@ -15004,7 +15367,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7a/Raddle_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/02/Raddle%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a5/Raddle%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/04/Raddle_NH_Villager_Icon.png',
       quote: 'A healthy mind makes for a healthy body.',
       'sub-personality': 'A',
@@ -15022,6 +15385,7 @@ const data = [
       house_flooring: 'Green Rubber Flooring',
       house_music: 'Mr. K.K.',
       house_music_note: '',
+      umbrella: 'busted umbrella',
     },
     appearances: ['E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'カックン',
@@ -15050,7 +15414,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/e1/Rasher_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c5/Rasher%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/5/5f/Rasher%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/38/Rasher_NH_Villager_Icon.png',
       quote: "Don't judge a book by its cover.",
       'sub-personality': 'B',
@@ -15068,6 +15432,7 @@ const data = [
       house_flooring: 'Parking Flooring',
       house_music: 'K.K. Rockabilly',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: [
       'DNM',
@@ -15107,7 +15472,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/2a/Raymond_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/7/78/Raymond%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/fe/Raymond%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f2/Raymond_NH_Villager_Icon.png',
       quote: 'Stay on brand!',
       'sub-personality': 'B',
@@ -15125,6 +15490,7 @@ const data = [
       house_flooring: 'Monochromatic Tile Flooring',
       house_music: "K.K. Cruisin'",
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'bat umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'ジャック',
@@ -15132,7 +15498,7 @@ const data = [
   },
   {
     name: 'Renée',
-    url: 'https://nookipedia.com/wiki/Renée',
+    url: 'https://nookipedia.com/wiki/Ren%C3%A9e',
     alt_name: '',
     title_color: 'ec7efc',
     text_color: 'fffce9',
@@ -15153,7 +15519,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/ef/Ren%C3%A9e_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/de/Ren%C3%A9e%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/0f/Ren%C3%A9e%27s_Photo_NH_Texture.png',
       icon_url:
         'https://dodo.ac/np/images/f/f6/Ren%C3%A9e_NH_Villager_Icon.png',
       quote: 'Reckless youth makes rueful age.',
@@ -15172,8 +15538,9 @@ const data = [
       house_flooring: 'Tiger-Print Flooring',
       house_music: "Surfin' K.K.",
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'おさい',
     ja_phrase: 'パネェ',
   },
@@ -15200,7 +15567,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/92/Reneigh_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/e/e0/Reneigh%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/b6/Reneigh%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f4/Reneigh_NH_Villager_Icon.png',
       quote: 'You can only be you, so be the best you that you can be.',
       'sub-personality': 'A',
@@ -15218,6 +15585,7 @@ const data = [
       house_flooring: 'Brown Floral Flooring',
       house_music: 'K.K. Synth',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'black lace umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'リアーナ',
@@ -15245,7 +15613,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/78/Rex_NH.png',
-      photo_url: 'https://dodo.ac/np/images/e/ee/Rex%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/1/19/Rex%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/52/Rex_NH_Villager_Icon.png',
       quote: "Three wrongs don't make a right, but three rights make a left.",
       'sub-personality': 'A',
@@ -15262,6 +15630,7 @@ const data = [
       house_flooring: 'Daisy Meadow',
       house_music: 'Wandering',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'watermelon umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'サンデー',
@@ -15290,7 +15659,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/df/Rhonda_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/80/Rhonda%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/3e/Rhonda%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/9c/Rhonda_NH_Villager_Icon.png',
       quote: "Don't look down your nose at people!",
       'sub-personality': 'B',
@@ -15308,6 +15677,7 @@ const data = [
       house_flooring: 'Simple Purple Flooring',
       house_music: 'K.K. Ballad',
       house_music_note: '',
+      umbrella: 'black lace umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ユメコ',
@@ -15336,7 +15706,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/94/Ribbot_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b1/Ribbot%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/d/d7/Ribbot%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/87/Ribbot_NH_Villager_Icon.png',
       quote: 'Never rest, never rust.',
       'sub-personality': 'B',
@@ -15354,6 +15724,7 @@ const data = [
       house_flooring: 'Future-Tech Flooring',
       house_music: 'K.K. Technopop',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: [
       'DNM',
@@ -15393,7 +15764,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/8d/Ricky_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/8f/Ricky%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c3/Ricky%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/dd/Ricky_NH_Villager_Icon.png',
       quote: 'You gotta break a few shells to get to the nut.',
       'sub-personality': 'B',
@@ -15411,8 +15782,9 @@ const data = [
       house_flooring: 'Swamp Flooring',
       house_music: 'K.K. Safari',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'bat umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'カジロウ',
     ja_phrase: 'キッ',
   },
@@ -15439,7 +15811,7 @@ const data = [
     nh_details: {
       image_url: '',
       photo_url:
-        'https://dodo.ac/np/images/9/9c/Rilla%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/4d/Rilla%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/bc/Rilla_NH_Villager_Icon.png',
       quote: "Where there's a will, there's a way.",
       'sub-personality': 'A',
@@ -15457,6 +15829,7 @@ const data = [
       house_flooring: 'Hello Kitty Flooring',
       house_music: 'Bubblegum K.K.',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'Toad parasol',
     },
     appearances: ['WA', 'NH', 'PC'],
     ja_name: 'リラ',
@@ -15484,7 +15857,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7e/Rio_amiibo.png',
-      photo_url: 'https://dodo.ac/np/images/a/ab/Rio%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/f/f5/Rio%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/12/Rio_NH_Villager_Icon.png',
       quote: 'Self-care? Best care.',
       'sub-personality': 'B',
@@ -15501,6 +15874,7 @@ const data = [
       house_flooring: 'Rosewood Flooring',
       house_music: 'K.K. Chorinho',
       house_music_note: '',
+      umbrella: 'kiwi umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'NH', 'PC'],
     ja_name: 'デジャネイロ',
@@ -15529,7 +15903,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/69/Rizzo_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/ac/Rizzo%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/70/Rizzo%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/7c/Rizzo_NH_Villager_Icon.png',
       quote: 'Evil lurks everywhere.',
       'sub-personality': 'B',
@@ -15547,6 +15921,7 @@ const data = [
       house_flooring: 'Dirt Flooring',
       house_music: 'K.K. Folk',
       house_music_note: '',
+      umbrella: 'paper parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ちょろきち',
@@ -15575,7 +15950,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/63/Roald_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/54/Roald%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/fc/Roald%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c4/Roald_NH_Villager_Icon.png',
       quote: 'You must learn to waddle before you can swim.',
       'sub-personality': 'B',
@@ -15593,6 +15968,7 @@ const data = [
       house_flooring: 'Iceberg Flooring',
       house_music: 'K.K. March',
       house_music_note: '',
+      umbrella: 'two-tone umbrella',
     },
     appearances: [
       'DNM',
@@ -15632,7 +16008,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/85/Robin_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/15/Robin%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/3c/Robin%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/eb/Robin_NH_Villager_Icon.png',
       quote: 'Always keep your wings manicured so you can fly away.',
       'sub-personality': 'B',
@@ -15650,6 +16026,7 @@ const data = [
       house_flooring: 'Brown Argyle-Tile Flooring',
       house_music: "K.K. Cruisin'",
       house_music_note: '',
+      umbrella: 'hydrangea umbrella',
     },
     appearances: [
       'DNM',
@@ -15689,7 +16066,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/02/Rocco_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/9d/Rocco%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/f/fb/Rocco%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/36/Rocco_NH_Villager_Icon.png',
       quote: 'The only thing to fear is fear itself... and wasps!',
       'sub-personality': 'B',
@@ -15707,6 +16084,7 @@ const data = [
       house_flooring: 'Construction-Site Flooring',
       house_music: 'K.K. Lament',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'two-tone umbrella',
     },
     appearances: [
       'DNM',
@@ -15746,7 +16124,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/58/Rocket_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/6a/Rocket%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/1c/Rocket%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/eb/Rocket_NH_Villager_Icon.png',
       quote: 'Art feeds the soul. So does pizza.',
       'sub-personality': 'B',
@@ -15764,6 +16142,7 @@ const data = [
       house_flooring: 'Monochromatic Tile Flooring',
       house_music: 'K.K. Adventure',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: '４ごう',
@@ -15791,7 +16170,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/ea/Rod_NH.png',
-      photo_url: 'https://dodo.ac/np/images/8/84/Rod%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/c/ca/Rod%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/16/Rod_NH_Villager_Icon.png',
       quote: "If you can't beat 'em, work harder.",
       'sub-personality': 'B',
@@ -15808,6 +16187,7 @@ const data = [
       house_flooring: 'Ship Deck',
       house_music: 'K.K. March',
       house_music_note: '',
+      umbrella: 'two-tone umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ジャン',
@@ -15836,7 +16216,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/6c/Rodeo_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/93/Rodeo%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/8a/Rodeo%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/99/Rodeo_NH_Villager_Icon.png',
       quote: 'Zzzzzzzzzzzzzzzzz...',
       'sub-personality': 'B',
@@ -15854,6 +16234,7 @@ const data = [
       house_flooring: 'Monochromatic Tile Flooring',
       house_music: 'K.K. Technopop',
       house_music_note: '',
+      umbrella: 'ghost umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ロデオ',
@@ -15882,7 +16263,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/35/Rodney_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/a1/Rodney%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/35/Rodney%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/14/Rodney_NH_Villager_Icon.png',
       quote: 'Everything is temporary.',
       'sub-personality': 'A',
@@ -15900,6 +16281,7 @@ const data = [
       house_flooring: 'Green Vinyl Flooring',
       house_music: 'K.K. Rockabilly',
       house_music_note: '',
+      umbrella: 'mush umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ジミー',
@@ -15927,8 +16309,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/93/Rolf_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/4/4a/Rolf%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/4/47/Rolf%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/08/Rolf_NH_Villager_Icon.png',
       quote: "Don't skip lunch. Ever.",
       'sub-personality': 'B',
@@ -15945,6 +16326,7 @@ const data = [
       house_flooring: 'Flowing-River Flooring',
       house_music: 'K.K. Condor',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'snowflake umbrella',
     },
     appearances: [
       'DNM',
@@ -15984,7 +16366,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/79/Rooney_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/42/Rooney%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/1f/Rooney%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/fc/Rooney_NH_Villager_Icon.png',
       quote: 'Bob and weave! Bob and weave!',
       'sub-personality': 'A',
@@ -16002,6 +16384,7 @@ const data = [
       house_flooring: 'Steel Flooring',
       house_music: 'K.K. Adventure',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'マイク',
@@ -16029,8 +16412,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/db/Rory_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/7/78/Rory%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/e/ec/Rory%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/fa/Rory_NH_Villager_Icon.png',
       quote: "Set 'em up and knock 'em down.",
       'sub-personality': 'A',
@@ -16047,6 +16429,7 @@ const data = [
       house_flooring: 'Starry-Sands Flooring',
       house_music: 'K.K. Faire',
       house_music_note: '',
+      umbrella: 'blue umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アーサー',
@@ -16075,7 +16458,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/8e/Roscoe_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/32/Roscoe%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/63/Roscoe%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f9/Roscoe_NH_Villager_Icon.png',
       quote: 'Trouble rides a fast horse.',
       'sub-personality': 'B',
@@ -16093,6 +16476,7 @@ const data = [
       house_flooring: 'Monochromatic Tile Flooring',
       house_music: 'K.K. D&B',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'シュバルツ',
@@ -16121,7 +16505,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/67/Rosie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/31/Rosie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/bf/Rosie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/92/Rosie_NH_Villager_Icon.png',
       quote: 'One good purr deserves another.',
       'sub-personality': 'A',
@@ -16139,6 +16523,7 @@ const data = [
       house_flooring: 'Blue-Paint Flooring',
       house_music: 'Bubblegum K.K.',
       house_music_note: '',
+      umbrella: 'candy umbrella',
     },
     appearances: [
       'DNM',
@@ -16179,7 +16564,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/df/Roswell_amiibo.png',
       photo_url:
-        'https://dodo.ac/np/images/3/3b/Roswell%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/05/Roswell%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/77/Roswell_NH_Villager_Icon.png',
       quote: 'Keep your eyes on the skies.',
       'sub-personality': 'A',
@@ -16197,6 +16582,7 @@ const data = [
       house_flooring: 'Sandlot',
       house_music: 'K.K. Khoomei',
       house_music_note: '',
+      umbrella: 'beach umbrella',
     },
     appearances: ['E_PLUS', 'NH', 'PC'],
     ja_name: 'ピロンコン',
@@ -16225,7 +16611,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/df/Rowan_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/d4/Rowan%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/b4/Rowan%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/17/Rowan_NH_Villager_Icon.png',
       quote: 'Refuse to lose.',
       'sub-personality': 'B',
@@ -16243,6 +16629,7 @@ const data = [
       house_flooring: 'Tiger-Print Flooring',
       house_music: "Surfin' K.K.",
       house_music_note: '',
+      umbrella: 'kabuki umbrella',
     },
     appearances: ['AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ゴメス',
@@ -16270,8 +16657,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/41/Ruby_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/0/06/Ruby%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/f/f0/Ruby%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/3a/Ruby_NH_Villager_Icon.png',
       quote: 'You can always take the red-eye.',
       'sub-personality': 'B',
@@ -16288,6 +16674,7 @@ const data = [
       house_flooring: 'Lunar Surface',
       house_music: 'Stale Cupcakes',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'lemon umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ルナ',
@@ -16315,8 +16702,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7e/Rudy_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/7/70/Rudy%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/7/79/Rudy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d4/Rudy_NH_Villager_Icon.png',
       quote: 'Always land on your feet!',
       'sub-personality': 'A',
@@ -16333,6 +16719,7 @@ const data = [
       house_flooring: 'Pine-Board Flooring',
       house_music: 'K.K. Blues',
       house_music_note: '',
+      umbrella: 'two-tone umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'チャス',
@@ -16361,7 +16748,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a3/Sally_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b3/Sally%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/6d/Sally%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/8c/Sally_NH_Villager_Icon.png',
       quote: 'Even the smallest acorn may grow into the tallest tree.',
       'sub-personality': 'B',
@@ -16379,8 +16766,20 @@ const data = [
       house_flooring: 'Dark Parquet Flooring',
       house_music: 'Only Me',
       house_music_note: '',
+      umbrella: 'raindrop umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: [
+      'DNM',
+      'AC',
+      'E_PLUS',
+      'WW',
+      'CF',
+      'NL',
+      'WA',
+      'NH',
+      'HHD',
+      'PC',
+    ],
     ja_name: 'ララミー',
     ja_phrase: 'ったら',
   },
@@ -16407,7 +16806,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/9b/Samson_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/23/Samson%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/95/Samson%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d3/Samson_NH_Villager_Icon.png',
       quote: 'Squeak softly and carry a big stick.',
       'sub-personality': 'B',
@@ -16425,6 +16824,7 @@ const data = [
       house_flooring: 'Cool-Paint Flooring',
       house_music: "Rockin' K.K.",
       house_music_note: '',
+      umbrella: 'leaf umbrella',
     },
     appearances: [
       'DNM',
@@ -16464,7 +16864,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a9/Sandy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/a1/Sandy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a6/Sandy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/97/Sandy_NH_Villager_Icon.png',
       quote: 'Soaring through the sky takes more than a pair of wings.',
       'sub-personality': 'A',
@@ -16482,6 +16882,7 @@ const data = [
       house_flooring: 'Rosewood Flooring',
       house_music: 'K.K. Soul',
       house_music_note: '',
+      umbrella: 'fairy-tale umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ラン',
@@ -16510,7 +16911,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/90/Sasha_amiibo.png',
       photo_url:
-        'https://dodo.ac/np/images/6/61/Sasha%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/87/Sasha%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/8/86/Sasha_NH_Villager_Icon.png',
       quote: 'Timing is everything.',
       'sub-personality': 'B',
@@ -16528,6 +16929,7 @@ const data = [
       house_flooring: 'Blue Dot Flooring',
       house_music: 'K.K. Lovers',
       house_music_note: '',
+      umbrella: 'patterned vinyl umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'ミッチェル',
@@ -16556,7 +16958,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/46/Savannah_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/1f/Savannah%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/20/Savannah%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c6/Savannah_NH_Villager_Icon.png',
       quote: 'Keep your chin up!',
       'sub-personality': 'B',
@@ -16574,6 +16976,7 @@ const data = [
       house_flooring: 'Zebra-Print Flooring',
       house_music: 'Forest Life',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'hydrangea umbrella',
     },
     appearances: [
       'DNM',
@@ -16613,7 +17016,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/ec/Scoot_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/bf/Scoot%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/85/Scoot%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/37/Scoot_NH_Villager_Icon.png',
       quote: 'Some birds avoid the water, ducks look for it.',
       'sub-personality': 'B',
@@ -16631,6 +17034,7 @@ const data = [
       house_flooring: 'Backyard Lawn',
       house_music: 'My Place',
       house_music_note: '',
+      umbrella: 'blue umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'マモル',
@@ -16659,7 +17063,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/72/Shari_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f8/Shari%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/96/Shari%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a0/Shari_NH_Villager_Icon.png',
       quote: 'A good start leads to a good end.',
       'sub-personality': 'A',
@@ -16677,6 +17081,7 @@ const data = [
       house_flooring: 'Rosewood Flooring',
       house_music: "K.K. Cruisin'",
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'exquisite parasol',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'シェリー',
@@ -16705,7 +17110,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/ce/Sheldon_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/16/Sheldon%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/86/Sheldon%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/9a/Sheldon_NH_Villager_Icon.png',
       quote: "Winners don't quit, and quitters never win.",
       'sub-personality': 'A',
@@ -16723,8 +17128,9 @@ const data = [
       house_flooring: 'Forest Flooring',
       house_music: 'K.K. Country',
       house_music_note: '',
+      umbrella: 'two-tone umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'クリス',
     ja_phrase: 'クリクリ',
   },
@@ -16750,8 +17156,7 @@ const data = [
     prev_phrases: ['baaa man'],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c1/Shep_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/9/9b/Shep%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/a/a8/Shep%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a8/Shep_NH_Villager_Icon.png',
       quote: "Even dogs won't get in the middle of true love.",
       'sub-personality': 'A',
@@ -16768,6 +17173,7 @@ const data = [
       house_flooring: 'Wooden-Knot Flooring',
       house_music: 'K.K. Swing',
       house_music_note: '',
+      umbrella: 'two-tone umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ボブ',
@@ -16796,7 +17202,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/18/Sherb_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/1/15/Sherb%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/5/5c/Sherb%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d9/Sherb_NH_Villager_Icon.png',
       quote: 'Forty winks is never enough.',
       'sub-personality': 'A',
@@ -16814,6 +17220,7 @@ const data = [
       house_flooring: 'Simple Purple Flooring',
       house_music: 'Hypno K.K.',
       house_music_note: '',
+      umbrella: 'vinyl umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'レム',
@@ -16842,7 +17249,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/26/Shino_amiibo.png',
       photo_url:
-        'https://dodo.ac/np/images/7/76/Shino%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/6d/Shino%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/9a/Shino_NH_Villager_Icon.png',
       quote: 'Better the demon you know than the one you do not.',
       'sub-personality': 'A',
@@ -16860,6 +17267,7 @@ const data = [
       house_flooring: 'Tatami',
       house_music: 'King K.K.',
       house_music_note: '',
+      umbrella: 'paper parasol',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'よしの',
@@ -16888,7 +17296,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/68/Simon_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/37/Simon%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c5/Simon%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/7a/Simon_NH_Villager_Icon.png',
       quote: 'Friends go together like peanut butter and bananas.',
       'sub-personality': 'B',
@@ -16906,6 +17314,7 @@ const data = [
       house_flooring: "Saharah's Desert",
       house_music: 'K.K. Safari',
       house_music_note: '',
+      umbrella: 'frog umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'エテキチ',
@@ -16933,8 +17342,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d1/Skye_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/0/08/Skye%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/9/98/Skye%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/92/Skye_NH_Villager_Icon.png',
       quote: "Love makes the world go 'round.",
       'sub-personality': 'A',
@@ -16951,6 +17359,7 @@ const data = [
       house_flooring: 'Simple White Flooring',
       house_music: 'Forest Life',
       house_music_note: '',
+      umbrella: 'lacy parasol',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'リリィ',
@@ -16978,7 +17387,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/70/Sly_NH.png',
-      photo_url: 'https://dodo.ac/np/images/9/92/Sly%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/d/d8/Sly%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/26/Sly_NH_Villager_Icon.png',
       quote: "Don't bite off more than you can chew.",
       'sub-personality': 'A',
@@ -16995,8 +17404,9 @@ const data = [
       house_flooring: 'Jungle Flooring',
       house_music: 'K.K. Safari',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'camo umbrella',
     },
-    appearances: ['NL', 'WA', 'NH', 'HHD'],
+    appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ハイド',
     ja_phrase: 'カサコソ',
   },
@@ -17023,7 +17433,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/ec/Snake_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/cc/Snake%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/32/Snake%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/09/Snake_NH_Villager_Icon.png',
       quote: 'A good ninja is neither seen nor heard.',
       'sub-personality': 'B',
@@ -17041,6 +17451,7 @@ const data = [
       house_flooring: 'Dirt Flooring',
       house_music: 'King K.K.',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'paper parasol',
     },
     appearances: [
       'DNM',
@@ -17059,7 +17470,7 @@ const data = [
   },
   {
     name: 'Snooty',
-    url: 'https://nookipedia.com/wiki/Snooty_(villager)',
+    url: 'https://nookipedia.com/wiki/Snooty%20%28villager%29',
     alt_name: '',
     title_color: 'f2bdc7',
     text_color: '634b4b',
@@ -17080,7 +17491,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/63/Snooty_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/6/66/Snooty%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/1f/Snooty%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/79/Snooty_NH_Villager_Icon.png',
       quote: 'Request forgiveness, not permission.',
       'sub-personality': 'A',
@@ -17098,6 +17509,7 @@ const data = [
       house_flooring: 'Tatami Flooring',
       house_music: 'K.K. Folk',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'kabuki umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'こまち',
@@ -17126,7 +17538,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/de/Soleil_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/ad/Soleil%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/5/5c/Soleil%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/5f/Soleil_NH_Villager_Icon.png',
       quote: 'Sometimes dreams are merely dreams.',
       'sub-personality': 'A',
@@ -17144,6 +17556,7 @@ const data = [
       house_flooring: 'Imperial Tile',
       house_music: 'K.K. Oasis',
       house_music_note: '',
+      umbrella: 'exquisite parasol',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'シャンティ',
@@ -17172,7 +17585,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/32/Sparro_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/44/Sparro%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/44/Sparro%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0c/Sparro_NH_Villager_Icon.png',
       quote: 'The proof of the pudding is in the eating.',
       'sub-personality': 'A',
@@ -17190,6 +17603,7 @@ const data = [
       house_flooring: 'Sandlot',
       house_music: 'I Love You',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'leaf umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ちゅんのすけ',
@@ -17218,7 +17632,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/f1/Spike_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/99/Spike%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/34/Spike%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/ab/Spike_NH_Villager_Icon.png',
       quote: 'Keep your eye on the ball.',
       'sub-personality': 'A',
@@ -17236,6 +17650,7 @@ const data = [
       house_flooring: 'Leopard-Print Flooring',
       house_music: 'K.K. House',
       house_music_note: '',
+      umbrella: 'beach umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'スクワット',
@@ -17264,7 +17679,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c2/Spork_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b5/Spork%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/cc/Spork%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c2/Spork_NH_Villager_Icon.png',
       quote: "It's never too late for a snack.",
       'sub-personality': 'B',
@@ -17282,8 +17697,9 @@ const data = [
       house_flooring: 'Swamp Flooring',
       house_music: 'Forest Life',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'leaf umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ポーク',
     ja_phrase: 'だブー',
   },
@@ -17310,7 +17726,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/44/Sprinkle_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f4/Sprinkle%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/7c/Sprinkle%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/7f/Sprinkle_NH_Villager_Icon.png',
       quote: 'Frosting is just the icing on the cake.',
       'sub-personality': 'A',
@@ -17328,6 +17744,7 @@ const data = [
       house_flooring: 'Ice Flooring',
       house_music: 'K.K. Marathon',
       house_music_note: '',
+      umbrella: 'patterned vinyl umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'フラッペ',
@@ -17356,7 +17773,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/8/8b/Sprocket_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/a6/Sprocket%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/cc/Sprocket%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/4a/Sprocket_NH_Villager_Icon.png',
       quote: 'Strike while the iron is hot.',
       'sub-personality': 'A',
@@ -17374,6 +17791,7 @@ const data = [
       house_flooring: 'Circuit-Board Flooring',
       house_music: 'K.K. Metal',
       house_music_note: '',
+      umbrella: 'busted umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ヘルツ',
@@ -17402,7 +17820,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/68/Static_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/47/Static%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/2a/Static%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/70/Static_NH_Villager_Icon.png',
       quote: 'Lightning never strikes twice.',
       'sub-personality': 'B',
@@ -17420,6 +17838,7 @@ const data = [
       house_flooring: 'Skull-Print Flooring',
       house_music: "Surfin' K.K.",
       house_music_note: '',
+      umbrella: 'logo umbrella',
     },
     appearances: [
       'DNM',
@@ -17459,7 +17878,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/95/Stella_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/9f/Stella%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/77/Stella%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/4e/Stella_NH_Villager_Icon.png',
       quote: '100% Natural Fiber.',
       'sub-personality': 'A',
@@ -17477,6 +17896,7 @@ const data = [
       house_flooring: 'Dark Herringbone Flooring',
       house_music: 'Only Me',
       house_music_note: '',
+      umbrella: 'petal parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'アクリル',
@@ -17505,7 +17925,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/4f/Sterling_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/db/Sterling%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/78/Sterling%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/da/Sterling_NH_Villager_Icon.png',
       quote: 'Discretion is the better part of valor.',
       'sub-personality': 'B',
@@ -17523,6 +17943,7 @@ const data = [
       house_flooring: 'Basement Flooring',
       house_music: 'K.K. Dirge',
       house_music_note: '',
+      umbrella: 'beach umbrella',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ギンカク',
@@ -17551,7 +17972,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/9c/Stinky_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/cb/Stinky%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/99/Stinky%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/ca/Stinky_NH_Villager_Icon.png',
       quote: 'If the mask fits, wear it!',
       'sub-personality': 'B',
@@ -17569,6 +17990,7 @@ const data = [
       house_flooring: 'Boxing-Ring Mat',
       house_music: 'K.K. Flamenco',
       house_music_note: '',
+      umbrella: 'busted umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アセクサ',
@@ -17597,7 +18019,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/56/Stitches_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b8/Stitches%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/26/Stitches%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/dd/Stitches_NH_Villager_Icon.png',
       quote: 'A stitch in time saves nine.',
       'sub-personality': 'B',
@@ -17615,6 +18037,7 @@ const data = [
       house_flooring: 'Patchwork-Tile Flooring',
       house_music: 'I Love You',
       house_music_note: '',
+      umbrella: 'panda umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'パッチ',
@@ -17642,7 +18065,7 @@ const data = [
     prev_phrases: ['moo-dude'],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/fa/Stu_NH.png',
-      photo_url: 'https://dodo.ac/np/images/0/0c/Stu%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/0/06/Stu%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/ea/Stu_NH_Villager_Icon.png',
       quote: 'As a cow grows, so do its nostrils.',
       'sub-personality': 'A',
@@ -17659,6 +18082,7 @@ const data = [
       house_flooring: 'Sidewalk Flooring',
       house_music: 'K.K. Rockabilly',
       house_music_note: '',
+      umbrella: 'grape umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'モーリス',
@@ -17687,7 +18111,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/3f/Sydney_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c9/Sydney%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/98/Sydney%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/ac/Sydney_NH_Villager_Icon.png',
       quote: 'Sail wherever the wind takes you.',
       'sub-personality': 'B',
@@ -17705,8 +18129,9 @@ const data = [
       house_flooring: 'Blue-Paint Flooring',
       house_music: "Drivin'",
       house_music_note: '',
+      umbrella: 'eggy parasol',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'シドニー',
     ja_phrase: 'だコアラ',
   },
@@ -17733,7 +18158,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/fc/Sylvana_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/24/Sylvana%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/6/69/Sylvana%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/b3/Sylvana_NH_Villager_Icon.png',
       quote: 'Remember to see the forest between the trees.',
       'sub-personality': 'A',
@@ -17751,6 +18176,7 @@ const data = [
       house_flooring: 'Cherry-Blossom Flooring',
       house_music: 'Spring Blossoms',
       house_music_note: '',
+      umbrella: 'kiwi umbrella',
     },
     appearances: ['E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'もんぺ',
@@ -17779,7 +18205,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/93/Sylvia_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/4c/Sylvia%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/7b/Sylvia%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/5/52/Sylvia_NH_Villager_Icon.png',
       quote: 'Hop first; ask questions later.',
       'sub-personality': 'B',
@@ -17797,6 +18223,7 @@ const data = [
       house_flooring: 'Monochromatic Tile Flooring',
       house_music: 'DJ K.K.',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'striped umbrella',
     },
     appearances: ['E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'シルビア',
@@ -17825,7 +18252,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/e0/T-Bone_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/ba/T-Bone%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/20/T-Bone%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/16/T-Bone_NH_Villager_Icon.png',
       quote: "Don't have a cow.",
       'sub-personality': 'B',
@@ -17843,6 +18270,7 @@ const data = [
       house_flooring: 'Arabesque Flooring',
       house_music: 'K.K. Steppe',
       house_music_note: '',
+      umbrella: 'logo umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ボルシチ',
@@ -17871,7 +18299,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/2f/Tabby_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/8/86/Tabby%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/8b/Tabby%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/f3/Tabby_NH_Villager_Icon.png',
       quote: 'You can never have too much of a good thing!',
       'sub-personality': 'B',
@@ -17889,6 +18317,7 @@ const data = [
       house_flooring: 'Tiger-Print Flooring',
       house_music: 'DJ K.K.',
       house_music_note: '',
+      umbrella: 'grape umbrella',
     },
     appearances: [
       'DNM',
@@ -17927,7 +18356,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/67/Tad_NH.png',
-      photo_url: 'https://dodo.ac/np/images/5/5b/Tad%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/4/41/Tad%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e6/Tad_NH_Villager_Icon.png',
       quote: 'Take a leap!',
       'sub-personality': 'A',
@@ -17944,6 +18373,7 @@ const data = [
       house_flooring: 'Field Flooring',
       house_music: 'Wandering',
       house_music_note: '',
+      umbrella: 'watermelon umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'タンボ',
@@ -17972,7 +18402,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/a8/Tammi_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/92/Tammi%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/a9/Tammi%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d8/Tammi_NH_Villager_Icon.png',
       quote: 'Always be down to monkey around!',
       'sub-personality': 'B',
@@ -17990,8 +18420,9 @@ const data = [
       house_flooring: 'Bamboo Flooring',
       house_music: 'Imperial K.K.',
       house_music_note: '',
+      umbrella: 'grape umbrella',
     },
-    appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'エイプリル',
     ja_phrase: 'ワオ',
   },
@@ -18018,7 +18449,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/aa/Tammy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/5c/Tammy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c7/Tammy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/25/Tammy_NH_Villager_Icon.png',
       quote: 'If a job is worth doing, do it right!',
       'sub-personality': 'A',
@@ -18036,6 +18467,7 @@ const data = [
       house_flooring: 'Giraffe-Print Flooring',
       house_music: 'DJ K.K.',
       house_music_note: '',
+      umbrella: 'two-tone umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'アネッサ',
@@ -18064,7 +18496,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/6f/Tangy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/2/2c/Tangy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/5/58/Tangy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e3/Tangy_NH_Villager_Icon.png',
       quote: 'When life gives you lemons, make lemonade!',
       'sub-personality': 'B',
@@ -18082,6 +18514,7 @@ const data = [
       house_flooring: 'Green Retro Flooring',
       house_music: 'I Love You',
       house_music_note: '',
+      umbrella: 'strawberry umbrella',
     },
     appearances: [
       'DNM',
@@ -18120,8 +18553,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d9/Tank_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/5/5e/Tank%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/c/c0/Tank%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a1/Tank_NH_Villager_Icon.png',
       quote: 'Remember to keep your core muscles engaged!',
       'sub-personality': 'B',
@@ -18138,6 +18570,7 @@ const data = [
       house_flooring: 'Sandlot',
       house_music: 'K.K. Lament',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'leaf umbrella',
     },
     appearances: [
       'DNM',
@@ -18177,7 +18610,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/35/Tasha_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/05/Tasha%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/20/Tasha%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/61/Tasha_NH_Villager_Icon.png',
       quote: "There's no such thing as a safe secret.",
       'sub-personality': 'A',
@@ -18195,6 +18628,7 @@ const data = [
       house_flooring: 'Rosewood Flooring',
       house_music: 'K.K. Synth',
       house_music_note: '',
+      umbrella: 'spider umbrella',
     },
     appearances: ['E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ナターシャ',
@@ -18223,7 +18657,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b9/Teddy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/3c/Teddy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/bf/Teddy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/b/bd/Teddy_NH_Villager_Icon.png',
       quote: 'No pain, no gain!',
       'sub-personality': 'B',
@@ -18241,6 +18675,7 @@ const data = [
       house_flooring: 'Cork Flooring',
       house_music: 'Mr. K.K.',
       house_music_note: '',
+      umbrella: 'frog umbrella',
     },
     appearances: [
       'DNM',
@@ -18279,7 +18714,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/4/44/Tex_NH.png',
-      photo_url: 'https://dodo.ac/np/images/4/4a/Tex%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/e/ea/Tex%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a0/Tex_NH_Villager_Icon.png',
       quote: 'Rules were made to be broken.',
       'sub-personality': 'A',
@@ -18296,6 +18731,7 @@ const data = [
       house_flooring: 'Ice Flooring',
       house_music: 'K.K. D&B',
       house_music_note: '',
+      umbrella: 'blue umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ボルト',
@@ -18323,7 +18759,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/0d/Tia_NH.png',
-      photo_url: 'https://dodo.ac/np/images/a/af/Tia%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/d/d3/Tia%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/9/93/Tia_NH_Villager_Icon.png',
       quote: 'Tea is a cup of life.',
       'sub-personality': 'A',
@@ -18340,6 +18776,7 @@ const data = [
       house_flooring: 'Brown Iron-Parquet Flooring',
       house_music: 'K.K. Bossa',
       house_music_note: '',
+      umbrella: 'blue shiny-bows parasol',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ティーナ',
@@ -18368,7 +18805,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/5d/Tiansheng_amiibo.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f6/Tiansheng%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/24/Tiansheng%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d6/Tiansheng_NH_Villager_Icon.png',
       quote: 'The world is more swole than you will ever fully know.',
       'sub-personality': 'B',
@@ -18386,6 +18823,7 @@ const data = [
       house_flooring: 'Restaurant-Kitchen Flooring',
       house_music: 'Imperial K.K.',
       house_music_note: '',
+      umbrella: 'red umbrella',
     },
     appearances: ['NH', 'PC'],
     ja_name: 'テンシン',
@@ -18414,7 +18852,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/f/f0/Tiffany_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/90/Tiffany%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/03/Tiffany%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/47/Tiffany_NH_Villager_Icon.png',
       quote: 'What is cheap is most costly.',
       'sub-personality': 'B',
@@ -18432,8 +18870,9 @@ const data = [
       house_flooring: 'Red-and-Black Vinyl Flooring',
       house_music: 'K.K. Ragtime',
       house_music_note: '',
+      umbrella: 'red chic umbrella',
     },
-    appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'バズレー',
     ja_phrase: 'ってさ',
   },
@@ -18460,7 +18899,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/6f/Timbra_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/9/9d/Timbra%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/4/43/Timbra%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a9/Timbra_NH_Villager_Icon.png',
       quote: "Don't pine for the past.",
       'sub-personality': 'A',
@@ -18478,6 +18917,7 @@ const data = [
       house_flooring: 'Dark Parquet Flooring',
       house_music: 'K.K. Love Song',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'melon umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'つかさ',
@@ -18506,7 +18946,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/75/Tipper_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/fe/Tipper%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/e/e1/Tipper%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/4b/Tipper_NH_Villager_Icon.png',
       quote: 'It takes two to tango.',
       'sub-personality': 'B',
@@ -18524,6 +18964,7 @@ const data = [
       house_flooring: 'Stone Tile',
       house_music: 'Soulful K.K.',
       house_music_note: '',
+      umbrella: 'rainbow umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'まきば',
@@ -18551,8 +18992,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: '',
-      photo_url:
-        'https://dodo.ac/np/images/b/ba/Toby%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/f/f6/Toby%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/12/Toby_NH_Villager_Icon.png',
       quote: "Toby or not Toby? I don't know, I'm asking you.",
       'sub-personality': 'A',
@@ -18569,6 +19009,7 @@ const data = [
       house_flooring: 'Kerokerokeroppi Flooring',
       house_music: 'King K.K.',
       house_music_note: '',
+      umbrella: 'gelato umbrella',
     },
     appearances: ['WA', 'NH', 'PC'],
     ja_name: 'トビー',
@@ -18596,7 +19037,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/d1/Tom_NH.png',
-      photo_url: 'https://dodo.ac/np/images/9/9b/Tom%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/e/e8/Tom%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/6f/Tom_NH_Villager_Icon.png',
       quote: "There's no use crying over spilled milk.",
       'sub-personality': 'B',
@@ -18613,6 +19054,7 @@ const data = [
       house_flooring: 'Paintball Flooring',
       house_music: 'K.K. Rock',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'bat umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'バンタム',
@@ -18641,7 +19083,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/e/eb/Truffles_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/0a/Truffles%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/77/Truffles%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/da/Truffles_NH_Villager_Icon.png',
       quote: 'The best things in life are free.',
       'sub-personality': 'B',
@@ -18659,6 +19101,7 @@ const data = [
       house_flooring: 'Brown Honeycomb Tile',
       house_music: 'Neapolitan',
       house_music_note: '',
+      umbrella: 'pear umbrella',
     },
     appearances: [
       'DNM',
@@ -18698,7 +19141,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7c/Tucker_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c7/Tucker%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/9a/Tucker%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/2/20/Tucker_NH_Villager_Icon.png',
       quote: 'Time makes fossils of us all.',
       'sub-personality': 'A',
@@ -18716,6 +19159,7 @@ const data = [
       house_flooring: 'Swamp Flooring',
       house_music: 'K.K. Safari',
       house_music_note: '',
+      umbrella: 'leaf umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'はじめ',
@@ -18743,8 +19187,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/9/93/Tutu_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/f/fa/Tutu%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/7/70/Tutu%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/d/d6/Tutu_NH_Villager_Icon.png',
       quote: 'Even the best of friends start out as strangers.',
       'sub-personality': 'B',
@@ -18761,6 +19204,7 @@ const data = [
       house_flooring: 'Red Dot Flooring',
       house_music: 'Bubblegum K.K.',
       house_music_note: '',
+      umbrella: 'Toad parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'れんにゅう',
@@ -18789,7 +19233,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/67/Twiggy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f8/Twiggy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/05/Twiggy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/02/Twiggy_NH_Villager_Icon.png',
       quote: "It's the early bird that catches the worm!",
       'sub-personality': 'B',
@@ -18807,6 +19251,7 @@ const data = [
       house_flooring: 'Gray Argyle-Tile Flooring',
       house_music: 'Bubblegum K.K.',
       house_music_note: '',
+      umbrella: 'strawberry umbrella',
     },
     appearances: [
       'DNM',
@@ -18846,7 +19291,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/0f/Tybalt_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/5/57/Tybalt%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/d/d2/Tybalt%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/3/30/Tybalt_NH_Villager_Icon.png',
       quote: "There's no excuse for half-baked potatoes.",
       'sub-personality': 'A',
@@ -18864,6 +19309,7 @@ const data = [
       house_flooring: 'Tiger-Print Flooring',
       house_music: 'K.K. Groove',
       house_music_note: '',
+      umbrella: 'blue umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ハリマオ',
@@ -18892,7 +19338,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/65/Ursala_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b7/Ursala%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/8b/Ursala%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/76/Ursala_NH_Villager_Icon.png',
       quote: 'Surround yourself with things you love.',
       'sub-personality': 'A',
@@ -18910,6 +19356,7 @@ const data = [
       house_flooring: 'Green Honeycomb Tile',
       house_music: 'Café K.K.',
       house_music_note: '',
+      umbrella: 'hydrangea umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ネーヤ',
@@ -18938,7 +19385,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/59/Velma_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/3/3e/Velma%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/0/03/Velma%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/cf/Velma_NH_Villager_Icon.png',
       quote: 'Work smarter, not harder.',
       'sub-personality': 'B',
@@ -18956,8 +19403,9 @@ const data = [
       house_flooring: 'Light Parquet Flooring',
       house_music: 'Mr. K.K.',
       house_music_note: '',
+      umbrella: 'purple chic umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['DNM', 'AC', 'E_PLUS', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ピティエ',
     ja_phrase: 'ザーマス',
   },
@@ -18984,7 +19432,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7c/Vesta_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/b/b4/Vesta%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/2a/Vesta%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/41/Vesta_NH_Villager_Icon.png',
       quote: 'No sweater off my back.',
       'sub-personality': 'B',
@@ -19002,6 +19450,7 @@ const data = [
       house_flooring: 'Floral Mosaic-Tile Flooring',
       house_music: 'Forest Life',
       house_music_note: '',
+      umbrella: 'Toad parasol',
     },
     appearances: [
       'DNM',
@@ -19040,7 +19489,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/1/1d/Vic_NH.png',
-      photo_url: 'https://dodo.ac/np/images/2/21/Vic%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/d/dd/Vic%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a1/Vic_NH_Villager_Icon.png',
       quote: 'You mess with the bull, you get the horns.',
       'sub-personality': 'A',
@@ -19057,6 +19506,7 @@ const data = [
       house_flooring: 'Ship Deck',
       house_music: 'K.K. March',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ノルマン',
@@ -19085,7 +19535,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/d/da/Victoria_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/da/Victoria%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/8d/Victoria%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/72/Victoria_NH_Villager_Icon.png',
       quote: "Don't put the cart before the horse.",
       'sub-personality': 'B',
@@ -19103,8 +19553,9 @@ const data = [
       house_flooring: 'Racetrack Flooring',
       house_music: 'K.K. Adventure',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'lemon umbrella',
     },
-    appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'セントアロー',
     ja_phrase: 'いくわよ',
   },
@@ -19131,7 +19582,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/6b/Violet_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/04/Violet%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/2/23/Violet%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a4/Violet_NH_Villager_Icon.png',
       quote: "Pearls are a pink gorilla's best friend.",
       'sub-personality': 'B',
@@ -19149,8 +19600,9 @@ const data = [
       house_flooring: 'Lobby Flooring',
       house_music: 'K.K. Bazaar',
       house_music_note: '',
+      umbrella: 'exquisite parasol',
     },
-    appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ウズメ',
     ja_phrase: 'アイヤ',
   },
@@ -19177,7 +19629,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/24/Vivian_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c4/Vivian%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/8/8b/Vivian%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/0a/Vivian_NH_Villager_Icon.png',
       quote: 'Onwards and upwards!',
       'sub-personality': 'A',
@@ -19195,6 +19647,7 @@ const data = [
       house_flooring: 'Dark Wood-Pattern Flooring',
       house_music: "K.K. Cruisin'",
       house_music_note: '',
+      umbrella: 'raindrop umbrella',
     },
     appearances: ['E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'ヴァネッサ',
@@ -19223,7 +19676,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/75/Vladimir_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/cc/Vladimir%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/9/9a/Vladimir%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/1f/Vladimir_NH_Villager_Icon.png',
       quote: 'Trouble never comes alone.',
       'sub-personality': 'B',
@@ -19241,8 +19694,9 @@ const data = [
       house_flooring: 'Ramshackle Flooring',
       house_music: 'Agent K.K.',
       house_music_note: '',
+      umbrella: 'camo umbrella',
     },
-    appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD'],
+    appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ガビ',
     ja_phrase: 'やんけ',
   },
@@ -19268,8 +19722,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/5/52/Wade_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/7/7e/Wade%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/b/be/Wade%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e7/Wade_NH_Villager_Icon.png',
       quote: 'Which came first, the seeds or the sunflower?',
       'sub-personality': 'A',
@@ -19286,6 +19739,7 @@ const data = [
       house_flooring: 'Ice Flooring',
       house_music: 'Stale Cupcakes',
       house_music_note: '',
+      umbrella: 'rainbow umbrella',
     },
     appearances: ['E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'カマボコ',
@@ -19314,7 +19768,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/0f/Walker_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/43/Walker%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/3/38/Walker%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/02/Walker_NH_Villager_Icon.png',
       quote: 'The dog wags his tail, not for you, but for your bread.',
       'sub-personality': 'B',
@@ -19332,6 +19786,7 @@ const data = [
       house_flooring: 'Colorful Tile Flooring',
       house_music: 'Two Days Ago',
       house_music_note: '',
+      umbrella: 'watermelon umbrella',
     },
     appearances: ['E_PLUS', 'WW', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ベン',
@@ -19359,8 +19814,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/bf/Walt_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/a/aa/Walt%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/3/38/Walt%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/6/65/Walt_NH_Villager_Icon.png',
       quote: 'Take the good with the bad.',
       'sub-personality': 'A',
@@ -19377,6 +19831,7 @@ const data = [
       house_flooring: 'Mossy-Garden Flooring',
       house_music: 'K.K. Lament',
       house_music_note: '',
+      umbrella: 'paper parasol',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'カンロク',
@@ -19384,7 +19839,7 @@ const data = [
   },
   {
     name: 'Wart Jr.',
-    url: 'https://nookipedia.com/wiki/Wart_Jr.',
+    url: 'https://nookipedia.com/wiki/Wart%20Jr.',
     alt_name: '',
     title_color: 'd86808',
     text_color: 'fffce9',
@@ -19405,7 +19860,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/21/Wart_Jr._NH.png',
       photo_url:
-        'https://dodo.ac/np/images/d/d1/Wart_Jr.%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c2/Wart_Jr.%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/f/fd/Wart_Jr._NH_Villager_Icon.png',
       quote: 'Age before beauty.',
       'sub-personality': 'B',
@@ -19423,6 +19878,7 @@ const data = [
       house_flooring: 'Rush Tatami',
       house_music: 'Steep Hill',
       house_music_note: '',
+      umbrella: 'ghost umbrella',
     },
     appearances: [
       'DNM',
@@ -19462,7 +19918,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/66/Weber_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/45/Weber%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/d/db/Weber%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/74/Weber_NH_Villager_Icon.png',
       quote: "Today's adults are yesterday's children.",
       'sub-personality': 'A',
@@ -19480,6 +19936,7 @@ const data = [
       house_flooring: 'Cork Flooring',
       house_music: 'K.K. Fusion',
       house_music_note: '',
+      umbrella: 'blue umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'WA', 'NH', 'PC'],
     ja_name: 'アチョット',
@@ -19508,7 +19965,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/2/23/Wendy_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/a/aa/Wendy%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/b6/Wendy%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c0/Wendy_NH_Villager_Icon.png',
       quote: 'Every cloud has a silver lining.',
       'sub-personality': 'B',
@@ -19526,6 +19983,7 @@ const data = [
       house_flooring: 'Simple White Flooring',
       house_music: 'Space K.K.',
       house_music_note: '',
+      umbrella: 'watermelon umbrella',
     },
     appearances: ['CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'みぞれ',
@@ -19554,7 +20012,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/3/36/Whitney_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/f7/Whitney%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/a/ad/Whitney%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/a/a9/Whitney_NH_Villager_Icon.png',
       quote: "Don't cry wolf unless you mean it.",
       'sub-personality': 'B',
@@ -19572,6 +20030,7 @@ const data = [
       house_flooring: 'Blue-Paint Flooring',
       house_music: 'K.K. Soul',
       house_music_note: '',
+      umbrella: 'purple chic umbrella',
     },
     appearances: ['WW', 'CF', 'NL', 'WA', 'NH', 'FILM', 'HHD', 'PC'],
     ja_name: 'ビアンカ',
@@ -19600,7 +20059,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/6/62/Willow_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/4/40/Willow%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/b/bb/Willow%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/c/c4/Willow_NH_Villager_Icon.png',
       quote: "You can't fight your genes.",
       'sub-personality': 'B',
@@ -19618,6 +20077,7 @@ const data = [
       house_flooring: 'Arabesque Flooring',
       house_music: 'K.K. Soul',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'fairy-tale umbrella',
     },
     appearances: ['E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'マリー',
@@ -19646,7 +20106,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/b/b8/Winnie_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/0/0d/Winnie%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/7/7e/Winnie%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/4/44/Winnie_NH_Villager_Icon.png',
       quote: 'Smile, and the world smiles with you.',
       'sub-personality': 'B',
@@ -19664,6 +20124,7 @@ const data = [
       house_flooring: 'Backyard Lawn',
       house_music: 'K.K. Country',
       house_music_note: '',
+      umbrella: 'eggy parasol',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'CF', 'NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'マキバスター',
@@ -19692,7 +20153,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/a/aa/Wolfgang_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/f/fa/Wolfgang%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/c/c0/Wolfgang%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/1/1a/Wolfgang_NH_Villager_Icon.png',
       quote: "Don't be afraid to show your fangs.",
       'sub-personality': 'B',
@@ -19710,6 +20171,7 @@ const data = [
       house_flooring: 'Stripe Flooring',
       house_music: 'K.K. D&B',
       house_music_note: '',
+      umbrella: 'bat umbrella',
     },
     appearances: [
       'DNM',
@@ -19748,8 +20210,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/ca/Yuka_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/4/40/Yuka%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/7/72/Yuka%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/7c/Yuka_NH_Villager_Icon.png',
       quote: 'Beauty is in the eye of the beholder.',
       'sub-personality': 'B',
@@ -19766,6 +20227,7 @@ const data = [
       house_flooring: 'Simple Purple Flooring',
       house_music: 'Soulful K.K.',
       house_music_note: '',
+      umbrella: 'raindrop umbrella',
     },
     appearances: [
       'DNM',
@@ -19804,8 +20266,7 @@ const data = [
     prev_phrases: [],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/c/c0/Zell_NH.png',
-      photo_url:
-        'https://dodo.ac/np/images/3/3d/Zell%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/0/01/Zell%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/7/78/Zell_NH_Villager_Icon.png',
       quote: 'Clothes totally make the mammal.',
       'sub-personality': 'A',
@@ -19822,6 +20283,7 @@ const data = [
       house_flooring: 'Monochromatic Tile Flooring',
       house_music: 'K.K. Swing',
       house_music_note: '',
+      umbrella: 'camo umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'ネルソン',
@@ -19849,7 +20311,7 @@ const data = [
     prev_phrases: ['whiiifff'],
     nh_details: {
       image_url: 'https://dodo.ac/np/images/0/0b/Zoe_amiibo.png',
-      photo_url: 'https://dodo.ac/np/images/c/c5/Zoe%27s_Poster_NH_Texture.png',
+      photo_url: 'https://dodo.ac/np/images/8/8c/Zoe%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/0/08/Zoe_NH_Villager_Icon.png',
       quote: "Don't sign until you've read the whole thing.",
       'sub-personality': 'B',
@@ -19866,6 +20328,7 @@ const data = [
       house_flooring: 'Dark Herringbone Flooring',
       house_music: 'K.K. Polka',
       house_music_note: '',
+      umbrella: 'strawberry umbrella',
     },
     appearances: ['DNM', 'AC', 'E_PLUS', 'NH', 'PC'],
     ja_name: 'ビーフン',
@@ -19894,7 +20357,7 @@ const data = [
     nh_details: {
       image_url: 'https://dodo.ac/np/images/7/7f/Zucker_NH.png',
       photo_url:
-        'https://dodo.ac/np/images/c/c0/Zucker%27s_Poster_NH_Texture.png',
+        'https://dodo.ac/np/images/1/13/Zucker%27s_Photo_NH_Texture.png',
       icon_url: 'https://dodo.ac/np/images/e/e2/Zucker_NH_Villager_Icon.png',
       quote: "There's no such thing as luck.",
       'sub-personality': 'A',
@@ -19912,6 +20375,7 @@ const data = [
       house_flooring: 'Backyard Lawn',
       house_music: 'Spring Blossoms',
       house_music_note: 'Does not contain a stereo initially',
+      umbrella: 'blue umbrella',
     },
     appearances: ['NL', 'WA', 'NH', 'HHD', 'PC'],
     ja_name: 'タコヤ',
