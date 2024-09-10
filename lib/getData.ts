@@ -2,52 +2,30 @@
 
 import { EventDocument, HistoryDocument } from '@/types';
 import { cache } from 'react';
+import connectToMongo from './connectToMongo';
 
 async function getData(): Promise<{
   historyData: HistoryDocument[];
   eventsData: EventDocument[];
 }> {
-  const payload = {
-    dataSource: 'AnimalCrossing',
-    database: 'lasagnark',
-    collection: 'history',
-    filter: {},
-    projection: { _id: 0 },
-  };
-  const res = await fetch(`${process.env.API_URL}/action/find`, {
-    method: 'POST',
-    headers: {
-      'api-key': `${process.env.API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload),
-  });
-  const historyResults: { documents: HistoryDocument[] } = await res.json();
+  const db = await connectToMongo();
+  const historyData = (await db
+    .collection('history')
+    .find({})
+    .project({ _id: 0 })
+    .toArray()) as HistoryDocument[];
 
-  const payload2 = {
-    dataSource: 'AnimalCrossing',
-    database: 'lasagnark',
-    collection: 'events',
-    filter: {},
-    sort: {
-      _id: -1,
-    },
-    limit: 10,
-    projection: { _id: 0 },
-  };
-  const res2 = await fetch(`${process.env.API_URL}/action/find`, {
-    method: 'POST',
-    headers: {
-      'api-key': `${process.env.API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload2),
-  });
-  const eventsResults: { documents: EventDocument[] } = await res2.json();
+  const eventsData = (await db
+    .collection('events')
+    .find({})
+    .sort({ _id: -1 })
+    .limit(10)
+    .project({ _id: 0 })
+    .toArray()) as EventDocument[];
 
   return {
-    historyData: historyResults.documents,
-    eventsData: eventsResults.documents,
+    historyData,
+    eventsData,
   };
 }
 
