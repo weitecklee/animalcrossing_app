@@ -3,7 +3,6 @@
 import IconGrid from '@/components/iconGrid';
 import IconGridAll from '@/components/iconGridAll';
 import { NAMES, PERSONALITIES, SPECIES } from '@/lib/constants';
-import searchLocal from '@/lib/searchLocal';
 import useScreen from '@/lib/useScreen';
 import { SearchOptions } from '@/types';
 import {
@@ -20,6 +19,7 @@ import {
 } from '@mui/material';
 import { useEffect, useState } from 'react';
 import Loading from '../loading';
+import searchMongo from '@/lib/searchMongo';
 
 function useDebounce(value: any, delay: number) {
   const [debouncedValue, setDebouncedValue] = useState(value);
@@ -72,7 +72,7 @@ export default function Page() {
     if (checkSearchOptions(searchOptions)) {
       setConductSearch(true);
       setSearching(true);
-      searchLocal(searchOptions).then((res) => {
+      searchMongo(searchOptions).then((res) => {
         setSearching(false);
         if (res.length) {
           setResultsFound(true);

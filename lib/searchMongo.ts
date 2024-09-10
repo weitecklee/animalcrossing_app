@@ -1,6 +1,7 @@
 'use server';
 
 import { SearchFilter, SearchOptions } from '@/types';
+import connectToMongo from './connectToMongo';
 
 function escapeRegExp(regexString: string) {
   return regexString.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -25,24 +26,13 @@ export default async function searchMongo(
   if (searchOptions.gender !== 'All') {
     searchFilter.gender = searchOptions.gender;
   }
-  const payload = {
-    dataSource: 'AnimalCrossing',
-    database: 'lasagnark',
-    collection: 'data',
-    filter: searchFilter,
-    projection: { name: 1, _id: 0 },
-  };
 
-  const res = await fetch(`${process.env.API_URL}/action/find`, {
-    method: 'POST',
-    headers: {
-      'api-key': `${process.env.API_KEY}`,
-      'Content-Type': 'application/ejson',
-      Accept: 'application/json',
-    },
-    body: JSON.stringify(payload),
-  });
+  const db = await connectToMongo();
+  const searchResults = await db
+    .collection('data')
+    .find(searchFilter)
+    .project({ name: 1, _id: 0 })
+    .toArray();
 
-  const filteredResults: { documents: { name: string }[] } = await res.json();
-  return filteredResults.documents.map((a) => a.name);
+  return searchResults.map((a) => a.name);
 }

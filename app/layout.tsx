@@ -11,6 +11,9 @@ import { StateProvider } from '@/lib/stateContext';
 import VillagerDialog from './villagerDialog';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import connectToMongo from '@/lib/connectToMongo';
+
+connectToMongo();
 
 export const metadata: Metadata = {
   title: 'My Animal Crossing Island',
