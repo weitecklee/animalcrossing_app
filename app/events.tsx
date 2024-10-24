@@ -18,23 +18,23 @@ import VillagerIcon from '@/components/villagerIcon';
 import Loading from './loading';
 import CustomChip from '@/components/customChip';
 
+const determinePronoun = (villager: string) =>
+  nookipediaData.get(villager)!.gender === 'Male' ? 'his' : 'her';
+
+const rewordEvent = (villager: string, event: string): string => {
+  if (event === 'gave photo') {
+    return `${villager} gave ${determinePronoun(villager)} photo`;
+  }
+  if (event === 'birthday') {
+    return `${villager} celebrated ${determinePronoun(villager)} birthday`;
+  }
+  return `${villager} ${event}`;
+};
+
 export default function Events() {
   const { smallScreen, mediumScreen } = useContext(ScreenContext);
   const theme = useTheme();
   const { eventsData } = useContext(DataContext);
-
-  const determinePronoun = (villager: string) =>
-    nookipediaData.get(villager)!.gender === 'Male' ? 'his' : 'her';
-
-  const rewordEvent = (villager: string, event: string): string => {
-    if (event === 'gave photo') {
-      return `${villager} gave ${determinePronoun(villager)} photo`;
-    }
-    if (event === 'birthday') {
-      return `${villager} celebrated ${determinePronoun(villager)} birthday`;
-    }
-    return `${villager} ${event}`;
-  };
 
   return (
     <Paper
