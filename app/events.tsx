@@ -32,7 +32,7 @@ const rewordEvent = (villager: string, event: string): string => {
 };
 
 export default function Events() {
-  const { smallScreen, mediumScreen } = useContext(ScreenContext);
+  const { mediumScreen } = useContext(ScreenContext);
   const theme = useTheme();
   const { eventsData } = useContext(DataContext);
 
@@ -42,6 +42,8 @@ export default function Events() {
       sx={{
         background: theme.palette.success.light,
         px: mediumScreen ? 1 : 2,
+        height: { xs: '100%', md: 'auto' },
+        overflow: 'auto',
       }}
     >
       <List dense={mediumScreen}>
@@ -49,7 +51,7 @@ export default function Events() {
           <CustomChip label="Latest Happenings" />
         </Divider>
         {!!eventsData.length ? (
-          eventsData.slice(0, smallScreen ? 3 : 10).map((eventDatum) => {
+          eventsData.map((eventDatum) => {
             const { date, event, villager } = eventDatum;
             const listItemKey = `${villager} ${event}`;
             return (

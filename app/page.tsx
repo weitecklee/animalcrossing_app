@@ -12,10 +12,15 @@ export default function Home() {
       direction="row-reverse"
       spacing={1}
     >
-      <Grid item xs={12} sm={4} sx={{ pt: 1, pb: 2 }}>
+      <Grid
+        item
+        xs={12}
+        md={4}
+        sx={{ pt: 1, pb: 2, height: { xs: '33dvh', md: 'auto' } }}
+      >
         <Events />
       </Grid>
-      <Grid item xs={12} sm={8}>
+      <Grid item xs={12} md={8}>
         <Typography>Hello there!</Typography>
         <Typography>
           This is a site I made to showcase my&nbsp;
