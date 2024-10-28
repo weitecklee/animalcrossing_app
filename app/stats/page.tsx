@@ -14,14 +14,13 @@ import { dayOrDays } from '@/lib/functions';
 import { DataContext } from '@/lib/dataContext';
 import CRIcon from '@/components/crIcon';
 import IconGrid from '@/components/iconGrid';
-import calculateStats from '@/lib/calculateStats';
 import { coustard } from '@/app/theme';
 import Loading from '@/app/loading';
 import StatsDivider from './statsDivider';
 import Link from 'next/link';
 
 export default function Stats() {
-  const { historyMap } = useContext(DataContext);
+  const { historyMap, calculatedStats } = useContext(DataContext);
 
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -39,7 +38,7 @@ export default function Stats() {
     islandmatesData,
     durationData,
     photoStats2,
-  } = calculateStats(historyMap);
+  } = calculatedStats;
 
   const BreakdownLink = ({ stat }: { stat: string }) => (
     <Link href={`/stats/${stat}`} scroll={false}>

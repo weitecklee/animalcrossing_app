@@ -22,7 +22,6 @@ import Draggable from 'react-draggable';
 import { DataContext } from '@/lib/dataContext';
 import TimelineTooltip from './timelineTooltip';
 import { ScreenContext } from '@/lib/screenContext';
-import calculateStats from '@/lib/calculateStats';
 import nookipediaData from '@/lib/nookipediaData';
 import { coustard } from '@/app/theme';
 
@@ -98,7 +97,7 @@ options2.plugins.zoom.limits = {
 };
 
 export default function Timeline() {
-  const { historyMap } = useContext(DataContext);
+  const { historyMap, calculatedStats } = useContext(DataContext);
 
   const {
     timelineColors,
@@ -110,7 +109,7 @@ export default function Timeline() {
     timelineLabels3,
     timelineNameMap,
     timelineNameMap3,
-  } = calculateStats(historyMap);
+  } = calculatedStats;
   const { smallScreen } = useContext(ScreenContext);
 
   const [timelineVillager, setTimelineVillager] = useState('');

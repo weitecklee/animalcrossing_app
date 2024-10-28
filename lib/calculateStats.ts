@@ -144,6 +144,13 @@ function calculateStats(historyMap: Map<string, History>): CalculatedStats {
     const tmp3 = genderMap.get(gender)!;
     tmp3.count++;
     tmp3.villagers.push(history.name);
+    if (history.currentResident) {
+      const lastIslandmate =
+        history.islandmates[history.islandmates.length - 1];
+      if (!historyMap.has(lastIslandmate)) {
+        history.islandmates.pop();
+      }
+    }
     if (!islandmatesMap.has(history.islandmates.length)) {
       islandmatesMap.set(history.islandmates.length, {
         trait: history.islandmates.length.toString(),
