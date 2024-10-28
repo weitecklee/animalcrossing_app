@@ -5,6 +5,12 @@ import { calculateDays } from './functions';
 import getData from './getData';
 import { cache } from 'react';
 
+const currentDate = new Date();
+currentDate.setHours(0, 0, 0);
+const endDate = new Date();
+endDate.setDate(currentDate.getDate() + 30);
+endDate.setHours(0, 0, 0);
+
 async function assembleData(): Promise<{
   historyMap: Map<string, History>;
   eventsData: EventDocument[];
@@ -17,18 +23,15 @@ async function assembleData(): Promise<{
   historyData.forEach((doc) => {
     const history = { ...doc } as History;
     history.startDateDate = new Date(history.startDate);
+    if (history.startDateDate > currentDate) {
+      return;
+    }
     history.startDateString = history.startDateDate.toLocaleDateString('en-ZA');
 
     if (!history.endDate) {
       history.currentResident = true;
-      history.endDateDate = new Date();
-      history.endDateDate.setHours(0, 0, 0);
-      history.duration = calculateDays(
-        history.startDateDate,
-        history.endDateDate,
-      );
-      history.endDateDate.setDate(history.endDateDate.getDate() + 30);
-      history.endDateDate.setHours(0, 0, 0);
+      history.endDateDate = endDate;
+      history.duration = calculateDays(history.startDateDate, currentDate);
     } else {
       history.currentResident = false;
       history.endDateDate = new Date(history.endDate);
