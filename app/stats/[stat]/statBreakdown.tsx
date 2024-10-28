@@ -5,7 +5,6 @@ import { useContext } from 'react';
 import { DataContext } from '@/lib/dataContext';
 import IconGrid from '@/components/iconGrid';
 import VillagerIcon from '@/components/villagerIcon';
-import calculateStats from '@/lib/calculateStats';
 import Loading from '@/app/loading';
 import PhotoDialog from '../photoDialog';
 import TitleChip from '../titleChip';
@@ -18,7 +17,7 @@ export default function StatBreakdown({
 }: {
   params: { stat: string };
 }) {
-  const { historyMap } = useContext(DataContext);
+  const { historyMap, calculatedStats } = useContext(DataContext);
 
   if (!historyMap.size) {
     return <Loading />;
@@ -32,7 +31,7 @@ export default function StatBreakdown({
     islandmatesData,
     durationData,
     noPhotoData,
-  } = calculateStats(historyMap);
+  } = calculatedStats;
 
   if (params.stat === 'lengthOfStay') {
     return <LengthOfStay durationData={durationData} historyMap={historyMap} />;
