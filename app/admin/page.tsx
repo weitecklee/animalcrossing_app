@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 
 import { createClient } from '@/lib/supabase/server';
+import EditVillager from './editVillager';
 
 export default async function AdminPage() {
   const supabase = await createClient();
@@ -10,5 +11,9 @@ export default async function AdminPage() {
     redirect('/admin/login');
   }
 
-  return <p>Hello {data.user.email}</p>;
+  return (
+    <>
+      <EditVillager />
+    </>
+  );
 }
