@@ -1,7 +1,7 @@
 'use client';
 
 import { NAMES } from '@/lib/constants';
-import { Autocomplete, TextField } from '@mui/material';
+import { Autocomplete, Box, Button, Stack, TextField } from '@mui/material';
 import { useState } from 'react';
 import VillagerInfo from '../villagers/[villager]/villagerInfo';
 import logout from './logout';
@@ -13,16 +13,20 @@ export default function EditVillager() {
   const router = useRouter();
 
   return (
-    <>
-      <button
-        onClick={() => {
-          logout().then(() => {
-            router.refresh();
-          });
-        }}
-      >
-        Logout
-      </button>
+    <Stack spacing={2}>
+      <Box>
+        <Button
+          color="secondary"
+          variant="contained"
+          onClick={() => {
+            logout().then(() => {
+              router.refresh();
+            });
+          }}
+        >
+          Logout
+        </Button>
+      </Box>
       <Autocomplete
         freeSolo
         options={NAMES}
@@ -34,6 +38,6 @@ export default function EditVillager() {
         renderInput={(params) => <TextField {...params} label="Villager" />}
       />
       {villager && <VillagerInfo params={{ villager }} />}
-    </>
+    </Stack>
   );
 }
