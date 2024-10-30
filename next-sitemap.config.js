@@ -2,4 +2,5 @@
 module.exports = {
   siteUrl: 'https://myacisland.vercel.app/',
   generateRobotsTxt: true,
+  exclude: ['/admin/*'],
 };
