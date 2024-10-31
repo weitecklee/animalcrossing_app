@@ -3,6 +3,39 @@ import editMongo from '@/lib/editMongo';
 import { Button, Stack, TextField } from '@mui/material';
 import { useContext, useEffect, useState } from 'react';
 
+const EditFieldRow = ({
+  label,
+  value,
+  setValue,
+  initialValue,
+}: {
+  label: string;
+  value: string;
+  setValue: (s: string) => void;
+  initialValue: string;
+}) => (
+  <Stack direction="row" gap={1}>
+    <TextField
+      label={label}
+      type="date"
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+      InputLabelProps={{ shrink: true }}
+      sx={{ height: '100%' }}
+    />
+    <Button
+      onClick={() => setValue(initialValue)}
+      variant="contained"
+      color="info"
+    >
+      Reset
+    </Button>
+    <Button onClick={() => setValue('')} variant="contained" color="info">
+      Clear
+    </Button>
+  </Stack>
+);
+
 export default function EditInfo({ villager }: { villager: string }) {
   const { historyMap, refreshData } = useContext(DataContext);
   const history = historyMap.get(villager);
@@ -11,10 +44,14 @@ export default function EditInfo({ villager }: { villager: string }) {
   const [endDate, setEndDate] = useState<string>('');
   const [photoDate, setPhotoDate] = useState<string>('');
 
+  const initialStartDate = history?.startDateString || '';
+  const initialEndDate = history?.endDateString || '';
+  const initialPhotoDate = history?.photoDateString || '';
+
   useEffect(() => {
-    setStartDate(history?.startDateString || '');
-    setEndDate(history?.endDateString || '');
-    setPhotoDate(history?.photoDateString || '');
+    setStartDate(initialStartDate);
+    setEndDate(initialEndDate);
+    setPhotoDate(initialPhotoDate);
   }, [history]);
 
   const handleConfirm = async () => {
@@ -28,27 +65,24 @@ export default function EditInfo({ villager }: { villager: string }) {
   };
 
   return (
-    <Stack gap={2} width="13rem">
-      <TextField
+    <Stack gap={2} width="20rem">
+      <EditFieldRow
         label="Move-in Date"
-        type="date"
         value={startDate}
-        onChange={(e) => setStartDate(e.target.value)}
-        InputLabelProps={{ shrink: true }}
+        setValue={setStartDate}
+        initialValue={initialStartDate}
       />
-      <TextField
+      <EditFieldRow
         label="Photo Date"
-        type="date"
         value={photoDate}
-        onChange={(e) => setPhotoDate(e.target.value)}
-        InputLabelProps={{ shrink: true }}
+        setValue={setPhotoDate}
+        initialValue={initialPhotoDate}
       />
-      <TextField
+      <EditFieldRow
         label="Move-out Date"
-        type="date"
         value={endDate}
-        onChange={(e) => setEndDate(e.target.value)}
-        InputLabelProps={{ shrink: true }}
+        setValue={setEndDate}
+        initialValue={initialEndDate}
       />
       <Button variant="contained" color="primary" onClick={handleConfirm}>
         Confirm Edits
