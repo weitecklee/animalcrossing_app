@@ -11,9 +11,5 @@ export default async function AdminPage() {
     redirect('/admin/login');
   }
 
-  return (
-    <>
-      <EditVillager />
-    </>
-  );
+  return <EditVillager />;
 }
