@@ -5,10 +5,13 @@ import assembleData from './assembleData';
 import { CalculatedStats, DataContextProps } from '@/types';
 import calculateStats from './calculateStats';
 
+const refreshData = () => {};
+
 export const DataContext = createContext({
   historyMap: new Map(),
   eventsData: [],
   calculatedStats: {} as CalculatedStats,
+  refreshData,
 } as DataContextProps);
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
@@ -16,13 +19,24 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     historyMap: new Map(),
     eventsData: [],
     calculatedStats: {} as CalculatedStats,
+    refreshData,
   } as DataContextProps);
 
-  useEffect(() => {
+  const fetchData = () => {
     assembleData().then((res) => {
-      setData({ ...res, calculatedStats: calculateStats(res.historyMap) });
+      setData({
+        ...res,
+        calculatedStats: calculateStats(res.historyMap),
+        refreshData,
+      });
     });
-  }, []);
+  };
 
-  return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
+  useEffect(fetchData, []);
+
+  return (
+    <DataContext.Provider value={{ ...data, refreshData: fetchData }}>
+      {children}
+    </DataContext.Provider>
+  );
 };

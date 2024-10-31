@@ -6,6 +6,8 @@ import { useState } from 'react';
 import VillagerInfo from '../villagers/[villager]/villagerInfo';
 import logout from './logout';
 import { useRouter } from 'next/navigation';
+import EditInfo from './editInfo';
+import { fixName } from '@/lib/functions';
 
 export default function EditVillager() {
   const [inputValue, setInputValue] = useState<string>('');
@@ -37,7 +39,8 @@ export default function EditVillager() {
         onChange={(e, name) => setVillager(name)}
         renderInput={(params) => <TextField {...params} label="Villager" />}
       />
-      {villager && <VillagerInfo params={{ villager }} />}
+      {villager && <VillagerInfo params={{ villager: fixName(villager) }} />}
+      {villager && <EditInfo villager={villager} />}
     </Stack>
   );
 }
