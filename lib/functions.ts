@@ -14,6 +14,7 @@ export function dayOrDays(duration: number | string): string {
 }
 
 const dateFormat = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'UTC',
   month: 'long',
   day: 'numeric',
   year: 'numeric',

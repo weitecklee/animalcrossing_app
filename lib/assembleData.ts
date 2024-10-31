@@ -6,10 +6,12 @@ import getData from './getData';
 import { cache } from 'react';
 
 const currentDate = new Date();
-currentDate.setHours(0, 0, 0);
+// currentDate.setHours(0, 0, 0);
 const endDate = new Date();
 endDate.setDate(currentDate.getDate() + 30);
-endDate.setHours(0, 0, 0);
+// endDate.setHours(0, 0, 0);
+
+const dateISOFormatter = (date: Date) => date.toISOString().slice(0, 10);
 
 async function assembleData(): Promise<{
   historyMap: Map<string, History>;
@@ -26,7 +28,7 @@ async function assembleData(): Promise<{
     if (history.startDateDate > currentDate) {
       return;
     }
-    history.startDateString = history.startDateDate.toLocaleDateString('en-ZA');
+    history.startDateString = dateISOFormatter(history.startDateDate);
 
     if (!history.endDate) {
       history.currentResident = true;
@@ -40,13 +42,12 @@ async function assembleData(): Promise<{
         history.endDateDate,
       );
     }
-    history.endDateString = history.endDateDate.toLocaleDateString('en-ZA');
+    history.endDateString = dateISOFormatter(history.endDateDate);
 
     if (history.photoDate) {
       history.photo = true;
       history.photoDateDate = new Date(history.photoDate!);
-      history.photoDateString =
-        history.photoDateDate.toLocaleDateString('en-ZA');
+      history.photoDateString = dateISOFormatter(history.photoDateDate);
       history.daysToPhoto = calculateDays(
         history.startDateDate,
         history.photoDateDate,

@@ -123,6 +123,7 @@ export interface DataContextProps {
   historyMap: Map<string, History>;
   eventsData: EventDocument[];
   calculatedStats: CalculatedStats;
+  refreshData: () => void;
 }
 
 export interface CustomDialogProps extends DialogProps {
@@ -149,4 +150,17 @@ export interface SearchFilter {
   species?: { $in: string[] };
   personality?: { $in: string[] };
   gender: string;
+}
+
+export interface EditOptions {
+  name: string;
+  startDate: string | null;
+  endDate: string | null;
+  photoDate: string | null;
+}
+
+export interface MongoSetObject {
+  startDate: string;
+  endDate: string;
+  photoDate: string;
 }
