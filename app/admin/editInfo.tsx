@@ -52,7 +52,8 @@ export default function EditInfo({ villager }: { villager: string }) {
   const [errorMessage, setErrorMessage] = useState('');
 
   const initialStartDate = history?.startDateString || '';
-  const initialEndDate = history?.endDateString || '';
+  const initialEndDate =
+    history && history.currentResident ? '' : history?.endDateString || '';
   const initialPhotoDate = history?.photoDateString || '';
 
   useEffect(() => {
