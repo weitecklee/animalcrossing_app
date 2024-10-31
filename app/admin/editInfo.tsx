@@ -60,6 +60,10 @@ export default function EditInfo({ villager }: { villager: string }) {
     setStartDate(initialStartDate);
     setEndDate(initialEndDate);
     setPhotoDate(initialPhotoDate);
+    setStartError(false);
+    setEndError(false);
+    setPhotoError(false);
+    setErrorMessage('');
   }, [history]);
 
   const handleDismissSnackbar = () => {
@@ -70,28 +74,28 @@ export default function EditInfo({ villager }: { villager: string }) {
     const errorMessages: string[] = [];
     if ((endDate || photoDate) && !startDate) {
       setStartError(true);
-      errorMessages.push('Move-in Date is required');
+      errorMessages.push('Move-in Date is required.');
     } else {
       setStartError(false);
     }
     if (photoDate && photoDate < startDate) {
       setPhotoError(true);
-      errorMessages.push('Photo Date must be after Move-in Date');
+      errorMessages.push('Photo Date must be after Move-in Date.');
     } else {
       setPhotoError(false);
     }
     if (photoDate && endDate && photoDate > endDate) {
       setPhotoError(true);
-      errorMessages.push('Photo Date must be before Move-out Date');
+      errorMessages.push('Photo Date must be before Move-out Date.');
     } else {
       setPhotoError(false);
     }
     if (endDate && endDate < startDate) {
       setEndError(true);
-      errorMessages.push('Move-out Date must be after Move-in Date');
+      errorMessages.push('Move-out Date must be after Move-in Date.');
     }
     if (errorMessages.length) {
-      setErrorMessage(errorMessages.join(', '));
+      setErrorMessage(errorMessages.join(' '));
       return;
     }
     setErrorMessage('');
