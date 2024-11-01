@@ -34,8 +34,35 @@ export default async function editMongo(editOptions: EditOptions) {
   if (!updateObject.$set) {
     await db.collection('history').deleteOne({ name: editOptions.name });
   } else {
-    await db
+    const res = await db
       .collection('history')
-      .updateOne({ name: editOptions.name }, updateObject, { upsert: true });
+      .updateOne({ name: editOptions.name }, updateObject);
+    if (res.matchedCount === 0) {
+      // new villager, find islandmates
+      const givenDate = new Date(editOptions.startDate!);
+      const res = await db
+        .collection('history')
+        .find({
+          startDate: { $lte: givenDate },
+          $or: [
+            { endDate: { $gte: givenDate } },
+            { endDate: { $exists: false } },
+          ],
+        })
+        .toArray();
+      const idsToUpdate = res.map((doc) => doc._id);
+      await db
+        .collection('history')
+        .updateMany(
+          { _id: { $in: idsToUpdate } },
+          { $addToSet: { islandmates: editOptions.name } },
+        );
+      const islandmates = res.map((doc) => doc.name);
+      updateObject['$set'].islandmates = islandmates;
+      await db.collection('history').insertOne({
+        name: editOptions.name,
+        ...updateObject.$set,
+      });
+    }
   }
 }

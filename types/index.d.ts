@@ -160,7 +160,8 @@ export interface EditOptions {
 }
 
 export interface MongoSetObject {
-  startDate: string;
-  endDate: string;
-  photoDate: string;
+  startDate?: string;
+  endDate?: string;
+  photoDate?: string;
+  islandmates?: string[];
 }
