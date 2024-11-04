@@ -36,7 +36,7 @@ export default async function editMongo(editOptions: EditOptions) {
       {
         updateMany: {
           filter: {},
-          update: { $pull: { islandmates: editOptions.name } },
+          update: { $pull: { islandmates: editOptions.name } } as any, // bypass Typescript check
         },
       },
       { deleteOne: { filter: { name: editOptions.name } } },
