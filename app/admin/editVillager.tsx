@@ -3,7 +3,7 @@
 import { NAMES } from '@/lib/constants';
 import { Autocomplete, Box, Button, Stack, TextField } from '@mui/material';
 import { useState } from 'react';
-import VillagerInfo from '../villagers/[villager]/villagerInfo';
+import VillagerPage from '../villagers/[villager]/page';
 import logout from './logout';
 import { useRouter } from 'next/navigation';
 import EditInfo from './editInfo';
@@ -39,7 +39,7 @@ export default function EditVillager() {
         onChange={(e, name) => setVillager(name)}
         renderInput={(params) => <TextField {...params} label="Villager" />}
       />
-      {villager && <VillagerInfo params={{ villager: fixName(villager) }} />}
+      {villager && <VillagerPage params={{ villager: fixName(villager) }} />}
       {villager && <EditInfo villager={villager} />}
     </Stack>
   );

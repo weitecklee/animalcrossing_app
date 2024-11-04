@@ -146,20 +146,37 @@ export default function EditInfo({ villager }: { villager: string }) {
       />
       <FormControl>
         <InputLabel id="house-number-select-label">House Number</InputLabel>
-        <Select
-          labelId="house-number-select-label"
-          id="house-number-select"
-          defaultValue={initialHouseNumber}
-          value={houseNumber}
-          label="House Number"
-          onChange={(e) => setHouseNumber(Number(e.target.value))}
-        >
-          {Array.from({ length: 10 }, (_, i) => i + 1).map((n) => (
-            <MenuItem key={n} value={n}>
-              {n}
-            </MenuItem>
-          ))}
-        </Select>
+        <Stack direction="row" gap={1}>
+          <Select
+            labelId="house-number-select-label"
+            id="house-number-select"
+            defaultValue={initialHouseNumber}
+            value={houseNumber}
+            label="House Number"
+            onChange={(e) => setHouseNumber(Number(e.target.value))}
+            sx={{ width: '17rem' }}
+          >
+            {Array.from({ length: 10 }, (_, i) => i + 1).map((n) => (
+              <MenuItem key={n} value={n}>
+                {n}
+              </MenuItem>
+            ))}
+          </Select>
+          <Button
+            onClick={() => setHouseNumber(initialHouseNumber)}
+            variant="contained"
+            color="info"
+          >
+            Reset
+          </Button>
+          <Button
+            onClick={() => setHouseNumber(0)}
+            variant="contained"
+            color="info"
+          >
+            Clear
+          </Button>
+        </Stack>
       </FormControl>
       <Button variant="contained" color="primary" onClick={handleConfirm}>
         Confirm Edits
