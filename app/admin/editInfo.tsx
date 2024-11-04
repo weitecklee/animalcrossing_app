@@ -1,9 +1,19 @@
 import { DataContext } from '@/lib/dataContext';
 import editMongo from '@/lib/editMongo';
-import { Alert, Button, Snackbar, Stack, TextField } from '@mui/material';
+import {
+  Alert,
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Snackbar,
+  Stack,
+  TextField,
+} from '@mui/material';
 import { useContext, useEffect, useState } from 'react';
 
-const EditFieldRow = ({
+const EditDateRow = ({
   label,
   value,
   setValue,
@@ -46,6 +56,7 @@ export default function EditInfo({ villager }: { villager: string }) {
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
   const [photoDate, setPhotoDate] = useState<string>('');
+  const [houseNumber, setHouseNumber] = useState<number>(0);
   const [startError, setStartError] = useState(false);
   const [endError, setEndError] = useState(false);
   const [photoError, setPhotoError] = useState(false);
@@ -55,11 +66,13 @@ export default function EditInfo({ villager }: { villager: string }) {
   const initialEndDate =
     history && history.currentResident ? '' : history?.endDateString || '';
   const initialPhotoDate = history?.photoDateString || '';
+  const initialHouseNumber = history?.houseNumber || 0;
 
   useEffect(() => {
     setStartDate(initialStartDate);
     setEndDate(initialEndDate);
     setPhotoDate(initialPhotoDate);
+    setHouseNumber(initialHouseNumber);
     setStartError(false);
     setEndError(false);
     setPhotoError(false);
@@ -110,27 +123,44 @@ export default function EditInfo({ villager }: { villager: string }) {
 
   return (
     <Stack gap={2} width="30rem">
-      <EditFieldRow
+      <EditDateRow
         label="Move-in Date"
         value={startDate}
         setValue={setStartDate}
         initialValue={initialStartDate}
         error={startError}
       />
-      <EditFieldRow
+      <EditDateRow
         label="Photo Date"
         value={photoDate}
         setValue={setPhotoDate}
         initialValue={initialPhotoDate}
         error={photoError}
       />
-      <EditFieldRow
+      <EditDateRow
         label="Move-out Date"
         value={endDate}
         setValue={setEndDate}
         initialValue={initialEndDate}
         error={endError}
       />
+      <FormControl>
+        <InputLabel id="house-number-select-label">House Number</InputLabel>
+        <Select
+          labelId="house-number-select-label"
+          id="house-number-select"
+          defaultValue={initialHouseNumber}
+          value={houseNumber}
+          label="House Number"
+          onChange={(e) => setHouseNumber(Number(e.target.value))}
+        >
+          {Array.from({ length: 10 }, (_, i) => i + 1).map((n) => (
+            <MenuItem key={n} value={n}>
+              {n}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
       <Button variant="contained" color="primary" onClick={handleConfirm}>
         Confirm Edits
       </Button>
