@@ -32,7 +32,15 @@ export default async function editMongo(editOptions: EditOptions) {
   }
 
   if (!updateObject.$set) {
-    await db.collection('history').deleteOne({ name: editOptions.name });
+    await db.collection('history').bulkWrite([
+      {
+        updateMany: {
+          filter: {},
+          update: { $pull: { islandmates: editOptions.name } },
+        },
+      },
+      { deleteOne: { filter: { name: editOptions.name } } },
+    ]);
   } else {
     const res = await db
       .collection('history')
@@ -51,18 +59,21 @@ export default async function editMongo(editOptions: EditOptions) {
         })
         .toArray();
       const idsToUpdate = res.map((doc) => doc._id);
-      await db
-        .collection('history')
-        .updateMany(
-          { _id: { $in: idsToUpdate } },
-          { $addToSet: { islandmates: editOptions.name } },
-        );
       const islandmates = res.map((doc) => doc.name);
       updateObject['$set'].islandmates = islandmates;
-      await db.collection('history').insertOne({
-        name: editOptions.name,
-        ...updateObject.$set,
-      });
+      await db.collection('history').bulkWrite([
+        {
+          updateMany: {
+            filter: { _id: { $in: idsToUpdate } },
+            update: { $addToSet: { islandmates: editOptions.name } },
+          },
+        },
+        {
+          insertOne: {
+            document: { name: editOptions.name, ...updateObject.$set },
+          },
+        },
+      ]);
     }
   }
 }
