@@ -6,6 +6,9 @@ import { NAMES, PERSONALITIES, SPECIES } from '@/lib/constants';
 import useScreen from '@/lib/useScreen';
 import { SearchOptions } from '@/types';
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Autocomplete,
   Button,
   Divider,
@@ -14,12 +17,17 @@ import {
   InputLabel,
   MenuItem,
   Select,
+  Stack,
   TextField,
   Typography,
+  useTheme,
 } from '@mui/material';
 import { useEffect, useState } from 'react';
 import Loading from '../loading';
 import searchMongo from '@/lib/searchMongo';
+import { dateISOFormatter } from '@/lib/functions';
+import { theme } from '../theme';
+import { ExpandMore } from '@mui/icons-material';
 
 function useDebounce(value: any, delay: number) {
   const [debouncedValue, setDebouncedValue] = useState(value);
@@ -63,6 +71,10 @@ export default function Page() {
   );
   const { smallScreen } = useScreen();
   const [searching, setSearching] = useState(false);
+  const initialFromDate = '2020-03-25';
+  const initialToDate = dateISOFormatter(new Date());
+  const [fromDate, setFromDate] = useState<string>(initialFromDate);
+  const [toDate, setToDate] = useState<string>(initialToDate);
 
   useEffect(() => {
     setSearchOptions((prev) => ({ ...prev, name: debouncedNameFilter }));
@@ -179,10 +191,40 @@ export default function Page() {
                     personality: [],
                     gender: 'All',
                   });
+                  setFromDate(initialFromDate);
+                  setToDate(initialToDate);
                 }}
               >
                 Reset
               </Button>
+            </Grid>
+            <Grid item>
+              <Accordion sx={{ bgcolor: theme.palette.success.light }}>
+                <AccordionSummary expandIcon={<ExpandMore />}>
+                  Advanced Search
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Stack gap={2}>
+                    <Typography>Date Range of Residence</Typography>
+                    <TextField
+                      label="From"
+                      type="date"
+                      value={fromDate}
+                      onChange={(e) => setFromDate(e.target.value)}
+                      InputLabelProps={{ shrink: true }}
+                      sx={{ height: '100%', width: '13rem' }}
+                    />
+                    <TextField
+                      label="To"
+                      type="date"
+                      value={toDate}
+                      onChange={(e) => setToDate(e.target.value)}
+                      InputLabelProps={{ shrink: true }}
+                      sx={{ height: '100%', width: '13rem' }}
+                    />
+                  </Stack>
+                </AccordionDetails>
+              </Accordion>
             </Grid>
           </Grid>
         </Grid>

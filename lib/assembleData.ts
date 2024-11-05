@@ -1,7 +1,7 @@
 'use server';
 
 import { EventDocument, History } from '@/types';
-import { calculateDays } from './functions';
+import { calculateDays, dateISOFormatter } from './functions';
 import getData from './getData';
 import { cache } from 'react';
 
@@ -10,8 +10,6 @@ const currentDate = new Date();
 const endDate = new Date();
 endDate.setDate(currentDate.getDate() + 30);
 // endDate.setHours(0, 0, 0);
-
-const dateISOFormatter = (date: Date) => date.toISOString().slice(0, 10);
 
 async function assembleData(): Promise<{
   historyMap: Map<string, History>;
