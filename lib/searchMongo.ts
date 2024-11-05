@@ -1,6 +1,6 @@
 'use server';
 
-import { SearchFilter, SearchOptions } from '@/types';
+import { AdvancedSearchOptions, SearchFilter, SearchOptions } from '@/types';
 import connectToMongo from './connectToMongo';
 
 function escapeRegExp(regexString: string) {
@@ -35,4 +35,15 @@ export default async function searchMongo(
     .toArray();
 
   return searchResults.map((a) => a.name);
+}
+
+export async function advancedSearchMongo(
+  advancedSearchOptions: AdvancedSearchOptions,
+): Promise<string[]> {
+  const db = await connectToMongo();
+
+  if (advancedSearchOptions.residence === 'Non-residents only') {
+  } else {
+  }
+  return [];
 }

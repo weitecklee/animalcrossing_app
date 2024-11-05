@@ -145,6 +145,12 @@ export interface SearchOptions {
   gender: string;
 }
 
+export interface AdvancedSearchOptions {
+  residence: string;
+  fromDate: string;
+  toDate: string;
+}
+
 export interface SearchFilter {
   name?: { $regex: string; $options: string };
   species?: { $in: string[] };

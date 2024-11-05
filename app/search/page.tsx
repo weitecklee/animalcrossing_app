@@ -4,7 +4,7 @@ import IconGrid from '@/components/iconGrid';
 import IconGridAll from '@/components/iconGridAll';
 import { NAMES, PERSONALITIES, SPECIES } from '@/lib/constants';
 import useScreen from '@/lib/useScreen';
-import { SearchOptions } from '@/types';
+import { AdvancedSearchOptions, SearchOptions } from '@/types';
 import {
   Accordion,
   AccordionDetails,
@@ -54,6 +54,10 @@ function checkSearchOptions(opt: SearchOptions) {
   );
 }
 
+function checkAdvancedSearchOptions(opt: AdvancedSearchOptions) {
+  return opt.residence !== 'All' || opt.fromDate || opt.toDate;
+}
+
 export default function Page() {
   const [nameFilter, setNameFilter] = useState('');
   const debouncedNameFilter = useDebounce(nameFilter, 250);
@@ -73,8 +77,31 @@ export default function Page() {
   const [searching, setSearching] = useState(false);
   const initialFromDate = '2020-03-25';
   const initialToDate = dateISOFormatter(new Date());
-  const [fromDate, setFromDate] = useState<string>(initialFromDate);
-  const [toDate, setToDate] = useState<string>(initialToDate);
+  const [advancedSearchOptions, setAdvancedSearchOptions] =
+    useState<AdvancedSearchOptions>({
+      residence: 'All',
+      fromDate: initialFromDate,
+      toDate: initialToDate,
+    });
+
+  const handleAdvancedSearch = () => {
+    // if (checkAdvancedSearchOptions(advancedSearchOptions)) {
+    //   setConductSearch(true);
+    //   setSearching(true);
+    //   searchMongo(searchOptions, advancedSearchOptions).then((res) => {
+    //     setSearching(false);
+    //     if (res.length) {
+    //       setResultsFound(true);
+    //       setFilteredVillagers(res);
+    //     } else {
+    //       setResultsFound(false);
+    //     }
+    //   });
+    // } else {
+    //   setConductSearch(false);
+    //   setFilteredVillagers([]);
+    // }
+  };
 
   useEffect(() => {
     setSearchOptions((prev) => ({ ...prev, name: debouncedNameFilter }));
@@ -191,8 +218,11 @@ export default function Page() {
                     personality: [],
                     gender: 'All',
                   });
-                  setFromDate(initialFromDate);
-                  setToDate(initialToDate);
+                  setAdvancedSearchOptions({
+                    residence: 'All',
+                    fromDate: initialFromDate,
+                    toDate: initialToDate,
+                  });
                 }}
               >
                 Reset
@@ -205,23 +235,64 @@ export default function Page() {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Stack gap={2}>
+                    <FormControl sx={{ width: '10rem' }}>
+                      <InputLabel>Residence</InputLabel>
+                      <Select
+                        value={advancedSearchOptions.residence}
+                        onChange={(e) =>
+                          setAdvancedSearchOptions((prev) => ({
+                            ...prev,
+                            residence: e.target.value,
+                          }))
+                        }
+                        label="Residence"
+                        size={autocompleteSize}
+                      >
+                        <MenuItem value="All">All</MenuItem>
+                        <MenuItem value="Residents only">
+                          Residents only
+                        </MenuItem>
+                        <MenuItem value="Non-residents only">
+                          Non-residents only
+                        </MenuItem>
+                      </Select>
+                    </FormControl>
                     <Typography>Date Range of Residence</Typography>
                     <TextField
                       label="From"
                       type="date"
-                      value={fromDate}
-                      onChange={(e) => setFromDate(e.target.value)}
+                      value={advancedSearchOptions.fromDate}
+                      onChange={(e) =>
+                        setAdvancedSearchOptions((prev) => ({
+                          ...prev,
+                          fromDate: e.target.value,
+                        }))
+                      }
                       InputLabelProps={{ shrink: true }}
                       sx={{ height: '100%', width: '13rem' }}
+                      disabled={
+                        advancedSearchOptions.residence === 'Non-residents only'
+                      }
                     />
                     <TextField
                       label="To"
                       type="date"
-                      value={toDate}
-                      onChange={(e) => setToDate(e.target.value)}
+                      value={advancedSearchOptions.toDate}
+                      onChange={(e) =>
+                        setAdvancedSearchOptions((prev) => ({
+                          ...prev,
+                          toDate: e.target.value,
+                        }))
+                      }
                       InputLabelProps={{ shrink: true }}
                       sx={{ height: '100%', width: '13rem' }}
+                      disabled={
+                        advancedSearchOptions.residence === 'Non-residents only'
+                      }
                     />
+                    <Button variant="contained" onClick={handleAdvancedSearch}>
+                      Search
+                    </Button>
                   </Stack>
                 </AccordionDetails>
               </Accordion>
