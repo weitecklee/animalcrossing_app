@@ -42,8 +42,8 @@ export async function advancedSearchMongo(
 ): Promise<string[]> {
   const db = await connectToMongo();
   const { fromDate, toDate } = advancedSearchOptions;
-  const fromDateDate = new Date(fromDate);
-  const toDateDate = new Date(toDate);
+  const fromDateDate = new Date(fromDate + 'T00:00:00Z');
+  const toDateDate = new Date(toDate + 'T23:59:59Z');
 
   if (advancedSearchOptions.residence === 'Non-residents only') {
   } else {
@@ -61,6 +61,7 @@ export async function advancedSearchMongo(
           },
         ],
       })
+      .project({ name: 1, _id: 0 })
       .toArray();
     return searchResults.map((a) => a.name);
   }

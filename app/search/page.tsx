@@ -83,6 +83,7 @@ export default function Page() {
       fromDate: initialFromDate,
       toDate: initialToDate,
     });
+  const [advancedSearchError, setAdvancedSearchError] = useState(false);
 
   const handleAdvancedSearch = () => {
     if (checkAdvancedSearchOptions(advancedSearchOptions)) {
@@ -129,6 +130,12 @@ export default function Page() {
   useEffect(() => {
     setAutocompleteSize(smallScreen ? 'small' : 'medium');
   }, [smallScreen]);
+
+  useEffect(() => {
+    setAdvancedSearchError(
+      advancedSearchOptions.fromDate <= advancedSearchOptions.toDate,
+    );
+  }, [advancedSearchOptions.fromDate, advancedSearchOptions.toDate]);
 
   return (
     <>
@@ -273,6 +280,7 @@ export default function Page() {
                       disabled={
                         advancedSearchOptions.residence === 'Non-residents only'
                       }
+                      error={advancedSearchError}
                     />
                     <TextField
                       label="To"
@@ -289,8 +297,13 @@ export default function Page() {
                       disabled={
                         advancedSearchOptions.residence === 'Non-residents only'
                       }
+                      error={advancedSearchError}
                     />
-                    <Button variant="contained" onClick={handleAdvancedSearch}>
+                    <Button
+                      variant="contained"
+                      onClick={handleAdvancedSearch}
+                      disabled={advancedSearchError}
+                    >
                       Search
                     </Button>
                   </Stack>
