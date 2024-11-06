@@ -41,9 +41,29 @@ export async function advancedSearchMongo(
   advancedSearchOptions: AdvancedSearchOptions,
 ): Promise<string[]> {
   const db = await connectToMongo();
+  const { fromDate, toDate } = advancedSearchOptions;
+  const fromDateDate = new Date(fromDate);
+  const toDateDate = new Date(toDate);
 
   if (advancedSearchOptions.residence === 'Non-residents only') {
   } else {
+    const searchResults = await db
+      .collection('history')
+      .find({
+        $or: [
+          {
+            startDate: { $lte: toDateDate },
+            endDate: { $gte: fromDateDate },
+          },
+          {
+            startDate: { $lte: toDateDate },
+            endDate: { $exists: false },
+          },
+        ],
+      })
+      .toArray();
+    return searchResults.map((a) => a.name);
   }
+
   return [];
 }

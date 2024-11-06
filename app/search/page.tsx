@@ -24,7 +24,7 @@ import {
 } from '@mui/material';
 import { useEffect, useState } from 'react';
 import Loading from '../loading';
-import searchMongo from '@/lib/searchMongo';
+import searchMongo, { advancedSearchMongo } from '@/lib/searchMongo';
 import { dateISOFormatter } from '@/lib/functions';
 import { theme } from '../theme';
 import { ExpandMore } from '@mui/icons-material';
@@ -55,7 +55,7 @@ function checkSearchOptions(opt: SearchOptions) {
 }
 
 function checkAdvancedSearchOptions(opt: AdvancedSearchOptions) {
-  return opt.residence !== 'All' || opt.fromDate || opt.toDate;
+  return !!(opt.residence !== 'All' || opt.fromDate || opt.toDate);
 }
 
 export default function Page() {
@@ -85,22 +85,22 @@ export default function Page() {
     });
 
   const handleAdvancedSearch = () => {
-    // if (checkAdvancedSearchOptions(advancedSearchOptions)) {
-    //   setConductSearch(true);
-    //   setSearching(true);
-    //   searchMongo(searchOptions, advancedSearchOptions).then((res) => {
-    //     setSearching(false);
-    //     if (res.length) {
-    //       setResultsFound(true);
-    //       setFilteredVillagers(res);
-    //     } else {
-    //       setResultsFound(false);
-    //     }
-    //   });
-    // } else {
-    //   setConductSearch(false);
-    //   setFilteredVillagers([]);
-    // }
+    if (checkAdvancedSearchOptions(advancedSearchOptions)) {
+      setConductSearch(true);
+      setSearching(true);
+      advancedSearchMongo(advancedSearchOptions).then((res) => {
+        setSearching(false);
+        if (res.length) {
+          setResultsFound(true);
+          setFilteredVillagers(res);
+        } else {
+          setResultsFound(false);
+        }
+      });
+    } else {
+      setConductSearch(false);
+      setFilteredVillagers([]);
+    }
   };
 
   useEffect(() => {
