@@ -39,6 +39,7 @@ export default async function searchMongo(
 
 export async function advancedSearchMongo(
   advancedSearchOptions: AdvancedSearchOptions,
+  searchOptions: SearchOptions | null,
 ): Promise<string[]> {
   const db = await connectToMongo();
   const { fromDate, toDate } = advancedSearchOptions;
@@ -47,7 +48,30 @@ export async function advancedSearchMongo(
 
   if (advancedSearchOptions.residence === 'Non-residents only') {
   } else {
-    const searchResults = await db
+    if (searchOptions) {
+      return searchMongo(searchOptions)
+        .then((res) =>
+          db
+            .collection('history')
+            .find({
+              $or: [
+                {
+                  startDate: { $lte: toDateDate },
+                  endDate: { $gte: fromDateDate },
+                },
+                {
+                  startDate: { $lte: toDateDate },
+                  endDate: { $exists: false },
+                },
+              ],
+              name: { $in: res },
+            })
+            .project({ name: 1, _id: 0 })
+            .toArray(),
+        )
+        .then((res) => res.map((a) => a.name));
+    }
+    return db
       .collection('history')
       .find({
         $or: [
@@ -62,8 +86,8 @@ export async function advancedSearchMongo(
         ],
       })
       .project({ name: 1, _id: 0 })
-      .toArray();
-    return searchResults.map((a) => a.name);
+      .toArray()
+      .then((res) => res.map((a) => a.name));
   }
 
   return [];

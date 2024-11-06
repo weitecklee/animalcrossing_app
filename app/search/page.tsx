@@ -20,7 +20,6 @@ import {
   Stack,
   TextField,
   Typography,
-  useTheme,
 } from '@mui/material';
 import { useEffect, useState } from 'react';
 import Loading from '../loading';
@@ -89,7 +88,10 @@ export default function Page() {
     if (checkAdvancedSearchOptions(advancedSearchOptions)) {
       setConductSearch(true);
       setSearching(true);
-      advancedSearchMongo(advancedSearchOptions).then((res) => {
+      advancedSearchMongo(
+        advancedSearchOptions,
+        checkSearchOptions(searchOptions) ? searchOptions : null,
+      ).then((res) => {
         setSearching(false);
         if (res.length) {
           setResultsFound(true);
@@ -133,7 +135,7 @@ export default function Page() {
 
   useEffect(() => {
     setAdvancedSearchError(
-      advancedSearchOptions.fromDate <= advancedSearchOptions.toDate,
+      advancedSearchOptions.fromDate > advancedSearchOptions.toDate,
     );
   }, [advancedSearchOptions.fromDate, advancedSearchOptions.toDate]);
 
