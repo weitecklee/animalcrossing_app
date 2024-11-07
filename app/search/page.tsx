@@ -4,8 +4,11 @@ import IconGrid from '@/components/iconGrid';
 import IconGridAll from '@/components/iconGridAll';
 import { NAMES, PERSONALITIES, SPECIES } from '@/lib/constants';
 import useScreen from '@/lib/useScreen';
-import { SearchOptions } from '@/types';
+import { AdvancedSearchOptions, SearchOptions } from '@/types';
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Autocomplete,
   Button,
   Divider,
@@ -14,12 +17,16 @@ import {
   InputLabel,
   MenuItem,
   Select,
+  Stack,
   TextField,
   Typography,
 } from '@mui/material';
 import { useEffect, useState } from 'react';
 import Loading from '../loading';
 import searchMongo from '@/lib/searchMongo';
+import { dateISOFormatter } from '@/lib/functions';
+import { theme } from '../theme';
+import { ExpandMore } from '@mui/icons-material';
 
 function useDebounce(value: any, delay: number) {
   const [debouncedValue, setDebouncedValue] = useState(value);
@@ -63,16 +70,52 @@ export default function Page() {
   );
   const { smallScreen } = useScreen();
   const [searching, setSearching] = useState(false);
+  const initialFromDate = '2020-03-25';
+  const initialToDate = dateISOFormatter(new Date());
+  const [advancedSearchOptions, setAdvancedSearchOptions] =
+    useState<AdvancedSearchOptions>({
+      residence: 'All',
+      fromDate: initialFromDate,
+      toDate: initialToDate,
+    });
+
+  const resetSearch = () => {
+    setNameFilter('');
+    setSearchOptions({
+      name: '',
+      species: [],
+      personality: [],
+      gender: 'All',
+    });
+  };
+
+  const resetAdvancedSearch = () =>
+    setAdvancedSearchOptions({
+      residence: 'All',
+      fromDate: initialFromDate,
+      toDate: initialToDate,
+    });
 
   useEffect(() => {
     setSearchOptions((prev) => ({ ...prev, name: debouncedNameFilter }));
   }, [debouncedNameFilter]);
 
   useEffect(() => {
-    if (checkSearchOptions(searchOptions)) {
+    if (
+      checkSearchOptions(searchOptions) ||
+      advancedSearchOptions.residence !== 'All'
+    ) {
+      if (
+        advancedSearchOptions.residence === 'Residents only' &&
+        (!advancedSearchOptions.fromDate ||
+          !advancedSearchOptions.toDate ||
+          advancedSearchOptions.fromDate > advancedSearchOptions.toDate)
+      ) {
+        return;
+      }
       setConductSearch(true);
       setSearching(true);
-      searchMongo(searchOptions).then((res) => {
+      searchMongo(searchOptions, advancedSearchOptions).then((res) => {
         setSearching(false);
         if (res.length) {
           setResultsFound(true);
@@ -85,7 +128,7 @@ export default function Page() {
       setConductSearch(false);
       setFilteredVillagers([]);
     }
-  }, [searchOptions]);
+  }, [searchOptions, advancedSearchOptions]);
 
   useEffect(() => {
     setAutocompleteSize(smallScreen ? 'small' : 'medium');
@@ -171,18 +214,94 @@ export default function Page() {
                 disableElevation
                 color="inherit"
                 variant="contained"
-                onClick={() => {
-                  setNameFilter('');
-                  setSearchOptions({
-                    name: '',
-                    species: [],
-                    personality: [],
-                    gender: 'All',
-                  });
-                }}
+                onClick={resetSearch}
               >
                 Reset
               </Button>
+            </Grid>
+            <Grid item>
+              <Accordion sx={{ bgcolor: theme.palette.success.light }}>
+                <AccordionSummary expandIcon={<ExpandMore />}>
+                  More Options
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Stack gap={2}>
+                    <FormControl sx={{ width: '10rem' }}>
+                      <InputLabel>Residence</InputLabel>
+                      <Select
+                        value={advancedSearchOptions.residence}
+                        onChange={(e) =>
+                          setAdvancedSearchOptions((prev) => ({
+                            ...prev,
+                            residence: e.target.value,
+                          }))
+                        }
+                        label="Residence"
+                        size={autocompleteSize}
+                      >
+                        <MenuItem value="All">All</MenuItem>
+                        <MenuItem value="Residents only">
+                          Residents only
+                        </MenuItem>
+                        <MenuItem value="Non-residents only">
+                          Non-residents only
+                        </MenuItem>
+                      </Select>
+                    </FormControl>
+                    <Typography>Date Range of Residence</Typography>
+                    <TextField
+                      label="From"
+                      type="date"
+                      value={advancedSearchOptions.fromDate}
+                      onChange={(e) =>
+                        setAdvancedSearchOptions((prev) => ({
+                          ...prev,
+                          fromDate: e.target.value,
+                        }))
+                      }
+                      InputLabelProps={{ shrink: true }}
+                      sx={{ height: '100%', width: '13rem' }}
+                      disabled={
+                        advancedSearchOptions.residence !== 'Residents only'
+                      }
+                      error={
+                        !advancedSearchOptions.fromDate ||
+                        advancedSearchOptions.fromDate >
+                          advancedSearchOptions.toDate
+                      }
+                    />
+                    <TextField
+                      label="To"
+                      type="date"
+                      value={advancedSearchOptions.toDate}
+                      onChange={(e) =>
+                        setAdvancedSearchOptions((prev) => ({
+                          ...prev,
+                          toDate: e.target.value,
+                        }))
+                      }
+                      InputLabelProps={{ shrink: true }}
+                      sx={{ height: '100%', width: '13rem' }}
+                      disabled={
+                        advancedSearchOptions.residence !== 'Residents only'
+                      }
+                      error={
+                        !advancedSearchOptions.toDate ||
+                        advancedSearchOptions.fromDate >
+                          advancedSearchOptions.toDate
+                      }
+                    />
+                    <Button
+                      disableElevation
+                      color="inherit"
+                      variant="contained"
+                      onClick={resetAdvancedSearch}
+                    >
+                      Reset
+                    </Button>
+                  </Stack>
+                </AccordionDetails>
+              </Accordion>
             </Grid>
           </Grid>
         </Grid>

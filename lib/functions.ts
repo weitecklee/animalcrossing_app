@@ -24,6 +24,10 @@ export function dateFormatter(date: Date): string {
   return dateFormat.format(date);
 }
 
+export function dateISOFormatter(date: Date): string {
+  return date.toISOString().slice(0, 10);
+}
+
 // Pixel GIF code adapted from https://stackoverflow.com/a/33919020/266535
 const keyStr =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
