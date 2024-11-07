@@ -78,7 +78,6 @@ export default function Page() {
       fromDate: initialFromDate,
       toDate: initialToDate,
     });
-  const [advancedSearchError, setAdvancedSearchError] = useState(false);
 
   const resetSearch = () => {
     setNameFilter('');
@@ -102,15 +101,18 @@ export default function Page() {
   }, [debouncedNameFilter]);
 
   useEffect(() => {
-    if (advancedSearchOptions.fromDate > advancedSearchOptions.toDate) {
-      setAdvancedSearchError(true);
-      return;
-    }
-    setAdvancedSearchError(false);
     if (
       checkSearchOptions(searchOptions) ||
       advancedSearchOptions.residence !== 'All'
     ) {
+      if (
+        advancedSearchOptions.residence === 'Residents only' &&
+        (!advancedSearchOptions.fromDate ||
+          !advancedSearchOptions.toDate ||
+          advancedSearchOptions.fromDate > advancedSearchOptions.toDate)
+      ) {
+        return;
+      }
       setConductSearch(true);
       setSearching(true);
       searchMongo(searchOptions, advancedSearchOptions).then((res) => {
@@ -262,7 +264,11 @@ export default function Page() {
                       disabled={
                         advancedSearchOptions.residence !== 'Residents only'
                       }
-                      error={advancedSearchError}
+                      error={
+                        !advancedSearchOptions.fromDate ||
+                        advancedSearchOptions.fromDate >
+                          advancedSearchOptions.toDate
+                      }
                     />
                     <TextField
                       label="To"
@@ -279,7 +285,11 @@ export default function Page() {
                       disabled={
                         advancedSearchOptions.residence !== 'Residents only'
                       }
-                      error={advancedSearchError}
+                      error={
+                        !advancedSearchOptions.toDate ||
+                        advancedSearchOptions.fromDate >
+                          advancedSearchOptions.toDate
+                      }
                     />
                     <Button
                       disableElevation
