@@ -23,7 +23,7 @@ import {
 } from '@mui/material';
 import { useEffect, useState } from 'react';
 import Loading from '../loading';
-import searchMongo, { advancedSearchMongo } from '@/lib/searchMongo';
+import searchMongo from '@/lib/searchMongo';
 import { dateISOFormatter } from '@/lib/functions';
 import { theme } from '../theme';
 import { ExpandMore } from '@mui/icons-material';
@@ -53,10 +53,6 @@ function checkSearchOptions(opt: SearchOptions) {
   );
 }
 
-function checkAdvancedSearchOptions(opt: AdvancedSearchOptions) {
-  return !!(opt.residence !== 'All' || opt.fromDate || opt.toDate);
-}
-
 export default function Page() {
   const [nameFilter, setNameFilter] = useState('');
   const debouncedNameFilter = useDebounce(nameFilter, 250);
@@ -84,37 +80,40 @@ export default function Page() {
     });
   const [advancedSearchError, setAdvancedSearchError] = useState(false);
 
-  const handleAdvancedSearch = () => {
-    if (checkAdvancedSearchOptions(advancedSearchOptions)) {
-      setConductSearch(true);
-      setSearching(true);
-      advancedSearchMongo(
-        advancedSearchOptions,
-        checkSearchOptions(searchOptions) ? searchOptions : null,
-      ).then((res) => {
-        setSearching(false);
-        if (res.length) {
-          setResultsFound(true);
-          setFilteredVillagers(res);
-        } else {
-          setResultsFound(false);
-        }
-      });
-    } else {
-      setConductSearch(false);
-      setFilteredVillagers([]);
-    }
+  const resetSearch = () => {
+    setNameFilter('');
+    setSearchOptions({
+      name: '',
+      species: [],
+      personality: [],
+      gender: 'All',
+    });
   };
+
+  const resetAdvancedSearch = () =>
+    setAdvancedSearchOptions({
+      residence: 'All',
+      fromDate: initialFromDate,
+      toDate: initialToDate,
+    });
 
   useEffect(() => {
     setSearchOptions((prev) => ({ ...prev, name: debouncedNameFilter }));
   }, [debouncedNameFilter]);
 
   useEffect(() => {
-    if (checkSearchOptions(searchOptions)) {
+    if (advancedSearchOptions.fromDate > advancedSearchOptions.toDate) {
+      setAdvancedSearchError(true);
+      return;
+    }
+    setAdvancedSearchError(false);
+    if (
+      checkSearchOptions(searchOptions) ||
+      advancedSearchOptions.residence !== 'All'
+    ) {
       setConductSearch(true);
       setSearching(true);
-      searchMongo(searchOptions).then((res) => {
+      searchMongo(searchOptions, advancedSearchOptions).then((res) => {
         setSearching(false);
         if (res.length) {
           setResultsFound(true);
@@ -127,17 +126,11 @@ export default function Page() {
       setConductSearch(false);
       setFilteredVillagers([]);
     }
-  }, [searchOptions]);
+  }, [searchOptions, advancedSearchOptions]);
 
   useEffect(() => {
     setAutocompleteSize(smallScreen ? 'small' : 'medium');
   }, [smallScreen]);
-
-  useEffect(() => {
-    setAdvancedSearchError(
-      advancedSearchOptions.fromDate > advancedSearchOptions.toDate,
-    );
-  }, [advancedSearchOptions.fromDate, advancedSearchOptions.toDate]);
 
   return (
     <>
@@ -219,20 +212,7 @@ export default function Page() {
                 disableElevation
                 color="inherit"
                 variant="contained"
-                onClick={() => {
-                  setNameFilter('');
-                  setSearchOptions({
-                    name: '',
-                    species: [],
-                    personality: [],
-                    gender: 'All',
-                  });
-                  setAdvancedSearchOptions({
-                    residence: 'All',
-                    fromDate: initialFromDate,
-                    toDate: initialToDate,
-                  });
-                }}
+                onClick={resetSearch}
               >
                 Reset
               </Button>
@@ -240,7 +220,7 @@ export default function Page() {
             <Grid item>
               <Accordion sx={{ bgcolor: theme.palette.success.light }}>
                 <AccordionSummary expandIcon={<ExpandMore />}>
-                  Advanced Search
+                  More Options
                 </AccordionSummary>
                 <AccordionDetails>
                   <Stack gap={2}>
@@ -280,7 +260,7 @@ export default function Page() {
                       InputLabelProps={{ shrink: true }}
                       sx={{ height: '100%', width: '13rem' }}
                       disabled={
-                        advancedSearchOptions.residence === 'Non-residents only'
+                        advancedSearchOptions.residence !== 'Residents only'
                       }
                       error={advancedSearchError}
                     />
@@ -297,16 +277,17 @@ export default function Page() {
                       InputLabelProps={{ shrink: true }}
                       sx={{ height: '100%', width: '13rem' }}
                       disabled={
-                        advancedSearchOptions.residence === 'Non-residents only'
+                        advancedSearchOptions.residence !== 'Residents only'
                       }
                       error={advancedSearchError}
                     />
                     <Button
+                      disableElevation
+                      color="inherit"
                       variant="contained"
-                      onClick={handleAdvancedSearch}
-                      disabled={advancedSearchError}
+                      onClick={resetAdvancedSearch}
                     >
-                      Search
+                      Reset
                     </Button>
                   </Stack>
                 </AccordionDetails>
