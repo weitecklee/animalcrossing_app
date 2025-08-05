@@ -5,7 +5,9 @@ import { useRouter } from 'next/navigation';
 import { DialogContent } from '@mui/material';
 import StatBreakdown from '@/app/stats/[stat]/statBreakdown';
 
-export default function StatDialog({ params }: { params: { stat: string } }) {
+type Params = Promise<{ stat: string }>;
+
+export default function StatDialog({ params }: { params: Params }) {
   const router = useRouter();
 
   return (
