@@ -221,7 +221,10 @@ export default function Page() {
             </Grid>
             <Grid>
               <Accordion sx={{ bgcolor: theme.palette.success.light }}>
-                <AccordionSummary expandIcon={<ExpandMore />}>
+                <AccordionSummary
+                  expandIcon={<ExpandMore />}
+                  sx={{ font: 'inherit' }}
+                >
                   More Options
                 </AccordionSummary>
                 <AccordionDetails>
