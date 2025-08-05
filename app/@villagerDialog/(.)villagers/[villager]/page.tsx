@@ -2,10 +2,9 @@
 
 import { use, useContext, useEffect } from 'react';
 import { StateContext } from '@/lib/stateContext';
+import { VillagerParams } from '@/types';
 
-type Params = Promise<{ villager: string }>;
-
-export default function VillagerDialog({ params }: { params: Params }) {
+export default function VillagerDialog({ params }: { params: VillagerParams }) {
   const { setDialogActive, setDialogVillager } = useContext(StateContext);
 
   const paramsUsed = use(params);

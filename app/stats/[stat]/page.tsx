@@ -1,3 +1,4 @@
+import { StatParams } from '@/types';
 import StatBreakdown from './statBreakdown';
 
 export const dynamicParams = false;
@@ -13,8 +14,6 @@ export function generateStaticParams() {
   ];
 }
 
-type Params = Promise<{ stat: string }>;
-
-export default function Page({ params }: { params: Params }) {
+export default function Page({ params }: { params: StatParams }) {
   return <StatBreakdown params={params} />;
 }

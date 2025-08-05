@@ -171,3 +171,6 @@ export interface MongoSetObject {
   photoDate?: string;
   islandmates?: string[];
 }
+
+export type StatParams = Promise<{ stat: string }>;
+export type VillagerParams = Promise<{ villager: string }>;
