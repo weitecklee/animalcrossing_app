@@ -1,14 +1,14 @@
 'use client';
 
-import { useContext, useEffect } from 'react';
+import { use, useContext, useEffect } from 'react';
 import { StateContext } from '@/lib/stateContext';
 
-export default function VillagerDialog({
-  params,
-}: {
-  params: { villager: string };
-}) {
+type Params = Promise<{ villager: string }>;
+
+export default function VillagerDialog({ params }: { params: Params }) {
   const { setDialogActive, setDialogVillager } = useContext(StateContext);
+
+  const paramsUsed = use(params);
 
   useEffect(() => {
     setDialogActive(true);
@@ -18,8 +18,8 @@ export default function VillagerDialog({
   }, [setDialogActive]);
 
   useEffect(() => {
-    setDialogVillager(params.villager);
-  }, [setDialogVillager, params]);
+    setDialogVillager(paramsUsed.villager);
+  }, [setDialogVillager, paramsUsed]);
 
   return <></>;
 }

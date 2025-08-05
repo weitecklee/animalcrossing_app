@@ -142,9 +142,9 @@ export default function Page() {
         paddingY={1}
         direction={{ xs: 'column', sm: 'row' }}
       >
-        <Grid item xs={12} sm="auto">
+        <Grid size={{ xs: 12, sm: 'auto' }}>
           <Grid container spacing={2} direction={{ xs: 'row', sm: 'column' }}>
-            <Grid item>
+            <Grid>
               <Autocomplete
                 freeSolo
                 options={NAMES}
@@ -155,7 +155,7 @@ export default function Page() {
                 size={autocompleteSize}
               />
             </Grid>
-            <Grid item>
+            <Grid>
               <Autocomplete
                 multiple
                 disableCloseOnSelect
@@ -168,11 +168,11 @@ export default function Page() {
                 renderInput={(params) => (
                   <TextField {...params} label="Species" />
                 )}
-                ChipProps={{ variant: 'outlined' }}
+                slotProps={{ chip: { variant: 'outlined' } }}
                 size={autocompleteSize}
               />
             </Grid>
-            <Grid item>
+            <Grid>
               <Autocomplete
                 multiple
                 disableCloseOnSelect
@@ -189,7 +189,7 @@ export default function Page() {
                 size={autocompleteSize}
               />
             </Grid>
-            <Grid item>
+            <Grid>
               <FormControl sx={{ width: '10rem' }}>
                 <InputLabel>Gender</InputLabel>
                 <Select
@@ -209,7 +209,7 @@ export default function Page() {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item>
+            <Grid>
               <Button
                 disableElevation
                 color="inherit"
@@ -219,9 +219,12 @@ export default function Page() {
                 Reset
               </Button>
             </Grid>
-            <Grid item>
+            <Grid>
               <Accordion sx={{ bgcolor: theme.palette.success.light }}>
-                <AccordionSummary expandIcon={<ExpandMore />}>
+                <AccordionSummary
+                  expandIcon={<ExpandMore />}
+                  sx={{ font: 'inherit' }}
+                >
                   More Options
                 </AccordionSummary>
                 <AccordionDetails>
@@ -259,7 +262,7 @@ export default function Page() {
                           fromDate: e.target.value,
                         }))
                       }
-                      InputLabelProps={{ shrink: true }}
+                      slotProps={{ inputLabel: { shrink: true } }}
                       sx={{ height: '100%', width: '13rem' }}
                       disabled={
                         advancedSearchOptions.residence !== 'Residents only'
@@ -280,7 +283,7 @@ export default function Page() {
                           toDate: e.target.value,
                         }))
                       }
-                      InputLabelProps={{ shrink: true }}
+                      slotProps={{ inputLabel: { shrink: true } }}
                       sx={{ height: '100%', width: '13rem' }}
                       disabled={
                         advancedSearchOptions.residence !== 'Residents only'
@@ -310,7 +313,7 @@ export default function Page() {
           flexItem
           sx={{ padding: 1 }}
         />
-        <Grid item xs data-testid="searchResults">
+        <Grid size="grow" data-testid="searchResults">
           {conductSearch ? (
             searching ? (
               <Loading />

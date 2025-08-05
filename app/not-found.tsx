@@ -5,12 +5,12 @@ import Image from 'next/image';
 export default function NotFound() {
   return (
     <Grid container direction="column" alignItems="center" spacing={1}>
-      <Grid item>
+      <Grid>
         <Typography variant="h5">
           There doesn&#39;t seem to be anything here...
         </Typography>
       </Grid>
-      <Grid item>
+      <Grid>
         <Image
           src={ErrorPNG}
           alt="Confused"

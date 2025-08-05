@@ -13,7 +13,7 @@ export default function IconGrid({
     return (
       <Grid container spacing={0.5} paddingY={0.5}>
         {traitData.villagers.map((villager) => (
-          <Grid key={villager} item>
+          <Grid key={villager}>
             <VillagerIcon villager={villager} />
           </Grid>
         ))}
@@ -24,7 +24,7 @@ export default function IconGrid({
   return (
     <Grid container spacing={0.5} paddingY={0.5}>
       {villagers!.map((villager) => (
-        <Grid key={villager} item>
+        <Grid key={villager}>
           <VillagerIcon villager={villager} />
         </Grid>
       ))}

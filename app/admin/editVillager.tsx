@@ -39,7 +39,11 @@ export default function EditVillager() {
         onChange={(e, name) => setVillager(name)}
         renderInput={(params) => <TextField {...params} label="Villager" />}
       />
-      {villager && <VillagerPage params={{ villager: fixName(villager) }} />}
+      {villager && (
+        <VillagerPage
+          params={Promise.resolve({ villager: fixName(villager) })}
+        />
+      )}
       {villager && <EditInfo villager={villager} />}
     </Stack>
   );
