@@ -13,13 +13,15 @@ export default function CustomDialog({ zIndex, ...props }: CustomDialogProps) {
       sx={{
         zIndex,
       }}
-      PaperProps={{
-        sx: smallScreen
-          ? {
-              maxWidth: '100%',
-              mx: '16px',
-            }
-          : {},
+      slotProps={{
+        paper: {
+          sx: smallScreen
+            ? {
+                maxWidth: '100%',
+                mx: '16px',
+              }
+            : {},
+        },
       }}
     />
   );

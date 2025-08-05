@@ -1,7 +1,7 @@
 'use client';
 
 import { Box, Divider, List, ListItem, Typography } from '@mui/material';
-import { useContext } from 'react';
+import { use, useContext } from 'react';
 import { DataContext } from '@/lib/dataContext';
 import IconGrid from '@/components/iconGrid';
 import VillagerIcon from '@/components/villagerIcon';
@@ -12,16 +12,16 @@ import { notFound } from 'next/navigation';
 import CustomChip from '@/components/customChip';
 import LengthOfStay from './lengthOfStay';
 
-export default function StatBreakdown({
-  params,
-}: {
-  params: { stat: string };
-}) {
+type Params = Promise<{ stat: string }>;
+
+export default function StatBreakdown({ params }: { params: Params }) {
   const { historyMap, calculatedStats } = useContext(DataContext);
 
   if (!historyMap.size) {
     return <Loading />;
   }
+
+  const stat = use(params).stat;
 
   const {
     speciesData,
@@ -33,11 +33,11 @@ export default function StatBreakdown({
     noPhotoData,
   } = calculatedStats;
 
-  if (params.stat === 'lengthOfStay') {
+  if (stat === 'lengthOfStay') {
     return <LengthOfStay durationData={durationData} historyMap={historyMap} />;
   }
 
-  if (params.stat === 'species') {
+  if (stat === 'species') {
     return (
       <>
         <TitleChip title="Species Breakdown" />
@@ -53,7 +53,7 @@ export default function StatBreakdown({
     );
   }
 
-  if (params.stat === 'personality') {
+  if (stat === 'personality') {
     return (
       <>
         <TitleChip title="Personality Breakdown" />
@@ -69,7 +69,7 @@ export default function StatBreakdown({
     );
   }
 
-  if (params.stat === 'gender') {
+  if (stat === 'gender') {
     return (
       <>
         <TitleChip title="Gender Breakdown" />
@@ -85,7 +85,7 @@ export default function StatBreakdown({
     );
   }
 
-  if (params.stat === 'photos') {
+  if (stat === 'photos') {
     return (
       <PhotoDialog
         photoData={photoData}
@@ -95,7 +95,7 @@ export default function StatBreakdown({
     );
   }
 
-  if (params.stat === 'islandmates') {
+  if (stat === 'islandmates') {
     return (
       <>
         <TitleChip title="Islandmates Breakdown" />

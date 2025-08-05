@@ -24,7 +24,7 @@ function IconGridAll() {
         const villagerData = nookipediaData.get(villager)!;
         const isResident = !!historyMap.get(villager);
         return (
-          <Grid key={villager} item>
+          <Grid key={villager}>
             <VillagerTooltip villager={villager}>
               <Link
                 href={`/villagers/${fixName(villager)}`}

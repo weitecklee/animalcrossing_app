@@ -13,6 +13,8 @@ export function generateStaticParams() {
   ];
 }
 
-export default function Page({ params }: { params: { stat: string } }) {
+type Params = Promise<{ stat: string }>;
+
+export default function Page({ params }: { params: Params }) {
   return <StatBreakdown params={params} />;
 }
