@@ -18,9 +18,13 @@ import { coustard } from '@/app/theme';
 import Link from 'next/link';
 
 function DraggablePaper(props: PaperProps) {
-  const nodeRef = useRef(null);
+  const nodeRef = useRef<HTMLDivElement>(null);
   return (
-    <Draggable handle="#dragHandle" bounds="parent" nodeRef={nodeRef}>
+    <Draggable
+      handle="#dragHandle"
+      bounds="parent"
+      nodeRef={nodeRef as React.RefObject<HTMLElement>}
+    >
       <Paper
         {...props}
         elevation={5}

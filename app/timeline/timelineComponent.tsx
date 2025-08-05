@@ -122,7 +122,7 @@ export default function Timeline() {
   const [barBackground, setBarBackground] = useState<number[][] | number[]>([
     0,
   ]);
-  const nodeRef = useRef(null);
+  const nodeRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     options.plugins.tooltip.external = ({ tooltip }: { tooltip: any }) => {
@@ -265,7 +265,7 @@ export default function Timeline() {
         handle="#dragFab"
         bounds="parent"
         cancel="#changeViewButton"
-        nodeRef={nodeRef}
+        nodeRef={nodeRef as React.RefObject<HTMLElement>}
       >
         <Box
           sx={{
