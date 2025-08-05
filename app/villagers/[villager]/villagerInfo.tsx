@@ -36,7 +36,7 @@ export default function VillagerInfo({
 
   return (
     <>
-      <Grid item xs={12} sm={6} md={5} position="relative">
+      <Grid size={{ xs: 12, sm: 6, md: 5 }} position="relative">
         <Stack
           position="relative"
           direction="row"
@@ -103,7 +103,7 @@ export default function VillagerInfo({
           </Stack>
         </Stack>
       </Grid>
-      <Grid item xs={12} sm={6} md={7}>
+      <Grid size={{ xs: 12, sm: 6, md: 7 }}>
         <Stack direction="row" alignItems="center">
           <Typography variant="h6" fontFamily={coustard.style.fontFamily}>
             {villagerData.name}&ensp;{villagerData.ja_name}&ensp;

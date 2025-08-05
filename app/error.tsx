@@ -13,10 +13,10 @@ export default function Error({
 
   return (
     <Grid container direction="column" alignItems="center" spacing={1}>
-      <Grid item>
+      <Grid>
         <Typography variant="h5">Seems like something went wrong...</Typography>
       </Grid>
-      <Grid item>
+      <Grid>
         <Image
           src={ErrorPNG}
           alt="Confused"

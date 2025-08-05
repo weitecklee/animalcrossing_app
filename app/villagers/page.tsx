@@ -15,8 +15,8 @@ import {
 export default function Villagers() {
   const { historyMap } = useContext(DataContext);
   const [showScroll, setShowScroll] = useState(false);
-  const timeoutID = useRef<NodeJS.Timeout>();
-  const bottomRef = useRef<HTMLDivElement>();
+  const timeoutID = useRef<NodeJS.Timeout>(undefined);
+  const bottomRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
     setShowScroll(true);

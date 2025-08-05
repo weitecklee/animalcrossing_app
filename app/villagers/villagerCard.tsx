@@ -30,7 +30,7 @@ export default function VillagerCard({
   const [elevation, setElevation] = useState(lowElevation);
 
   return (
-    <Grid item>
+    <Grid>
       <Link href={`/villagers/${fixName(history.name)}`} scroll={false}>
         <Paper
           elevation={elevation}

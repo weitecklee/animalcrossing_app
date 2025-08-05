@@ -2,6 +2,7 @@ import { Grid } from '@mui/material';
 import VillagerInfo from './villagerInfo';
 import { NAMES } from '@/lib/constants';
 import { fixName } from '@/lib/functions';
+import { use } from 'react';
 
 export const dynamicParams = false;
 
@@ -9,14 +10,12 @@ export function generateStaticParams() {
   return NAMES.map((name) => ({ villager: fixName(name) }));
 }
 
-export default function VillagerPage({
-  params,
-}: {
-  params: { villager: string };
-}) {
+type Params = Promise<{ villager: string }>;
+
+export default function VillagerPage({ params }: { params: Params }) {
   return (
     <Grid container justifyContent="center" spacing={4}>
-      <VillagerInfo params={params} />
+      <VillagerInfo params={use(params)} />
     </Grid>
   );
 }
