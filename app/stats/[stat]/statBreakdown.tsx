@@ -11,10 +11,9 @@ import TitleChip from '../titleChip';
 import { notFound } from 'next/navigation';
 import CustomChip from '@/components/customChip';
 import LengthOfStay from './lengthOfStay';
+import { StatParams } from '@/types';
 
-type Params = Promise<{ stat: string }>;
-
-export default function StatBreakdown({ params }: { params: Params }) {
+export default function StatBreakdown({ params }: { params: StatParams }) {
   const { historyMap, calculatedStats } = useContext(DataContext);
 
   if (!historyMap.size) {
