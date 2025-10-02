@@ -9,7 +9,7 @@ import { Container, CssBaseline } from '@mui/material';
 import { DataProvider } from '@/lib/dataContext';
 import { StateProvider } from '@/lib/stateContext';
 import VillagerDialog from './villagerDialog';
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import connectToMongo from '@/lib/connectToMongo';
 
