@@ -1,33 +1,66 @@
 'use server';
 
-import { MongoSetObject, EditOptions } from '@/types';
+import { MongoSetObject, EditOptions, MongoInsertOperation } from '@/types';
 import connectToMongo from './connectToMongo';
+
+const timezoneOffset = 'T04:00:00.000Z';
 
 export default async function editMongo(editOptions: EditOptions) {
   const db = await connectToMongo();
   const setObject = {} as MongoSetObject;
   const unsetObject = {} as MongoSetObject;
   const updateObject = {} as { $set?: MongoSetObject; $unset?: MongoSetObject };
+  const eventsOperations: MongoInsertOperation[] = [];
 
   if (editOptions.startDate) {
-    setObject.startDate = editOptions.startDate;
+    const startDate = editOptions.startDate + timezoneOffset;
+    setObject.startDate = new Date(startDate);
     updateObject.$set = setObject;
+    eventsOperations.push({
+      insertOne: {
+        document: {
+          villager: editOptions.name,
+          date: startDate,
+          event: 0, // 'moved in',
+        },
+      },
+    });
   } else {
-    unsetObject.startDate = '';
+    unsetObject.startDate = null;
     updateObject.$unset = unsetObject;
   }
   if (editOptions.endDate) {
-    setObject.endDate = editOptions.endDate;
+    const endDate = editOptions.endDate + timezoneOffset;
+    setObject.endDate = new Date(endDate);
     updateObject.$set = setObject;
+    eventsOperations.push({
+      insertOne: {
+        document: {
+          villager: editOptions.name,
+          date: endDate,
+          event: 3, // 'moved out',
+        },
+      },
+    });
   } else {
-    unsetObject.endDate = '';
+    unsetObject.endDate = null;
     updateObject.$unset = unsetObject;
   }
   if (editOptions.photoDate) {
-    setObject.photoDate = editOptions.photoDate;
+    const photoDate = editOptions.photoDate + timezoneOffset;
+    setObject.photoDate = new Date(photoDate);
     updateObject.$set = setObject;
+    eventsOperations.push({
+      insertOne: {
+        document: {
+          villager: editOptions.name,
+          date: photoDate,
+          event: 2, // 'gave photo',
+        },
+      },
+    });
   } else {
-    unsetObject.photoDate = '';
+    unsetObject.photoDate = null;
     updateObject.$unset = unsetObject;
   }
 
@@ -75,5 +108,11 @@ export default async function editMongo(editOptions: EditOptions) {
         },
       ]);
     }
+    await db
+      .collection('events')
+      .bulkWrite([
+        { deleteMany: { filter: { villager: editOptions.name } } },
+        ...eventsOperations,
+      ]);
   }
 }
