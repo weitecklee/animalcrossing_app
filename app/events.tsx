@@ -15,7 +15,7 @@ import { DataContext } from '@/lib/dataContext';
 import { ScreenContext } from '@/lib/screenContext';
 import nookipediaData from '@/lib/nookipediaData';
 import VillagerIcon from '@/components/villagerIcon';
-import Loading from './loading';
+import Loading from '@/components/loading';
 import CustomChip from '@/components/customChip';
 
 const currentDate = new Date();

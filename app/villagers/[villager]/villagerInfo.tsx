@@ -11,7 +11,7 @@ import { coustard } from '@/app/theme';
 import IconGrid from '@/components/iconGrid';
 import CustomImage from '@/components/customImage';
 import { notFound } from 'next/navigation';
-import Loading from '@/app/loading';
+import Loading from '@/components/loading';
 
 const baseDim = 128;
 const unit1 = `${baseDim * 1}px`;
