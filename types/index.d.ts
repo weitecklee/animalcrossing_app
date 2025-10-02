@@ -13,7 +13,7 @@ export interface HistoryDocument {
 export interface EventDocument {
   date: string;
   villager: string;
-  event: string;
+  event: Number;
 }
 
 interface NH_Details {
@@ -166,10 +166,22 @@ export interface EditOptions {
 }
 
 export interface MongoSetObject {
-  startDate?: string;
-  endDate?: string;
-  photoDate?: string;
+  startDate?: Date | null;
+  endDate?: Date | null;
+  photoDate?: Date | null;
   islandmates?: string[];
+}
+
+export interface MongoInsertObject {
+  villager: string;
+  date: string;
+  event: Number;
+}
+
+export interface MongoInsertOperation {
+  insertOne: {
+    document: MongoInsertObject;
+  };
 }
 
 export type StatParams = Promise<{ stat: string }>;

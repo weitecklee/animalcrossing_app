@@ -18,7 +18,7 @@ async function getData(): Promise<{
   const eventsData = (await db
     .collection('events')
     .find({})
-    .sort({ _id: -1 })
+    .sort({ date: -1, event: -1 })
     .limit(10)
     .project({ _id: 0 })
     .toArray()) as EventDocument[];
