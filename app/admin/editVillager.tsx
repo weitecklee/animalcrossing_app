@@ -1,13 +1,21 @@
 'use client';
 
 import { NAMES } from '@/lib/constants';
-import { Autocomplete, Box, Button, Stack, TextField } from '@mui/material';
+import {
+  Autocomplete,
+  Box,
+  Button,
+  Grid,
+  Stack,
+  TextField,
+} from '@mui/material';
 import { useState } from 'react';
 import VillagerPage from '../villagers/[villager]/page';
 import logout from './logout';
 import { useRouter } from 'next/navigation';
 import EditInfo from './editInfo';
 import { fixName } from '@/lib/functions';
+import VillagerInfo from '../villagers/[villager]/villagerInfo';
 
 export default function EditVillager() {
   const [inputValue, setInputValue] = useState<string>('');
@@ -40,9 +48,9 @@ export default function EditVillager() {
         renderInput={(params) => <TextField {...params} label="Villager" />}
       />
       {villager && (
-        <VillagerPage
-          params={Promise.resolve({ villager: fixName(villager) })}
-        />
+        <Grid container justifyContent="center" spacing={4}>
+          <VillagerInfo params={{ villager: fixName(villager) }} />
+        </Grid>
       )}
       {villager && <EditInfo villager={villager} />}
     </Stack>
