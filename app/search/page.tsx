@@ -22,7 +22,7 @@ import {
   Typography,
 } from '@mui/material';
 import { useEffect, useState } from 'react';
-import Loading from '../loading';
+import Loading from '../../components/loading';
 import searchMongo from '@/lib/searchMongo';
 import { dateISOFormatter } from '@/lib/functions';
 import { theme } from '../theme';

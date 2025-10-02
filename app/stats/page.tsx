@@ -15,7 +15,7 @@ import { DataContext } from '@/lib/dataContext';
 import CRIcon from '@/components/crIcon';
 import IconGrid from '@/components/iconGrid';
 import { coustard } from '@/app/theme';
-import Loading from '@/app/loading';
+import Loading from '@/components/loading';
 import StatsDivider from './statsDivider';
 import Link from 'next/link';
 

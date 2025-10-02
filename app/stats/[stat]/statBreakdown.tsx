@@ -5,7 +5,7 @@ import { use, useContext } from 'react';
 import { DataContext } from '@/lib/dataContext';
 import IconGrid from '@/components/iconGrid';
 import VillagerIcon from '@/components/villagerIcon';
-import Loading from '@/app/loading';
+import Loading from '@/components/loading';
 import PhotoDialog from '../photoDialog';
 import TitleChip from '../titleChip';
 import { notFound } from 'next/navigation';
