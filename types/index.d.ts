@@ -166,7 +166,7 @@ export interface EditOptions {
   startDate: string | null;
   endDate: string | null;
   photoDate: string | null;
-  birthday: string | null;
+  celebrated: string | null;
 }
 
 export interface MongoSetObject {
