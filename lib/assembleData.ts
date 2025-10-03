@@ -54,6 +54,13 @@ async function assembleData(): Promise<{
       history.photo = false;
     }
 
+    if (history.celebrated) {
+      history.celebratedDateDate = new Date(history.celebrated!);
+      history.celebratedDateString = dateISOFormatter(
+        history.celebratedDateDate,
+      );
+    }
+
     historyMap.set(history.name, history);
   });
 

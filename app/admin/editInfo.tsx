@@ -56,6 +56,7 @@ export default function EditInfo({ villager }: { villager: string }) {
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
   const [photoDate, setPhotoDate] = useState<string>('');
+  const [celebrated, setCelebrated] = useState<string>('');
   const [houseNumber, setHouseNumber] = useState<number>(0);
   const [startError, setStartError] = useState(false);
   const [endError, setEndError] = useState(false);
@@ -67,12 +68,14 @@ export default function EditInfo({ villager }: { villager: string }) {
     history && history.currentResident ? '' : history?.endDateString || '';
   const initialPhotoDate = history?.photoDateString || '';
   const initialHouseNumber = history?.houseNumber || 0;
+  const initialCelebrated = history?.celebratedDateString || '';
 
   useEffect(() => {
     setStartDate(initialStartDate);
     setEndDate(initialEndDate);
     setPhotoDate(initialPhotoDate);
     setHouseNumber(initialHouseNumber);
+    setCelebrated(initialCelebrated);
     setStartError(false);
     setEndError(false);
     setPhotoError(false);
@@ -117,6 +120,7 @@ export default function EditInfo({ villager }: { villager: string }) {
       startDate: startDate ?? null,
       endDate: endDate ?? null,
       photoDate: photoDate ?? null,
+      celebrated: celebrated ?? null,
     };
     await editMongo(editOptions).then(refreshData);
   };
@@ -129,6 +133,13 @@ export default function EditInfo({ villager }: { villager: string }) {
         setValue={setStartDate}
         initialValue={initialStartDate}
         error={startError}
+      />
+      <EditDateRow
+        label="Celebrated Birthday"
+        value={celebrated}
+        setValue={setCelebrated}
+        initialValue={''}
+        error={false}
       />
       <EditDateRow
         label="Photo Date"

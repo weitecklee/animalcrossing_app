@@ -6,6 +6,7 @@ export interface HistoryDocument {
   startDate: string;
   endDate: string;
   photoDate?: string;
+  celebrated?: string;
   houseNumber: number;
   islandmates: string[];
 }
@@ -84,6 +85,8 @@ export interface History extends HistoryDocument {
   endDateDate: Date;
   endDateString: string;
   photoDateDate: Date;
+  celebratedDateString: string;
+  celebratedDateDate: Date;
 }
 
 export interface PhotoStats {
@@ -163,6 +166,7 @@ export interface EditOptions {
   startDate: string | null;
   endDate: string | null;
   photoDate: string | null;
+  celebrated: string | null;
 }
 
 export interface MongoSetObject {

@@ -63,6 +63,18 @@ export default async function editMongo(editOptions: EditOptions) {
     unsetObject.photoDate = null;
     updateObject.$unset = unsetObject;
   }
+  if (editOptions.celebrated) {
+    const celebrated = editOptions.celebrated + timezoneOffset;
+    eventsOperations.push({
+      insertOne: {
+        document: {
+          villager: editOptions.name,
+          date: celebrated,
+          event: 1, // 'birthday',
+        },
+      },
+    });
+  }
 
   if (!updateObject.$set) {
     await db.collection('history').bulkWrite([
