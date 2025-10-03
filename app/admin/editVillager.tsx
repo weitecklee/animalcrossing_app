@@ -10,7 +10,6 @@ import {
   TextField,
 } from '@mui/material';
 import { useState } from 'react';
-import VillagerPage from '../villagers/[villager]/page';
 import logout from './logout';
 import { useRouter } from 'next/navigation';
 import EditInfo from './editInfo';

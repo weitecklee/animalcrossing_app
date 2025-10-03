@@ -12,11 +12,68 @@ import IconGrid from '@/components/iconGrid';
 import CustomImage from '@/components/customImage';
 import { notFound } from 'next/navigation';
 import Loading from '@/components/loading';
+import { History } from '@/types';
 
 const baseDim = 128;
 const unit1 = `${baseDim * 1}px`;
 const unit2 = `${baseDim * 2}px`;
 const unit3 = `${baseDim * 3}px`;
+
+const PhotoAndBirthdayBlock = ({ history }: { history: History }) => {
+  if (
+    history.celebrated &&
+    history.photo &&
+    history.celebratedDateDate <= history.photoDateDate
+  ) {
+    return (
+      <>
+        <Typography>
+          Celebrated on {dateFormatter(history.celebratedDateDate)}
+        </Typography>
+        <Typography>
+          Gave photo on {dateFormatter(history.photoDateDate)}
+          <br />
+          Time to give: {history.daysToPhoto} days
+        </Typography>
+      </>
+    );
+  }
+  if (
+    history.celebrated &&
+    history.photo &&
+    history.celebratedDateDate > history.photoDateDate
+  ) {
+    return (
+      <>
+        <Typography>
+          Gave photo on {dateFormatter(history.photoDateDate)}
+          <br />
+          Time to give: {history.daysToPhoto} days
+        </Typography>
+        <Typography>
+          Celebrated on {dateFormatter(history.celebratedDateDate)}
+        </Typography>
+      </>
+    );
+  }
+  if (history.celebrated) {
+    return (
+      <Typography>
+        Celebrated on {dateFormatter(history.celebratedDateDate)}
+      </Typography>
+    );
+  }
+  if (history.photo) {
+    return (
+      <Typography>
+        Gave photo on {dateFormatter(history.photoDateDate)}
+        <br />
+        Time to give: {history.daysToPhoto} days
+      </Typography>
+    );
+  }
+  return '';
+};
 
 export default function VillagerInfo({
   params,
@@ -128,23 +185,13 @@ export default function VillagerInfo({
           </Box>
         </Typography>
         {!historyMap.size ? <Loading /> : ''}
-        {history ? (
+        {history && (
           <Typography>
             <br />
             Moved in on {dateFormatter(history.startDateDate)}
           </Typography>
-        ) : (
-          ''
         )}
-        {history?.photo ? (
-          <Typography>
-            Gave photo on {dateFormatter(history.photoDateDate)}
-            <br />
-            Time to give: {history.daysToPhoto} days
-          </Typography>
-        ) : (
-          ''
-        )}
+        {history && <PhotoAndBirthdayBlock history={history} />}
         {history && !history?.currentResident ? (
           <Typography>
             Moved out on {dateFormatter(history.endDateDate)}

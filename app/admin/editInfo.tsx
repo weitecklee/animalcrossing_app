@@ -56,6 +56,7 @@ export default function EditInfo({ villager }: { villager: string }) {
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
   const [photoDate, setPhotoDate] = useState<string>('');
+  const [birthday, setBirthday] = useState<string>('');
   const [houseNumber, setHouseNumber] = useState<number>(0);
   const [startError, setStartError] = useState(false);
   const [endError, setEndError] = useState(false);
@@ -117,6 +118,7 @@ export default function EditInfo({ villager }: { villager: string }) {
       startDate: startDate ?? null,
       endDate: endDate ?? null,
       photoDate: photoDate ?? null,
+      birthday: birthday ?? null,
     };
     await editMongo(editOptions).then(refreshData);
   };
@@ -129,6 +131,13 @@ export default function EditInfo({ villager }: { villager: string }) {
         setValue={setStartDate}
         initialValue={initialStartDate}
         error={startError}
+      />
+      <EditDateRow
+        label="Celebrated Birthday"
+        value={birthday}
+        setValue={setBirthday}
+        initialValue={''}
+        error={false}
       />
       <EditDateRow
         label="Photo Date"
