@@ -1,17 +1,32 @@
+import { NAMES } from '@/lib/constants';
 import { DataContext } from '@/lib/dataContext';
 import editMongo from '@/lib/editMongo';
 import {
+  ArrowDownward,
+  ArrowUpward,
+  Delete,
+  ExpandMore,
+} from '@mui/icons-material';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Alert,
+  Autocomplete,
   Button,
   FormControl,
+  IconButton,
   InputLabel,
+  List,
   MenuItem,
   Select,
   Snackbar,
   Stack,
   TextField,
+  Typography,
 } from '@mui/material';
 import { useContext, useEffect, useState } from 'react';
+import { theme } from '../theme';
 
 const EditDateRow = ({
   label,
@@ -53,6 +68,9 @@ export default function EditInfo({ villager }: { villager: string }) {
   const { historyMap, refreshData } = useContext(DataContext);
   const history = historyMap.get(villager);
 
+  const { calculatedStats } = useContext(DataContext);
+  const { currentResidents } = calculatedStats;
+
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
   const [photoDate, setPhotoDate] = useState<string>('');
@@ -62,6 +80,9 @@ export default function EditInfo({ villager }: { villager: string }) {
   const [endError, setEndError] = useState(false);
   const [photoError, setPhotoError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [newIslandmate, setNewIslandmate] = useState('');
+  const [newIslandmateToBeAdded, setNewIslandmateToBeAdded] = useState('');
+  const [islandmates, setIslandmates] = useState<string[]>([]);
 
   const initialStartDate = history?.startDateString || '';
   const initialEndDate =
@@ -69,6 +90,7 @@ export default function EditInfo({ villager }: { villager: string }) {
   const initialPhotoDate = history?.photoDateString || '';
   const initialHouseNumber = history?.houseNumber || 0;
   const initialCelebrated = history?.celebratedDateString || '';
+  const initialIslandmates = history?.islandmates || [];
 
   useEffect(() => {
     setStartDate(initialStartDate);
@@ -80,7 +102,18 @@ export default function EditInfo({ villager }: { villager: string }) {
     setEndError(false);
     setPhotoError(false);
     setErrorMessage('');
+    setIslandmates(initialIslandmates);
   }, [history]);
+
+  useEffect(() => {
+    if (!newIslandmateToBeAdded) {
+      return;
+    }
+    const tmp = [...islandmates];
+    tmp.push(newIslandmateToBeAdded);
+    setIslandmates(tmp);
+    setNewIslandmateToBeAdded('');
+  }, [newIslandmateToBeAdded]);
 
   const handleDismissSnackbar = () => {
     setErrorMessage('');
@@ -121,6 +154,7 @@ export default function EditInfo({ villager }: { villager: string }) {
       endDate: endDate ?? null,
       photoDate: photoDate ?? null,
       celebrated: celebrated ?? null,
+      islandmates: islandmates,
     };
     await editMongo(editOptions).then(refreshData);
   };
@@ -189,6 +223,82 @@ export default function EditInfo({ villager }: { villager: string }) {
           </Button>
         </Stack>
       </FormControl>
+      <Accordion sx={{ bgcolor: theme.palette.success.light }}>
+        <AccordionSummary expandIcon={<ExpandMore />} sx={{ font: 'inherit' }}>
+          Islandmates
+        </AccordionSummary>
+        <AccordionDetails>
+          <List>
+            {islandmates.map((resident, i) => (
+              <Stack key={resident} direction="row" alignItems="center" gap={1}>
+                <Typography>{resident}</Typography>
+                <IconButton
+                  onClick={() => {
+                    if (i === 0) {
+                      return;
+                    }
+                    const tmp = [...islandmates];
+                    [tmp[i], tmp[i - 1]] = [tmp[i - 1], tmp[i]];
+                    setIslandmates(tmp);
+                  }}
+                >
+                  <ArrowUpward />
+                </IconButton>
+                <IconButton
+                  onClick={() => {
+                    if (i === islandmates.length - 1) {
+                      return;
+                    }
+                    const tmp = [...islandmates];
+                    [tmp[i], tmp[i + 1]] = [tmp[i + 1], tmp[i]];
+                    setIslandmates(tmp);
+                  }}
+                >
+                  <ArrowDownward />
+                </IconButton>
+                <IconButton
+                  onClick={() => {
+                    const tmp: string[] = [];
+                    for (const name of islandmates) {
+                      if (name != resident) {
+                        tmp.push(name);
+                      }
+                    }
+                    setIslandmates(tmp);
+                  }}
+                >
+                  <Delete />
+                </IconButton>
+              </Stack>
+            ))}
+          </List>
+          <Stack direction="row" gap={1}>
+            <Autocomplete
+              options={NAMES}
+              sx={{ width: '13rem' }}
+              inputValue={newIslandmate}
+              onInputChange={(e, name) => setNewIslandmate(name)}
+              value={newIslandmateToBeAdded}
+              onChange={(e, name) => {
+                if (!!name) {
+                  setNewIslandmateToBeAdded(name);
+                }
+              }}
+              renderInput={(params) => (
+                <TextField {...params} label="New Islandmate" />
+              )}
+            />
+
+            <Button
+              onClick={() => setIslandmates(initialIslandmates)}
+              variant="contained"
+              color="info"
+            >
+              Reset
+            </Button>
+          </Stack>
+        </AccordionDetails>
+      </Accordion>
       <Button variant="contained" color="primary" onClick={handleConfirm}>
         Confirm Edits
       </Button>

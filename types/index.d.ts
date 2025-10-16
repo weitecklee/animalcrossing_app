@@ -167,6 +167,7 @@ export interface EditOptions {
   endDate: string | null;
   photoDate: string | null;
   celebrated: string | null;
+  islandmates: string[];
 }
 
 export interface MongoSetObject {
