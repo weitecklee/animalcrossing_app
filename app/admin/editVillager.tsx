@@ -19,6 +19,7 @@ import { DataContext } from '@/lib/dataContext';
 
 export default function EditVillager() {
   const [inputValue, setInputValue] = useState<string>('');
+  const [inputCR, setInputCR] = useState<string>('');
   const [villager, setVillager] = useState<string | null>('');
   const router = useRouter();
 
@@ -44,8 +45,8 @@ export default function EditVillager() {
         <Autocomplete
           options={currentResidents ?? []}
           sx={{ width: '13rem' }}
-          inputValue={inputValue}
-          onInputChange={(e, name) => setInputValue(name)}
+          inputValue={inputCR}
+          onInputChange={(e, name) => setInputCR(name)}
           value={villager}
           onChange={(e, name) => setVillager(name)}
           renderInput={(params) => (
