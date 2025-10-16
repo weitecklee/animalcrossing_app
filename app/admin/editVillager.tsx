@@ -42,7 +42,7 @@ export default function EditVillager() {
       </Box>
       <Stack direction="row" spacing={2}>
         <Autocomplete
-          options={currentResidents}
+          options={currentResidents ?? []}
           sx={{ width: '13rem' }}
           inputValue={inputValue}
           onInputChange={(e, name) => setInputValue(name)}

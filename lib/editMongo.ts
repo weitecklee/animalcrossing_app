@@ -12,6 +12,8 @@ export default async function editMongo(editOptions: EditOptions) {
   const updateObject = {} as { $set?: MongoSetObject; $unset?: MongoSetObject };
   const eventsOperations: MongoInsertOperation[] = [];
 
+  setObject.islandmates = editOptions.islandmates;
+  updateObject.$set = setObject;
   if (editOptions.startDate) {
     const startDate = editOptions.startDate + timezoneOffset;
     setObject.startDate = new Date(startDate);
