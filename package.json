@@ -33,7 +33,7 @@
     "react-draggable": "^4.4.6"
   },
   "devDependencies": {
-    "@playwright/test": "^1.45.3",
+    "@playwright/test": "^1.56.1",
     "@types/node": "^20",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
