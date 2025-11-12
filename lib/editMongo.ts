@@ -67,6 +67,8 @@ export default async function editMongo(editOptions: EditOptions) {
   }
   if (editOptions.celebrated) {
     const celebrated = editOptions.celebrated + timezoneOffset;
+    setObject.celebrated = new Date(celebrated);
+    updateObject.$set = setObject;
     eventsOperations.push({
       insertOne: {
         document: {

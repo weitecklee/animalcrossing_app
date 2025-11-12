@@ -174,6 +174,7 @@ export interface MongoSetObject {
   startDate?: Date | null;
   endDate?: Date | null;
   photoDate?: Date | null;
+  celebrated?: Date | null;
   islandmates?: string[];
 }
 
