@@ -168,6 +168,7 @@ export interface EditOptions {
   photoDate: string | null;
   celebrated: string | null;
   islandmates: string[];
+  houseNumber: Number | null;
 }
 
 export interface MongoSetObject {
@@ -176,6 +177,7 @@ export interface MongoSetObject {
   photoDate?: Date | null;
   celebrated?: Date | null;
   islandmates?: string[];
+  houseNumber?: Number | null;
 }
 
 export interface MongoInsertObject {

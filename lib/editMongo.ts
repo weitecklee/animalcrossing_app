@@ -79,6 +79,10 @@ export default async function editMongo(editOptions: EditOptions) {
       },
     });
   }
+  if (editOptions.houseNumber) {
+    setObject.houseNumber = editOptions.houseNumber;
+    updateObject.$set = setObject;
+  }
 
   if (!updateObject.$set) {
     await db.collection('history').bulkWrite([

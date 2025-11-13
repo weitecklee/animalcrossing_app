@@ -47,7 +47,7 @@ const EditDateRow = ({
       type="date"
       value={value}
       onChange={(e) => setValue(e.target.value)}
-      InputLabelProps={{ shrink: true }}
+      slotProps={{ inputLabel: { shrink: true } }}
       sx={{ height: '100%', width: '17rem' }}
       error={error}
     />
@@ -67,9 +67,6 @@ const EditDateRow = ({
 export default function EditInfo({ villager }: { villager: string }) {
   const { historyMap, refreshData } = useContext(DataContext);
   const history = historyMap.get(villager);
-
-  const { calculatedStats } = useContext(DataContext);
-  const { currentResidents } = calculatedStats;
 
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
@@ -155,6 +152,7 @@ export default function EditInfo({ villager }: { villager: string }) {
       photoDate: photoDate ?? null,
       celebrated: celebrated ?? null,
       islandmates: islandmates,
+      houseNumber,
     };
     await editMongo(editOptions).then(refreshData);
   };
