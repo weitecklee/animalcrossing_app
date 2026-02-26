@@ -18,8 +18,6 @@ async function assembleData(): Promise<{
   const { eventsData, historyData } = await getData();
   const historyMap: Map<string, History> = new Map();
 
-  historyData.sort((a, b) => (a.startDate < b.startDate ? -1 : 1));
-
   historyData.forEach((doc) => {
     const history = { ...doc } as History;
     history.startDateDate = new Date(history.startDate);

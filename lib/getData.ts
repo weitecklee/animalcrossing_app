@@ -12,6 +12,7 @@ async function getData(): Promise<{
   const historyData = (await db
     .collection('history')
     .find({})
+    .sort({ startDate: 1 })
     .project({ _id: 0 })
     .toArray()) as HistoryDocument[];
 
